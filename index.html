@@ -544,6 +544,9 @@
                             <span id="host-domain-badge" class="px-3 py-1 bg-amber-100 text-amber-900 font-black text-xs md:text-sm rounded-xl">
                                 🎧 듣기 영역
                             </span>
+                            <span id="host-revival-badge" class="hidden px-3 py-1 bg-gradient-to-r from-rose-500 to-amber-500 text-white font-black text-xs md:text-sm rounded-xl shadow-xs animate-pulse">
+                                ✨ 패자부활전 라운드
+                            </span>
                             <span id="host-difficulty-badge" class="text-amber-500 text-xs font-black">
                                 ★★★
                             </span>
@@ -646,9 +649,9 @@
                     </div>
 
                     <!-- 골든벨 패자부활전 액션 버튼 -->
-                    <button type="button" onclick="hostReviveAllPlayers()" class="w-full py-2 px-3 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 hover:from-amber-600 hover:to-amber-700 active:scale-95 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-1.5">
+                    <button type="button" id="btn-host-current-revival" onclick="toggleCurrentQuestionRevival()" class="w-full py-2.5 px-3 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 hover:from-amber-600 hover:to-amber-700 active:scale-95 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-1.5 border border-amber-300">
                         <i class="fa-solid fa-wand-magic-sparkles text-amber-200"></i>
-                        <span>✨ 패자부활전 (전원 부활)</span>
+                        <span id="btn-host-current-revival-text">✨ 이번 문제 패자부활전 지정 (맞힌 탈락자 부활)</span>
                     </button>
 
                     <!-- 참여자 명단 & 점수 리스트 -->
@@ -685,6 +688,17 @@
                     </div>
                     <p id="reveal-explanation" class="text-xs md:text-sm text-slate-600 font-semibold pt-1 border-t border-emerald-200/70">
                         'spring'은 봄을 의미합니다.
+                    </p>
+                </div>
+
+                <!-- ✨ 패자부활전 결과 배너 (패자부활전 라운드 직후 노출) -->
+                <div id="reveal-revival-summary-box" class="hidden max-w-xl mx-auto bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-600 text-white rounded-2xl p-4 shadow-lg space-y-1 text-center">
+                    <div class="flex items-center justify-center gap-2 text-lg font-black">
+                        <span class="text-2xl animate-bounce">🎉</span>
+                        <span>패자부활전 결과: <strong id="reveal-revived-count" class="text-amber-200">0</strong>명 부활 성공!</span>
+                    </div>
+                    <p id="reveal-revived-names" class="text-xs text-emerald-100 font-bold truncate">
+                        부활한 친구들: 없음
                     </p>
                 </div>
 
@@ -744,11 +758,11 @@
                     </div>
                 </div>
 
-                <!-- 패자부활전 & 다음 문제 진행 버튼 그룹 -->
-                <div class="pt-2 flex flex-col md:flex-row items-center justify-center gap-3 max-w-lg mx-auto">
-                    <button type="button" onclick="hostReviveAllPlayers()" class="w-full md:w-auto px-5 py-3.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border-2 border-amber-300 active:scale-95 font-black text-xs md:text-sm rounded-2xl transition shadow-xs flex items-center justify-center gap-2">
+                <!-- 패자부활전 지정 & 다음 문제 진행 버튼 그룹 -->
+                <div class="pt-2 flex flex-col md:flex-row items-center justify-center gap-3 max-w-xl mx-auto">
+                    <button type="button" id="btn-toggle-next-revival" onclick="toggleNextQuestionRevival()" class="w-full md:w-auto px-5 py-3.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border-2 border-amber-300 active:scale-95 font-black text-xs md:text-sm rounded-2xl transition shadow-xs flex items-center justify-center gap-2">
                         <i class="fa-solid fa-wand-magic-sparkles text-amber-600"></i>
-                        <span>✨ 패자부활전 실행</span>
+                        <span id="btn-toggle-next-revival-text">✨ 다음 문제: 패자부활전 지정 (OFF)</span>
                     </button>
                     <button type="button" id="btn-next-question" onclick="hostNextQuestion()" class="golden-btn flex-1 text-base py-3.5 justify-center gap-2">
                         <span>다음 문제로 ➔</span>
@@ -810,6 +824,9 @@
                         <span id="student-spectator-badge" class="hidden px-2 py-0.5 bg-slate-800 text-amber-300 border border-amber-400 font-black text-2xs rounded-md animate-pulse">
                             👀 관전 모드
                         </span>
+                        <span id="student-revival-badge" class="hidden px-2 py-0.5 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-black text-2xs rounded-md shadow-xs animate-pulse">
+                            ✨ 패자부활전
+                        </span>
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="text-xs font-black text-slate-500">내 점수: <strong id="student-my-score" class="text-amber-600">0</strong>점</span>
@@ -817,7 +834,7 @@
                     </div>
                 </div>
 
-                <!-- 관전 모드 전용 알림 배너 -->
+                <!-- 관전 모드 전용 알림 배너 (일반 문제에서 탈락한 경우) -->
                 <div id="student-spectator-banner" class="hidden p-3 bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white rounded-2xl border-2 border-amber-400 shadow-md text-center space-y-1">
                     <div class="flex items-center justify-center gap-1.5 font-black text-amber-300 text-xs">
                         <i class="fa-solid fa-eye text-sm"></i>
@@ -826,6 +843,18 @@
                     <p id="student-spectator-desc" class="text-3xs text-slate-300 font-bold leading-relaxed">
                         아쉽게 탈락하여 관전 모드로 전환되었습니다. 남은 친구들의 도전을 응원해 주세요!<br>
                         (문제 지문과 원어민 음성은 계속 함께 학습하실 수 있습니다.)
+                    </p>
+                </div>
+
+                <!-- ✨ 패자부활전 기회 안내 배너 (패자부활전 라운드일 때 탈락자에게 노출) -->
+                <div id="student-revival-banner" class="hidden p-3.5 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white rounded-2xl border-2 border-amber-300 shadow-lg text-center space-y-1 animate-pulse">
+                    <div class="flex items-center justify-center gap-1.5 font-black text-xs md:text-sm text-amber-100">
+                        <i class="fa-solid fa-wand-magic-sparkles text-amber-200"></i>
+                        <span>✨ 패자부활전 기회! 맞히면 부활합니다!</span>
+                    </div>
+                    <p class="text-3xs text-amber-50 font-bold leading-relaxed">
+                        탈락한 학생 여러분도 답안을 제출할 수 있습니다.<br>
+                        <strong>이번 문제의 정답을 맞힌 친구들만 다시 생존 상태로 부활</strong>합니다! 끝까지 힘내세요!
                     </p>
                 </div>
 
@@ -2002,13 +2031,19 @@
 
             if (!listEl) return;
 
+            const isRevival = !!data.isRevivalQuestion;
             const players = Object.values(data.players || {});
             const totalCount = players.length;
             const alivePlayers = players.filter(p => !p.isEliminated);
             const aliveCount = alivePlayers.length;
             const eliminatedCount = totalCount - aliveCount;
-            const submittedCount = alivePlayers.filter(p => !!p.answered).length;
-            const pendingCount = Math.max(0, aliveCount - submittedCount);
+
+            // 패자부활전 중에는 탈락자도 문제 풀이에 참여하므로 전체 인원 기준으로 제출 현황 집계
+            const submittedCount = isRevival
+                ? players.filter(p => !!p.answered).length
+                : alivePlayers.filter(p => !!p.answered).length;
+            const targetPoolCount = isRevival ? totalCount : aliveCount;
+            const pendingCount = Math.max(0, targetPoolCount - submittedCount);
 
             if (countBadge) countBadge.innerText = `${totalCount}명 참여`;
             if (aliveEl) aliveEl.innerText = `${aliveCount}명`;
@@ -2046,8 +2081,10 @@
                 let rowBg = 'bg-slate-50 border-slate-200/80 hover:bg-slate-100/70';
 
                 if (isEliminated) {
-                    rowBg = 'bg-slate-100/60 border-slate-200/70 opacity-60';
-                    rankBadge = `<span class="w-6 h-6 rounded-full bg-slate-200 text-slate-400 font-black text-2xs flex items-center justify-center flex-shrink-0">✕</span>`;
+                    rowBg = isRevival 
+                        ? 'bg-rose-50/50 border-rose-200/70' 
+                        : 'bg-slate-100/60 border-slate-200/70 opacity-60';
+                    rankBadge = `<span class="w-6 h-6 rounded-full ${isRevival ? 'bg-rose-200 text-rose-700' : 'bg-slate-200 text-slate-400'} font-black text-2xs flex items-center justify-center flex-shrink-0">✕</span>`;
                 } else if (rank === 1) {
                     rankBadge = `<span class="w-6 h-6 rounded-full bg-amber-400 text-white font-black text-2xs flex items-center justify-center shadow-xs flex-shrink-0">🥇</span>`;
                     rowBg = 'bg-amber-50/80 border-amber-300/80 shadow-2xs';
@@ -2063,11 +2100,22 @@
 
                 let statusBadge = '';
                 if (isEliminated) {
-                    statusBadge = `
-                        <span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-slate-200 text-slate-600 font-extrabold text-3xs rounded-md flex-shrink-0" title="Q ${p.eliminatedAt || '?'} 탈락">
-                            <i class="fa-solid fa-eye text-3xs text-slate-400"></i>Q${p.eliminatedAt || '?'} 탈락
-                        </span>
-                    `;
+                    if (isRevival) {
+                        const isAns = !!p.answered;
+                        statusBadge = isAns
+                            ? `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-rose-100 text-rose-700 font-black text-3xs rounded-full border border-rose-300 flex-shrink-0">
+                                 <i class="fa-solid fa-wand-magic-sparkles text-3xs"></i>부활제출
+                               </span>`
+                            : `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-rose-50 text-rose-600 font-black text-3xs rounded-full border border-rose-200 animate-pulse flex-shrink-0">
+                                 <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>부활도전중
+                               </span>`;
+                    } else {
+                        statusBadge = `
+                            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-slate-200 text-slate-600 font-extrabold text-3xs rounded-md flex-shrink-0" title="Q ${p.eliminatedAt || '?'} 탈락">
+                                <i class="fa-solid fa-eye text-3xs text-slate-400"></i>Q${p.eliminatedAt || '?'} 탈락
+                            </span>
+                        `;
+                    }
                 } else {
                     const isAnswered = !!p.answered;
                     statusBadge = isAnswered
@@ -2107,11 +2155,62 @@
         }
 
         // ─────────────────────────────────────────────
-        // 9-C. 교사 호스트: 패자부활전 (전원 부활)
+        // 9-C. 교사 호스트: 패자부활전 (지정 및 토글 제어)
         // ─────────────────────────────────────────────
+        // [결과 화면] 다음 문제를 패자부활전으로 지정/해제 토글
+        window.toggleNextQuestionRevival = async function() {
+            if (!currentRoomCode || !isHost) return;
+            try {
+                const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
+                const snap = await getDoc(roomRef);
+                if (!snap.exists()) return;
+                const data = snap.data();
+                const nextVal = !data.nextIsRevival;
+
+                await updateDoc(roomRef, { nextIsRevival: nextVal });
+
+                const btn = document.getElementById('btn-toggle-next-revival');
+                const btnText = document.getElementById('btn-toggle-next-revival-text');
+                if (btn && btnText) {
+                    if (nextVal) {
+                        btnText.innerText = "✨ 다음 문제: 패자부활전 지정 (ON 🟢)";
+                        btn.className = "w-full md:w-auto px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white border-2 border-emerald-400 active:scale-95 font-black text-xs md:text-sm rounded-2xl transition shadow-md flex items-center justify-center gap-2";
+                    } else {
+                        btnText.innerText = "✨ 다음 문제: 패자부활전 지정 (OFF)";
+                        btn.className = "w-full md:w-auto px-5 py-3.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border-2 border-amber-300 active:scale-95 font-black text-xs md:text-sm rounded-2xl transition shadow-xs flex items-center justify-center gap-2";
+                    }
+                }
+            } catch (e) {
+                console.error("toggleNextQuestionRevival error:", e);
+                alert("패자부활전 설정 오류: " + e.message);
+            }
+        };
+
+        // [인게임 화면] 이번 문제를 실시간 패자부활전으로 지정/해제 토글
+        window.toggleCurrentQuestionRevival = async function() {
+            if (!currentRoomCode || !isHost) return;
+            try {
+                const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
+                const snap = await getDoc(roomRef);
+                if (!snap.exists()) return;
+                const data = snap.data();
+                const currentVal = !data.isRevivalQuestion;
+
+                await updateDoc(roomRef, { isRevivalQuestion: currentVal });
+
+                if (currentVal) {
+                    confetti({ particleCount: 60, spread: 50, origin: { y: 0.5 } });
+                }
+            } catch (e) {
+                console.error("toggleCurrentQuestionRevival error:", e);
+                alert("패자부활전 설정 오류: " + e.message);
+            }
+        };
+
+        // [비상용] 전원 즉시 부활
         window.hostReviveAllPlayers = async function() {
             if (!currentRoomCode || !isHost) return;
-            const ok = confirm("✨ 현재 탈락한 모든 학생을 부활시키겠습니까?\n모든 학생이 생존 상태로 복귀하여 다음 문제에 참여할 수 있습니다.");
+            const ok = confirm("✨ 현재 탈락한 모든 학생을 즉시 부활시키겠습니까?\n모든 학생이 생존 상태로 복귀합니다.");
             if (!ok) return;
 
             try {
@@ -2130,10 +2229,10 @@
                 await updateDoc(roomRef, updates);
                 playGoldenBellChime();
                 confetti({ particleCount: 150, spread: 80, origin: { y: 0.5 } });
-                alert("✨ 패자부활전이 성공적으로 진행되었습니다!\n모든 학생이 다시 살아났습니다!");
+                alert("✨ 모든 학생이 다시 살아났습니다!");
             } catch(e) {
                 console.error("Revive all players error:", e);
-                alert("패자부활전 실패: " + e.message);
+                alert("부활 실패: " + e.message);
             }
         };
 
@@ -2156,6 +2255,7 @@
                 resetPlayers[`players.${pid}.bonus`] = 0;
                 resetPlayers[`players.${pid}.isEliminated`] = false;
                 resetPlayers[`players.${pid}.eliminatedAt`] = null;
+                resetPlayers[`players.${pid}.revivedThisRound`] = false;
             });
 
             await updateDoc(roomRef, {
@@ -2164,6 +2264,8 @@
                 questionStartedAt: 0,
                 firstSolver: null,
                 revealedAnswer: null,
+                isRevivalQuestion: false,
+                nextIsRevival: false,
                 ...resetPlayers
             });
 
@@ -2178,6 +2280,25 @@
             document.getElementById('host-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain} 영역`;
             document.getElementById('host-difficulty-badge').innerText = q.difficulty || '★★☆';
             document.getElementById('host-question-text').innerText = cleanQuestionText(q.question, q.subtext);
+
+            // 패자부활전 라운드 뱃지 및 사이드바 버튼 상태
+            const hostRevBadge = document.getElementById('host-revival-badge');
+            if (hostRevBadge) {
+                if (data.isRevivalQuestion) hostRevBadge.classList.remove('hidden');
+                else hostRevBadge.classList.add('hidden');
+            }
+
+            const hostCurRevBtn = document.getElementById('btn-host-current-revival');
+            const hostCurRevText = document.getElementById('btn-host-current-revival-text');
+            if (hostCurRevBtn && hostCurRevText) {
+                if (data.isRevivalQuestion) {
+                    hostCurRevText.innerText = '✨ 이번 문제: 패자부활전 진행 중 (ON - 취소)';
+                    hostCurRevBtn.className = 'w-full py-2.5 px-3 bg-gradient-to-r from-rose-500 via-rose-600 to-rose-500 hover:from-rose-600 hover:to-rose-700 active:scale-95 text-white font-black text-xs rounded-xl shadow-md transition flex items-center justify-center gap-1.5 border border-rose-300 animate-pulse';
+                } else {
+                    hostCurRevText.innerText = '✨ 이번 문제 패자부활전 지정 (맞힌 탈락자 부활)';
+                    hostCurRevBtn.className = 'w-full py-2.5 px-3 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 hover:from-amber-600 hover:to-amber-700 active:scale-95 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-1.5 border border-amber-300';
+                }
+            }
 
             // 오디오 컨트롤
             const audioCont = document.getElementById('host-audio-container');
@@ -2217,14 +2338,19 @@
             }
 
             // 실시간 제출 집계
+            const isRevival = !!data.isRevivalQuestion;
             const players = data.players || {};
             const pList = Object.values(players);
-            const submittedCount = pList.filter(p => !!p.answered).length;
             const totalCount = pList.length;
+            const alivePlayers = pList.filter(p => !p.isEliminated);
+            const targetCount = isRevival ? totalCount : alivePlayers.length;
+            const submittedCount = isRevival
+                ? pList.filter(p => !!p.answered).length
+                : alivePlayers.filter(p => !!p.answered).length;
 
             document.getElementById('host-submit-count').innerText = submittedCount;
-            document.getElementById('host-total-players').innerText = totalCount;
-            const pct = totalCount > 0 ? (submittedCount / totalCount) * 100 : 0;
+            document.getElementById('host-total-players').innerText = targetCount;
+            const pct = targetCount > 0 ? (submittedCount / targetCount) * 100 : 0;
             document.getElementById('host-submit-bar').style.width = `${pct}%`;
 
             // 우측 실시간 참여자 및 점수 순위 패널 갱신
@@ -2269,7 +2395,7 @@
             window.showScreen('screen-host-game');
         }
 
-        // 호스트: 정답 공개 및 채점 (탈락 판정 및 선착순 보너스 계산)
+        // 호스트: 정답 공개 및 채점 (탈락 판정, 패자부활전 선별 부활, 선착순 보너스 계산)
         window.hostForceReveal = async function() {
             if (typeof window.stopCurrentQuestionAudio === 'function') {
                 window.stopCurrentQuestionAudio();
@@ -2287,23 +2413,17 @@
             const data = snap.data();
             const q = currentQuestions[data.currentQIndex || 0];
             const players = data.players || {};
+            const isRevival = !!data.isRevivalQuestion;
 
             // 채점 로직
             const correctTarget = String(q.correctAnswer || '').trim().toLowerCase();
             const playerUpdates = {};
 
             const correctSolvers = [];
-            let previouslyEliminatedCount = 0;
+            const revivedSolvers = [];
 
             Object.entries(players).forEach(([pid, p]) => {
-                // 이미 탈락한 학생은 이번 문제에서 점수 가산 없이 탈락 유지
-                if (p.isEliminated) {
-                    previouslyEliminatedCount++;
-                    playerUpdates[`players.${pid}.isCorrect`] = false;
-                    playerUpdates[`players.${pid}.bonus`] = 0;
-                    return;
-                }
-
+                const isEliminatedBefore = !!p.isEliminated;
                 const ans = String(p.answer || '').trim().toLowerCase();
                 let isRight = false;
 
@@ -2319,26 +2439,56 @@
                     }
                 }
 
-                if (isRight) {
-                    correctSolvers.push({
-                        pid: pid,
-                        name: p.name,
-                        submittedAt: p.submittedAt || Date.now(),
-                        currentScore: p.score || 0,
-                        correctCount: (p.correctCount || 0) + 1,
-                        firstCount: p.firstCount || 0
-                    });
-                    playerUpdates[`players.${pid}.isEliminated`] = false;
+                if (isEliminatedBefore) {
+                    // 탈락자였던 학생의 판정:
+                    if (isRevival && isRight) {
+                        // 🎉 패자부활전에서 맞힌 친구만 선별 부활!
+                        revivedSolvers.push({
+                            pid: pid,
+                            name: p.name,
+                            submittedAt: p.submittedAt || Date.now(),
+                            currentScore: p.score || 0,
+                            correctCount: (p.correctCount || 0) + 1
+                        });
+                        playerUpdates[`players.${pid}.isEliminated`] = false;
+                        playerUpdates[`players.${pid}.eliminatedAt`] = null;
+                        playerUpdates[`players.${pid}.revivedThisRound`] = true;
+                        playerUpdates[`players.${pid}.isCorrect`] = true;
+                        playerUpdates[`players.${pid}.score`] = (p.score || 0) + 100;
+                        playerUpdates[`players.${pid}.bonus`] = 0;
+                        playerUpdates[`players.${pid}.correctCount`] = (p.correctCount || 0) + 1;
+                    } else {
+                        // 패자부활전 실패 또는 일반 라운드 -> 계속 탈락 유지
+                        playerUpdates[`players.${pid}.isEliminated`] = true;
+                        playerUpdates[`players.${pid}.revivedThisRound`] = false;
+                        playerUpdates[`players.${pid}.isCorrect`] = false;
+                        playerUpdates[`players.${pid}.bonus`] = 0;
+                    }
                 } else {
-                    // 💥 오답 또는 미제출로 인한 서바이벌 탈락!
-                    playerUpdates[`players.${pid}.isCorrect`] = false;
-                    playerUpdates[`players.${pid}.bonus`] = 0;
-                    playerUpdates[`players.${pid}.isEliminated`] = true;
-                    playerUpdates[`players.${pid}.eliminatedAt`] = (data.currentQIndex || 0) + 1;
+                    // 기존 생존 학생의 판정:
+                    if (isRight) {
+                        correctSolvers.push({
+                            pid: pid,
+                            name: p.name,
+                            submittedAt: p.submittedAt || Date.now(),
+                            currentScore: p.score || 0,
+                            correctCount: (p.correctCount || 0) + 1,
+                            firstCount: p.firstCount || 0
+                        });
+                        playerUpdates[`players.${pid}.isEliminated`] = false;
+                        playerUpdates[`players.${pid}.revivedThisRound`] = false;
+                    } else {
+                        // 💥 오답 또는 미제출로 인한 서바이벌 탈락!
+                        playerUpdates[`players.${pid}.isCorrect`] = false;
+                        playerUpdates[`players.${pid}.bonus`] = 0;
+                        playerUpdates[`players.${pid}.isEliminated`] = true;
+                        playerUpdates[`players.${pid}.eliminatedAt`] = (data.currentQIndex || 0) + 1;
+                        playerUpdates[`players.${pid}.revivedThisRound`] = false;
+                    }
                 }
             });
 
-            // 🥇 선착순 1등 정답자 선발 (생존자 중 가장 먼저 맞힌 사람)
+            // 🥇 선착순 1등 정답자 선발 (생존자 정답자 중 가장 먼저 맞힌 사람)
             let firstSolver = null;
             if (correctSolvers.length > 0) {
                 // 제출 시각 오름차순 정렬
@@ -2360,7 +2510,7 @@
                 playerUpdates[`players.${winner.pid}.correctCount`] = winner.correctCount;
                 playerUpdates[`players.${winner.pid}.firstCount`] = winner.firstCount + 1;
 
-                // 나머지 정답자에게는 기본 100점
+                // 나머지 생존 정답자에게는 기본 100점
                 for (let i = 1; i < correctSolvers.length; i++) {
                     const other = correctSolvers[i];
                     playerUpdates[`players.${other.pid}.score`] = other.currentScore + 100;
@@ -2371,19 +2521,23 @@
             }
 
             const totalPlayerCount = Object.keys(players).length;
-            const aliveCount = correctSolvers.length;
+            const aliveCount = correctSolvers.length + revivedSolvers.length;
             const eliminatedCount = totalPlayerCount - aliveCount;
 
             await updateDoc(roomRef, {
                 status: 'revealed',
+                isRevivalQuestion: false, // 채점 완료 후 패자부활전 자동 초기화
                 firstSolver: firstSolver,
                 revealedAnswer: {
                     correctAnswer: q.correctAnswer,
                     explanation: q.explanation || "",
-                    correctCount: correctSolvers.length,
+                    correctCount: correctSolvers.length + revivedSolvers.length,
                     totalCount: totalPlayerCount,
                     aliveCount: aliveCount,
-                    eliminatedCount: eliminatedCount
+                    eliminatedCount: eliminatedCount,
+                    wasRevivalRound: isRevival,
+                    revivedCount: revivedSolvers.length,
+                    revivedNames: revivedSolvers.map(r => r.name)
                 },
                 ...playerUpdates
             });
@@ -2399,6 +2553,27 @@
             document.getElementById('reveal-q-num').innerText = (data.currentQIndex || 0) + 1;
             document.getElementById('reveal-correct-answer').innerText = rev.correctAnswer || q.correctAnswer;
             document.getElementById('reveal-explanation').innerText = rev.explanation || q.explanation || "";
+
+            // ✨ 패자부활전 결과 요약 배너 (패자부활전 라운드 직후 노출)
+            const revSummaryBox = document.getElementById('reveal-revival-summary-box');
+            const revCountEl = document.getElementById('reveal-revived-count');
+            const revNamesEl = document.getElementById('reveal-revived-names');
+            if (revSummaryBox) {
+                if (rev.wasRevivalRound) {
+                    revSummaryBox.classList.remove('hidden');
+                    const rCount = rev.revivedCount || 0;
+                    if (revCountEl) revCountEl.innerText = rCount;
+                    if (revNamesEl) {
+                        const mask = window.WaurimalMask ? window.WaurimalMask.maskStudentName : (x => x);
+                        const names = (Array.isArray(rev.revivedNames) && rev.revivedNames.length > 0)
+                            ? rev.revivedNames.map(n => mask(n)).join(', ') + ' 학생'
+                            : '없음 (맞힌 학생 없음)';
+                        revNamesEl.innerText = `부활한 친구들: ${names}`;
+                    }
+                } else {
+                    revSummaryBox.classList.add('hidden');
+                }
+            }
 
             // 🥇 1등 선착순 발표 배너
             const firstBox = document.getElementById('reveal-first-solver-box');
@@ -2446,6 +2621,19 @@
                 }).join('');
             }
 
+            // 다음 문제 패자부활전 토글 버튼 텍스트/스타일 반영
+            const btnNextRev = document.getElementById('btn-toggle-next-revival');
+            const btnNextRevText = document.getElementById('btn-toggle-next-revival-text');
+            if (btnNextRev && btnNextRevText) {
+                if (data.nextIsRevival) {
+                    btnNextRevText.innerText = "✨ 다음 문제: 패자부활전 지정 (ON 🟢)";
+                    btnNextRev.className = "w-full md:w-auto px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white border-2 border-emerald-400 active:scale-95 font-black text-xs md:text-sm rounded-2xl transition shadow-md flex items-center justify-center gap-2";
+                } else {
+                    btnNextRevText.innerText = "✨ 다음 문제: 패자부활전 지정 (OFF)";
+                    btnNextRev.className = "w-full md:w-auto px-5 py-3.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border-2 border-amber-300 active:scale-95 font-black text-xs md:text-sm rounded-2xl transition shadow-xs flex items-center justify-center gap-2";
+                }
+            }
+
             // 다음 문제 버튼 텍스트
             const btnNext = document.getElementById('btn-next-question');
             if (data.currentQIndex >= 19) {
@@ -2477,7 +2665,8 @@
                 return;
             }
 
-            // 다음 문제 전환: 학생 답변 플래그 리셋
+            // 다음 문제 전환: 학생 답변 플래그 리셋 및 부활 라운드 여부 승계
+            const isRevivalNext = !!data.nextIsRevival;
             const resetPlayers = {};
             Object.keys(data.players || {}).forEach(pid => {
                 resetPlayers[`players.${pid}.answered`] = false;
@@ -2485,6 +2674,7 @@
                 resetPlayers[`players.${pid}.submittedAt`] = 0;
                 resetPlayers[`players.${pid}.isCorrect`] = false;
                 resetPlayers[`players.${pid}.bonus`] = 0;
+                resetPlayers[`players.${pid}.revivedThisRound`] = false;
             });
 
             await updateDoc(roomRef, {
@@ -2493,6 +2683,8 @@
                 questionStartedAt: 0,
                 firstSolver: null,
                 revealedAnswer: null,
+                isRevivalQuestion: isRevivalNext,
+                nextIsRevival: false,
                 ...resetPlayers
             });
 
@@ -2506,12 +2698,31 @@
             const q = currentQuestions[data.currentQIndex || 0];
             if (!q) return;
 
-            const isSpectator = !!me.isEliminated;
+            const isRevivalQ = !!data.isRevivalQuestion;
+            const isEliminated = !!me.isEliminated;
+            // 패자부활전 문제에서는 탈락자도 문제를 풀어 부활할 기회가 있으므로 관전 모드로 잠그지 않음!
+            const isSpectator = isEliminated && !isRevivalQ;
+
             const specBadge = document.getElementById('student-spectator-badge');
             const specBanner = document.getElementById('student-spectator-banner');
             const specDesc = document.getElementById('student-spectator-desc');
+            const revBadge = document.getElementById('student-revival-badge');
+            const revBanner = document.getElementById('student-revival-banner');
 
-            if (isSpectator) {
+            // 뱃지 제어
+            if (revBadge) {
+                if (isRevivalQ) revBadge.classList.remove('hidden');
+                else revBadge.classList.add('hidden');
+            }
+
+            // 관전 배너/뱃지 vs 패자부활전 배너
+            if (isRevivalQ && isEliminated) {
+                // 탈락자에게 패자부활전 기회 알림!
+                if (revBanner) revBanner.classList.remove('hidden');
+                if (specBadge) specBadge.classList.add('hidden');
+                if (specBanner) specBanner.classList.add('hidden');
+            } else if (isSpectator) {
+                if (revBanner) revBanner.classList.add('hidden');
                 if (specBadge) specBadge.classList.remove('hidden');
                 if (specBanner) specBanner.classList.remove('hidden');
                 if (specDesc) {
@@ -2519,6 +2730,7 @@
                     specDesc.innerHTML = `Q <strong class="text-amber-300 font-black">${elimQ}</strong>에서 탈락하여 관전 모드입니다. 남은 친구들의 도전을 응원해 주세요!<br><span class="text-slate-400 font-semibold">(문제 지문과 원어민 음성은 계속 학습할 수 있습니다.)</span>`;
                 }
             } else {
+                if (revBanner) revBanner.classList.add('hidden');
                 if (specBadge) specBadge.classList.add('hidden');
                 if (specBanner) specBanner.classList.add('hidden');
             }
@@ -2574,6 +2786,7 @@
                 }
 
                 // 내가 이미 제출했는지 또는 관전 모드인지 확인
+                // (패자부활전 라운드에서는 탈락자도 me.answered 여부에 따라 정상 제출 가능)
                 if (isSpectator) {
                     hasSubmittedAnswer = true;
                     overlay.classList.add('hidden');
@@ -2594,7 +2807,7 @@
             const scrambleCont = document.getElementById('student-scramble-container');
             const textCont = document.getElementById('student-text-container');
 
-            // 관전 모드일 경우 모든 입력 컨트롤 상호작용 차단
+            // 관전 모드일 때만 모든 입력 컨트롤 상호작용 차단 (패자부활전 라운드에서는 차단 해제)
             [choiceCont, scrambleCont, textCont].forEach(cont => {
                 if (!cont) return;
                 if (isSpectator) {
@@ -2749,9 +2962,12 @@
 
         function renderStudentRevealScreen(data, me) {
             const q = currentQuestions[data.currentQIndex || 0];
+            const rev = data.revealedAnswer || {};
             const isRight = !!me.isCorrect;
             const gotBonus = (me.bonus && me.bonus > 0);
             const isEliminated = !!me.isEliminated;
+            const revivedThisRound = !!me.revivedThisRound;
+            const wasRevivalRound = !!rev.wasRevivalRound;
             const eliminatedThisRound = isEliminated && (me.eliminatedAt === ((data.currentQIndex || 0) + 1));
 
             const iconEl = document.getElementById('student-feedback-icon');
@@ -2759,7 +2975,20 @@
             const bonusAnnounce = document.getElementById('student-bonus-announcement');
             const subdescEl = document.getElementById('student-feedback-subdesc');
 
-            if (isRight) {
+            if (revivedThisRound) {
+                // 🎉 이번 패자부활전에서 맞혀서 극적으로 부활 성공!
+                iconEl.innerText = "🎉";
+                titleEl.innerText = "🎉 패자부활 성공! 💚 (+100점)";
+                titleEl.className = "text-2xl font-black text-emerald-700 animate-bounce";
+                if (subdescEl) {
+                    subdescEl.innerText = "정답을 맞혀 생존 상태로 복귀했습니다! 다음 문제에 계속 도전하세요!";
+                    subdescEl.className = "text-xs font-black text-emerald-600 block";
+                    subdescEl.classList.remove('hidden');
+                }
+                confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+                bonusAnnounce.classList.add('hidden');
+            } else if (isRight) {
+                // 기존 생존자의 정답
                 iconEl.innerText = "🎉";
                 titleEl.innerText = "정답입니다! (+100점)";
                 titleEl.className = "text-2xl font-black text-emerald-700";
@@ -2774,8 +3003,19 @@
                 } else {
                     bonusAnnounce.classList.add('hidden');
                 }
+            } else if (wasRevivalRound && isEliminated) {
+                // 패자부활전 라운드였으나 부활에 실패한 경우
+                iconEl.innerText = "😢";
+                titleEl.innerText = "아쉽네요! 부활에 실패했습니다.";
+                titleEl.className = "text-2xl font-black text-rose-600";
+                if (subdescEl) {
+                    subdescEl.innerText = "오답 또는 미제출로 부활하지 못했습니다. 다음 기회를 기대해주세요! 👀";
+                    subdescEl.className = "text-xs font-bold text-slate-500 block";
+                    subdescEl.classList.remove('hidden');
+                }
+                bonusAnnounce.classList.add('hidden');
             } else if (eliminatedThisRound) {
-                // 이번 문제에서 오답으로 탈락한 경우
+                // 일반 문제에서 오답으로 탈락한 경우
                 iconEl.innerText = "😢";
                 titleEl.innerText = "아쉽네요! 탈락했습니다.";
                 titleEl.className = "text-2xl font-black text-rose-600";
