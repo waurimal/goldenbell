@@ -625,11 +625,31 @@
                         </span>
                     </div>
 
-                    <!-- 제출 현황 요약 미니 바 -->
-                    <div class="flex items-center justify-between text-2xs font-extrabold px-3 py-2 bg-amber-50/70 border border-amber-200/70 rounded-xl text-slate-600">
-                        <span>제출 완료: <strong id="host-sidebar-submitted" class="text-emerald-600">0</strong>명</span>
-                        <span>풀이 중: <strong id="host-sidebar-pending" class="text-amber-600">0</strong>명</span>
+                    <!-- 제출 현황 및 생존/탈락 요약 미니 바 -->
+                    <div class="grid grid-cols-2 gap-2 text-2xs font-extrabold px-3 py-2 bg-amber-50/70 border border-amber-200/70 rounded-xl text-slate-600">
+                        <div class="flex justify-between items-center">
+                            <span>💚 생존:</span>
+                            <strong id="host-sidebar-alive" class="text-emerald-600">0명</strong>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>👀 탈락/관전:</span>
+                            <strong id="host-sidebar-eliminated" class="text-slate-500">0명</strong>
+                        </div>
+                        <div class="flex justify-between items-center pt-1 border-t border-amber-200/60">
+                            <span>제출 완료:</span>
+                            <strong id="host-sidebar-submitted" class="text-emerald-600">0명</strong>
+                        </div>
+                        <div class="flex justify-between items-center pt-1 border-t border-amber-200/60">
+                            <span>풀이 중:</span>
+                            <strong id="host-sidebar-pending" class="text-amber-600">0명</strong>
+                        </div>
                     </div>
+
+                    <!-- 골든벨 패자부활전 액션 버튼 -->
+                    <button type="button" onclick="hostReviveAllPlayers()" class="w-full py-2 px-3 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 hover:from-amber-600 hover:to-amber-700 active:scale-95 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-wand-magic-sparkles text-amber-200"></i>
+                        <span>✨ 패자부활전 (전원 부활)</span>
+                    </button>
 
                     <!-- 참여자 명단 & 점수 리스트 -->
                     <div id="host-live-player-list" class="space-y-1.5 max-h-[500px] overflow-y-auto pr-1 custom-scrollbar text-xs">
@@ -691,12 +711,20 @@
                         </h4>
                         <div class="space-y-1.5 text-xs font-bold text-slate-600">
                             <div class="flex justify-between">
-                                <span>⭕ 정답자</span>
+                                <span>⭕ 이번 문제 정답자</span>
                                 <span id="stat-correct-count" class="font-black text-emerald-600">0명</span>
                             </div>
                             <div class="flex justify-between">
-                                <span>❌ 오답자</span>
+                                <span>❌ 오답 / 미제출</span>
                                 <span id="stat-wrong-count" class="font-black text-rose-500">0명</span>
+                            </div>
+                            <div class="flex justify-between border-t border-slate-200 pt-1">
+                                <span>💚 현재 생존 학생</span>
+                                <span id="stat-alive-count" class="font-black text-emerald-600">0명</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>👀 탈락 / 관전 학생</span>
+                                <span id="stat-eliminated-count" class="font-black text-slate-500">0명</span>
                             </div>
                             <div class="flex justify-between border-t border-slate-200 pt-1">
                                 <span>정답률</span>
@@ -716,9 +744,13 @@
                     </div>
                 </div>
 
-                <!-- 다음 문제 진행 버튼 -->
-                <div class="pt-2">
-                    <button type="button" id="btn-next-question" onclick="hostNextQuestion()" class="golden-btn max-w-md mx-auto text-base py-3.5 justify-center gap-2">
+                <!-- 패자부활전 & 다음 문제 진행 버튼 그룹 -->
+                <div class="pt-2 flex flex-col md:flex-row items-center justify-center gap-3 max-w-lg mx-auto">
+                    <button type="button" onclick="hostReviveAllPlayers()" class="w-full md:w-auto px-5 py-3.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border-2 border-amber-300 active:scale-95 font-black text-xs md:text-sm rounded-2xl transition shadow-xs flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles text-amber-600"></i>
+                        <span>✨ 패자부활전 실행</span>
+                    </button>
+                    <button type="button" id="btn-next-question" onclick="hostNextQuestion()" class="golden-btn flex-1 text-base py-3.5 justify-center gap-2">
                         <span>다음 문제로 ➔</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -768,18 +800,33 @@
 
                 <!-- 상단 미니 HUD -->
                 <div class="flex justify-between items-center pb-2 border-b border-amber-100">
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-1.5 flex-wrap">
                         <span id="student-q-badge" class="px-2.5 py-1 bg-amber-500 text-white font-black text-xs rounded-lg">
                             Q 01 / 20
                         </span>
                         <span id="student-domain-badge" class="px-2 py-0.5 bg-amber-100 text-amber-800 font-black text-2xs rounded-md">
                             🎧 듣기
                         </span>
+                        <span id="student-spectator-badge" class="hidden px-2 py-0.5 bg-slate-800 text-amber-300 border border-amber-400 font-black text-2xs rounded-md animate-pulse">
+                            👀 관전 모드
+                        </span>
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="text-xs font-black text-slate-500">내 점수: <strong id="student-my-score" class="text-amber-600">0</strong>점</span>
                         <span id="student-timer-text" class="text-sm font-black text-rose-600">30s</span>
                     </div>
+                </div>
+
+                <!-- 관전 모드 전용 알림 배너 -->
+                <div id="student-spectator-banner" class="hidden p-3 bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white rounded-2xl border-2 border-amber-400 shadow-md text-center space-y-1">
+                    <div class="flex items-center justify-center gap-1.5 font-black text-amber-300 text-xs">
+                        <i class="fa-solid fa-eye text-sm"></i>
+                        <span>현재 관전 모드로 참여 중입니다</span>
+                    </div>
+                    <p id="student-spectator-desc" class="text-3xs text-slate-300 font-bold leading-relaxed">
+                        아쉽게 탈락하여 관전 모드로 전환되었습니다. 남은 친구들의 도전을 응원해 주세요!<br>
+                        (문제 지문과 원어민 음성은 계속 함께 학습하실 수 있습니다.)
+                    </p>
                 </div>
 
                 <!-- 문제 요약 지문 -->
@@ -860,6 +907,9 @@
                     <h2 id="student-feedback-title" class="text-2xl font-black text-emerald-700">
                         정답입니다! (+100점)
                     </h2>
+                    <p id="student-feedback-subdesc" class="text-xs text-slate-500 font-bold hidden">
+                        다음 문제부터 관전 모드로 전환됩니다.
+                    </p>
                     <p id="student-bonus-announcement" class="text-xs font-black text-amber-600 hidden bg-amber-50 px-3 py-1 rounded-full border border-amber-300">
                         🥇 대단해요! 반에서 가장 먼저 맞혔습니다! (+50점 보너스!)
                     </p>
@@ -1228,6 +1278,7 @@
         let hofTab = 'all';
         let hofAllScores = [];
         let scoresMap = new Map();
+        let lastSeenRevivalTimestamp = 0;
 
         // ─────────────────────────────────────────────
         // 3. 음향 효과음 제어 (사용자 요청: 띵 소리 및 카운트다운 비프음 제거)
@@ -1666,6 +1717,7 @@
             currentRoomCode = null;
             isHost = false;
             isSoloMode = false;
+            lastSeenRevivalTimestamp = 0;
             window.showScreen('screen-home');
             loadHallOfFame();
         };
@@ -1789,6 +1841,8 @@
                     answered: false,
                     answer: null,
                     submittedAt: 0,
+                    isEliminated: false,
+                    eliminatedAt: null,
                     joinedAt: Date.now()
                 };
 
@@ -1902,6 +1956,13 @@
                 const myScoreEl = document.getElementById('student-my-score');
                 if (myScoreEl) myScoreEl.innerText = me.score || 0;
 
+                // 패자부활전 발생 감지 (탈락했던 학생들에게 희망 알림!)
+                if (data.lastRevivalAt && data.lastRevivalAt > lastSeenRevivalTimestamp) {
+                    lastSeenRevivalTimestamp = data.lastRevivalAt;
+                    confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 } });
+                    if (window.WaurimalAudio) window.WaurimalAudio.play('correct');
+                }
+
                 if (data.status === 'waiting') {
                     dismissReadyCountdown();
                     currentReadyCountdownQIndex = -1;
@@ -1936,17 +1997,24 @@
             const countBadge = document.getElementById('host-sidebar-count-badge');
             const submittedEl = document.getElementById('host-sidebar-submitted');
             const pendingEl = document.getElementById('host-sidebar-pending');
+            const aliveEl = document.getElementById('host-sidebar-alive');
+            const eliminatedEl = document.getElementById('host-sidebar-eliminated');
 
             if (!listEl) return;
 
             const players = Object.values(data.players || {});
             const totalCount = players.length;
-            const submittedCount = players.filter(p => !!p.answered).length;
-            const pendingCount = Math.max(0, totalCount - submittedCount);
+            const alivePlayers = players.filter(p => !p.isEliminated);
+            const aliveCount = alivePlayers.length;
+            const eliminatedCount = totalCount - aliveCount;
+            const submittedCount = alivePlayers.filter(p => !!p.answered).length;
+            const pendingCount = Math.max(0, aliveCount - submittedCount);
 
             if (countBadge) countBadge.innerText = `${totalCount}명 참여`;
-            if (submittedEl) submittedEl.innerText = submittedCount;
-            if (pendingEl) pendingEl.innerText = pendingCount;
+            if (aliveEl) aliveEl.innerText = `${aliveCount}명`;
+            if (eliminatedEl) eliminatedEl.innerText = `${eliminatedCount}명`;
+            if (submittedEl) submittedEl.innerText = `${submittedCount}명`;
+            if (pendingEl) pendingEl.innerText = `${pendingCount}명`;
 
             if (totalCount === 0) {
                 listEl.innerHTML = `
@@ -1958,8 +2026,11 @@
                 return;
             }
 
-            // 점수 내림차순 정렬 (동점 시 제출 빠른 순, 그 다음 이름 가나다순)
+            // 생존자 우선 정렬 (생존자 내 점수순 ➔ 탈락자 내 점수순)
             const sorted = [...players].sort((a, b) => {
+                const aElim = !!a.isEliminated;
+                const bElim = !!b.isEliminated;
+                if (aElim !== bElim) return aElim ? 1 : -1;
                 const scoreDiff = (b.score || 0) - (a.score || 0);
                 if (scoreDiff !== 0) return scoreDiff;
                 if (a.submittedAt && b.submittedAt) return a.submittedAt - b.submittedAt;
@@ -1970,10 +2041,14 @@
 
             listEl.innerHTML = sorted.map((p, idx) => {
                 const rank = idx + 1;
+                const isEliminated = !!p.isEliminated;
                 let rankBadge = '';
                 let rowBg = 'bg-slate-50 border-slate-200/80 hover:bg-slate-100/70';
 
-                if (rank === 1) {
+                if (isEliminated) {
+                    rowBg = 'bg-slate-100/60 border-slate-200/70 opacity-60';
+                    rankBadge = `<span class="w-6 h-6 rounded-full bg-slate-200 text-slate-400 font-black text-2xs flex items-center justify-center flex-shrink-0">✕</span>`;
+                } else if (rank === 1) {
                     rankBadge = `<span class="w-6 h-6 rounded-full bg-amber-400 text-white font-black text-2xs flex items-center justify-center shadow-xs flex-shrink-0">🥇</span>`;
                     rowBg = 'bg-amber-50/80 border-amber-300/80 shadow-2xs';
                 } else if (rank === 2) {
@@ -1986,14 +2061,23 @@
                     rankBadge = `<span class="w-6 h-6 rounded-full bg-slate-200 text-slate-600 font-black text-2xs flex items-center justify-center flex-shrink-0">${rank}</span>`;
                 }
 
-                const isAnswered = !!p.answered;
-                const statusBadge = isAnswered
-                    ? `<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-100 text-emerald-700 font-black text-3xs rounded-full border border-emerald-300 flex-shrink-0">
-                         <i class="fa-solid fa-check text-3xs"></i>제출
-                       </span>`
-                    : `<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-100/80 text-amber-800 font-black text-3xs rounded-full border border-amber-300 animate-pulse flex-shrink-0">
-                         <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>풀이중
-                       </span>`;
+                let statusBadge = '';
+                if (isEliminated) {
+                    statusBadge = `
+                        <span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-slate-200 text-slate-600 font-extrabold text-3xs rounded-md flex-shrink-0" title="Q ${p.eliminatedAt || '?'} 탈락">
+                            <i class="fa-solid fa-eye text-3xs text-slate-400"></i>Q${p.eliminatedAt || '?'} 탈락
+                        </span>
+                    `;
+                } else {
+                    const isAnswered = !!p.answered;
+                    statusBadge = isAnswered
+                        ? `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-emerald-100 text-emerald-700 font-black text-3xs rounded-full border border-emerald-300 flex-shrink-0">
+                             <i class="fa-solid fa-check text-3xs"></i>제출
+                           </span>`
+                        : `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-amber-100/80 text-amber-800 font-black text-3xs rounded-full border border-amber-300 animate-pulse flex-shrink-0">
+                             <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>풀이중
+                           </span>`;
+                }
 
                 const bonusTag = (p.firstCount && p.firstCount > 0)
                     ? `<span class="text-3xs text-amber-600 font-black bg-amber-100/80 px-1 py-0.2 rounded">🥇${p.firstCount}</span>`
@@ -2013,14 +2097,45 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2 flex-shrink-0">
+                        <div class="flex items-center gap-1.5 flex-shrink-0">
                             ${statusBadge}
-                            <span class="font-black text-amber-700 text-xs w-14 text-right">${p.score || 0}점</span>
+                            <span class="font-black text-amber-700 text-xs w-12 text-right">${p.score || 0}점</span>
                         </div>
                     </div>
                 `;
             }).join('');
         }
+
+        // ─────────────────────────────────────────────
+        // 9-C. 교사 호스트: 패자부활전 (전원 부활)
+        // ─────────────────────────────────────────────
+        window.hostReviveAllPlayers = async function() {
+            if (!currentRoomCode || !isHost) return;
+            const ok = confirm("✨ 현재 탈락한 모든 학생을 부활시키겠습니까?\n모든 학생이 생존 상태로 복귀하여 다음 문제에 참여할 수 있습니다.");
+            if (!ok) return;
+
+            try {
+                const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
+                const snap = await getDoc(roomRef);
+                if (!snap.exists()) return;
+                const data = snap.data();
+                const updates = {
+                    lastRevivalAt: Date.now(),
+                    revivalCount: (data.revivalCount || 0) + 1
+                };
+                Object.keys(data.players || {}).forEach(pid => {
+                    updates[`players.${pid}.isEliminated`] = false;
+                    updates[`players.${pid}.eliminatedAt`] = null;
+                });
+                await updateDoc(roomRef, updates);
+                playGoldenBellChime();
+                confetti({ particleCount: 150, spread: 80, origin: { y: 0.5 } });
+                alert("✨ 패자부활전이 성공적으로 진행되었습니다!\n모든 학생이 다시 살아났습니다!");
+            } catch(e) {
+                console.error("Revive all players error:", e);
+                alert("패자부활전 실패: " + e.message);
+            }
+        };
 
         // ─────────────────────────────────────────────
         // 10. 교사 호스트: 인게임 제어 & 타이머
@@ -2029,7 +2144,7 @@
             if (!currentRoomCode || !isHost) return;
             const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
 
-            // 학생 답변 상태 초기화
+            // 학생 답변 상태 및 탈락 여부 전원 초기화
             const snap = await getDoc(roomRef);
             const data = snap.data();
             const resetPlayers = {};
@@ -2039,6 +2154,8 @@
                 resetPlayers[`players.${pid}.submittedAt`] = 0;
                 resetPlayers[`players.${pid}.isCorrect`] = false;
                 resetPlayers[`players.${pid}.bonus`] = 0;
+                resetPlayers[`players.${pid}.isEliminated`] = false;
+                resetPlayers[`players.${pid}.eliminatedAt`] = null;
             });
 
             await updateDoc(roomRef, {
@@ -2152,7 +2269,7 @@
             window.showScreen('screen-host-game');
         }
 
-        // 호스트: 정답 공개 및 채점 (선착순 보너스 계산)
+        // 호스트: 정답 공개 및 채점 (탈락 판정 및 선착순 보너스 계산)
         window.hostForceReveal = async function() {
             if (typeof window.stopCurrentQuestionAudio === 'function') {
                 window.stopCurrentQuestionAudio();
@@ -2176,21 +2293,30 @@
             const playerUpdates = {};
 
             const correctSolvers = [];
+            let previouslyEliminatedCount = 0;
 
             Object.entries(players).forEach(([pid, p]) => {
+                // 이미 탈락한 학생은 이번 문제에서 점수 가산 없이 탈락 유지
+                if (p.isEliminated) {
+                    previouslyEliminatedCount++;
+                    playerUpdates[`players.${pid}.isCorrect`] = false;
+                    playerUpdates[`players.${pid}.bonus`] = 0;
+                    return;
+                }
+
                 const ans = String(p.answer || '').trim().toLowerCase();
                 let isRight = false;
 
-                if (q.type === 'listening_choice' || q.type === 'reading_choice') {
-                    // 보기 텍스트 또는 인덱스 일치 여부
-                    isRight = (ans === correctTarget) || (String(p.answer) === String(q.correctAnswer));
-                } else if (q.type === 'writing_text') {
-                    isRight = (ans === correctTarget);
-                } else if (q.type === 'writing_scramble') {
-                    // 공백/특수문자 정규화 비교 (단어 칩과 문장부호 공백 자동 보정)
-                    const normAns = ans.replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
-                    const normTarget = correctTarget.replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
-                    isRight = (normAns === normTarget);
+                if (p.answered) {
+                    if (q.type === 'listening_choice' || q.type === 'reading_choice') {
+                        isRight = (ans === correctTarget) || (String(p.answer) === String(q.correctAnswer));
+                    } else if (q.type === 'writing_text') {
+                        isRight = (ans === correctTarget);
+                    } else if (q.type === 'writing_scramble') {
+                        const normAns = ans.replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
+                        const normTarget = correctTarget.replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
+                        isRight = (normAns === normTarget);
+                    }
                 }
 
                 if (isRight) {
@@ -2202,13 +2328,17 @@
                         correctCount: (p.correctCount || 0) + 1,
                         firstCount: p.firstCount || 0
                     });
+                    playerUpdates[`players.${pid}.isEliminated`] = false;
                 } else {
+                    // 💥 오답 또는 미제출로 인한 서바이벌 탈락!
                     playerUpdates[`players.${pid}.isCorrect`] = false;
                     playerUpdates[`players.${pid}.bonus`] = 0;
+                    playerUpdates[`players.${pid}.isEliminated`] = true;
+                    playerUpdates[`players.${pid}.eliminatedAt`] = (data.currentQIndex || 0) + 1;
                 }
             });
 
-            // 🥇 선착순 1등 정답자 선발 (가장 먼저 맞힌 사람)
+            // 🥇 선착순 1등 정답자 선발 (생존자 중 가장 먼저 맞힌 사람)
             let firstSolver = null;
             if (correctSolvers.length > 0) {
                 // 제출 시각 오름차순 정렬
@@ -2240,6 +2370,10 @@
                 }
             }
 
+            const totalPlayerCount = Object.keys(players).length;
+            const aliveCount = correctSolvers.length;
+            const eliminatedCount = totalPlayerCount - aliveCount;
+
             await updateDoc(roomRef, {
                 status: 'revealed',
                 firstSolver: firstSolver,
@@ -2247,7 +2381,9 @@
                     correctAnswer: q.correctAnswer,
                     explanation: q.explanation || "",
                     correctCount: correctSolvers.length,
-                    totalCount: Object.keys(players).length
+                    totalCount: totalPlayerCount,
+                    aliveCount: aliveCount,
+                    eliminatedCount: eliminatedCount
                 },
                 ...playerUpdates
             });
@@ -2279,10 +2415,16 @@
             const corr = rev.correctCount || 0;
             const total = rev.totalCount || players.length;
             const wrong = Math.max(0, total - corr);
+            const alive = (rev.aliveCount != null) ? rev.aliveCount : players.filter(p => !p.isEliminated).length;
+            const elim = (rev.eliminatedCount != null) ? rev.eliminatedCount : (total - alive);
             const acc = total > 0 ? Math.round((corr / total) * 100) : 0;
 
             document.getElementById('stat-correct-count').innerText = `${corr}명`;
             document.getElementById('stat-wrong-count').innerText = `${wrong}명`;
+            const aliveStatEl = document.getElementById('stat-alive-count');
+            const elimStatEl = document.getElementById('stat-eliminated-count');
+            if (aliveStatEl) aliveStatEl.innerText = `${alive}명`;
+            if (elimStatEl) elimStatEl.innerText = `${elim}명`;
             document.getElementById('stat-accuracy').innerText = `${acc}%`;
 
             // TOP 5 실시간 순위
@@ -2364,6 +2506,23 @@
             const q = currentQuestions[data.currentQIndex || 0];
             if (!q) return;
 
+            const isSpectator = !!me.isEliminated;
+            const specBadge = document.getElementById('student-spectator-badge');
+            const specBanner = document.getElementById('student-spectator-banner');
+            const specDesc = document.getElementById('student-spectator-desc');
+
+            if (isSpectator) {
+                if (specBadge) specBadge.classList.remove('hidden');
+                if (specBanner) specBanner.classList.remove('hidden');
+                if (specDesc) {
+                    const elimQ = me.eliminatedAt || (data.currentQIndex + 1);
+                    specDesc.innerHTML = `Q <strong class="text-amber-300 font-black">${elimQ}</strong>에서 탈락하여 관전 모드입니다. 남은 친구들의 도전을 응원해 주세요!<br><span class="text-slate-400 font-semibold">(문제 지문과 원어민 음성은 계속 학습할 수 있습니다.)</span>`;
+                }
+            } else {
+                if (specBadge) specBadge.classList.add('hidden');
+                if (specBanner) specBanner.classList.add('hidden');
+            }
+
             document.getElementById('student-q-badge').innerText = `Q ${String((data.currentQIndex || 0) + 1).padStart(2, '0')} / 20`;
             document.getElementById('student-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain}`;
             document.getElementById('student-question-text').innerText = cleanQuestionText(q.question, q.subtext);
@@ -2414,8 +2573,12 @@
                     }, 1000);
                 }
 
-                // 내가 이미 제출했는지 확인
-                if (me.answered) {
+                // 내가 이미 제출했는지 또는 관전 모드인지 확인
+                if (isSpectator) {
+                    hasSubmittedAnswer = true;
+                    overlay.classList.add('hidden');
+                    submitBtn.classList.add('hidden');
+                } else if (me.answered) {
                     hasSubmittedAnswer = true;
                     overlay.classList.remove('hidden');
                     submitBtn.classList.add('hidden');
@@ -2430,6 +2593,16 @@
             const choiceCont = document.getElementById('student-choices-container');
             const scrambleCont = document.getElementById('student-scramble-container');
             const textCont = document.getElementById('student-text-container');
+
+            // 관전 모드일 경우 모든 입력 컨트롤 상호작용 차단
+            [choiceCont, scrambleCont, textCont].forEach(cont => {
+                if (!cont) return;
+                if (isSpectator) {
+                    cont.classList.add('pointer-events-none', 'opacity-50', 'select-none');
+                } else {
+                    cont.classList.remove('pointer-events-none', 'opacity-50', 'select-none');
+                }
+            });
 
             if (q.type === 'listening_choice' || q.type === 'reading_choice') {
                 choiceCont.classList.remove('hidden');
@@ -2576,27 +2749,58 @@
 
         function renderStudentRevealScreen(data, me) {
             const q = currentQuestions[data.currentQIndex || 0];
-            const isRight = me.isCorrect;
+            const isRight = !!me.isCorrect;
             const gotBonus = (me.bonus && me.bonus > 0);
+            const isEliminated = !!me.isEliminated;
+            const eliminatedThisRound = isEliminated && (me.eliminatedAt === ((data.currentQIndex || 0) + 1));
 
             const iconEl = document.getElementById('student-feedback-icon');
             const titleEl = document.getElementById('student-feedback-title');
             const bonusAnnounce = document.getElementById('student-bonus-announcement');
+            const subdescEl = document.getElementById('student-feedback-subdesc');
 
             if (isRight) {
                 iconEl.innerText = "🎉";
                 titleEl.innerText = "정답입니다! (+100점)";
                 titleEl.className = "text-2xl font-black text-emerald-700";
+                if (subdescEl) {
+                    subdescEl.innerText = "생존 성공! 💚 다음 문제에 계속 도전합니다!";
+                    subdescEl.className = "text-xs font-black text-emerald-600 block";
+                    subdescEl.classList.remove('hidden');
+                }
                 if (gotBonus) {
                     bonusAnnounce.classList.remove('hidden');
                     bonusAnnounce.innerText = "🥇 대단해요! 반에서 가장 먼저 맞혔습니다! (선착순 보너스 +50점 추가!)";
                 } else {
                     bonusAnnounce.classList.add('hidden');
                 }
+            } else if (eliminatedThisRound) {
+                // 이번 문제에서 오답으로 탈락한 경우
+                iconEl.innerText = "😢";
+                titleEl.innerText = "아쉽네요! 탈락했습니다.";
+                titleEl.className = "text-2xl font-black text-rose-600";
+                if (subdescEl) {
+                    subdescEl.innerText = "오답으로 인해 탈락하였습니다. 다음 문제부터 관전 모드로 전환됩니다. 👀";
+                    subdescEl.className = "text-xs font-black text-rose-600 block";
+                    subdescEl.classList.remove('hidden');
+                }
+                bonusAnnounce.classList.add('hidden');
+            } else if (isEliminated) {
+                // 이전 문제에서 이미 탈락한 경우
+                iconEl.innerText = "👀";
+                titleEl.innerText = "관전 모드 진행 중";
+                titleEl.className = "text-2xl font-black text-slate-700";
+                if (subdescEl) {
+                    subdescEl.innerText = "정답을 확인하며 다음 문제를 함께 관전하세요.";
+                    subdescEl.className = "text-xs font-bold text-slate-500 block";
+                    subdescEl.classList.remove('hidden');
+                }
+                bonusAnnounce.classList.add('hidden');
             } else {
                 iconEl.innerText = "😢";
                 titleEl.innerText = "아쉽네요! 오답입니다.";
                 titleEl.className = "text-2xl font-black text-rose-600";
+                if (subdescEl) subdescEl.classList.add('hidden');
                 bonusAnnounce.classList.add('hidden');
             }
 
@@ -2904,7 +3108,7 @@
                 if (window.WaurimalAudio) window.WaurimalAudio.play('correct');
             } else {
                 feedback.className = "p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-xl text-center font-bold text-xs";
-                feedback.innerHTML = `❌ 오답! 정답은 <strong>${q.correctAnswer}</strong> 입니다.<br><span class="text-2xs font-medium text-slate-600">${q.explanation || ''}</span>`;
+                feedback.innerHTML = `❌ 아쉽네요! 오답으로 골든벨 도전이 종료되었습니다.<br>정답은 <strong>${q.correctAnswer}</strong> 입니다.<br><span class="text-2xs font-medium text-slate-600">${q.explanation || ''}</span>`;
                 if (window.WaurimalAudio) window.WaurimalAudio.play('wrong');
             }
 
@@ -2912,6 +3116,12 @@
             document.getElementById('btn-solo-submit').classList.add('hidden');
 
             setTimeout(() => {
+                // 서바이벌 탈락 룰: 오답 시 즉시 도전 종료
+                if (!isRight) {
+                    finishSoloChallenge(true);
+                    return;
+                }
+
                 currentQIndex++;
                 if (currentQIndex < 20) {
                     const fb = document.getElementById('solo-feedback-box');
@@ -2920,37 +3130,45 @@
                         loadSoloQuestion();
                     });
                 } else {
-                    finishSoloChallenge();
+                    finishSoloChallenge(false);
                 }
             }, 2300);
         };
 
-        async function finishSoloChallenge() {
+        async function finishSoloChallenge(isEliminated = false) {
             playGoldenBellChime();
-            confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 } });
-
-            // 명예의 전당 저장
-            try {
-                const record = {
-                    name: myProfile.name || "학생",
-                    maskedName: window.WaurimalMask ? window.WaurimalMask.maskStudentName(myProfile.name) : myProfile.name,
-                    grade: String(myProfile.grade || '6'),
-                    classNum: String(myProfile.classNum || '1'),
-                    studentNum: String(myProfile.studentNum || '1'),
-                    score: soloScore,
-                    correctCount: Math.min(20, Math.floor(soloScore / 100)),
-                    firstCount: soloFirstBonusCount,
-                    unit: "1인 골든벨 챌린지",
-                    mode: "1인 도전",
-                    timestamp: Date.now()
-                };
-                await addDoc(collection(db, SCORES_COLLECTION), record);
-            } catch(e) {
-                console.warn("Solo score save error:", e);
+            if (!isEliminated) {
+                confetti({ particleCount: 150, spread: 90, origin: { y: 0.5 } });
             }
 
-            saveScoresToLocalCache();
-            alert(`🎉 20문제 완주! 최종 점수: ${soloScore}점! 명예의 전당에 등록되었습니다.`);
+            // 명예의 전당 저장 (점수가 있는 경우)
+            if (soloScore > 0) {
+                try {
+                    const record = {
+                        name: myProfile.name || "학생",
+                        maskedName: window.WaurimalMask ? window.WaurimalMask.maskStudentName(myProfile.name) : myProfile.name,
+                        grade: String(myProfile.grade || '6'),
+                        classNum: String(myProfile.classNum || '1'),
+                        studentNum: String(myProfile.studentNum || '1'),
+                        score: soloScore,
+                        correctCount: Math.min(20, Math.floor(soloScore / 100)),
+                        firstCount: soloFirstBonusCount,
+                        unit: "1인 골든벨 챌린지",
+                        mode: "1인 도전",
+                        timestamp: Date.now()
+                    };
+                    await addDoc(collection(db, SCORES_COLLECTION), record);
+                } catch(e) {
+                    console.warn("Solo score save error:", e);
+                }
+                saveScoresToLocalCache();
+            }
+
+            if (isEliminated) {
+                alert(`🔔 아쉽게 탈락했습니다! (Q ${currentQIndex + 1}에서 탈락)\n최종 점수: ${soloScore}점! 다음번에 골든벨을 울려보세요!`);
+            } else {
+                alert(`🎉 20문제 완주 골든벨 달성! 최종 점수: ${soloScore}점! 명예의 전당에 등록되었습니다.`);
+            }
             exitToHome();
         }
 
