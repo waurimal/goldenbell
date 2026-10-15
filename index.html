@@ -1331,10 +1331,22 @@
             return preferredKo;
         }
 
-        // 문제 지문 앞의 불필요한 [듣기 · 1단원], [읽기] 등 대괄호 제시어 제거 헬퍼
-        function cleanQuestionText(text) {
+        // 문제 지문 앞의 불필요한 [듣기 · 1단원], [읽기] 등 대괄호 제시어 제거 및 본문 지문 중복 제거 헬퍼
+        function cleanQuestionText(text, subtext) {
             if (!text) return '';
-            return String(text).replace(/^\[[^\]]+\]\s*/, '').trim();
+            let cleaned = String(text).replace(/^\[[^\]]+\]\s*/, '').trim();
+            if (cleaned.includes('다음 글을 읽고 물음에 답하세요') || subtext) {
+                const qParts = cleaned.split(/질문:\s*/);
+                if (qParts.length > 1) {
+                    cleaned = qParts[qParts.length - 1].trim();
+                } else {
+                    cleaned = cleaned.replace(/다음 글을 읽고 물음에 답하세요\.?[\s\n]*/g, '')
+                                     .replace(/["“][^"”]+["”][\s\n]*/g, '')
+                                     .replace(/^질문:\s*/, '')
+                                     .trim();
+                }
+            }
+            return cleaned.replace(/위 대화문을 읽고,?\s*질문에 알맞은 답을 고르세요\.?[\s\n]*/g, '').trim();
         }
 
         let activeDialogueSessionId = 0;
@@ -2048,7 +2060,7 @@
             document.getElementById('host-q-badge').innerText = `Q ${String(currentQIndex + 1).padStart(2, '0')} / 20`;
             document.getElementById('host-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain} 영역`;
             document.getElementById('host-difficulty-badge').innerText = q.difficulty || '★★☆';
-            document.getElementById('host-question-text').innerText = cleanQuestionText(q.question);
+            document.getElementById('host-question-text').innerText = cleanQuestionText(q.question, q.subtext);
 
             // 오디오 컨트롤
             const audioCont = document.getElementById('host-audio-container');
@@ -2354,7 +2366,7 @@
 
             document.getElementById('student-q-badge').innerText = `Q ${String((data.currentQIndex || 0) + 1).padStart(2, '0')} / 20`;
             document.getElementById('student-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain}`;
-            document.getElementById('student-question-text').innerText = cleanQuestionText(q.question);
+            document.getElementById('student-question-text').innerText = cleanQuestionText(q.question, q.subtext);
 
             // 서브 텍스트
             const subBox = document.getElementById('student-subtext-box');
@@ -2722,7 +2734,7 @@
 
             document.getElementById('solo-q-badge').innerText = `Q ${String(currentQIndex + 1).padStart(2, '0')} / 20`;
             document.getElementById('solo-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain}`;
-            document.getElementById('solo-question-text').innerText = cleanQuestionText(q.question);
+            document.getElementById('solo-question-text').innerText = cleanQuestionText(q.question, q.subtext);
             document.getElementById('solo-timer-text').innerText = `${remainingSeconds}s`;
 
             const audioCont = document.getElementById('solo-audio-container');
@@ -2937,14 +2949,57 @@
                 console.warn("Solo score save error:", e);
             }
 
+            saveScoresToLocalCache();
             alert(`🎉 20문제 완주! 최종 점수: ${soloScore}점! 명예의 전당에 등록되었습니다.`);
             exitToHome();
         }
 
         // ─────────────────────────────────────────────
-        // 14. 실시간 명예의 전당 (표준 1224 순위제 & 2중 리스너)
+        // 14. 실시간 명예의 전당 (표준 1224 순위제 & 2중 캐시 & 2중 리스너)
         // ─────────────────────────────────────────────
+        const LOCAL_HOF_CACHE_KEY = 'waurimal_goldenbell_scores';
+
+        function loadScoresFromLocalCache() {
+            try {
+                const cached = localStorage.getItem(LOCAL_HOF_CACHE_KEY);
+                if (cached) {
+                    const list = JSON.parse(cached);
+                    if (Array.isArray(list)) {
+                        list.forEach(item => {
+                            if (item && item.id) scoresMap.set(item.id, item);
+                        });
+                    }
+                }
+            } catch(e) {
+                console.warn("Local HOF cache load error:", e);
+            }
+        }
+
+        function saveScoresToLocalCache() {
+            try {
+                const arr = Array.from(scoresMap.values()).slice(0, 100);
+                localStorage.setItem(LOCAL_HOF_CACHE_KEY, JSON.stringify(arr));
+            } catch(e) {}
+        }
+
+        window.loadHallOfFame = function() {
+            renderHallOfFame();
+        };
+
+        let isHofListening = false;
         function listenToHallOfFame() {
+            // 1차: 0ms 무지연 로컬 캐시 즉시 렌더링
+            loadScoresFromLocalCache();
+            renderHallOfFame();
+
+            // 2차: 안전 타이머 (800ms 내에 리스너 응답이 없거나 0건이어도 로딩 스피너를 안내문으로 즉시 해제)
+            setTimeout(() => {
+                renderHallOfFame();
+            }, 800);
+
+            if (isHofListening) return;
+            isHofListening = true;
+
             try {
                 // 1) 최근 기록 300건 리스너
                 const qRecent = query(collection(db, SCORES_COLLECTION), orderBy("timestamp", "desc"), limit(300));
@@ -2952,9 +3007,13 @@
                     snap.forEach(docSnap => {
                         scoresMap.set(docSnap.id, { id: docSnap.id, ...docSnap.data() });
                     });
+                    saveScoresToLocalCache();
                     renderHallOfFame();
                     renderTeacherScoresTable();
-                }, (err) => console.warn("Hof recent error:", err));
+                }, (err) => {
+                    console.warn("Hof recent error:", err);
+                    renderHallOfFame();
+                });
 
                 // 2) 역대 최고점 150건 리스너
                 const qTop = query(collection(db, SCORES_COLLECTION), orderBy("score", "desc"), limit(150));
@@ -2962,11 +3021,16 @@
                     snap.forEach(docSnap => {
                         scoresMap.set(docSnap.id, { id: docSnap.id, ...docSnap.data() });
                     });
+                    saveScoresToLocalCache();
                     renderHallOfFame();
                     renderTeacherScoresTable();
-                }, (err) => console.warn("Hof top error:", err));
+                }, (err) => {
+                    console.warn("Hof top error:", err);
+                    renderHallOfFame();
+                });
             } catch (e) {
                 console.warn("HOF listener init error:", e);
+                renderHallOfFame();
             }
         }
 
@@ -3237,7 +3301,7 @@
                         <span class="font-black text-amber-800">Q${q.id} [${q.domain}] ${q.difficulty}</span>
                         <span class="text-emerald-700 font-bold">정답: ${q.correctAnswer}</span>
                     </div>
-                    <div class="text-slate-800 font-bold">${q.question}</div>
+                    <div class="text-slate-800 font-bold">${cleanQuestionText(q.question, q.subtext)}</div>
                     ${q.subtext ? `<div class="text-slate-500 font-medium">${q.subtext}</div>` : ''}
                 </div>
             `).join('');
@@ -3271,11 +3335,19 @@
         // ─────────────────────────────────────────────
         // 16. 초기 기동
         // ─────────────────────────────────────────────
-        window.addEventListener('DOMContentLoaded', () => {
+        function initGoldenBellApp() {
             initProfile();
+            loadScoresFromLocalCache();
+            renderHallOfFame();
             listenToHallOfFame();
             window.showScreen('screen-home');
-        });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initGoldenBellApp);
+        } else {
+            initGoldenBellApp();
+        }
 
     </script>
 </body>

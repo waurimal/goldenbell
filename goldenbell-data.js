@@ -653,7 +653,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. My classroom is on the third floor. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. My classroom is on the third floor. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "내 교실은 3층에 있어.",
@@ -671,7 +671,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. She won first place in the English contest. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. She won first place in the English contest. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -689,7 +689,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. Welcome to our elementary school. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. Welcome to our elementary school. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리 초등학교에 온 것을 환영해.",
           "친구와 다투어서 기분이 슬프다.",
@@ -707,7 +707,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. He is in the fifth grade this year. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. He is in the fifth grade this year. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -725,7 +725,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. Can you spell the word student? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. Can you spell the word student? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "단어의 철자를 말해 달라고 부탁하고 있다.",
           "좋아하는 계절이 언제인지 묻고 있다.",
@@ -743,7 +743,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. We are the oldest sixth grade students. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. We are the oldest sixth grade students. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리는 학교에서 가장 맏형인 6학년이야.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -761,7 +761,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. The music room is on the second floor. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. The music room is on the second floor. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -779,7 +779,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. How do you spell Linh Phan? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. How do you spell Linh Phan? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "학교 도서관이 어디 있는지 길을 묻고 있다.",
           "친구 이름의 철자를 어떻게 쓰는지 묻고 있다.",
@@ -797,7 +797,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. My sister is in the first grade. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. My sister is in the first grade. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "내 여동생은 1학년에 다니고 있어.",
           "숙제가 너무 어려워서 고민이다.",
@@ -815,7 +815,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. Who is the second runner in line? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. Who is the second runner in line? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "줄에서 두 번째 주자는 누구니?",
@@ -833,7 +833,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. Please write your name and grade here. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. Please write your name and grade here. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "여기에 너의 이름과 학년을 적어주렴.",
@@ -851,7 +851,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. I am proud to be in the sixth grade. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. I am proud to be in the sixth grade. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -869,7 +869,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. What grade are you in? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. What grade are you in? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "너는 몇 학년이니?",
@@ -887,7 +887,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. I am in the sixth grade. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. I am in the sixth grade. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "나는 6학년이야.",
@@ -905,7 +905,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. How do you spell your name? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. How do you spell your name? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "너의 이름 철자가 어떻게 되니?",
           "숙제가 너무 어려워서 고민이다.",
@@ -923,7 +923,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Is your little brother in the first grade? And the response was: \"Yes, he is in the first grade.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Is your little brother in the first grade? And the response was: \"Yes, he is in the first grade.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 남동생의 학년으로 알맞은 것은?",
+        "question": "남동생의 학년으로 알맞은 것은?",
         "options": [
           "1학년",
           "4학년",
@@ -941,7 +941,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What grade is your sister in? And the response was: \"She is in the third grade.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What grade is your sister in? And the response was: \"She is in the third grade.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 여동생의 학년으로 알맞은 것은?",
+        "question": "여동생의 학년으로 알맞은 것은?",
         "options": [
           "4학년",
           "2학년",
@@ -959,7 +959,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Are the second grade students in the gym? And the response was: \"Yes, they are having gym class.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Are the second grade students in the gym? And the response was: \"Yes, they are having gym class.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 체육관에 있는 학생들의 학년은?",
+        "question": "체육관에 있는 학생들의 학년은?",
         "options": [
           "2학년",
           "1학년",
@@ -977,7 +977,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How do you spell your name, Kevin? And the response was: \"It is K-E-V-I-N.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How do you spell your name, Kevin? And the response was: \"It is K-E-V-I-N.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Kevin의 이름 철자로 알맞은 것은?",
+        "question": "Kevin의 이름 철자로 알맞은 것은?",
         "options": [
           "K-E-L-V-I-N",
           "K-A-V-I-N",
@@ -995,7 +995,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Can you spell your last name, Brown? And the response was: \"Sure, B-R-O-W-N.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you spell your last name, Brown? And the response was: \"Sure, B-R-O-W-N.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 성의 철자로 알맞은 것은?",
+        "question": "성의 철자로 알맞은 것은?",
         "options": [
           "B-R-O-U-N",
           "B-L-O-W-N",
@@ -1013,7 +1013,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How do you spell Linh Phan? And the response was: \"L-I-N-H P-H-A-N.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How do you spell Linh Phan? And the response was: \"L-I-N-H P-H-A-N.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 대화에서 언급된 이름의 철자는?",
+        "question": "대화에서 언급된 이름의 철자는?",
         "options": [
           "L-I-N-H F-A-N",
           "L-I-N-H P-H-A-N",
@@ -1031,7 +1031,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Where is the sixth grade classroom? And the response was: \"It is on the fourth floor.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Where is the sixth grade classroom? And the response was: \"It is on the fourth floor.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 6학년 교실의 위치는 몇 층인가요?",
+        "question": "6학년 교실의 위치는 몇 층인가요?",
         "options": [
           "4층",
           "1층",
@@ -1049,7 +1049,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Who won first place in the speech contest? And the response was: \"Minsoo won first place!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Who won first place in the speech contest? And the response was: \"Minsoo won first place!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 말하기 대회에서 1등을 한 사람은?",
+        "question": "말하기 대회에서 1등을 한 사람은?",
         "options": [
           "Minsoo",
           "Sarah",
@@ -1067,7 +1067,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Welcome to our school club! Please spell your name. And the response was: \"My name is Amy, A-M-Y.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Welcome to our school club! Please spell your name. And the response was: \"My name is Amy, A-M-Y.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 새로 가입한 학생의 이름 철자는?",
+        "question": "새로 가입한 학생의 이름 철자는?",
         "options": [
           "A-M-Y",
           "A-I-M-Y",
@@ -1085,7 +1085,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Hello! What grade are you in? And the response was: \"I am in the sixth grade.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Hello! What grade are you in? And the response was: \"I am in the sixth grade.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 학년으로 알맞은 것은?",
+        "question": "B의 학년으로 알맞은 것은?",
         "options": [
           "3학년",
           "6학년",
@@ -1103,7 +1103,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'student' is a new word in 1단원. In Korean, it means '학생'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'student' is a new word in 1단원. In Korean, it means '학생'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'student'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'student'의 뜻은?",
         "options": [
           "첫 번째의",
           "학생",
@@ -1121,7 +1121,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'place' is a new word in 1단원. In Korean, it means '등수, 장소'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'place' is a new word in 1단원. In Korean, it means '등수, 장소'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'place'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'place'의 뜻은?",
         "options": [
           "등수, 장소",
           "두 번째의",
@@ -1139,7 +1139,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'number' is a new word in 1단원. In Korean, it means '번호, 숫자'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'number' is a new word in 1단원. In Korean, it means '번호, 숫자'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'number'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'number'의 뜻은?",
         "options": [
           "번호, 숫자",
           "두 번째의",
@@ -1157,7 +1157,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'first' is a new word in 1단원. In Korean, it means '첫 번째의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'first' is a new word in 1단원. In Korean, it means '첫 번째의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'first'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'first'의 뜻은?",
         "options": [
           "두 번째의",
           "세 번째의",
@@ -1175,7 +1175,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'second' is a new word in 1단원. In Korean, it means '두 번째의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'second' is a new word in 1단원. In Korean, it means '두 번째의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'second'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'second'의 뜻은?",
         "options": [
           "세 번째의",
           "네 번째의",
@@ -1193,7 +1193,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'third' is a new word in 1단원. In Korean, it means '세 번째의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'third' is a new word in 1단원. In Korean, it means '세 번째의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'third'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'third'의 뜻은?",
         "options": [
           "세 번째의",
           "첫 번째의",
@@ -1211,7 +1211,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'fourth' is a new word in 1단원. In Korean, it means '네 번째의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'fourth' is a new word in 1단원. In Korean, it means '네 번째의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'fourth'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'fourth'의 뜻은?",
         "options": [
           "세 번째의",
           "두 번째의",
@@ -1229,7 +1229,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'fifth' is a new word in 1단원. In Korean, it means '다섯 번째의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'fifth' is a new word in 1단원. In Korean, it means '다섯 번째의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'fifth'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'fifth'의 뜻은?",
         "options": [
           "다섯 번째의",
           "첫 번째의",
@@ -1247,7 +1247,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'sixth' is a new word in 1단원. In Korean, it means '여섯 번째의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'sixth' is a new word in 1단원. In Korean, it means '여섯 번째의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'sixth'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'sixth'의 뜻은?",
         "options": [
           "여섯 번째의",
           "첫 번째의",
@@ -1265,7 +1265,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'grade' is a new word in 1단원. In Korean, it means '학년'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'grade' is a new word in 1단원. In Korean, it means '학년'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'grade'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'grade'의 뜻은?",
         "options": [
           "세 번째의",
           "학년",
@@ -2353,7 +2353,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. Good job! You did very well. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. Good job! You did very well. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "잘했어! 아주 잘 해냈구나.",
           "숙제가 너무 어려워서 고민이다.",
@@ -2371,7 +2371,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. I like summer because I can swim. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. I like summer because I can swim. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "수영할 수 있어서 여름이 좋아.",
           "숙제가 너무 어려워서 고민이다.",
@@ -2389,7 +2389,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. Fall is my favorite season. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. Fall is my favorite season. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "가을은 내가 가장 좋아하는 계절이야.",
@@ -2407,7 +2407,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. We can make a snowman in winter. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. We can make a snowman in winter. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -2425,7 +2425,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. The weather is cool and breezy today. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. The weather is cool and breezy today. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -2443,7 +2443,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. I like seeing colorful autumn leaves. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. I like seeing colorful autumn leaves. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "알록달록한 가을 단풍잎 보는 것을 좋아해.",
@@ -2461,7 +2461,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. Why do you like winter so much? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. Why do you like winter so much? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -2479,7 +2479,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. Because I love skiing on the white snow. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. Because I love skiing on the white snow. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -2497,7 +2497,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. Spring brings green grass and warm sunshine. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. Spring brings green grass and warm sunshine. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "봄은 초록 풀밭과 따뜻한 햇살을 가져와.",
@@ -2515,7 +2515,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. Good job on your beautiful drawing! I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. Good job on your beautiful drawing! I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -2533,7 +2533,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. Summer is hot, but we can eat sweet watermelon. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. Summer is hot, but we can eat sweet watermelon. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "여름은 덥지만 달콤한 수박을 먹을 수 있어.",
           "숙제가 너무 어려워서 고민이다.",
@@ -2551,7 +2551,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Which season has the best weather for you? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Which season has the best weather for you? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -2569,7 +2569,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. What season do you like? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. What season do you like? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -2587,7 +2587,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. I like spring because it is warm. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. I like spring because it is warm. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "따뜻해서 봄을 좋아해.",
           "숙제가 너무 어려워서 고민이다.",
@@ -2605,7 +2605,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. I can see beautiful flowers. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. I can see beautiful flowers. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "아름다운 꽃들을 볼 수 있어.",
@@ -2623,7 +2623,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What season do you like? And the response was: \"I like summer because I can swim in the cool sea.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What season do you like? And the response was: \"I like summer because I can swim in the cool sea.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 좋아하는 계절과 활동은?",
+        "question": "B가 좋아하는 계절과 활동은?",
         "options": [
           "가을 (등산하기)",
           "겨울 (스키 타기)",
@@ -2641,7 +2641,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you like fall? And the response was: \"Yes, fall is cool and breezy. I like red and yellow leaves.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you like fall? And the response was: \"Yes, fall is cool and breezy. I like red and yellow leaves.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 가을을 좋아하는 이유로 알맞은 것은?",
+        "question": "B가 가을을 좋아하는 이유로 알맞은 것은?",
         "options": [
           "시원하고 알록달록한 단풍잎을 볼 수 있어서",
           "따뜻하고 비가 자주 와서",
@@ -2659,7 +2659,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What season do you like the most? And the response was: \"I like winter because I can make a big snowman.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What season do you like the most? And the response was: \"I like winter because I can make a big snowman.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 가장 좋아하는 계절은?",
+        "question": "B가 가장 좋아하는 계절은?",
         "options": [
           "가을",
           "여름",
@@ -2677,7 +2677,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at my flower drawing! And the response was: \"Good job! It is really colorful and pretty.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at my flower drawing! And the response was: \"Good job! It is really colorful and pretty.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 상대방에게 건넨 칭찬의 말은?",
+        "question": "B가 상대방에게 건넨 칭찬의 말은?",
         "options": [
           "Cheer up! (기운 내!)",
           "Watch out! (조심해!)",
@@ -2695,7 +2695,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How is the weather today? And the response was: \"It is warm and sunny.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How is the weather today? And the response was: \"It is warm and sunny.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 오늘의 날씨 묘사로 알맞은 것은?",
+        "question": "오늘의 날씨 묘사로 알맞은 것은?",
         "options": [
           "따뜻하고 화창함",
           "춥고 눈이 내림",
@@ -2713,7 +2713,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: I love autumn picnics. And the response was: \"Good job preparing this delicious lunch!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: I love autumn picnics. And the response was: \"Good job preparing this delicious lunch!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 칭찬한 내용은?",
+        "question": "B가 칭찬한 내용은?",
         "options": [
           "자전거를 빨리 탄 것",
           "맛있는 점심을 준비한 것",
@@ -2731,7 +2731,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What season do you like, Minsoo? And the response was: \"I like spring. I can see beautiful flowers.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What season do you like, Minsoo? And the response was: \"I like spring. I can see beautiful flowers.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Minsoo가 좋아하는 계절과 그 이유는?",
+        "question": "Minsoo가 좋아하는 계절과 그 이유는?",
         "options": [
           "겨울 (눈사람을 만들 수 있어서)",
           "봄 (아름다운 꽃을 볼 수 있어서)",
@@ -2749,7 +2749,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What season do you like? And the response was: \"I like summer because I can swim in the cool sea.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What season do you like? And the response was: \"I like summer because I can swim in the cool sea.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 좋아하는 계절과 활동은?",
+        "question": "B가 좋아하는 계절과 활동은?",
         "options": [
           "가을 (등산하기)",
           "겨울 (스키 타기)",
@@ -2767,7 +2767,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you like fall? And the response was: \"Yes, fall is cool and breezy. I like red and yellow leaves.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you like fall? And the response was: \"Yes, fall is cool and breezy. I like red and yellow leaves.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 가을을 좋아하는 이유로 알맞은 것은?",
+        "question": "B가 가을을 좋아하는 이유로 알맞은 것은?",
         "options": [
           "따뜻하고 비가 자주 와서",
           "시원하고 알록달록한 단풍잎을 볼 수 있어서",
@@ -2785,7 +2785,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What season do you like the most? And the response was: \"I like winter because I can make a big snowman.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What season do you like the most? And the response was: \"I like winter because I can make a big snowman.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 가장 좋아하는 계절은?",
+        "question": "B가 가장 좋아하는 계절은?",
         "options": [
           "겨울",
           "봄",
@@ -2803,7 +2803,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'swim' is a new word in 2단원. In Korean, it means '수영하다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'swim' is a new word in 2단원. In Korean, it means '수영하다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'swim'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'swim'의 뜻은?",
         "options": [
           "계절",
           "여름",
@@ -2821,7 +2821,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'leaves' is a new word in 2단원. In Korean, it means '나뭇잎들'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'leaves' is a new word in 2단원. In Korean, it means '나뭇잎들'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'leaves'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'leaves'의 뜻은?",
         "options": [
           "나뭇잎들",
           "여름",
@@ -2839,7 +2839,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'pretty' is a new word in 2단원. In Korean, it means '예쁜'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'pretty' is a new word in 2단원. In Korean, it means '예쁜'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'pretty'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'pretty'의 뜻은?",
         "options": [
           "봄",
           "계절",
@@ -2857,7 +2857,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'season' is a new word in 2단원. In Korean, it means '계절'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'season' is a new word in 2단원. In Korean, it means '계절'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'season'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'season'의 뜻은?",
         "options": [
           "여름",
           "가을",
@@ -2875,7 +2875,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'spring' is a new word in 2단원. In Korean, it means '봄'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'spring' is a new word in 2단원. In Korean, it means '봄'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'spring'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'spring'의 뜻은?",
         "options": [
           "봄",
           "계절",
@@ -2893,7 +2893,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'summer' is a new word in 2단원. In Korean, it means '여름'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'summer' is a new word in 2단원. In Korean, it means '여름'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'summer'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'summer'의 뜻은?",
         "options": [
           "여름",
           "가을",
@@ -2911,7 +2911,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'fall' is a new word in 2단원. In Korean, it means '가을'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'fall' is a new word in 2단원. In Korean, it means '가을'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'fall'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'fall'의 뜻은?",
         "options": [
           "가을",
           "계절",
@@ -2929,7 +2929,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'winter' is a new word in 2단원. In Korean, it means '겨울'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'winter' is a new word in 2단원. In Korean, it means '겨울'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'winter'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'winter'의 뜻은?",
         "options": [
           "겨울",
           "계절",
@@ -2947,7 +2947,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'weather' is a new word in 2단원. In Korean, it means '날씨'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'weather' is a new word in 2단원. In Korean, it means '날씨'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'weather'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'weather'의 뜻은?",
         "options": [
           "날씨",
           "계절",
@@ -2965,7 +2965,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'warm' is a new word in 2단원. In Korean, it means '따뜻한'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'warm' is a new word in 2단원. In Korean, it means '따뜻한'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'warm'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'warm'의 뜻은?",
         "options": [
           "봄",
           "여름",
@@ -4051,7 +4051,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. When is the school sports day? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. When is the school sports day? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -4069,7 +4069,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. It is on September 23rd. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. It is on September 23rd. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -4087,7 +4087,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. My birthday is on Christmas Day. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. My birthday is on Christmas Day. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "내 생일은 크리스마스 날이야.",
@@ -4105,7 +4105,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. I can't wait to see my friends tomorrow. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. I can't wait to see my friends tomorrow. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -4123,7 +4123,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. Please come to my birthday party. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. Please come to my birthday party. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "내 생일 파티에 꼭 와주렴.",
@@ -4141,7 +4141,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. When is the English speech contest? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. When is the English speech contest? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -4159,7 +4159,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. It is on November 12th. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. It is on November 12th. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "11월 12일이야.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -4177,7 +4177,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. We are going to have a big celebration. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. We are going to have a big celebration. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -4195,7 +4195,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. Happy birthday to you, my dear friend! I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. Happy birthday to you, my dear friend! I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -4213,7 +4213,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. I can't wait for our summer vacation. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. I can't wait for our summer vacation. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "여름방학이 정말 손꼽아 기다려져.",
@@ -4231,7 +4231,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. What date is it today? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. What date is it today? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "오늘이 며칠이니?",
           "친구와 다투어서 기분이 슬프다.",
@@ -4249,7 +4249,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Check the date on the school calendar. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Check the date on the school calendar. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -4267,7 +4267,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. When is your birthday? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. When is your birthday? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "네 생일은 언제니?",
           "길을 잃어서 병원을 찾고 있다.",
@@ -4285,7 +4285,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. It is on May 7th. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. It is on May 7th. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "5월 7일이야.",
           "숙제가 너무 어려워서 고민이다.",
@@ -4303,7 +4303,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. I can't wait for the party! I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. I can't wait for the party! I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "파티가 너무너무 기다려져!",
@@ -4321,7 +4321,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: When is your birthday? And the response was: \"My birthday is on October 15th.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: When is your birthday? And the response was: \"My birthday is on October 15th.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 생일은 몇 월 며칠인가요?",
+        "question": "B의 생일은 몇 월 며칠인가요?",
         "options": [
           "10월 5일",
           "9월 15일",
@@ -4339,7 +4339,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: The school festival is next Friday! And the response was: \"I can't wait! It will be so much fun.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: The school festival is next Friday! And the response was: \"I can't wait! It will be so much fun.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 나타낸 감정(I can't wait!)의 뜻은?",
+        "question": "B가 나타낸 감정(I can't wait!)의 뜻은?",
         "options": [
           "시간이 너무 없어!",
           "갈 수 없어 미안해!",
@@ -4357,7 +4357,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: When is the sports day? And the response was: \"It is on September 23rd.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: When is the sports day? And the response was: \"It is on September 23rd.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 운동회(sports day) 날짜는?",
+        "question": "운동회(sports day) 날짜는?",
         "options": [
           "9월 23일",
           "8월 23일",
@@ -4375,7 +4375,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: When is your sister's birthday? And the response was: \"It is on December 25th, Christmas Day!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: When is your sister's birthday? And the response was: \"It is on December 25th, Christmas Day!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 여동생의 생일은 언제인가요?",
+        "question": "여동생의 생일은 언제인가요?",
         "options": [
           "12월 15일",
           "12월 25일",
@@ -4393,7 +4393,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: We are going to the amusement park tomorrow! And the response was: \"I can't wait to ride the roller coaster!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: We are going to the amusement park tomorrow! And the response was: \"I can't wait to ride the roller coaster!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 내일 몹시 기대하고 있는 것은?",
+        "question": "B가 내일 몹시 기대하고 있는 것은?",
         "options": [
           "사진 찍기",
           "기념품 구경하기",
@@ -4411,7 +4411,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: When is our class party? And the response was: \"It is on March 30th after school.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: When is our class party? And the response was: \"It is on March 30th after school.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 학급 파티 날짜는?",
+        "question": "학급 파티 날짜는?",
         "options": [
           "3월 13일",
           "3월 30일",
@@ -4429,7 +4429,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: When is your birthday, David? And the response was: \"It is on May 7th.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: When is your birthday, David? And the response was: \"It is on May 7th.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: David의 생일 날짜는 언제인가요?",
+        "question": "David의 생일 날짜는 언제인가요?",
         "options": [
           "3월 7일",
           "6월 7일",
@@ -4447,7 +4447,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: When is your birthday? And the response was: \"My birthday is on October 15th.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: When is your birthday? And the response was: \"My birthday is on October 15th.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 생일은 몇 월 며칠인가요?",
+        "question": "B의 생일은 몇 월 며칠인가요?",
         "options": [
           "11월 15일",
           "9월 15일",
@@ -4465,7 +4465,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: The school festival is next Friday! And the response was: \"I can't wait! It will be so much fun.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: The school festival is next Friday! And the response was: \"I can't wait! It will be so much fun.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 나타낸 감정(I can't wait!)의 뜻은?",
+        "question": "B가 나타낸 감정(I can't wait!)의 뜻은?",
         "options": [
           "정말 기대돼! (몹시 기다려져!)",
           "기다리기 싫어! (짜증나!)",
@@ -4483,7 +4483,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: When is the sports day? And the response was: \"It is on September 23rd.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: When is the sports day? And the response was: \"It is on September 23rd.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 운동회(sports day) 날짜는?",
+        "question": "운동회(sports day) 날짜는?",
         "options": [
           "9월 23일",
           "9월 13일",
@@ -4501,7 +4501,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'calendar' is a new word in 3단원. In Korean, it means '달력'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'calendar' is a new word in 3단원. In Korean, it means '달력'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'calendar'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'calendar'의 뜻은?",
         "options": [
           "달력",
           "생일",
@@ -4519,7 +4519,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'sports' is a new word in 3단원. In Korean, it means '운동, 스포츠'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'sports' is a new word in 3단원. In Korean, it means '운동, 스포츠'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'sports'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'sports'의 뜻은?",
         "options": [
           "운동, 스포츠",
           "날짜",
@@ -4537,7 +4537,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'fun' is a new word in 3단원. In Korean, it means '재미'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'fun' is a new word in 3단원. In Korean, it means '재미'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'fun'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'fun'의 뜻은?",
         "options": [
           "재미",
           "언제",
@@ -4555,7 +4555,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'birthday' is a new word in 3단원. In Korean, it means '생일'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'birthday' is a new word in 3단원. In Korean, it means '생일'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'birthday'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'birthday'의 뜻은?",
         "options": [
           "생일",
           "언제",
@@ -4573,7 +4573,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'when' is a new word in 3단원. In Korean, it means '언제'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'when' is a new word in 3단원. In Korean, it means '언제'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'when'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'when'의 뜻은?",
         "options": [
           "기다리다",
           "날짜",
@@ -4591,7 +4591,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'date' is a new word in 3단원. In Korean, it means '날짜'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'date' is a new word in 3단원. In Korean, it means '날짜'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'date'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'date'의 뜻은?",
         "options": [
           "기다리다",
           "날짜",
@@ -4609,7 +4609,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'wait' is a new word in 3단원. In Korean, it means '기다리다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'wait' is a new word in 3단원. In Korean, it means '기다리다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'wait'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'wait'의 뜻은?",
         "options": [
           "기다리다",
           "생일",
@@ -4627,7 +4627,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'party' is a new word in 3단원. In Korean, it means '파티'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'party' is a new word in 3단원. In Korean, it means '파티'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'party'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'party'의 뜻은?",
         "options": [
           "날짜",
           "언제",
@@ -4645,7 +4645,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'festival' is a new word in 3단원. In Korean, it means '축제'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'festival' is a new word in 3단원. In Korean, it means '축제'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'festival'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'festival'의 뜻은?",
         "options": [
           "생일",
           "날짜",
@@ -4663,7 +4663,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'month' is a new word in 3단원. In Korean, it means '달, 월'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'month' is a new word in 3단원. In Korean, it means '달, 월'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'month'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'month'의 뜻은?",
         "options": [
           "날짜",
           "언제",
@@ -5740,7 +5740,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. Why are you so excited today? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. Why are you so excited today? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "너 오늘 왜 그렇게 신이 났니?",
           "숙제가 너무 어려워서 고민이다.",
@@ -5758,7 +5758,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. Because tomorrow is my birthday party. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. Because tomorrow is my birthday party. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -5776,7 +5776,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. I am sad because my pet is sick. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. I am sad because my pet is sick. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -5794,7 +5794,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. Don't worry, everything will be fine. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. Don't worry, everything will be fine. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -5812,7 +5812,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. Why is Sarah so nervous? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. Why is Sarah so nervous? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -5830,7 +5830,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. Because she has to play the piano on stage. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. Because she has to play the piano on stage. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "무대에서 피아노를 연주해야 하기 때문이야.",
           "숙제가 너무 어려워서 고민이다.",
@@ -5848,7 +5848,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. We are proud because our class won. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. We are proud because our class won. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -5866,7 +5866,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. Don't worry about the small mistake. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. Don't worry about the small mistake. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -5884,7 +5884,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. Take a deep breath and smile. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. Take a deep breath and smile. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "심호흡을 크게 하고 미소를 지어봐.",
           "숙제가 너무 어려워서 고민이다.",
@@ -5902,7 +5902,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. Why did you arrive so late? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. Why did you arrive so late? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "너 왜 그렇게 늦게 도착했니?",
           "숙제가 너무 어려워서 고민이다.",
@@ -5920,7 +5920,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. Because the school bus was delayed. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. Because the school bus was delayed. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -5938,7 +5938,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Cheer up! Tomorrow is another bright day. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Cheer up! Tomorrow is another bright day. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "기운 내! 내일은 또 다른 밝은 날이 올 거야.",
           "친구와 다투어서 기분이 슬프다.",
@@ -5956,7 +5956,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. Why are you happy? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. Why are you happy? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "너는 왜 기분이 좋니?",
           "친구와 다투어서 기분이 슬프다.",
@@ -5974,7 +5974,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. Because I got a black belt. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. Because I got a black belt. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -5992,7 +5992,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. Don't worry. You can do it. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. Don't worry. You can do it. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -6010,7 +6010,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Don't worry, we can look for it together. And the response was: \"Because I lost my favorite pen.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Don't worry, we can look for it together. And the response was: \"Because I lost my favorite pen.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A가 상대방을 위로하며 제안한 것은?",
+        "question": "A가 상대방을 위로하며 제안한 것은?",
         "options": [
           "함께 펜을 찾아보자고 위로함",
           "잊어버리라고 화냄",
@@ -6028,7 +6028,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Why are you nervous, Sarah? And the response was: \"Because I have to give a speech on stage.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Why are you nervous, Sarah? And the response was: \"Because I have to give a speech on stage.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Sarah가 긴장한 이유는?",
+        "question": "Sarah가 긴장한 이유는?",
         "options": [
           "달리기 시합이 있어서",
           "무대에서 발표를 해야 해서",
@@ -6046,7 +6046,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: I fell down while running. And the response was: \"Don't worry. Let's go to the nurse's office.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: I fell down while running. And the response was: \"Don't worry. Let's go to the nurse's office.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 조언과 위로는?",
+        "question": "B의 조언과 위로는?",
         "options": [
           "집에 그냥 가버려",
           "빨리 다시 일어나서 뛰어",
@@ -6064,7 +6064,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Why are you happy, Minsoo? And the response was: \"Because I got a black belt in Taekwondo!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Why are you happy, Minsoo? And the response was: \"Because I got a black belt in Taekwondo!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Minsoo가 행복해하는 이유는?",
+        "question": "Minsoo가 행복해하는 이유는?",
         "options": [
           "수학 시험을 잘 봐서",
           "태권도 검은 띠를 따서",
@@ -6082,7 +6082,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Why are you so excited? And the response was: \"Because our team won the championship game!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Why are you so excited? And the response was: \"Because our team won the championship game!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 신이 난 이유는?",
+        "question": "B가 신이 난 이유는?",
         "options": [
           "팀이 결승전 경기에서 우승해서",
           "새 자전거를 사서",
@@ -6100,7 +6100,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: I am worried about my English test tomorrow. And the response was: \"Don't worry. You practiced very hard.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: I am worried about my English test tomorrow. And the response was: \"Don't worry. You practiced very hard.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 위로하며 건넨 말은?",
+        "question": "B가 위로하며 건넨 말은?",
         "options": [
           "Good job. (잘했어.)",
           "Don't worry. (걱정하지 마.)",
@@ -6118,7 +6118,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Don't worry, we can look for it together. And the response was: \"Because I lost my favorite pen.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Don't worry, we can look for it together. And the response was: \"Because I lost my favorite pen.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A가 상대방을 위로하며 제안한 것은?",
+        "question": "A가 상대방을 위로하며 제안한 것은?",
         "options": [
           "새 펜을 사주겠다고 함",
           "잊어버리라고 화냄",
@@ -6136,7 +6136,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Why are you nervous, Sarah? And the response was: \"Because I have to give a speech on stage.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Why are you nervous, Sarah? And the response was: \"Because I have to give a speech on stage.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Sarah가 긴장한 이유는?",
+        "question": "Sarah가 긴장한 이유는?",
         "options": [
           "병원에 가야 해서",
           "시험 결과를 기다려서",
@@ -6154,7 +6154,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: I fell down while running. And the response was: \"Don't worry. Let's go to the nurse's office.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: I fell down while running. And the response was: \"Don't worry. Let's go to the nurse's office.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 조언과 위로는?",
+        "question": "B의 조언과 위로는?",
         "options": [
           "걱정 마, 보건실에 가자",
           "빨리 다시 일어나서 뛰어",
@@ -6172,7 +6172,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Why are you happy, Minsoo? And the response was: \"Because I got a black belt in Taekwondo!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Why are you happy, Minsoo? And the response was: \"Because I got a black belt in Taekwondo!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Minsoo가 행복해하는 이유는?",
+        "question": "Minsoo가 행복해하는 이유는?",
         "options": [
           "태권도 검은 띠를 따서",
           "생일 선물을 받아서",
@@ -6190,7 +6190,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'stage' is a new word in 4단원. In Korean, it means '무대'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'stage' is a new word in 4단원. In Korean, it means '무대'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'stage'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'stage'의 뜻은?",
         "options": [
           "행복한",
           "무대",
@@ -6208,7 +6208,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'proud' is a new word in 4단원. In Korean, it means '자랑스러운'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'proud' is a new word in 4단원. In Korean, it means '자랑스러운'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'proud'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'proud'의 뜻은?",
         "options": [
           "행복한",
           "자랑스러운",
@@ -6226,7 +6226,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'cheer' is a new word in 4단원. In Korean, it means '응원하다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'cheer' is a new word in 4단원. In Korean, it means '응원하다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'cheer'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'cheer'의 뜻은?",
         "options": [
           "걱정스러운",
           "슬픈",
@@ -6244,7 +6244,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'happy' is a new word in 4단원. In Korean, it means '행복한'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'happy' is a new word in 4단원. In Korean, it means '행복한'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'happy'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'happy'의 뜻은?",
         "options": [
           "행복한",
           "슬픈",
@@ -6262,7 +6262,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'sad' is a new word in 4단원. In Korean, it means '슬픈'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'sad' is a new word in 4단원. In Korean, it means '슬픈'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'sad'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'sad'의 뜻은?",
         "options": [
           "슬픈",
           "행복한",
@@ -6280,7 +6280,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'worried' is a new word in 4단원. In Korean, it means '걱정스러운'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'worried' is a new word in 4단원. In Korean, it means '걱정스러운'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'worried'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'worried'의 뜻은?",
         "options": [
           "신나는",
           "슬픈",
@@ -6298,7 +6298,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'excited' is a new word in 4단원. In Korean, it means '신나는'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'excited' is a new word in 4단원. In Korean, it means '신나는'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'excited'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'excited'의 뜻은?",
         "options": [
           "슬픈",
           "행복한",
@@ -6316,7 +6316,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'nervous' is a new word in 4단원. In Korean, it means '긴장한'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'nervous' is a new word in 4단원. In Korean, it means '긴장한'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'nervous'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'nervous'의 뜻은?",
         "options": [
           "슬픈",
           "행복한",
@@ -6334,7 +6334,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'why' is a new word in 4단원. In Korean, it means '왜'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'why' is a new word in 4단원. In Korean, it means '왜'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'why'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'why'의 뜻은?",
         "options": [
           "왜",
           "행복한",
@@ -6352,7 +6352,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'because' is a new word in 4단원. In Korean, it means '~때문에'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'because' is a new word in 4단원. In Korean, it means '~때문에'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'because'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'because'의 뜻은?",
         "options": [
           "걱정스러운",
           "슬픈",
@@ -7432,7 +7432,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. It is on your right. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. It is on your right. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -7450,7 +7450,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. You can not miss it. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. You can not miss it. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -7468,7 +7468,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. Where is the post office? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. Where is the post office? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -7486,7 +7486,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. Turn left at the second corner. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. Turn left at the second corner. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "두 번째 모퉁이에서 좌회전하세요.",
           "숙제가 너무 어려워서 고민이다.",
@@ -7504,7 +7504,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. The museum is across from the park. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. The museum is across from the park. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -7522,7 +7522,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. The bakery is between the bank and the shop. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. The bakery is between the bank and the shop. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -7540,7 +7540,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. Walk straight for two minutes. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. Walk straight for two minutes. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "2분 동안 똑바로 걸어가세요.",
           "숙제가 너무 어려워서 고민이다.",
@@ -7558,7 +7558,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. Cross the street at the crosswalk. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. Cross the street at the crosswalk. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "횡단보도에서 길을 건너세요.",
           "숙제가 너무 어려워서 고민이다.",
@@ -7576,7 +7576,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. Is there a hospital near here? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. Is there a hospital near here? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -7594,7 +7594,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. Yes, it is behind the supermarket. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. Yes, it is behind the supermarket. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "네, 슈퍼마켓 뒤편에 있습니다.",
@@ -7612,7 +7612,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. Thank you for your kind directions. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. Thank you for your kind directions. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친절하게 길을 안내해 주셔서 감사합니다.",
@@ -7630,7 +7630,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Where can I find the subway station? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Where can I find the subway station? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "지하철역은 어디에서 찾을 수 있나요?",
           "숙제가 너무 어려워서 고민이다.",
@@ -7648,7 +7648,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. Where is ABC Library? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. Where is ABC Library? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "병원에서 진료 순서를 기다리고 있다.",
           "친구와 공원에서 자전거를 타고 있다.",
@@ -7666,7 +7666,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. Go straight one block and turn right. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. Go straight one block and turn right. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -7684,7 +7684,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. It is next to the bank. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. It is next to the bank. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -7702,7 +7702,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Is there a bakery near here? And the response was: \"Yes, it is between the flower shop and the bookstore.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Is there a bakery near here? And the response was: \"Yes, it is between the flower shop and the bookstore.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 빵집의 위치는 어디인가요?",
+        "question": "빵집의 위치는 어디인가요?",
         "options": [
           "꽃집과 서점 사이",
           "공원 입구 앞",
@@ -7720,7 +7720,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How can I get to the museum? And the response was: \"Walk straight past the fountain. You can't miss it.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How can I get to the museum? And the response was: \"Walk straight past the fountain. You can't miss it.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 박물관 안내에서 강조한 말은?",
+        "question": "박물관 안내에서 강조한 말은?",
         "options": [
           "지하철로 환승해야 한다",
           "골목길로 돌아가야 한다",
@@ -7738,7 +7738,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Where is the restroom? And the response was: \"It is next to the elevator on the second floor.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Where is the restroom? And the response was: \"It is next to the elevator on the second floor.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 화장실 위치는?",
+        "question": "화장실 위치는?",
         "options": [
           "1층 정문 계단 밑",
           "2층 엘리베이터 옆",
@@ -7756,7 +7756,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Excuse me, where is ABC Library? And the response was: \"Go straight one block and turn right at Nuri Bank. It is next to the bank.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Excuse me, where is ABC Library? And the response was: \"Go straight one block and turn right at Nuri Bank. It is next to the bank.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: ABC 도서관을 찾아가는 올바른 경로는?",
+        "question": "ABC 도서관을 찾아가는 올바른 경로는?",
         "options": [
           "사거리에서 유턴 후 바로 앞",
           "한 블록 직진 후 누리은행에서 우회전, 은행 옆",
@@ -7774,7 +7774,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Where is the post office? And the response was: \"Go straight two blocks and turn left. It is on your right.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Where is the post office? And the response was: \"Go straight two blocks and turn left. It is on your right.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 우체국의 위치로 알맞은 안내는?",
+        "question": "우체국의 위치로 알맞은 안내는?",
         "options": [
           "도서관 건물 3층",
           "횡단보도 건너편 공원 뒤",
@@ -7792,7 +7792,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Where is the police station? And the response was: \"It is across from the city park.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Where is the police station? And the response was: \"It is across from the city park.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 경찰서의 위치는 어디인가요?",
+        "question": "경찰서의 위치는 어디인가요?",
         "options": [
           "기차역 지하",
           "도시 공원 맞은편",
@@ -7810,7 +7810,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Is there a bakery near here? And the response was: \"Yes, it is between the flower shop and the bookstore.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Is there a bakery near here? And the response was: \"Yes, it is between the flower shop and the bookstore.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 빵집의 위치는 어디인가요?",
+        "question": "빵집의 위치는 어디인가요?",
         "options": [
           "공원 입구 앞",
           "슈퍼마켓 2층",
@@ -7828,7 +7828,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How can I get to the museum? And the response was: \"Walk straight past the fountain. You can't miss it.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How can I get to the museum? And the response was: \"Walk straight past the fountain. You can't miss it.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 박물관 안내에서 강조한 말은?",
+        "question": "박물관 안내에서 강조한 말은?",
         "options": [
           "골목길로 돌아가야 한다",
           "분수대를 지나 똑바로 걸어가면 쉽게 찾을 수 있다",
@@ -7846,7 +7846,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Where is the restroom? And the response was: \"It is next to the elevator on the second floor.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Where is the restroom? And the response was: \"It is next to the elevator on the second floor.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 화장실 위치는?",
+        "question": "화장실 위치는?",
         "options": [
           "3층 교무실 맞은편",
           "1층 정문 계단 밑",
@@ -7864,7 +7864,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Excuse me, where is ABC Library? And the response was: \"Go straight one block and turn right at Nuri Bank. It is next to the bank.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Excuse me, where is ABC Library? And the response was: \"Go straight one block and turn right at Nuri Bank. It is next to the bank.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: ABC 도서관을 찾아가는 올바른 경로는?",
+        "question": "ABC 도서관을 찾아가는 올바른 경로는?",
         "options": [
           "신호등 건너 지하철역 2번 출구",
           "두 블록 직진 후 좌회전, 우체국 맞은편",
@@ -7882,7 +7882,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'corner' is a new word in 5단원. In Korean, it means '모퉁이'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'corner' is a new word in 5단원. In Korean, it means '모퉁이'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'corner'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'corner'의 뜻은?",
         "options": [
           "모퉁이",
           "똑바로, 곧장",
@@ -7900,7 +7900,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'miss' is a new word in 5단원. In Korean, it means '놓치다, 지나치다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'miss' is a new word in 5단원. In Korean, it means '놓치다, 지나치다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'miss'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'miss'의 뜻은?",
         "options": [
           "블록, 구역",
           "똑바로, 곧장",
@@ -7918,7 +7918,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'crosswalk' is a new word in 5단원. In Korean, it means '횡단보도'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'crosswalk' is a new word in 5단원. In Korean, it means '횡단보도'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'crosswalk'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'crosswalk'의 뜻은?",
         "options": [
           "횡단보도",
           "똑바로, 곧장",
@@ -7936,7 +7936,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'straight' is a new word in 5단원. In Korean, it means '똑바로, 곧장'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'straight' is a new word in 5단원. In Korean, it means '똑바로, 곧장'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'straight'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'straight'의 뜻은?",
         "options": [
           "똑바로, 곧장",
           "블록, 구역",
@@ -7954,7 +7954,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'block' is a new word in 5단원. In Korean, it means '블록, 구역'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'block' is a new word in 5단원. In Korean, it means '블록, 구역'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'block'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'block'의 뜻은?",
         "options": [
           "블록, 구역",
           "똑바로, 곧장",
@@ -7972,7 +7972,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'turn' is a new word in 5단원. In Korean, it means '돌다, 회전하다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'turn' is a new word in 5단원. In Korean, it means '돌다, 회전하다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'turn'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'turn'의 뜻은?",
         "options": [
           "왼쪽",
           "돌다, 회전하다",
@@ -7990,7 +7990,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'left' is a new word in 5단원. In Korean, it means '왼쪽'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'left' is a new word in 5단원. In Korean, it means '왼쪽'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'left'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'left'의 뜻은?",
         "options": [
           "돌다, 회전하다",
           "똑바로, 곧장",
@@ -8008,7 +8008,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'right' is a new word in 5단원. In Korean, it means '오른쪽'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'right' is a new word in 5단원. In Korean, it means '오른쪽'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'right'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'right'의 뜻은?",
         "options": [
           "똑바로, 곧장",
           "블록, 구역",
@@ -8026,7 +8026,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'next to' is a new word in 5단원. In Korean, it means '~옆에'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'next to' is a new word in 5단원. In Korean, it means '~옆에'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'next to'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'next to'의 뜻은?",
         "options": [
           "돌다, 회전하다",
           "블록, 구역",
@@ -8044,7 +8044,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'across from' is a new word in 5단원. In Korean, it means '~맞은편에'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'across from' is a new word in 5단원. In Korean, it means '~맞은편에'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'across from'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'across from'의 뜻은?",
         "options": [
           "돌다, 회전하다",
           "블록, 구역",
@@ -9120,7 +9120,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. What does she look like? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. What does she look like? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -9138,7 +9138,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. She has long straight black hair. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. She has long straight black hair. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "그녀는 긴 검은 생머리를 가지고 있어.",
           "숙제가 너무 어려워서 고민이다.",
@@ -9156,7 +9156,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. My English teacher wears round glasses. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. My English teacher wears round glasses. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리 영어 선생님은 동그란 안경을 쓰셔.",
           "친구와 다투어서 기분이 슬프다.",
@@ -9174,7 +9174,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. He has short curly brown hair. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. He has short curly brown hair. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -9192,7 +9192,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. She is wearing white running sneakers. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. She is wearing white running sneakers. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "그녀는 흰색 조깅용 운동화를 신고 있어.",
           "숙제가 너무 어려워서 고민이다.",
@@ -9210,7 +9210,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. The boy is tall and has bright eyes. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. The boy is tall and has bright eyes. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "그 소년은 키가 크고 맑은 눈을 가졌어.",
           "숙제가 너무 어려워서 고민이다.",
@@ -9228,7 +9228,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. Can you describe your best friend? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. Can you describe your best friend? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "가장 친한 친구의 생김새를 묘사해 줄래?",
           "친구와 다투어서 기분이 슬프다.",
@@ -9246,7 +9246,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. She always wears a warm and friendly smile. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. She always wears a warm and friendly smile. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -9264,7 +9264,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. He is wearing a blue sports cap. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. He is wearing a blue sports cap. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -9282,7 +9282,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. What is your brother wearing today? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. What is your brother wearing today? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -9300,7 +9300,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. She has pretty wavy blond hair. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. She has pretty wavy blond hair. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -9318,7 +9318,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. He looks very smart in that jacket. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. He looks very smart in that jacket. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -9336,7 +9336,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. What does he look like? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. What does he look like? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "그는 어떻게 생겼니?",
           "숙제가 너무 어려워서 고민이다.",
@@ -9354,7 +9354,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. He has blue eyes. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. He has blue eyes. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -9372,7 +9372,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. She is wearing a yellow shirt and blue pants. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. She is wearing a yellow shirt and blue pants. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -9390,7 +9390,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at that boy. What is he wearing? And the response was: \"He is wearing a red jacket and white sneakers.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at that boy. What is he wearing? And the response was: \"He is wearing a red jacket and white sneakers.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 저 소년의 옷차림 묘사로 알맞은 것은?",
+        "question": "저 소년의 옷차림 묘사로 알맞은 것은?",
         "options": [
           "노란 비옷과 장화",
           "파란 유니폼과 축구화",
@@ -9408,7 +9408,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What does your grandmother look like? And the response was: \"She has short gray hair and a warm, kind smile.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What does your grandmother look like? And the response was: \"She has short gray hair and a warm, kind smile.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 할머니의 인상 착의로 알맞은 것은?",
+        "question": "할머니의 인상 착의로 알맞은 것은?",
         "options": [
           "짧은 은발에 따뜻하고 다정한 미소",
           "긴 생머리에 무서운 표정",
@@ -9426,7 +9426,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Who is the girl wearing a pink ribbon? And the response was: \"She is my cousin Emma. She is tall and slim.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Who is the girl wearing a pink ribbon? And the response was: \"She is my cousin Emma. She is tall and slim.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 분홍 리본을 단 소녀 Emma의 체형은?",
+        "question": "분홍 리본을 단 소녀 Emma의 체형은?",
         "options": [
           "키가 크고 날씬함",
           "키가 작고 통통함",
@@ -9444,7 +9444,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What does he look like? And the response was: \"He has short curly brown hair and blue eyes.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What does he look like? And the response was: \"He has short curly brown hair and blue eyes.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 그의 외모 특징으로 알맞은 것은?",
+        "question": "그의 외모 특징으로 알맞은 것은?",
         "options": [
           "대머리에 안경 착용",
           "짧은 갈색 곱슬머리에 파란 눈",
@@ -9462,7 +9462,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What does she look like? And the response was: \"She has long straight black hair and wears glasses.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What does she look like? And the response was: \"She has long straight black hair and wears glasses.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 그녀의 외모 특징으로 알맞은 것은?",
+        "question": "그녀의 외모 특징으로 알맞은 것은?",
         "options": [
           "긴 검은 생머리에 안경 착용",
           "짧은 단발머리에 모자 착용",
@@ -9480,7 +9480,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What is she wearing today? And the response was: \"She is wearing a yellow shirt and blue pants.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What is she wearing today? And the response was: \"She is wearing a yellow shirt and blue pants.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 그녀가 오늘 입고 있는 옷차림은?",
+        "question": "그녀가 오늘 입고 있는 옷차림은?",
         "options": [
           "초록 재킷과 갈색 바지",
           "빨간 스웨터와 검정 치마",
@@ -9498,7 +9498,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at that boy. What is he wearing? And the response was: \"He is wearing a red jacket and white sneakers.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at that boy. What is he wearing? And the response was: \"He is wearing a red jacket and white sneakers.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 저 소년의 옷차림 묘사로 알맞은 것은?",
+        "question": "저 소년의 옷차림 묘사로 알맞은 것은?",
         "options": [
           "파란 유니폼과 축구화",
           "빨간 재킷과 흰 운동화",
@@ -9516,7 +9516,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What does your grandmother look like? And the response was: \"She has short gray hair and a warm, kind smile.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What does your grandmother look like? And the response was: \"She has short gray hair and a warm, kind smile.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 할머니의 인상 착의로 알맞은 것은?",
+        "question": "할머니의 인상 착의로 알맞은 것은?",
         "options": [
           "키가 아주 크고 엄격한 표정",
           "파마머리에 큰 선글라스 착용",
@@ -9534,7 +9534,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Who is the girl wearing a pink ribbon? And the response was: \"She is my cousin Emma. She is tall and slim.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Who is the girl wearing a pink ribbon? And the response was: \"She is my cousin Emma. She is tall and slim.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 분홍 리본을 단 소녀 Emma의 체형은?",
+        "question": "분홍 리본을 단 소녀 Emma의 체형은?",
         "options": [
           "보통 키에 둥근 얼굴",
           "키가 크고 날씬함",
@@ -9552,7 +9552,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What does he look like? And the response was: \"He has short curly brown hair and blue eyes.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What does he look like? And the response was: \"He has short curly brown hair and blue eyes.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 그의 외모 특징으로 알맞은 것은?",
+        "question": "그의 외모 특징으로 알맞은 것은?",
         "options": [
           "대머리에 안경 착용",
           "짧은 갈색 곱슬머리에 파란 눈",
@@ -9570,7 +9570,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'sneakers' is a new word in 6단원. In Korean, it means '운동화'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'sneakers' is a new word in 6단원. In Korean, it means '운동화'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'sneakers'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'sneakers'의 뜻은?",
         "options": [
           "곧은, 생머리의",
           "곱슬머리의",
@@ -9588,7 +9588,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'blond' is a new word in 6단원. In Korean, it means '금발의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'blond' is a new word in 6단원. In Korean, it means '금발의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'blond'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'blond'의 뜻은?",
         "options": [
           "금발의",
           "~처럼 보이다",
@@ -9606,7 +9606,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'smile' is a new word in 6단원. In Korean, it means '미소'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'smile' is a new word in 6단원. In Korean, it means '미소'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'smile'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'smile'의 뜻은?",
         "options": [
           "곧은, 생머리의",
           "곱슬머리의",
@@ -9624,7 +9624,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'look' is a new word in 6단원. In Korean, it means '~처럼 보이다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'look' is a new word in 6단원. In Korean, it means '~처럼 보이다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'look'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'look'의 뜻은?",
         "options": [
           "안경",
           "곱슬머리의",
@@ -9642,7 +9642,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'curly' is a new word in 6단원. In Korean, it means '곱슬머리의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'curly' is a new word in 6단원. In Korean, it means '곱슬머리의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'curly'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'curly'의 뜻은?",
         "options": [
           "~처럼 보이다",
           "곱슬머리의",
@@ -9660,7 +9660,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'straight' is a new word in 6단원. In Korean, it means '곧은, 생머리의'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'straight' is a new word in 6단원. In Korean, it means '곧은, 생머리의'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'straight'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'straight'의 뜻은?",
         "options": [
           "곱슬머리의",
           "~처럼 보이다",
@@ -9678,7 +9678,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'glasses' is a new word in 6단원. In Korean, it means '안경'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'glasses' is a new word in 6단원. In Korean, it means '안경'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'glasses'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'glasses'의 뜻은?",
         "options": [
           "곧은, 생머리의",
           "~처럼 보이다",
@@ -9696,7 +9696,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'wear' is a new word in 6단원. In Korean, it means '입다, 착용하다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'wear' is a new word in 6단원. In Korean, it means '입다, 착용하다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'wear'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'wear'의 뜻은?",
         "options": [
           "곧은, 생머리의",
           "곱슬머리의",
@@ -9714,7 +9714,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'shirt' is a new word in 6단원. In Korean, it means '셔츠'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'shirt' is a new word in 6단원. In Korean, it means '셔츠'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'shirt'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'shirt'의 뜻은?",
         "options": [
           "~처럼 보이다",
           "셔츠",
@@ -9732,7 +9732,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'pants' is a new word in 6단원. In Korean, it means '바지'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'pants' is a new word in 6단원. In Korean, it means '바지'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'pants'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'pants'의 뜻은?",
         "options": [
           "곧은, 생머리의",
           "곱슬머리의",
@@ -10813,7 +10813,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. Of course, you can join us. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. Of course, you can join us. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -10831,7 +10831,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. What will you do after school? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. What will you do after school? I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -10849,7 +10849,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. Please have some delicious biscuits. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. Please have some delicious biscuits. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "맛있는 비스킷 좀 드셔보세요.",
@@ -10867,7 +10867,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. Look at the colorful laser light show. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. Look at the colorful laser light show. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "다채로운 레이저 조명 쇼를 봐.",
@@ -10885,7 +10885,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. What is your seat number in the theater? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. What is your seat number in the theater? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -10903,7 +10903,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. Can you tell me about the story? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. Can you tell me about the story? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -10921,7 +10921,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. This soft bread tastes so good. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. This soft bread tastes so good. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "이 부드러운 빵은 맛이 정말 좋아.",
           "숙제가 너무 어려워서 고민이다.",
@@ -10939,7 +10939,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. Can you come to my house this Saturday? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. Can you come to my house this Saturday? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -10957,7 +10957,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. The science festival starts at two o'clock. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. The science festival starts at two o'clock. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -10975,7 +10975,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. I received a wonderful invitation card. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. I received a wonderful invitation card. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "나는 멋진 초대장을 받았어.",
@@ -10993,7 +10993,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. Let's watch the exciting movie together. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. Let's watch the exciting movie together. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "신나는 영화를 우리 함께 관람하자.",
           "숙제가 너무 어려워서 고민이다.",
@@ -11011,7 +11011,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Thank you for inviting me to the festival. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Thank you for inviting me to the festival. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -11029,7 +11029,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. Can you come to the movie festival? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. Can you come to the movie festival? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "영화제에 올 수 있니?",
           "숙제가 너무 어려워서 고민이다.",
@@ -11047,7 +11047,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. Sure, I would love to. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. Sure, I would love to. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -11065,7 +11065,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. I am sorry, but I can't. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. I am sorry, but I can't. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "미안하지만, 난 갈 수 없어.",
           "숙제가 너무 어려워서 고민이다.",
@@ -11083,7 +11083,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at the light on the screen! And the response was: \"It is a wonderful laser show.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at the light on the screen! And the response was: \"It is a wonderful laser show.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 화면에서 펼쳐지는 것은?",
+        "question": "화면에서 펼쳐지는 것은?",
         "options": [
           "멋진 레이저 쇼",
           "불꽃놀이",
@@ -11101,7 +11101,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What is your lucky number? And the response was: \"My lucky number is seven.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What is your lucky number? And the response was: \"My lucky number is seven.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 행운의 숫자는?",
+        "question": "B의 행운의 숫자는?",
         "options": [
           "3",
           "9",
@@ -11119,7 +11119,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Can you tell me about the movie story? And the response was: \"Sure, of course! It is about space travel.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you tell me about the movie story? And the response was: \"Sure, of course! It is about space travel.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 영화 줄거리에 대한 대화 내용은?",
+        "question": "영화 줄거리에 대한 대화 내용은?",
         "options": [
           "동물들의 모험 이야기",
           "우주 여행에 관한 이야기",
@@ -11137,7 +11137,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Can you come to the movie festival? And the response was: \"Sure, I would love to! When is it?\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you come to the movie festival? And the response was: \"Sure, I would love to! When is it?\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A의 영화제 초대 제안에 대한 B의 응답은?",
+        "question": "A의 영화제 초대 제안에 대한 B의 응답은?",
         "options": [
           "기꺼이 수락함",
           "일정이 있어 거절함",
@@ -11155,7 +11155,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Can you come to our school concert? And the response was: \"I am sorry, but I can't. I have an English exam.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you come to our school concert? And the response was: \"I am sorry, but I can't. I have an English exam.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 학교 음악회 초대를 거절한 이유는?",
+        "question": "B가 학교 음악회 초대를 거절한 이유는?",
         "options": [
           "음악을 싫어해서",
           "감기에 심하게 걸려서",
@@ -11173,7 +11173,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What will we do after the movie? And the response was: \"Let's eat delicious biscuits and drink juice.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What will we do after the movie? And the response was: \"Let's eat delicious biscuits and drink juice.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 영화 관람 후에 함께 하기로 한 것은?",
+        "question": "영화 관람 후에 함께 하기로 한 것은?",
         "options": [
           "운동장에서 축구하기",
           "곧바로 집으로 귀가하기",
@@ -11191,7 +11191,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at the light on the screen! And the response was: \"It is a wonderful laser show.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at the light on the screen! And the response was: \"It is a wonderful laser show.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 화면에서 펼쳐지는 것은?",
+        "question": "화면에서 펼쳐지는 것은?",
         "options": [
           "마술 쇼",
           "인형극",
@@ -11209,7 +11209,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What is your lucky number? And the response was: \"My lucky number is seven.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What is your lucky number? And the response was: \"My lucky number is seven.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 행운의 숫자는?",
+        "question": "B의 행운의 숫자는?",
         "options": [
           "7",
           "12",
@@ -11227,7 +11227,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Can you tell me about the movie story? And the response was: \"Sure, of course! It is about space travel.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you tell me about the movie story? And the response was: \"Sure, of course! It is about space travel.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 영화 줄거리에 대한 대화 내용은?",
+        "question": "영화 줄거리에 대한 대화 내용은?",
         "options": [
           "스포츠 영웅 이야기",
           "동물들의 모험 이야기",
@@ -11245,7 +11245,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Can you come to the movie festival? And the response was: \"Sure, I would love to! When is it?\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you come to the movie festival? And the response was: \"Sure, I would love to! When is it?\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A의 영화제 초대 제안에 대한 B의 응답은?",
+        "question": "A의 영화제 초대 제안에 대한 B의 응답은?",
         "options": [
           "기꺼이 수락함",
           "이미 영화를 봤다고 함",
@@ -11263,7 +11263,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'sure' is a new word in 7단원. In Korean, it means '물론이지, 확실한'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'sure' is a new word in 7단원. In Korean, it means '물론이지, 확실한'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'sure'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'sure'의 뜻은?",
         "options": [
           "물론, 과정",
           "물론이지, 확실한",
@@ -11281,7 +11281,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'sorry' is a new word in 7단원. In Korean, it means '미안한'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'sorry' is a new word in 7단원. In Korean, it means '미안한'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'sorry'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'sorry'의 뜻은?",
         "options": [
           "미안한",
           "~후에",
@@ -11299,7 +11299,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'tomorrow' is a new word in 7단원. In Korean, it means '내일'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'tomorrow' is a new word in 7단원. In Korean, it means '내일'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'tomorrow'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'tomorrow'의 뜻은?",
         "options": [
           "비스킷, 과자",
           "물론, 과정",
@@ -11317,7 +11317,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'after' is a new word in 7단원. In Korean, it means '~후에'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'after' is a new word in 7단원. In Korean, it means '~후에'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'after'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'after'의 뜻은?",
         "options": [
           "레이저",
           "물론, 과정",
@@ -11335,7 +11335,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'biscuit' is a new word in 7단원. In Korean, it means '비스킷, 과자'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'biscuit' is a new word in 7단원. In Korean, it means '비스킷, 과자'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'biscuit'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'biscuit'의 뜻은?",
         "options": [
           "~후에",
           "비스킷, 과자",
@@ -11353,7 +11353,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'course' is a new word in 7단원. In Korean, it means '물론, 과정'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'course' is a new word in 7단원. In Korean, it means '물론, 과정'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'course'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'course'의 뜻은?",
         "options": [
           "레이저",
           "비스킷, 과자",
@@ -11371,7 +11371,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'laser' is a new word in 7단원. In Korean, it means '레이저'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'laser' is a new word in 7단원. In Korean, it means '레이저'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'laser'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'laser'의 뜻은?",
         "options": [
           "비스킷, 과자",
           "~후에",
@@ -11389,7 +11389,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'light' is a new word in 7단원. In Korean, it means '빛, 가벼운'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'light' is a new word in 7단원. In Korean, it means '빛, 가벼운'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'light'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'light'의 뜻은?",
         "options": [
           "비스킷, 과자",
           "~후에",
@@ -11407,7 +11407,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'number' is a new word in 7단원. In Korean, it means '숫자, 번호'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'number' is a new word in 7단원. In Korean, it means '숫자, 번호'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'number'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'number'의 뜻은?",
         "options": [
           "숫자, 번호",
           "~후에",
@@ -11425,7 +11425,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'soft' is a new word in 7단원. In Korean, it means '부드러운'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'soft' is a new word in 7단원. In Korean, it means '부드러운'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'soft'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'soft'의 뜻은?",
         "options": [
           "부드러운",
           "비스킷, 과자",
@@ -12509,7 +12509,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. My backpack is heavier than yours. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. My backpack is heavier than yours. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -12527,7 +12527,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. Who is stronger, the bear or the lion? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. Who is stronger, the bear or the lion? I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -12545,7 +12545,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. The high tower is taller than our school. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. The high tower is taller than our school. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -12563,7 +12563,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. Can you dribble the ball faster than Tom? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. Can you dribble the ball faster than Tom? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "너는 톰보다 공을 더 빨리 몰 수 있니?",
@@ -12581,7 +12581,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. Always do your best to win the race. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. Always do your best to win the race. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "경주에서 이기기 위해 언제나 최선을 다하렴.",
           "숙제가 너무 어려워서 고민이다.",
@@ -12599,7 +12599,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. Catch the ball and score a goal! I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. Catch the ball and score a goal! I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -12617,7 +12617,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. Please give me that heavy clock. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. Please give me that heavy clock. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -12635,7 +12635,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. A cheetah runs faster than any horse. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. A cheetah runs faster than any horse. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -12653,7 +12653,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. An elephant is heavier than ten bears. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. An elephant is heavier than ten bears. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "코끼리는 곰 열 마리보다 더 무거워.",
@@ -12671,7 +12671,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. Look at the baby giraffe beside its mother. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. Look at the baby giraffe beside its mother. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "엄마 곁에 있는 아기 기린을 봐.",
           "숙제가 너무 어려워서 고민이다.",
@@ -12689,7 +12689,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. This bridge is longer than that street. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. This bridge is longer than that street. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "이 다리는 저 거리보다 더 길어.",
@@ -12707,7 +12707,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Science is more interesting than games. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Science is more interesting than games. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -12725,7 +12725,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. It is taller than the tree. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. It is taller than the tree. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -12743,7 +12743,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. A giraffe is taller than an elephant. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. A giraffe is taller than an elephant. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -12761,7 +12761,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. He is faster than me in running. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. He is faster than me in running. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "그는 달리기에서 나보다 더 빨라.",
           "숙제가 너무 어려워서 고민이다.",
@@ -12779,7 +12779,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Who can dribble the basketball faster? And the response was: \"Kevin can dribble faster than David.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Who can dribble the basketball faster? And the response was: \"Kevin can dribble faster than David.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 농구공을 더 빠르게 몰고 갈 수 있는 사람은?",
+        "question": "농구공을 더 빠르게 몰고 갈 수 있는 사람은?",
         "options": [
           "David",
           "Tom",
@@ -12797,7 +12797,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: This box is heavier than that one. And the response was: \"Be careful! Give it to me, I am stronger.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: This box is heavier than that one. And the response was: \"Be careful! Give it to me, I am stronger.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 상자에 대한 설명과 상대방의 제안은?",
+        "question": "상자에 대한 설명과 상대방의 제안은?",
         "options": [
           "상자를 열어보자고 함",
           "상자를 바닥에 버리자고 함",
@@ -12815,7 +12815,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Who will win the swimming race? And the response was: \"Jisu will win because she practices always.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Who will win the swimming race? And the response was: \"Jisu will win because she practices always.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 수영 경주에서 우승할 것으로 예상되는 사람은?",
+        "question": "수영 경주에서 우승할 것으로 예상되는 사람은?",
         "options": [
           "늦잠을 잔 Kevin",
           "항상 연습하는 Jisu",
@@ -12833,7 +12833,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at that tall building! It's taller than the tree. And the response was: \"Wow, it is almost as high as the tower!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at that tall building! It's taller than the tree. And the response was: \"Wow, it is almost as high as the tower!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 대화에서 두 대상의 비교 내용으로 일치하는 것은?",
+        "question": "대화에서 두 대상의 비교 내용으로 일치하는 것은?",
         "options": [
           "건물이 나무보다 더 키가 크다",
           "나무가 건물보다 훨씬 더 높다",
@@ -12851,7 +12851,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: A cheetah is faster than a lion. And the response was: \"Yes, cheetahs are the fastest land animals.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: A cheetah is faster than a lion. And the response was: \"Yes, cheetahs are the fastest land animals.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 대화에서 비교하고 있는 동물과 성질은?",
+        "question": "대화에서 비교하고 있는 동물과 성질은?",
         "options": [
           "사자가 치타보다 더 빠르다",
           "둘의 달리기 속도가 같다",
@@ -12869,7 +12869,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: A giraffe is taller than an elephant. And the response was: \"Right, giraffes have very long necks.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: A giraffe is taller than an elephant. And the response was: \"Right, giraffes have very long necks.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 기린이 코끼리보다 뛰어난 신체 특징은?",
+        "question": "기린이 코끼리보다 뛰어난 신체 특징은?",
         "options": [
           "달리기가 더 빠르다",
           "귀가 더 크다",
@@ -12887,7 +12887,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Who can dribble the basketball faster? And the response was: \"Kevin can dribble faster than David.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Who can dribble the basketball faster? And the response was: \"Kevin can dribble faster than David.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 농구공을 더 빠르게 몰고 갈 수 있는 사람은?",
+        "question": "농구공을 더 빠르게 몰고 갈 수 있는 사람은?",
         "options": [
           "Minsoo",
           "Kevin",
@@ -12905,7 +12905,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: This box is heavier than that one. And the response was: \"Be careful! Give it to me, I am stronger.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: This box is heavier than that one. And the response was: \"Be careful! Give it to me, I am stronger.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 상자에 대한 설명과 상대방의 제안은?",
+        "question": "상자에 대한 설명과 상대방의 제안은?",
         "options": [
           "상자를 바닥에 버리자고 함",
           "상자를 열어보자고 함",
@@ -12923,7 +12923,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Who will win the swimming race? And the response was: \"Jisu will win because she practices always.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Who will win the swimming race? And the response was: \"Jisu will win because she practices always.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 수영 경주에서 우승할 것으로 예상되는 사람은?",
+        "question": "수영 경주에서 우승할 것으로 예상되는 사람은?",
         "options": [
           "아무도 우승하지 못함",
           "항상 연습하는 Jisu",
@@ -12941,7 +12941,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at that tall building! It's taller than the tree. And the response was: \"Wow, it is almost as high as the tower!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at that tall building! It's taller than the tree. And the response was: \"Wow, it is almost as high as the tower!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 대화에서 두 대상의 비교 내용으로 일치하는 것은?",
+        "question": "대화에서 두 대상의 비교 내용으로 일치하는 것은?",
         "options": [
           "탑이 나무보다 더 낮다",
           "건물이 나무보다 더 키가 크다",
@@ -12959,7 +12959,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'goal' is a new word in 8단원. In Korean, it means '목표, 골'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'goal' is a new word in 8단원. In Korean, it means '목표, 골'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'goal'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'goal'의 뜻은?",
         "options": [
           "더 키가 큰",
           "더 빠른",
@@ -12977,7 +12977,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'race' is a new word in 8단원. In Korean, it means '경주'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'race' is a new word in 8단원. In Korean, it means '경주'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'race'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'race'의 뜻은?",
         "options": [
           "더 빠른",
           "더 무거운",
@@ -12995,7 +12995,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'tower' is a new word in 8단원. In Korean, it means '탑'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'tower' is a new word in 8단원. In Korean, it means '탑'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'tower'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'tower'의 뜻은?",
         "options": [
           "더 무거운",
           "탑",
@@ -13013,7 +13013,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'taller' is a new word in 8단원. In Korean, it means '더 키가 큰'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'taller' is a new word in 8단원. In Korean, it means '더 키가 큰'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'taller'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'taller'의 뜻은?",
         "options": [
           "더 빠른",
           "더 키가 큰",
@@ -13031,7 +13031,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'faster' is a new word in 8단원. In Korean, it means '더 빠른'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'faster' is a new word in 8단원. In Korean, it means '더 빠른'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'faster'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'faster'의 뜻은?",
         "options": [
           "더 힘센",
           "더 키가 큰",
@@ -13049,7 +13049,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'heavier' is a new word in 8단원. In Korean, it means '더 무거운'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'heavier' is a new word in 8단원. In Korean, it means '더 무거운'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'heavier'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'heavier'의 뜻은?",
         "options": [
           "더 힘센",
           "더 무거운",
@@ -13067,7 +13067,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'stronger' is a new word in 8단원. In Korean, it means '더 힘센'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'stronger' is a new word in 8단원. In Korean, it means '더 힘센'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'stronger'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'stronger'의 뜻은?",
         "options": [
           "더 힘센",
           "더 키가 큰",
@@ -13085,7 +13085,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'than' is a new word in 8단원. In Korean, it means '~보다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'than' is a new word in 8단원. In Korean, it means '~보다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'than'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'than'의 뜻은?",
         "options": [
           "더 빠른",
           "더 키가 큰",
@@ -13103,7 +13103,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'always' is a new word in 8단원. In Korean, it means '항상, 언제나'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'always' is a new word in 8단원. In Korean, it means '항상, 언제나'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'always'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'always'의 뜻은?",
         "options": [
           "더 무거운",
           "더 키가 큰",
@@ -13121,7 +13121,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'baby' is a new word in 8단원. In Korean, it means '아기'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'baby' is a new word in 8단원. In Korean, it means '아기'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'baby'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'baby'의 뜻은?",
         "options": [
           "아기",
           "더 키가 큰",
@@ -14213,7 +14213,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. I do not have any special plans. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. I do not have any special plans. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -14231,7 +14231,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. They play soccer with the children. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. They play soccer with the children. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -14249,7 +14249,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. I like hiking in the green forest. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. I like hiking in the green forest. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -14267,7 +14267,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. Choose your favorite holiday program, please. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. Choose your favorite holiday program, please. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "가장 좋아하는 방학 프로그램을 골라주세요.",
           "숙제가 너무 어려워서 고민이다.",
@@ -14285,7 +14285,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. I am going to clean my room today. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. I am going to clean my room today. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -14303,7 +14303,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. I am going to stay home this weekend. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. I am going to stay home this weekend. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -14321,7 +14321,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. We are going to visit a beautiful small village. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. We are going to visit a beautiful small village. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리는 아름답고 작은 마을을 방문할 거야.",
           "숙제가 너무 어려워서 고민이다.",
@@ -14339,7 +14339,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. The children are excited to visit the zoo. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. The children are excited to visit the zoo. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "아이들은 동물원에 방문할 생각에 신이 났어.",
@@ -14357,7 +14357,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. I want to eat a hamburger for lunch. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. I want to eat a hamburger for lunch. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "점심으로 햄버거를 먹고 싶어.",
@@ -14375,7 +14375,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. What is she going to do tomorrow morning? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. What is she going to do tomorrow morning? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "그녀는 내일 아침에 무엇을 할 예정이니?",
           "길을 잃어서 병원을 찾고 있다.",
@@ -14393,7 +14393,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. He plans to travel around Jeju Island. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. He plans to travel around Jeju Island. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -14411,7 +14411,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Our summer vacation is going to be fantastic. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Our summer vacation is going to be fantastic. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -14429,7 +14429,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. What are you going to do? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. What are you going to do? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "너는 무엇을 할 예정이니?",
           "숙제가 너무 어려워서 고민이다.",
@@ -14447,7 +14447,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. I am going to go camping in the forest. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. I am going to go camping in the forest. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "나는 숲으로 캠핑을 갈 거야.",
@@ -14465,7 +14465,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. We are going to sleep in a warm tent. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. We are going to sleep in a warm tent. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -14483,7 +14483,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: I am going to stay at home and clean my room. And the response was: \"Good idea! A clean room makes you feel fresh.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: I am going to stay at home and clean my room. And the response was: \"Good idea! A clean room makes you feel fresh.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A가 집에서 할 일은?",
+        "question": "A가 집에서 할 일은?",
         "options": [
           "낮잠 자기",
           "TV 시청하기",
@@ -14501,7 +14501,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Which holiday program are you going to join? And the response was: \"I am going to join the English drama program.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Which holiday program are you going to join? And the response was: \"I am going to join the English drama program.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 참여할 방학 프로그램은?",
+        "question": "B가 참여할 방학 프로그램은?",
         "options": [
           "영어 연극 프로그램",
           "로봇 조립 캠프",
@@ -14519,7 +14519,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Let's eat a delicious hamburger after hiking in the forest. And the response was: \"Sounds delicious! I am very hungry.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Let's eat a delicious hamburger after hiking in the forest. And the response was: \"Sounds delicious! I am very hungry.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 숲 하이킹 후 먹기로 한 음식은?",
+        "question": "두 사람이 숲 하이킹 후 먹기로 한 음식은?",
         "options": [
           "김밥",
           "피자",
@@ -14537,7 +14537,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What are you going to do this summer? And the response was: \"I am going to camp in the deep forest and sleep in a tent.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What are you going to do this summer? And the response was: \"I am going to camp in the deep forest and sleep in a tent.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 방학 계획으로 알맞은 것은?",
+        "question": "B의 방학 계획으로 알맞은 것은?",
         "options": [
           "도서관에 매일 가서 책 읽기",
           "집에서 햄버거 먹으며 게임하기",
@@ -14555,7 +14555,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you have any special plans? And the response was: \"Yes, I am going to visit a traditional folk village.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you have any special plans? And the response was: \"Yes, I am going to visit a traditional folk village.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 방문할 예정인 장소는?",
+        "question": "B가 방문할 예정인 장소는?",
         "options": [
           "컴퓨터 학원",
           "놀이공원 워터파크",
@@ -14573,7 +14573,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What is your child going to do tomorrow? And the response was: \"He is going to the zoo to see wild animals.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What is your child going to do tomorrow? And the response was: \"He is going to the zoo to see wild animals.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 아이가 내일 방문할 장소는?",
+        "question": "아이가 내일 방문할 장소는?",
         "options": [
           "수족관",
           "동물원",
@@ -14591,7 +14591,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: I am going to stay at home and clean my room. And the response was: \"Good idea! A clean room makes you feel fresh.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: I am going to stay at home and clean my room. And the response was: \"Good idea! A clean room makes you feel fresh.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A가 집에서 할 일은?",
+        "question": "A가 집에서 할 일은?",
         "options": [
           "방 청소하기",
           "늦잠 자기",
@@ -14609,7 +14609,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Which holiday program are you going to join? And the response was: \"I am going to join the English drama program.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Which holiday program are you going to join? And the response was: \"I am going to join the English drama program.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 참여할 방학 프로그램은?",
+        "question": "B가 참여할 방학 프로그램은?",
         "options": [
           "수영 교실",
           "로봇 조립 캠프",
@@ -14627,7 +14627,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Let's eat a delicious hamburger after hiking in the forest. And the response was: \"Sounds delicious! I am very hungry.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Let's eat a delicious hamburger after hiking in the forest. And the response was: \"Sounds delicious! I am very hungry.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 숲 하이킹 후 먹기로 한 음식은?",
+        "question": "두 사람이 숲 하이킹 후 먹기로 한 음식은?",
         "options": [
           "피자",
           "김밥",
@@ -14645,7 +14645,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What are you going to do this summer? And the response was: \"I am going to camp in the deep forest and sleep in a tent.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What are you going to do this summer? And the response was: \"I am going to camp in the deep forest and sleep in a tent.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 방학 계획으로 알맞은 것은?",
+        "question": "B의 방학 계획으로 알맞은 것은?",
         "options": [
           "도서관에 매일 가서 책 읽기",
           "집에서 햄버거 먹으며 게임하기",
@@ -14663,7 +14663,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'camp' is a new word in 9단원. In Korean, it means '캠핑하다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'camp' is a new word in 9단원. In Korean, it means '캠핑하다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'camp'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'camp'의 뜻은?",
         "options": [
           "계획",
           "숲",
@@ -14681,7 +14681,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'vacation' is a new word in 9단원. In Korean, it means '방학'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'vacation' is a new word in 9단원. In Korean, it means '방학'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'vacation'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'vacation'의 뜻은?",
         "options": [
           "숲",
           "방학",
@@ -14699,7 +14699,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'visit' is a new word in 9단원. In Korean, it means '방문하다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'visit' is a new word in 9단원. In Korean, it means '방문하다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'visit'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'visit'의 뜻은?",
         "options": [
           "방문하다",
           "텐트",
@@ -14717,7 +14717,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'plan' is a new word in 9단원. In Korean, it means '계획'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'plan' is a new word in 9단원. In Korean, it means '계획'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'plan'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'plan'의 뜻은?",
         "options": [
           "계획",
           "숲",
@@ -14735,7 +14735,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'forest' is a new word in 9단원. In Korean, it means '숲'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'forest' is a new word in 9단원. In Korean, it means '숲'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'forest'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'forest'의 뜻은?",
         "options": [
           "숲",
           "계획",
@@ -14753,7 +14753,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'tent' is a new word in 9단원. In Korean, it means '텐트'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'tent' is a new word in 9단원. In Korean, it means '텐트'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'tent'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'tent'의 뜻은?",
         "options": [
           "숲",
           "계획",
@@ -14771,7 +14771,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'stay' is a new word in 9단원. In Korean, it means '머무르다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'stay' is a new word in 9단원. In Korean, it means '머무르다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'stay'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'stay'의 뜻은?",
         "options": [
           "숲",
           "머무르다",
@@ -14789,7 +14789,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'village' is a new word in 9단원. In Korean, it means '마을'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'village' is a new word in 9단원. In Korean, it means '마을'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'village'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'village'의 뜻은?",
         "options": [
           "마을",
           "계획",
@@ -14807,7 +14807,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'zoo' is a new word in 9단원. In Korean, it means '동물원'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'zoo' is a new word in 9단원. In Korean, it means '동물원'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'zoo'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'zoo'의 뜻은?",
         "options": [
           "숲",
           "텐트",
@@ -14825,7 +14825,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'hamburger' is a new word in 9단원. In Korean, it means '햄버거'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'hamburger' is a new word in 9단원. In Korean, it means '햄버거'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'hamburger'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'hamburger'의 뜻은?",
         "options": [
           "햄버거",
           "텐트",
@@ -15925,7 +15925,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. I brush my teeth twice a day. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. I brush my teeth twice a day. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -15943,7 +15943,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. Drinking enough water is a healthy habit. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. Drinking enough water is a healthy habit. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "충분한 물을 마시는 것은 건강한 습관이야.",
           "숙제가 너무 어려워서 고민이다.",
@@ -15961,7 +15961,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. How often do you clean your room? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. How often do you clean your room? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -15979,7 +15979,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. I clean my room once a week on Saturday. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. I clean my room once a week on Saturday. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -15997,7 +15997,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. Good health is the most precious thing in life. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. Good health is the most precious thing in life. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "좋은 건강은 인생에서 가장 소중한 것이야.",
           "숙제가 너무 어려워서 고민이다.",
@@ -16015,7 +16015,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. All our club members practice together. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. All our club members practice together. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리 동아리 회원들은 모두 함께 연습해.",
           "친구와 다투어서 기분이 슬프다.",
@@ -16033,7 +16033,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. He knows almost nothing about fast food. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. He knows almost nothing about fast food. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -16051,7 +16051,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. I eat fresh apples and carrots a lot. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. I eat fresh apples and carrots a lot. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -16069,7 +16069,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. You should get enough sleep at night. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. You should get enough sleep at night. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -16087,7 +16087,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. How often do you go swimming? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. How often do you go swimming? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -16105,7 +16105,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. I go swimming twice a week with my dad. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. I go swimming twice a week with my dad. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -16123,7 +16123,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Small daily habits can change your whole life. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Small daily habits can change your whole life. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "매일의 작은 습관들이 너의 인생 전체를 바꿀 수 있어.",
           "숙제가 너무 어려워서 고민이다.",
@@ -16141,7 +16141,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. How often do you eat vegetables? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. How often do you eat vegetables? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -16159,7 +16159,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. I eat vegetables three times a day. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. I eat vegetables three times a day. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "나는 하루에 세 번 채소를 먹어.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -16177,7 +16177,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. You should exercise every day. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. You should exercise every day. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "너는 매일 운동을 해야 해.",
           "친구와 다투어서 기분이 슬프다.",
@@ -16195,7 +16195,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: You should drink enough water every day. And the response was: \"Yes, water is very important for healthy life.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: You should drink enough water every day. And the response was: \"Yes, water is very important for healthy life.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A가 권고한 건강 습관은?",
+        "question": "A가 권고한 건강 습관은?",
         "options": [
           "단 음료수를 많이 마시기",
           "운동을 쉬기",
@@ -16213,7 +16213,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you eat fast food often? And the response was: \"No, almost nothing. I love fresh fruits a lot.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you eat fast food often? And the response was: \"No, almost nothing. I love fresh fruits a lot.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 식습관 특징은?",
+        "question": "B의 식습관 특징은?",
         "options": [
           "매일 패스트푸드만 먹음",
           "밥 대신 과자만 먹음",
@@ -16231,7 +16231,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Our club members meet once a week. And the response was: \"That is a great schedule for all of us.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Our club members meet once a week. And the response was: \"That is a great schedule for all of us.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 동아리 부원들의 모임 빈도는?",
+        "question": "동아리 부원들의 모임 빈도는?",
         "options": [
           "격주에 한 번",
           "한 달에 한 번",
@@ -16249,7 +16249,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How often do you eat vegetables, Minsoo? And the response was: \"I eat vegetables three times a day. It is a healthy habit.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How often do you eat vegetables, Minsoo? And the response was: \"I eat vegetables three times a day. It is a healthy habit.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Minsoo의 채소 섭취 빈도는?",
+        "question": "Minsoo의 채소 섭취 빈도는?",
         "options": [
           "한 달에 두 번",
           "거의 먹지 않음",
@@ -16267,7 +16267,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How often do you brush your teeth? And the response was: \"I brush my teeth twice a day, in the morning and evening.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How often do you brush your teeth? And the response was: \"I brush my teeth twice a day, in the morning and evening.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 양치질 빈도는?",
+        "question": "B의 양치질 빈도는?",
         "options": [
           "식사할 때마다",
           "일주일에 두 번",
@@ -16285,7 +16285,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How often do you exercise? And the response was: \"I exercise almost every day to stay strong.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How often do you exercise? And the response was: \"I exercise almost every day to stay strong.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 운동 빈도는?",
+        "question": "B의 운동 빈도는?",
         "options": [
           "전혀 하지 않음",
           "거의 매일",
@@ -16303,7 +16303,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: You should drink enough water every day. And the response was: \"Yes, water is very important for healthy life.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: You should drink enough water every day. And the response was: \"Yes, water is very important for healthy life.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A가 권고한 건강 습관은?",
+        "question": "A가 권고한 건강 습관은?",
         "options": [
           "매일 충분한 물을 마시기",
           "단 음료수를 많이 마시기",
@@ -16321,7 +16321,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you eat fast food often? And the response was: \"No, almost nothing. I love fresh fruits a lot.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you eat fast food often? And the response was: \"No, almost nothing. I love fresh fruits a lot.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 식습관 특징은?",
+        "question": "B의 식습관 특징은?",
         "options": [
           "밥 대신 과자만 먹음",
           "과일을 전혀 먹지 않음",
@@ -16339,7 +16339,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Our club members meet once a week. And the response was: \"That is a great schedule for all of us.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Our club members meet once a week. And the response was: \"That is a great schedule for all of us.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 동아리 부원들의 모임 빈도는?",
+        "question": "동아리 부원들의 모임 빈도는?",
         "options": [
           "격주에 한 번",
           "매일 방과 후",
@@ -16357,7 +16357,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: How often do you eat vegetables, Minsoo? And the response was: \"I eat vegetables three times a day. It is a healthy habit.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How often do you eat vegetables, Minsoo? And the response was: \"I eat vegetables three times a day. It is a healthy habit.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Minsoo의 채소 섭취 빈도는?",
+        "question": "Minsoo의 채소 섭취 빈도는?",
         "options": [
           "거의 먹지 않음",
           "한 달에 두 번",
@@ -16375,7 +16375,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'lot' is a new word in 10단원. In Korean, it means '많음, 다량'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'lot' is a new word in 10단원. In Korean, it means '많음, 다량'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'lot'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'lot'의 뜻은?",
         "options": [
           "많음, 다량",
           "자주, 종종",
@@ -16393,7 +16393,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'member' is a new word in 10단원. In Korean, it means '회원, 부원'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'member' is a new word in 10단원. In Korean, it means '회원, 부원'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'member'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'member'의 뜻은?",
         "options": [
           "습관",
           "건강한",
@@ -16411,7 +16411,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'nothing' is a new word in 10단원. In Korean, it means '아무것도 없음'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'nothing' is a new word in 10단원. In Korean, it means '아무것도 없음'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'nothing'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'nothing'의 뜻은?",
         "options": [
           "습관",
           "자주, 종종",
@@ -16429,7 +16429,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'often' is a new word in 10단원. In Korean, it means '자주, 종종'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'often' is a new word in 10단원. In Korean, it means '자주, 종종'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'often'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'often'의 뜻은?",
         "options": [
           "습관",
           "건강한",
@@ -16447,7 +16447,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'healthy' is a new word in 10단원. In Korean, it means '건강한'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'healthy' is a new word in 10단원. In Korean, it means '건강한'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'healthy'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'healthy'의 뜻은?",
         "options": [
           "운동하다, 운동",
           "건강한",
@@ -16465,7 +16465,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'habit' is a new word in 10단원. In Korean, it means '습관'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'habit' is a new word in 10단원. In Korean, it means '습관'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'habit'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'habit'의 뜻은?",
         "options": [
           "습관",
           "자주, 종종",
@@ -16483,7 +16483,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'exercise' is a new word in 10단원. In Korean, it means '운동하다, 운동'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'exercise' is a new word in 10단원. In Korean, it means '운동하다, 운동'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'exercise'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'exercise'의 뜻은?",
         "options": [
           "습관",
           "자주, 종종",
@@ -16501,7 +16501,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'vegetables' is a new word in 10단원. In Korean, it means '채소들'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'vegetables' is a new word in 10단원. In Korean, it means '채소들'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'vegetables'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'vegetables'의 뜻은?",
         "options": [
           "건강한",
           "자주, 종종",
@@ -16519,7 +16519,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'once' is a new word in 10단원. In Korean, it means '한 번'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'once' is a new word in 10단원. In Korean, it means '한 번'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'once'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'once'의 뜻은?",
         "options": [
           "한 번",
           "자주, 종종",
@@ -16537,7 +16537,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'twice' is a new word in 10단원. In Korean, it means '두 번'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'twice' is a new word in 10단원. In Korean, it means '두 번'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'twice'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'twice'의 뜻은?",
         "options": [
           "자주, 종종",
           "두 번",
@@ -17631,7 +17631,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. A boomerang flies high in the air. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. A boomerang flies high in the air. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17649,7 +17649,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. The clever player hit the target. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. The clever player hit the target. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17667,7 +17667,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. A sari is a traditional dress from India. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. A sari is a traditional dress from India. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17685,7 +17685,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. Do you know anything about Korean culture? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. Do you know anything about Korean culture? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "너는 한국 문화에 대해 무엇이든 알고 있니?",
           "길을 잃어서 병원을 찾고 있다.",
@@ -17703,7 +17703,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. Playing traditional games is so much fun. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. Playing traditional games is so much fun. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "전통 놀이를 하는 것은 정말 재미있어.",
@@ -17721,7 +17721,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. Throw the wooden arrow straight into the jar. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. Throw the wooden arrow straight into the jar. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "나무 화살을 항아리 안으로 곧게 던져봐.",
           "숙제가 너무 어려워서 고민이다.",
@@ -17739,7 +17739,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. Every country has its own special games. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. Every country has its own special games. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -17757,7 +17757,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. How many sticks did you throw into the box? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. How many sticks did you throw into the box? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17775,7 +17775,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. I hit the center goal three times. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. I hit the center goal three times. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "나는 중앙 목표물을 세 번 맞혔어.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17793,7 +17793,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. We can learn about world cultures through games. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. We can learn about world cultures through games. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리는 놀이를 통해 세계 문화를 배울 수 있어.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -17811,7 +17811,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. The clever dog caught the flying disc in the air. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. The clever dog caught the flying disc in the air. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17829,7 +17829,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Let's share our traditional games with foreign friends. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Let's share our traditional games with foreign friends. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17847,7 +17847,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. Do you know anything about Tuho? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. Do you know anything about Tuho? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17865,7 +17865,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. It is a traditional Korean game. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. It is a traditional Korean game. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "그것은 한국의 전통 놀이야.",
           "숙제가 너무 어려워서 고민이다.",
@@ -17883,7 +17883,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. Throw the stick into the pot. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. Throw the stick into the pot. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -17901,7 +17901,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you know what a sari is? And the response was: \"Yes, it is a traditional beautiful dress worn in India.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you know what a sari is? And the response was: \"Yes, it is a traditional beautiful dress worn in India.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 사리(sari)에 대한 설명으로 알맞은 것은?",
+        "question": "사리(sari)에 대한 설명으로 알맞은 것은?",
         "options": [
           "아프리카의 북",
           "호주의 목조 악기",
@@ -17919,7 +17919,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Let's play Yutnori together on Chuseok! And the response was: \"Great! Traditional games are very exciting.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Let's play Yutnori together on Chuseok! And the response was: \"Great! Traditional games are very exciting.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 추석에 함께 하기로 한 것은?",
+        "question": "두 사람이 추석에 함께 하기로 한 것은?",
         "options": [
           "컴퓨터 게임",
           "윷놀이",
@@ -17937,7 +17937,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: The clever boy threw the stick into the jar ten times. And the response was: \"Amazing! He won the game.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: The clever boy threw the stick into the jar ten times. And the response was: \"Amazing! He won the game.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 소년이 투호 놀이에서 성공한 횟수는?",
+        "question": "소년이 투호 놀이에서 성공한 횟수는?",
         "options": [
           "1번",
           "5번",
@@ -17955,7 +17955,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you know anything about Tuho? And the response was: \"Yes, it is a traditional Korean game of throwing arrows into a pot.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you know anything about Tuho? And the response was: \"Yes, it is a traditional Korean game of throwing arrows into a pot.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Tuho(투호) 놀이에 대한 올바른 설명은?",
+        "question": "Tuho(투호) 놀이에 대한 올바른 설명은?",
         "options": [
           "줄을 꼬아 넘는 놀이",
           "돌을 던져 탑을 쓰러뜨리는 놀이",
@@ -17973,7 +17973,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Have you ever thrown a boomerang into the air? And the response was: \"Yes, an Australian boomerang comes back when you throw it.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Have you ever thrown a boomerang into the air? And the response was: \"Yes, an Australian boomerang comes back when you throw it.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 부메랑(boomerang)의 특징으로 알맞은 것은?",
+        "question": "부메랑(boomerang)의 특징으로 알맞은 것은?",
         "options": [
           "소리를 내며 폭발한다",
           "물속에 가라앉는다",
@@ -17991,7 +17991,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Can you hit the goal in Tuho? And the response was: \"Yes, if you throw the stick clever and straight, it hits the jar.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you hit the goal in Tuho? And the response was: \"Yes, if you throw the stick clever and straight, it hits the jar.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 투호에서 성공하기 위한 비결은?",
+        "question": "투호에서 성공하기 위한 비결은?",
         "options": [
           "친구의 화살을 빼앗기",
           "힘껏 바닥으로 내리치기",
@@ -18009,7 +18009,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you know what a sari is? And the response was: \"Yes, it is a traditional beautiful dress worn in India.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you know what a sari is? And the response was: \"Yes, it is a traditional beautiful dress worn in India.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 사리(sari)에 대한 설명으로 알맞은 것은?",
+        "question": "사리(sari)에 대한 설명으로 알맞은 것은?",
         "options": [
           "인도의 아름다운 전통 의상",
           "호주의 목조 악기",
@@ -18027,7 +18027,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Let's play Yutnori together on Chuseok! And the response was: \"Great! Traditional games are very exciting.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Let's play Yutnori together on Chuseok! And the response was: \"Great! Traditional games are very exciting.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 추석에 함께 하기로 한 것은?",
+        "question": "두 사람이 추석에 함께 하기로 한 것은?",
         "options": [
           "쇼핑",
           "영화 관람",
@@ -18045,7 +18045,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: The clever boy threw the stick into the jar ten times. And the response was: \"Amazing! He won the game.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: The clever boy threw the stick into the jar ten times. And the response was: \"Amazing! He won the game.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 소년이 투호 놀이에서 성공한 횟수는?",
+        "question": "소년이 투호 놀이에서 성공한 횟수는?",
         "options": [
           "1번",
           "5번",
@@ -18063,7 +18063,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you know anything about Tuho? And the response was: \"Yes, it is a traditional Korean game of throwing arrows into a pot.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you know anything about Tuho? And the response was: \"Yes, it is a traditional Korean game of throwing arrows into a pot.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: Tuho(투호) 놀이에 대한 올바른 설명은?",
+        "question": "Tuho(투호) 놀이에 대한 올바른 설명은?",
         "options": [
           "줄을 꼬아 넘는 놀이",
           "돌을 던져 탑을 쓰러뜨리는 놀이",
@@ -18081,7 +18081,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'world' is a new word in 11단원. In Korean, it means '세계'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'world' is a new word in 11단원. In Korean, it means '세계'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'world'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'world'의 뜻은?",
         "options": [
           "세계",
           "투호",
@@ -18099,7 +18099,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'throw' is a new word in 11단원. In Korean, it means '던지다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'throw' is a new word in 11단원. In Korean, it means '던지다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'throw'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'throw'의 뜻은?",
         "options": [
           "전통의, 전통적인",
           "던지다",
@@ -18117,7 +18117,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'stick' is a new word in 11단원. In Korean, it means '막대기, 화살'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'stick' is a new word in 11단원. In Korean, it means '막대기, 화살'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'stick'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'stick'의 뜻은?",
         "options": [
           "놀이, 게임",
           "전통의, 전통적인",
@@ -18135,7 +18135,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'tuho' is a new word in 11단원. In Korean, it means '투호'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'tuho' is a new word in 11단원. In Korean, it means '투호'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'tuho'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'tuho'의 뜻은?",
         "options": [
           "투호",
           "알다",
@@ -18153,7 +18153,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'traditional' is a new word in 11단원. In Korean, it means '전통의, 전통적인'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'traditional' is a new word in 11단원. In Korean, it means '전통의, 전통적인'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'traditional'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'traditional'의 뜻은?",
         "options": [
           "알다",
           "투호",
@@ -18171,7 +18171,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'game' is a new word in 11단원. In Korean, it means '놀이, 게임'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'game' is a new word in 11단원. In Korean, it means '놀이, 게임'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'game'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'game'의 뜻은?",
         "options": [
           "전통의, 전통적인",
           "투호",
@@ -18189,7 +18189,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'know' is a new word in 11단원. In Korean, it means '알다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'know' is a new word in 11단원. In Korean, it means '알다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'know'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'know'의 뜻은?",
         "options": [
           "투호",
           "전통의, 전통적인",
@@ -18207,7 +18207,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'about' is a new word in 11단원. In Korean, it means '~에 대하여'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'about' is a new word in 11단원. In Korean, it means '~에 대하여'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'about'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'about'의 뜻은?",
         "options": [
           "투호",
           "놀이, 게임",
@@ -18225,7 +18225,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'air' is a new word in 11단원. In Korean, it means '공기, 공중'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'air' is a new word in 11단원. In Korean, it means '공기, 공중'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'air'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'air'의 뜻은?",
         "options": [
           "놀이, 게임",
           "전통의, 전통적인",
@@ -18243,7 +18243,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'boomerang' is a new word in 11단원. In Korean, it means '부메랑'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'boomerang' is a new word in 11단원. In Korean, it means '부메랑'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'boomerang'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'boomerang'의 뜻은?",
         "options": [
           "놀이, 게임",
           "투호",
@@ -19339,7 +19339,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. The boy in the front row is smiling brightly. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. The boy in the front row is smiling brightly. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -19357,7 +19357,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. We won the golden cup in the English quiz. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. We won the golden cup in the English quiz. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리는 영어 퀴즈에서 황금 컵을 땄어.",
           "친구와 다투어서 기분이 슬프다.",
@@ -19375,7 +19375,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. We walked down the colorful autumn street together. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. We walked down the colorful autumn street together. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -19393,7 +19393,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Jisu. Make a wish for your middle school life. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Jisu. Make a wish for your middle school life. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Jisu이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -19411,7 +19411,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kevin. Don't forget our precious sixth grade memories. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. Don't forget our precious sixth grade memories. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -19429,7 +19429,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Emma. She made a special gift for her teacher. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Emma. She made a special gift for her teacher. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Emma이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -19447,7 +19447,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Tom. Do you remember the day we first met? I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Tom. Do you remember the day we first met? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Tom이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리가 처음 만났던 날을 기억하니?",
           "친구와 다투어서 기분이 슬프다.",
@@ -19465,7 +19465,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Hana. Every photo tells a warm and sweet story. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. Every photo tells a warm and sweet story. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "길을 잃어서 병원을 찾고 있다.",
           "친구와 다투어서 기분이 슬프다.",
@@ -19483,7 +19483,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Brian. I wish you all great happiness and health. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Brian. I wish you all great happiness and health. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Brian이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "너희 모두에게 큰 행복과 건강이 가득하길 바라.",
@@ -19501,7 +19501,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Amy. We will always be the best class forever. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Amy. We will always be the best class forever. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Amy이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리는 언제나 영원히 최고의 반일 거야.",
           "숙제가 너무 어려워서 고민이다.",
@@ -19519,7 +19519,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Paul. Thank you for being my friend this whole year. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Paul. Thank you for being my friend this whole year. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Paul이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "친구와 다투어서 기분이 슬프다.",
           "숙제가 너무 어려워서 고민이다.",
@@ -19537,7 +19537,7 @@
         "difficulty": "★☆☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Minsoo. Congratulations on graduating from elementary school! I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Minsoo. Congratulations on graduating from elementary school! I am very happy and excited about our English class today.\"\n질문: 윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Minsoo이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "초등학교 졸업을 진심으로 축하해!",
           "숙제가 너무 어려워서 고민이다.",
@@ -19555,7 +19555,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Kelly. We made a class album. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. We made a class album. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "우리는 학급 앨범을 만들었어.",
           "친구와 다투어서 기분이 슬프다.",
@@ -19573,7 +19573,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is David. I will never forget this happy year. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is David. I will never forget this happy year. I am very happy and excited about our English class today.\"\n질문: 윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 David이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "숙제가 너무 어려워서 고민이다.",
           "나는 이 행복했던 한 해를 결코 잊지 못할 거야.",
@@ -19591,7 +19591,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Hello! My name is Sarah. Look at the photos on the classroom wall. I am very happy and excited about our English class today.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Sarah. Look at the photos on the classroom wall. I am very happy and excited about our English class today.\"\n질문: 윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
+        "question": "윗글에서 Sarah이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
           "교실 벽에 걸린 사진들을 봐.",
           "길을 잃어서 병원을 찾고 있다.",
@@ -19609,7 +19609,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: We solved the big English quiz together. And the response was: \"Yes, we won the first prize cup as a whole team!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: We solved the big English quiz together. And the response was: \"Yes, we won the first prize cup as a whole team!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 학급 친구들이 함께 이뤄낸 성과는?",
+        "question": "학급 친구들이 함께 이뤄낸 성과는?",
         "options": [
           "연극 발표를 취소함",
           "달리기 계주에서 꼴찌를 함",
@@ -19627,7 +19627,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What is your final wish before graduation? And the response was: \"My wish is that our friendship lasts forever.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What is your final wish before graduation? And the response was: \"My wish is that our friendship lasts forever.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 졸업을 앞둔 B의 마지막 소원은?",
+        "question": "졸업을 앞둔 B의 마지막 소원은?",
         "options": [
           "친구들과의 우정이 영원히 지속되는 것",
           "숙제를 안 하는 것",
@@ -19645,7 +19645,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Don't forget all our happy memories in the sixth grade. And the response was: \"I promise I will remember each of you forever.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Don't forget all our happy memories in the sixth grade. And the response was: \"I promise I will remember each of you forever.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 서로에게 약속한 것은?",
+        "question": "두 사람이 서로에게 약속한 것은?",
         "options": [
           "방학 동안 매일 전화하기",
           "6학년 때의 행복한 추억을 잊지 않고 영원히 기억하기",
@@ -19663,7 +19663,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at our graduation album! We made a class album. And the response was: \"Wow, it has so many wonderful pictures of our memories.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at our graduation album! We made a class album. And the response was: \"Wow, it has so many wonderful pictures of our memories.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 함께 만든 것은?",
+        "question": "두 사람이 함께 만든 것은?",
         "options": [
           "그림 동화책",
           "학교 홍보 영상",
@@ -19681,7 +19681,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Do you remember our field trip in spring? And the response was: \"Yes, I will never forget the street parade we saw.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Do you remember our field trip in spring? And the response was: \"Yes, I will never forget the street parade we saw.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B가 결코 잊지 못할 추억으로 꼽은 것은?",
+        "question": "B가 결코 잊지 못할 추억으로 꼽은 것은?",
         "options": [
           "거리 행진 퍼레이드를 보았던 것",
           "도시락을 떨어뜨렸던 것",
@@ -19699,7 +19699,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at this picture on the wall! And the response was: \"That boy in the photo is Tom when he was in the first grade.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at this picture on the wall! And the response was: \"That boy in the photo is Tom when he was in the first grade.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 벽에 걸린 사진 속 인물은?",
+        "question": "벽에 걸린 사진 속 인물은?",
         "options": [
           "선생님의 어린 시절",
           "교장 선생님",
@@ -19717,7 +19717,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: We solved the big English quiz together. And the response was: \"Yes, we won the first prize cup as a whole team!\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: We solved the big English quiz together. And the response was: \"Yes, we won the first prize cup as a whole team!\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 학급 친구들이 함께 이뤄낸 성과는?",
+        "question": "학급 친구들이 함께 이뤄낸 성과는?",
         "options": [
           "합창 대회에 나가지 못함",
           "연극 발표를 취소함",
@@ -19735,7 +19735,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: What is your final wish before graduation? And the response was: \"My wish is that our friendship lasts forever.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What is your final wish before graduation? And the response was: \"My wish is that our friendship lasts forever.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 졸업을 앞둔 B의 마지막 소원은?",
+        "question": "졸업을 앞둔 B의 마지막 소원은?",
         "options": [
           "친구들과의 우정이 영원히 지속되는 것",
           "숙제를 안 하는 것",
@@ -19753,7 +19753,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Don't forget all our happy memories in the sixth grade. And the response was: \"I promise I will remember each of you forever.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Don't forget all our happy memories in the sixth grade. And the response was: \"I promise I will remember each of you forever.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 서로에게 약속한 것은?",
+        "question": "두 사람이 서로에게 약속한 것은?",
         "options": [
           "모든 사진을 삭제하기",
           "6학년 때의 행복한 추억을 잊지 않고 영원히 기억하기",
@@ -19771,7 +19771,7 @@
         "difficulty": "★★☆",
         "type": "reading_choice",
         "subtext": "Dialogue Reading: Look at our graduation album! We made a class album. And the response was: \"Wow, it has so many wonderful pictures of our memories.\"",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at our graduation album! We made a class album. And the response was: \"Wow, it has so many wonderful pictures of our memories.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 함께 만든 것은?",
+        "question": "두 사람이 함께 만든 것은?",
         "options": [
           "학급 앨범",
           "학급 신문",
@@ -19789,7 +19789,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'friend' is a new word in 12단원. In Korean, it means '친구'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'friend' is a new word in 12단원. In Korean, it means '친구'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'friend'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'friend'의 뜻은?",
         "options": [
           "친구",
           "소년",
@@ -19807,7 +19807,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'graduate' is a new word in 12단원. In Korean, it means '졸업하다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'graduate' is a new word in 12단원. In Korean, it means '졸업하다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'graduate'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'graduate'의 뜻은?",
         "options": [
           "소년",
           "앨범, 사진첩",
@@ -19825,7 +19825,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'together' is a new word in 12단원. In Korean, it means '함께'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'together' is a new word in 12단원. In Korean, it means '함께'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'together'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'together'의 뜻은?",
         "options": [
           "앨범, 사진첩",
           "만들었다",
@@ -19843,7 +19843,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'made' is a new word in 12단원. In Korean, it means '만들었다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'made' is a new word in 12단원. In Korean, it means '만들었다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'made'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'made'의 뜻은?",
         "options": [
           "소년",
           "앨범, 사진첩",
@@ -19861,7 +19861,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'album' is a new word in 12단원. In Korean, it means '앨범, 사진첩'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'album' is a new word in 12단원. In Korean, it means '앨범, 사진첩'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'album'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'album'의 뜻은?",
         "options": [
           "만들었다",
           "소년",
@@ -19879,7 +19879,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'boy' is a new word in 12단원. In Korean, it means '소년'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'boy' is a new word in 12단원. In Korean, it means '소년'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'boy'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'boy'의 뜻은?",
         "options": [
           "잊다, 잊어버리다",
           "소년",
@@ -19897,7 +19897,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'forget' is a new word in 12단원. In Korean, it means '잊다, 잊어버리다'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'forget' is a new word in 12단원. In Korean, it means '잊다, 잊어버리다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'forget'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'forget'의 뜻은?",
         "options": [
           "잊다, 잊어버리다",
           "앨범, 사진첩",
@@ -19915,7 +19915,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'quiz' is a new word in 12단원. In Korean, it means '퀴즈, 간단한 시험'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'quiz' is a new word in 12단원. In Korean, it means '퀴즈, 간단한 시험'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'quiz'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'quiz'의 뜻은?",
         "options": [
           "소년",
           "만들었다",
@@ -19933,7 +19933,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'street' is a new word in 12단원. In Korean, it means '거리, 길'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'street' is a new word in 12단원. In Korean, it means '거리, 길'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'street'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'street'의 뜻은?",
         "options": [
           "만들었다",
           "거리, 길",
@@ -19951,7 +19951,7 @@
         "difficulty": "★★★",
         "type": "reading_choice",
         "subtext": "Vocabulary Note: The word 'wall' is a new word in 12단원. In Korean, it means '벽'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'wall' is a new word in 12단원. In Korean, it means '벽'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'wall'의 뜻은?",
+        "question": "윗글에서 설명하고 있는 신출 어휘 'wall'의 뜻은?",
         "options": [
           "만들었다",
           "앨범, 사진첩",
@@ -20412,9 +20412,6 @@
   }
 };
 
-    // ────────────────────────────────────────────────────────
-    // 2. 교사용 지도서 엄선 20문제 고정 마스터 프리셋 (CURRICULUM_20)
-    // ────────────────────────────────────────────────────────
     const MASTER_20_HIGH_LEVEL = [
   {
     "id": 1,
