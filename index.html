@@ -533,11 +533,15 @@
                     </h2>
 
                     <!-- 듣기 문제용 TTS 버튼 -->
-                    <div id="host-audio-container" class="hidden flex justify-center items-center gap-3 py-2">
-                        <button type="button" onclick="playCurrentQuestionAudio()" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-black text-sm md:text-base rounded-2xl shadow-md transition flex items-center gap-2">
-                            <i class="fa-solid fa-volume-high text-lg"></i>
-                            <span>원어민 음성 다시 듣기 (🔊)</span>
-                        </button>
+                    <div id="host-audio-container" class="hidden flex flex-col justify-center items-center gap-2 py-2">
+                        <div class="flex items-center gap-3">
+                            <button type="button" onclick="playCurrentQuestionAudio()" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-black text-sm md:text-base rounded-2xl shadow-md transition flex items-center gap-2">
+                                <i class="fa-solid fa-volume-high text-lg"></i>
+                                <span>원어민 대화 다시 듣기 (🔊)</span>
+                            </button>
+                        </div>
+                        <div id="host-dialogue-speaker-status" class="hidden text-xs md:text-sm font-extrabold px-3 py-1 bg-amber-100 text-amber-900 rounded-full border border-amber-300 animate-pulse">
+                        </div>
                     </div>
 
                     <!-- 읽기 지문/보조 텍스트 (필요시) -->
@@ -906,11 +910,15 @@
                     </h2>
 
                     <!-- 듣기 버튼 -->
-                    <div id="solo-audio-container" class="hidden flex justify-center py-1">
-                        <button type="button" onclick="playCurrentQuestionAudio()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center gap-2">
-                            <i class="fa-solid fa-volume-high"></i>
-                            <span>음성 다시 듣기 (🔊)</span>
-                        </button>
+                    <div id="solo-audio-container" class="hidden flex flex-col justify-center items-center gap-1.5 py-1">
+                        <div class="flex items-center gap-2">
+                            <button type="button" onclick="playCurrentQuestionAudio()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center gap-2">
+                                <i class="fa-solid fa-volume-high"></i>
+                                <span>원어민 대화 다시 듣기 (🔊)</span>
+                            </button>
+                        </div>
+                        <div id="solo-dialogue-speaker-status" class="hidden text-2xs font-extrabold px-2.5 py-0.5 bg-amber-100 text-amber-900 rounded-full border border-amber-300 animate-pulse">
+                        </div>
                     </div>
 
                     <!-- 서브 텍스트 -->
@@ -1151,85 +1159,234 @@
         let scoresMap = new Map();
 
         // ─────────────────────────────────────────────
-        // 3. 웹 오디오 골든벨 타종 & 효과음 합성 엔진
+        // 3. 음향 효과음 제어 (사용자 요청: 띵 소리 및 카운트다운 비프음 제거)
         // ─────────────────────────────────────────────
         function playGoldenBellChime() {
-            try {
-                const AudioCtx = window.AudioContext || window.webkitAudioContext;
-                const ctx = new AudioCtx();
-                const now = ctx.currentTime;
-                // 풍성한 황금종 배음 구조 (D5 587.33Hz 기본음 + 조화/비조화 벨 오버톤)
-                const harmonics = [587.33, 880, 1174.66, 1760, 2637];
-                const gains = [0.65, 0.4, 0.28, 0.16, 0.08];
-                const decays = [3.2, 2.5, 2.0, 1.4, 0.9];
-
-                harmonics.forEach((freq, idx) => {
-                    const osc = ctx.createOscillator();
-                    const gain = ctx.createGain();
-                    osc.type = (idx % 2 === 0) ? 'sine' : 'triangle';
-                    osc.frequency.setValueAtTime(freq, now);
-                    gain.gain.setValueAtTime(gains[idx], now);
-                    gain.gain.exponentialRampToValueAtTime(0.0001, now + decays[idx]);
-                    osc.connect(gain);
-                    gain.connect(ctx.destination);
-                    osc.start(now);
-                    osc.stop(now + decays[idx]);
-                });
-            } catch (e) {
-                console.warn("Chime synth error:", e);
-            }
+            // 사용자 요청: 띵 소리(골든벨 타종음) 완전 음소거
         }
 
         function playTickSound() {
-            try {
-                const AudioCtx = window.AudioContext || window.webkitAudioContext;
-                const ctx = new AudioCtx();
-                const osc = ctx.createOscillator();
-                const gain = ctx.createGain();
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(800, ctx.currentTime);
-                gain.gain.setValueAtTime(0.08, ctx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.05);
-                osc.connect(gain);
-                gain.connect(ctx.destination);
-                osc.start();
-                osc.stop(ctx.currentTime + 0.05);
-            } catch(e) {}
+            // 사용자 요청: 카운트다운 띵/비프음 음소거
         }
 
-        // 미국 영어 원어민 프리미엄 음성 파이프라인
-        function getEnglishVoice() {
-            if (!('speechSynthesis' in window)) return null;
-            const voices = window.speechSynthesis.getVoices();
-            const us = voices.filter(v => v.lang === 'en-US' || v.lang === 'en_US');
-            const premium = us.find(v => 
-                v.name.includes('Google') || 
-                v.name.includes('Jenny') || 
-                v.name.includes('Aria') || 
-                v.name.includes('Samantha') || 
-                v.name.includes('Natural')
-            );
-            return premium || us[0] || voices.find(v => v.lang.startsWith('en')) || null;
+        // ─────────────────────────────────────────────
+        // 3-B. 2인 화자(목소리 차등) 대화형 Web Speech TTS 엔진
+        // ─────────────────────────────────────────────
+        let cachedVoices = [];
+        function refreshVoices() {
+            if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+                cachedVoices = window.speechSynthesis.getVoices();
+            }
+        }
+        if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+            refreshVoices();
+            window.speechSynthesis.onvoiceschanged = refreshVoices;
+        }
+
+        // 대화 텍스트에서 화자별 발화 분리
+        function parseDialogueTurns(audioText) {
+            if (!audioText) return [];
+            const speakerRegex = /(?:^|(?<=[.?!]\s+))([A-Za-z가-힣]{1,15})\s*:\s*/g;
+            const matches = [];
+            let match;
+            while ((match = speakerRegex.exec(audioText)) !== null) {
+                matches.push({
+                    speaker: match[1],
+                    index: match.index,
+                    textStart: match.index + match[0].length
+                });
+            }
+            if (matches.length === 0) {
+                return [{ speaker: 'Speaker', text: audioText.trim() }];
+            }
+            const turns = [];
+            for (let i = 0; i < matches.length; i++) {
+                const speaker = matches[i].speaker;
+                const start = matches[i].textStart;
+                const end = (i + 1 < matches.length) ? matches[i + 1].index : audioText.length;
+                const text = audioText.substring(start, end).trim();
+                if (text) turns.push({ speaker, text });
+            }
+            return turns;
+        }
+
+        const FEMALE_NAMES = new Set(['amy', 'emma', 'hana', 'jisu', 'kelly', 'sarah', 'girl', 'woman', 'mom', 'mother', 'lady', 'miss']);
+        const MALE_NAMES = new Set(['brian', 'david', 'kevin', 'minsoo', 'paul', 'tom', 'boy', 'man', 'dad', 'father', 'mr']);
+
+        function getDialogueVoicePair() {
+            const voices = (cachedVoices && cachedVoices.length > 0)
+                ? cachedVoices
+                : ((typeof window !== 'undefined' && 'speechSynthesis' in window) ? window.speechSynthesis.getVoices() : []);
+
+            const enVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+
+            const femaleKw = ['jenny', 'aria', 'zira', 'samantha', 'victoria', 'karen', 'moira', 'tessa', 'female', 'woman', 'girl'];
+            const maleKw = ['guy', 'david', 'christopher', 'mark', 'roger', 'alex', 'daniel', 'fred', 'tom', 'oliver', 'male', 'man', 'boy'];
+
+            let female = enVoices.find(v => {
+                const n = v.name.toLowerCase();
+                return femaleKw.some(k => n.includes(k)) && (n.includes('natural') || n.includes('online') || n.includes('google'));
+            }) || enVoices.find(v => femaleKw.some(k => v.name.toLowerCase().includes(k)));
+
+            let male = enVoices.find(v => {
+                const n = v.name.toLowerCase();
+                return maleKw.some(k => n.includes(k)) && (n.includes('natural') || n.includes('online') || n.includes('google'));
+            }) || enVoices.find(v => maleKw.some(k => v.name.toLowerCase().includes(k)));
+
+            const usVoices = enVoices.filter(v => v.lang.toLowerCase().includes('us'));
+            const pool = usVoices.length > 0 ? usVoices : (enVoices.length > 0 ? enVoices : voices);
+
+            if (!female && pool.length > 0) female = pool[0];
+            if (!male && pool.length > 0) male = pool.find(v => v !== female) || pool[0];
+
+            return { femaleVoice: female || null, maleVoice: male || null };
+        }
+
+        let activeDialogueSessionId = 0;
+
+        window.stopCurrentQuestionAudio = function() {
+            activeDialogueSessionId = 0;
+            if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            updateDialogueSpeakerIndicator('');
+        };
+
+        function updateDialogueSpeakerIndicator(speakerName) {
+            const hostInd = document.getElementById('host-dialogue-speaker-status');
+            const soloInd = document.getElementById('solo-dialogue-speaker-status');
+            if (hostInd) {
+                if (speakerName) {
+                    hostInd.innerHTML = `<i class="fa-solid fa-comments text-amber-500 mr-1.5"></i><strong>${speakerName}</strong> 발화 중...`;
+                    hostInd.classList.remove('hidden');
+                } else {
+                    hostInd.classList.add('hidden');
+                }
+            }
+            if (soloInd) {
+                if (speakerName) {
+                    soloInd.innerHTML = `<i class="fa-solid fa-comments text-amber-500 mr-1.5"></i><strong>${speakerName}</strong> 발화 중...`;
+                    soloInd.classList.remove('hidden');
+                } else {
+                    soloInd.classList.add('hidden');
+                }
+            }
         }
 
         window.playCurrentQuestionAudio = function() {
             const q = currentQuestions[currentQIndex];
             if (!q || !q.audioText) return;
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-                const u = new SpeechSynthesisUtterance(q.audioText);
-                u.lang = 'en-US';
-                u.rate = 0.9;
-                const voice = getEnglishVoice();
-                if (voice) u.voice = voice;
+            if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+
+            window.stopCurrentQuestionAudio();
+            const sessionId = Date.now();
+            activeDialogueSessionId = sessionId;
+
+            const turns = parseDialogueTurns(q.audioText);
+            if (turns.length === 0) return;
+
+            const { femaleVoice, maleVoice } = getDialogueVoicePair();
+            const koVoice = (cachedVoices || []).find(v => v.lang && v.lang.toLowerCase().startsWith('ko')) || null;
+
+            // 등장하는 화자 목록 식별
+            const speakerList = [];
+            turns.forEach(t => {
+                if (!speakerList.includes(t.speaker)) speakerList.push(t.speaker);
+            });
+
+            const spk1 = speakerList[0] || 'A';
+            const spk2 = speakerList[1] || 'B';
+
+            const isSpk1Female = FEMALE_NAMES.has(spk1.toLowerCase());
+            const isSpk1Male = MALE_NAMES.has(spk1.toLowerCase());
+            const isSpk2Female = FEMALE_NAMES.has(spk2.toLowerCase());
+            const isSpk2Male = MALE_NAMES.has(spk2.toLowerCase());
+
+            const profileMap = {};
+
+            if (isSpk1Female && isSpk2Male) {
+                profileMap[spk1] = { voice: femaleVoice, pitch: 1.15, rate: 0.92 };
+                profileMap[spk2] = { voice: maleVoice, pitch: 0.85, rate: 0.90 };
+            } else if (isSpk1Male && isSpk2Female) {
+                profileMap[spk1] = { voice: maleVoice, pitch: 0.85, rate: 0.90 };
+                profileMap[spk2] = { voice: femaleVoice, pitch: 1.15, rate: 0.92 };
+            } else if (isSpk1Male && isSpk2Male) {
+                // 두 명 모두 남학생: 한 명은 경쾌한 톤(1.05), 다른 한 명은 차분한 저음(0.82)
+                profileMap[spk1] = { voice: maleVoice, pitch: 1.05, rate: 0.93 };
+                profileMap[spk2] = { voice: (femaleVoice && femaleVoice !== maleVoice ? femaleVoice : maleVoice), pitch: 0.82, rate: 0.88 };
+            } else if (isSpk1Female && isSpk2Female) {
+                // 두 명 모두 여학생: 한 명은 맑고 높은 톤(1.18), 다른 한 명은 부드럽고 차분한 톤(0.95)
+                profileMap[spk1] = { voice: femaleVoice, pitch: 1.18, rate: 0.92 };
+                profileMap[spk2] = { voice: (maleVoice && maleVoice !== femaleVoice ? maleVoice : femaleVoice), pitch: 0.95, rate: 0.90 };
+            } else {
+                // 기본값 (A & B 등): 화자 1은 밝은 여성톤, 화자 2는 안정된 남성톤
+                profileMap[spk1] = { voice: femaleVoice, pitch: 1.15, rate: 0.92 };
+                profileMap[spk2] = { voice: maleVoice, pitch: 0.86, rate: 0.90 };
+            }
+
+            let turnIdx = 0;
+
+            function speakTurn() {
+                if (activeDialogueSessionId !== sessionId) return;
+                if (turnIdx >= turns.length) {
+                    updateDialogueSpeakerIndicator('');
+                    return;
+                }
+
+                const turn = turns[turnIdx];
+                const profile = profileMap[turn.speaker] || (turnIdx % 2 === 0 ? profileMap[spk1] : profileMap[spk2]);
+
+                updateDialogueSpeakerIndicator(turn.speaker);
+
+                const u = new SpeechSynthesisUtterance(turn.text);
+                const hasKorean = /[가-힣]/.test(turn.text);
+
+                if (hasKorean) {
+                    u.lang = 'ko-KR';
+                    if (koVoice) u.voice = koVoice;
+                } else {
+                    u.lang = 'en-US';
+                    if (profile.voice) u.voice = profile.voice;
+                }
+
+                u.rate = profile.rate || 0.90;
+                u.pitch = profile.pitch || 1.0;
+
+                u.onend = function() {
+                    if (activeDialogueSessionId !== sessionId) return;
+                    turnIdx++;
+                    if (turnIdx < turns.length) {
+                        // 대화 주고받는 자연스러운 간격 (380ms)
+                        setTimeout(speakTurn, 380);
+                    } else {
+                        updateDialogueSpeakerIndicator('');
+                    }
+                };
+
+                u.onerror = function(e) {
+                    if (activeDialogueSessionId !== sessionId) return;
+                    console.warn("Speech synthesis turn error:", e);
+                    turnIdx++;
+                    if (turnIdx < turns.length) {
+                        setTimeout(speakTurn, 250);
+                    } else {
+                        updateDialogueSpeakerIndicator('');
+                    }
+                };
+
                 window.speechSynthesis.speak(u);
             }
+
+            speakTurn();
         };
 
         // ─────────────────────────────────────────────
         // 4. 화면 전환 유틸리티
         // ─────────────────────────────────────────────
         window.showScreen = function(screenId) {
+            if (typeof window.stopCurrentQuestionAudio === 'function') {
+                window.stopCurrentQuestionAudio();
+            }
             const screens = [
                 'screen-home', 'screen-host-lobby', 'screen-host-game', 'screen-host-reveal',
                 'screen-student-lobby', 'screen-student-game', 'screen-student-reveal',
@@ -1249,6 +1406,9 @@
         };
 
         window.exitToHome = function() {
+            if (typeof window.stopCurrentQuestionAudio === 'function') {
+                window.stopCurrentQuestionAudio();
+            }
             if (roomUnsubscribe) {
                 roomUnsubscribe();
                 roomUnsubscribe = null;
@@ -1597,6 +1757,9 @@
 
         // 호스트: 정답 공개 및 채점 (선착순 보너스 계산)
         window.hostForceReveal = async function() {
+            if (typeof window.stopCurrentQuestionAudio === 'function') {
+                window.stopCurrentQuestionAudio();
+            }
             if (!currentRoomCode || !isHost) return;
             if (questionTimer) {
                 clearInterval(questionTimer);
@@ -1756,6 +1919,9 @@
         }
 
         window.hostNextQuestion = async function() {
+            if (typeof window.stopCurrentQuestionAudio === 'function') {
+                window.stopCurrentQuestionAudio();
+            }
             if (!currentRoomCode || !isHost) return;
             const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
             const snap = await getDoc(roomRef);
@@ -2242,6 +2408,9 @@
         };
 
         window.submitSoloAnswer = function(isTimeout = false) {
+            if (typeof window.stopCurrentQuestionAudio === 'function') {
+                window.stopCurrentQuestionAudio();
+            }
             if (questionTimer) {
                 clearInterval(questionTimer);
                 questionTimer = null;

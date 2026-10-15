@@ -15744,7 +15744,7 @@
         "domainIcon": "🎧",
         "difficulty": "★★★",
         "type": "listening_choice",
-        "audioText": "Kelly: What does 'tooth' mean in Korean? Sarah: It means '치아, 이 (복수: teeth)'.",
+        "audioText": "Kelly: What does 'tooth' mean in Korean? Sarah: It means '치아, 이 (복수 teeth)'.",
         "question": "[듣기 · 10단원] 대화에서 언급된 영어 단어 'tooth'의 우리말 뜻으로 바른 것은?",
         "options": [
           "습관",
@@ -15780,7 +15780,7 @@
         "domainIcon": "🎧",
         "difficulty": "★★★",
         "type": "listening_choice",
-        "audioText": "Sarah: What does 'lot' mean in Korean? Kevin: It means '많음 (a lot: 많이)'.",
+        "audioText": "Sarah: What does 'lot' mean in Korean? Kevin: It means '많음 (a lot 많이)'.",
         "question": "[듣기 · 10단원] 대화에서 언급된 영어 단어 'lot'의 우리말 뜻으로 바른 것은?",
         "options": [
           "습관",
