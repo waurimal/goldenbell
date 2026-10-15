@@ -421,14 +421,14 @@
         "audioText": "Amy: Can you spell the word student? Minsoo: I agree with you!",
         "question": "대화에서 Amy이(가) 말한 핵심 표현의 우리말 뜻으로 가장 알맞은 것은?",
         "options": [
-          "student라는 단어 철자를 말할 수 있니?",
-          "다음 기회에 다시 이야기하자.",
-          "나는 무슨 말인지 잘 모르겠어.",
-          "그것은 좋은 생각이 아닌 것 같아."
+          "단어의 철자를 말할 수 있니?",
+          "이름을 다시 말해 줄 수 있니?",
+          "몇 학년인지 물어봐도 되겠니?",
+          "영어 책을 함께 읽어줄 수 있니?"
         ],
         "correctIndex": 0,
-        "correctAnswer": "student라는 단어 철자를 말할 수 있니?",
-        "explanation": "'Can you spell the word student?'은 'student라는 단어 철자를 말할 수 있니?'을 의미합니다."
+        "correctAnswer": "단어의 철자를 말할 수 있니?",
+        "explanation": "'Can you spell the word student?'은 '단어의 철자를 말할 수 있니?'을 의미합니다."
       },
       {
         "id": 24,
@@ -727,14 +727,14 @@
         "subtext": "Hello! My name is Kevin. Can you spell the word student? I am very happy and excited about our English class today.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kevin. Can you spell the word student? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kevin이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
-          "student라는 단어 철자를 말할 수 있니?",
-          "길을 잃어서 병원을 찾고 있다.",
-          "숙제가 너무 어려워서 고민이다.",
-          "친구와 다투어서 기분이 슬프다."
+          "단어의 철자를 말해 달라고 부탁하고 있다.",
+          "좋아하는 계절이 언제인지 묻고 있다.",
+          "친구에게 생일이 언제인지 묻고 있다.",
+          "새 학년이 되어 기쁘다고 말하고 있다."
         ],
         "correctIndex": 0,
-        "correctAnswer": "student라는 단어 철자를 말할 수 있니?",
-        "explanation": "'Can you spell the word student?'(student라는 단어 철자를 말할 수 있니?)이 핵심 문장입니다."
+        "correctAnswer": "단어의 철자를 말해 달라고 부탁하고 있다.",
+        "explanation": "Kevin은 'Can you spell student?'라며 단어의 철자를 말해 달라고 부탁하고 있습니다."
       },
       {
         "id": 41,
@@ -781,14 +781,14 @@
         "subtext": "Hello! My name is Hana. How do you spell Linh Phan? I am very happy and excited about our English class today.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Hana. How do you spell Linh Phan? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Hana이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
-          "길을 잃어서 병원을 찾고 있다.",
-          "Linh Phan의 철자는 어떻게 쓰니?",
-          "숙제가 너무 어려워서 고민이다.",
-          "친구와 다투어서 기분이 슬프다."
+          "학교 도서관이 어디 있는지 길을 묻고 있다.",
+          "친구 이름의 철자를 어떻게 쓰는지 묻고 있다.",
+          "오늘 영어 숙제가 무엇인지 확인하고 있다.",
+          "방과 후 동아리 활동에 참여하자고 권유하고 있다."
         ],
         "correctIndex": 1,
-        "correctAnswer": "Linh Phan의 철자는 어떻게 쓰니?",
-        "explanation": "'How do you spell Linh Phan?'(Linh Phan의 철자는 어떻게 쓰니?)이 핵심 문장입니다."
+        "correctAnswer": "친구 이름의 철자를 어떻게 쓰는지 묻고 있다.",
+        "explanation": "Hana는 'How do you spell Linh Phan?'이라며 친구 이름의 철자를 묻고 있습니다."
       },
       {
         "id": 44,
@@ -7074,14 +7074,14 @@
         "audioText": "Sarah: Where is ABC Library? Kevin: I agree with you!",
         "question": "대화에서 Sarah이(가) 말한 핵심 표현의 우리말 뜻으로 가장 알맞은 것은?",
         "options": [
-          "나는 무슨 말인지 잘 모르겠어.",
-          "그것은 좋은 생각이 아닌 것 같아.",
-          "다음 기회에 다시 이야기하자.",
-          "ABC 도서관이 어디에 있나요?"
+          "우체국이 몇 시에 문을 닫나요?",
+          "경찰서까지 어떻게 가나요?",
+          "지하철역에서 만날 수 있나요?",
+          "도서관이 어디에 있나요?"
         ],
         "correctIndex": 3,
-        "correctAnswer": "ABC 도서관이 어디에 있나요?",
-        "explanation": "'Where is ABC Library?'은 'ABC 도서관이 어디에 있나요?'을 의미합니다."
+        "correctAnswer": "도서관이 어디에 있나요?",
+        "explanation": "'Where is ABC Library?'은 '도서관이 어디에 있나요?'을 의미합니다."
       },
       {
         "id": 17,
@@ -7650,14 +7650,14 @@
         "subtext": "Hello! My name is Kelly. Where is ABC Library? I am very happy and excited about our English class today.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Hello! My name is Kelly. Where is ABC Library? I am very happy and excited about our English class today.\"\n질문: 윗글에서 Kelly이(가) 언급한 주된 내용으로 알맞은 것은?",
         "options": [
-          "길을 잃어서 병원을 찾고 있다.",
-          "친구와 다투어서 기분이 슬프다.",
-          "숙제가 너무 어려워서 고민이다.",
-          "ABC 도서관이 어디에 있나요?"
+          "병원에서 진료 순서를 기다리고 있다.",
+          "친구와 공원에서 자전거를 타고 있다.",
+          "은행에서 새 통장을 만들고 있다.",
+          "도서관이 어디에 있는지 묻고 있다."
         ],
         "correctIndex": 3,
-        "correctAnswer": "ABC 도서관이 어디에 있나요?",
-        "explanation": "'Where is ABC Library?'(ABC 도서관이 어디에 있나요?)이 핵심 문장입니다."
+        "correctAnswer": "도서관이 어디에 있는지 묻고 있다.",
+        "explanation": "Kelly는 'Where is ABC Library?'라며 도서관의 위치(길)를 묻고 있습니다."
       },
       {
         "id": 49,
@@ -10186,12 +10186,12 @@
         "question": "대화를 듣고, A의 영화제 초대 제안에 대한 B의 응답은?",
         "options": [
           "표가 없어서 못 간다고 함",
-          "기꺼이 수락함 (Sure, I would love to!)",
+          "기꺼이 수락함",
           "이미 영화를 봤다고 함",
           "일정이 있어 거절함"
         ],
         "correctIndex": 1,
-        "correctAnswer": "기꺼이 수락함 (Sure, I would love to!)",
+        "correctAnswer": "기꺼이 수락함",
         "explanation": "'Sure, I would love to!'는 초대에 흔쾌히 응하는 표현입니다."
       },
       {
@@ -10242,10 +10242,10 @@
           "마술 쇼",
           "불꽃놀이",
           "인형극",
-          "멋진 레이저 쇼 (laser show)"
+          "멋진 레이저 쇼"
         ],
         "correctIndex": 3,
-        "correctAnswer": "멋진 레이저 쇼 (laser show)",
+        "correctAnswer": "멋진 레이저 쇼",
         "explanation": "교과서 어휘: 'laser'와 'light'입니다."
       },
       {
@@ -10296,10 +10296,10 @@
           "이미 영화를 봤다고 함",
           "표가 없어서 못 간다고 함",
           "일정이 있어 거절함",
-          "기꺼이 수락함 (Sure, I would love to!)"
+          "기꺼이 수락함"
         ],
         "correctIndex": 3,
-        "correctAnswer": "기꺼이 수락함 (Sure, I would love to!)",
+        "correctAnswer": "기꺼이 수락함",
         "explanation": "'Sure, I would love to!'는 초대에 흔쾌히 응하는 표현입니다."
       },
       {
@@ -10347,13 +10347,13 @@
         "audioText": "Brian: Look at the light on the screen! Paul: It is a wonderful laser show.",
         "question": "대화를 듣고, 화면에서 펼쳐지는 것은?",
         "options": [
-          "멋진 레이저 쇼 (laser show)",
+          "멋진 레이저 쇼",
           "불꽃놀이",
           "인형극",
           "마술 쇼"
         ],
         "correctIndex": 0,
-        "correctAnswer": "멋진 레이저 쇼 (laser show)",
+        "correctAnswer": "멋진 레이저 쇼",
         "explanation": "교과서 어휘: 'laser'와 'light'입니다."
       },
       {
@@ -10401,13 +10401,13 @@
         "audioText": "Minsoo: Can you come to the movie festival? David: Sure, I would love to! When is it?",
         "question": "대화를 듣고, A의 영화제 초대 제안에 대한 B의 응답은?",
         "options": [
-          "기꺼이 수락함 (Sure, I would love to!)",
+          "기꺼이 수락함",
           "표가 없어서 못 간다고 함",
           "이미 영화를 봤다고 함",
           "일정이 있어 거절함"
         ],
         "correctIndex": 0,
-        "correctAnswer": "기꺼이 수락함 (Sure, I would love to!)",
+        "correctAnswer": "기꺼이 수락함",
         "explanation": "'Sure, I would love to!'는 초대에 흔쾌히 응하는 표현입니다."
       },
       {
@@ -10635,7 +10635,7 @@
         "audioText": "Kelly: Can you come to my house today? Sarah: Sure, I'd love to visit you!",
         "question": "대화에서 언급된 영어 단어 'come'의 우리말 뜻으로 바른 것은?",
         "options": [
-          "물론 (of course), 과정",
+          "물론, 과정",
           "오다",
           "~후에",
           "비스킷, 과자"
@@ -10655,7 +10655,7 @@
         "options": [
           "초대하다",
           "~후에",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "비스킷, 과자"
         ],
         "correctIndex": 0,
@@ -10673,7 +10673,7 @@
         "options": [
           "비스킷, 과자",
           "~후에",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "물론이지, 확실한"
         ],
         "correctIndex": 3,
@@ -10690,7 +10690,7 @@
         "question": "대화에서 언급된 영어 단어 'sorry'의 우리말 뜻으로 바른 것은?",
         "options": [
           "비스킷, 과자",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "미안한",
           "~후에"
         ],
@@ -10707,7 +10707,7 @@
         "audioText": "Kevin: See you at the playground tomorrow! Tom: Sounds good, see you then!",
         "question": "대화에서 언급된 영어 단어 'tomorrow'의 우리말 뜻으로 바른 것은?",
         "options": [
-          "물론 (of course), 과정",
+          "물론, 과정",
           "비스킷, 과자",
           "~후에",
           "내일"
@@ -10727,7 +10727,7 @@
         "options": [
           "비스킷, 과자",
           "~후에",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "레이저"
         ],
         "correctIndex": 1,
@@ -10745,7 +10745,7 @@
         "options": [
           "~후에",
           "비스킷, 과자",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "레이저"
         ],
         "correctIndex": 1,
@@ -10764,11 +10764,11 @@
           "비스킷, 과자",
           "~후에",
           "레이저",
-          "물론 (of course), 과정"
+          "물론, 과정"
         ],
         "correctIndex": 3,
-        "correctAnswer": "물론 (of course), 과정",
-        "explanation": "'course'은 '물론 (of course), 과정'를 뜻합니다."
+        "correctAnswer": "물론, 과정",
+        "explanation": "'course'은 '물론, 과정'를 뜻합니다."
       },
       {
         "id": 34,
@@ -10781,7 +10781,7 @@
         "options": [
           "레이저",
           "비스킷, 과자",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "~후에"
         ],
         "correctIndex": 0,
@@ -10799,7 +10799,7 @@
         "options": [
           "비스킷, 과자",
           "~후에",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "빛, 가벼운"
         ],
         "correctIndex": 3,
@@ -11085,13 +11085,13 @@
         "subtext": "Dialogue Reading: Look at the light on the screen! And the response was: \"It is a wonderful laser show.\"",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at the light on the screen! And the response was: \"It is a wonderful laser show.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 화면에서 펼쳐지는 것은?",
         "options": [
-          "멋진 레이저 쇼 (laser show)",
+          "멋진 레이저 쇼",
           "불꽃놀이",
           "인형극",
           "마술 쇼"
         ],
         "correctIndex": 0,
-        "correctAnswer": "멋진 레이저 쇼 (laser show)",
+        "correctAnswer": "멋진 레이저 쇼",
         "explanation": "교과서 어휘: 'laser'와 'light'입니다."
       },
       {
@@ -11139,13 +11139,13 @@
         "subtext": "Dialogue Reading: Can you come to the movie festival? And the response was: \"Sure, I would love to! When is it?\"",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you come to the movie festival? And the response was: \"Sure, I would love to! When is it?\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A의 영화제 초대 제안에 대한 B의 응답은?",
         "options": [
-          "기꺼이 수락함 (Sure, I would love to!)",
+          "기꺼이 수락함",
           "일정이 있어 거절함",
           "이미 영화를 봤다고 함",
           "표가 없어서 못 간다고 함"
         ],
         "correctIndex": 0,
-        "correctAnswer": "기꺼이 수락함 (Sure, I would love to!)",
+        "correctAnswer": "기꺼이 수락함",
         "explanation": "'Sure, I would love to!'는 초대에 흔쾌히 응하는 표현입니다."
       },
       {
@@ -11196,10 +11196,10 @@
           "마술 쇼",
           "인형극",
           "불꽃놀이",
-          "멋진 레이저 쇼 (laser show)"
+          "멋진 레이저 쇼"
         ],
         "correctIndex": 3,
-        "correctAnswer": "멋진 레이저 쇼 (laser show)",
+        "correctAnswer": "멋진 레이저 쇼",
         "explanation": "교과서 어휘: 'laser'와 'light'입니다."
       },
       {
@@ -11247,13 +11247,13 @@
         "subtext": "Dialogue Reading: Can you come to the movie festival? And the response was: \"Sure, I would love to! When is it?\"",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Can you come to the movie festival? And the response was: \"Sure, I would love to! When is it?\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: A의 영화제 초대 제안에 대한 B의 응답은?",
         "options": [
-          "기꺼이 수락함 (Sure, I would love to!)",
+          "기꺼이 수락함",
           "이미 영화를 봤다고 함",
           "표가 없어서 못 간다고 함",
           "일정이 있어 거절함"
         ],
         "correctIndex": 0,
-        "correctAnswer": "기꺼이 수락함 (Sure, I would love to!)",
+        "correctAnswer": "기꺼이 수락함",
         "explanation": "'Sure, I would love to!'는 초대에 흔쾌히 응하는 표현입니다."
       },
       {
@@ -11265,7 +11265,7 @@
         "subtext": "Vocabulary Note: The word 'sure' is a new word in 7단원. In Korean, it means '물론이지, 확실한'.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'sure' is a new word in 7단원. In Korean, it means '물론이지, 확실한'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'sure'의 뜻은?",
         "options": [
-          "물론 (of course), 과정",
+          "물론, 과정",
           "물론이지, 확실한",
           "~후에",
           "비스킷, 과자"
@@ -11286,7 +11286,7 @@
           "미안한",
           "~후에",
           "비스킷, 과자",
-          "물론 (of course), 과정"
+          "물론, 과정"
         ],
         "correctIndex": 0,
         "correctAnswer": "미안한",
@@ -11302,7 +11302,7 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'tomorrow' is a new word in 7단원. In Korean, it means '내일'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'tomorrow'의 뜻은?",
         "options": [
           "비스킷, 과자",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "~후에",
           "내일"
         ],
@@ -11320,7 +11320,7 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'after' is a new word in 7단원. In Korean, it means '~후에'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'after'의 뜻은?",
         "options": [
           "레이저",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "비스킷, 과자",
           "~후에"
         ],
@@ -11339,7 +11339,7 @@
         "options": [
           "~후에",
           "비스킷, 과자",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "레이저"
         ],
         "correctIndex": 1,
@@ -11352,17 +11352,17 @@
         "domainIcon": "📖",
         "difficulty": "★★★",
         "type": "reading_choice",
-        "subtext": "Vocabulary Note: The word 'course' is a new word in 7단원. In Korean, it means '물론 (of course), 과정'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'course' is a new word in 7단원. In Korean, it means '물론 (of course), 과정'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'course'의 뜻은?",
+        "subtext": "Vocabulary Note: The word 'course' is a new word in 7단원. In Korean, it means '물론, 과정'.",
+        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'course' is a new word in 7단원. In Korean, it means '물론, 과정'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'course'의 뜻은?",
         "options": [
           "레이저",
           "비스킷, 과자",
           "~후에",
-          "물론 (of course), 과정"
+          "물론, 과정"
         ],
         "correctIndex": 3,
-        "correctAnswer": "물론 (of course), 과정",
-        "explanation": "'course'은 '물론 (of course), 과정'입니다."
+        "correctAnswer": "물론, 과정",
+        "explanation": "'course'은 '물론, 과정'입니다."
       },
       {
         "id": 67,
@@ -11375,7 +11375,7 @@
         "options": [
           "비스킷, 과자",
           "~후에",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "레이저"
         ],
         "correctIndex": 3,
@@ -11393,7 +11393,7 @@
         "options": [
           "비스킷, 과자",
           "~후에",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "빛, 가벼운"
         ],
         "correctIndex": 3,
@@ -11411,7 +11411,7 @@
         "options": [
           "숫자, 번호",
           "~후에",
-          "물론 (of course), 과정",
+          "물론, 과정",
           "비스킷, 과자"
         ],
         "correctIndex": 0,
@@ -11430,7 +11430,7 @@
           "부드러운",
           "비스킷, 과자",
           "~후에",
-          "물론 (of course), 과정"
+          "물론, 과정"
         ],
         "correctIndex": 0,
         "correctAnswer": "부드러운",
@@ -11462,9 +11462,9 @@
         "domainIcon": "✍️",
         "difficulty": "★☆☆",
         "type": "writing_text",
-        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"물론 (of course), 과정\" (첫 글자: c, 총 6글자)",
+        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"물론, 과정\" (첫 글자: c, 총 6글자)",
         "correctAnswer": "course",
-        "explanation": "'물론 (of course), 과정'의 영어 표기는 'course'입니다."
+        "explanation": "'물론, 과정'의 영어 표기는 'course'입니다."
       },
       {
         "id": 74,
@@ -11917,13 +11917,13 @@
         "audioText": "David: A giraffe is taller than an elephant. Jisu: Right, giraffes have very long necks.",
         "question": "대화를 듣고, 기린이 코끼리보다 뛰어난 신체 특징은?",
         "options": [
-          "키가 더 크다 (taller)",
+          "키가 더 크다",
           "몸무게가 더 무겁다",
           "달리기가 더 빠르다",
           "귀가 더 크다"
         ],
         "correctIndex": 0,
-        "correctAnswer": "키가 더 크다 (taller)",
+        "correctAnswer": "키가 더 크다",
         "explanation": "'A giraffe is taller than an elephant.'입니다."
       },
       {
@@ -12028,10 +12028,10 @@
           "달리기가 더 빠르다",
           "귀가 더 크다",
           "몸무게가 더 무겁다",
-          "키가 더 크다 (taller)"
+          "키가 더 크다"
         ],
         "correctIndex": 3,
-        "correctAnswer": "키가 더 크다 (taller)",
+        "correctAnswer": "키가 더 크다",
         "explanation": "'A giraffe is taller than an elephant.'입니다."
       },
       {
@@ -12133,13 +12133,13 @@
         "audioText": "David: A giraffe is taller than an elephant. Jisu: Right, giraffes have very long necks.",
         "question": "대화를 듣고, 기린이 코끼리보다 뛰어난 신체 특징은?",
         "options": [
-          "키가 더 크다 (taller)",
+          "키가 더 크다",
           "귀가 더 크다",
           "몸무게가 더 무겁다",
           "달리기가 더 빠르다"
         ],
         "correctIndex": 0,
-        "correctAnswer": "키가 더 크다 (taller)",
+        "correctAnswer": "키가 더 크다",
         "explanation": "'A giraffe is taller than an elephant.'입니다."
       },
       {
@@ -12874,10 +12874,10 @@
           "달리기가 더 빠르다",
           "귀가 더 크다",
           "몸무게가 더 무겁다",
-          "키가 더 크다 (taller)"
+          "키가 더 크다"
         ],
         "correctIndex": 3,
-        "correctAnswer": "키가 더 크다 (taller)",
+        "correctAnswer": "키가 더 크다",
         "explanation": "'A giraffe is taller than an elephant.'입니다."
       },
       {
@@ -13606,10 +13606,10 @@
           "컴퓨터 학원",
           "놀이공원 워터파크",
           "도심 속 쇼핑몰",
-          "전통 민속마을 (village)"
+          "전통 민속마을"
         ],
         "correctIndex": 3,
-        "correctAnswer": "전통 민속마을 (village)",
+        "correctAnswer": "전통 민속마을",
         "explanation": "교과서 어휘: 'village'와 'plan'입니다."
       },
       {
@@ -13621,13 +13621,13 @@
         "audioText": "David: What is your child going to do tomorrow? Jisu: He is going to the zoo to see wild animals.",
         "question": "대화를 듣고, 아이가 내일 방문할 장소는?",
         "options": [
-          "동물원 (zoo)",
+          "동물원",
           "수족관",
           "식물원",
           "박물관"
         ],
         "correctIndex": 0,
-        "correctAnswer": "동물원 (zoo)",
+        "correctAnswer": "동물원",
         "explanation": "교과서 어휘: 'child'와 'zoo'입니다."
       },
       {
@@ -13676,12 +13676,12 @@
         "question": "대화를 듣고, 두 사람이 숲 하이킹 후 먹기로 한 음식은?",
         "options": [
           "김밥",
-          "햄버거 (hamburger)",
+          "햄버거",
           "떡볶이",
           "피자"
         ],
         "correctIndex": 1,
-        "correctAnswer": "햄버거 (hamburger)",
+        "correctAnswer": "햄버거",
         "explanation": "교과서 어휘: 'forest'와 'hamburger'입니다."
       },
       {
@@ -13713,11 +13713,11 @@
         "options": [
           "놀이공원 워터파크",
           "도심 속 쇼핑몰",
-          "전통 민속마을 (village)",
+          "전통 민속마을",
           "컴퓨터 학원"
         ],
         "correctIndex": 2,
-        "correctAnswer": "전통 민속마을 (village)",
+        "correctAnswer": "전통 민속마을",
         "explanation": "교과서 어휘: 'village'와 'plan'입니다."
       },
       {
@@ -13732,10 +13732,10 @@
           "박물관",
           "식물원",
           "수족관",
-          "동물원 (zoo)"
+          "동물원"
         ],
         "correctIndex": 3,
-        "correctAnswer": "동물원 (zoo)",
+        "correctAnswer": "동물원",
         "explanation": "교과서 어휘: 'child'와 'zoo'입니다."
       },
       {
@@ -13786,10 +13786,10 @@
           "떡볶이",
           "김밥",
           "피자",
-          "햄버거 (hamburger)"
+          "햄버거"
         ],
         "correctIndex": 3,
-        "correctAnswer": "햄버거 (hamburger)",
+        "correctAnswer": "햄버거",
         "explanation": "교과서 어휘: 'forest'와 'hamburger'입니다."
       },
       {
@@ -13819,13 +13819,13 @@
         "audioText": "Kelly: Do you have any special plans? Sarah: Yes, I am going to visit a traditional folk village.",
         "question": "대화를 듣고, B가 방문할 예정인 장소는?",
         "options": [
-          "전통 민속마을 (village)",
+          "전통 민속마을",
           "컴퓨터 학원",
           "놀이공원 워터파크",
           "도심 속 쇼핑몰"
         ],
         "correctIndex": 0,
-        "correctAnswer": "전통 민속마을 (village)",
+        "correctAnswer": "전통 민속마을",
         "explanation": "교과서 어휘: 'village'와 'plan'입니다."
       },
       {
@@ -13838,12 +13838,12 @@
         "question": "대화를 듣고, 아이가 내일 방문할 장소는?",
         "options": [
           "식물원",
-          "동물원 (zoo)",
+          "동물원",
           "박물관",
           "수족관"
         ],
         "correctIndex": 1,
-        "correctAnswer": "동물원 (zoo)",
+        "correctAnswer": "동물원",
         "explanation": "교과서 어휘: 'child'와 'zoo'입니다."
       },
       {
@@ -14524,10 +14524,10 @@
           "김밥",
           "피자",
           "떡볶이",
-          "햄버거 (hamburger)"
+          "햄버거"
         ],
         "correctIndex": 3,
-        "correctAnswer": "햄버거 (hamburger)",
+        "correctAnswer": "햄버거",
         "explanation": "교과서 어휘: 'forest'와 'hamburger'입니다."
       },
       {
@@ -14560,10 +14560,10 @@
           "컴퓨터 학원",
           "놀이공원 워터파크",
           "도심 속 쇼핑몰",
-          "전통 민속마을 (village)"
+          "전통 민속마을"
         ],
         "correctIndex": 3,
-        "correctAnswer": "전통 민속마을 (village)",
+        "correctAnswer": "전통 민속마을",
         "explanation": "교과서 어휘: 'village'와 'plan'입니다."
       },
       {
@@ -14576,12 +14576,12 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: What is your child going to do tomorrow? And the response was: \"He is going to the zoo to see wild animals.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 아이가 내일 방문할 장소는?",
         "options": [
           "수족관",
-          "동물원 (zoo)",
+          "동물원",
           "박물관",
           "식물원"
         ],
         "correctIndex": 1,
-        "correctAnswer": "동물원 (zoo)",
+        "correctAnswer": "동물원",
         "explanation": "교과서 어휘: 'child'와 'zoo'입니다."
       },
       {
@@ -14632,10 +14632,10 @@
           "피자",
           "김밥",
           "떡볶이",
-          "햄버거 (hamburger)"
+          "햄버거"
         ],
         "correctIndex": 3,
-        "correctAnswer": "햄버거 (hamburger)",
+        "correctAnswer": "햄버거",
         "explanation": "교과서 어휘: 'forest'와 'hamburger'입니다."
       },
       {
@@ -15297,13 +15297,13 @@
         "audioText": "Minsoo: How often do you eat vegetables, Minsoo? David: I eat vegetables three times a day. It is a healthy habit.",
         "question": "대화를 듣고, Minsoo의 채소 섭취 빈도는?",
         "options": [
-          "하루에 세 번 (three times a day)",
+          "하루에 세 번",
           "일주일에 한 번",
           "한 달에 두 번",
           "거의 먹지 않음"
         ],
         "correctIndex": 0,
-        "correctAnswer": "하루에 세 번 (three times a day)",
+        "correctAnswer": "하루에 세 번",
         "explanation": "교과서 단원 핵심 대화: 'How often do you eat vegetables?'입니다."
       },
       {
@@ -15318,10 +15318,10 @@
           "식사할 때마다",
           "일주일에 두 번",
           "하루에 한 번",
-          "하루에 두 번 (twice a day)"
+          "하루에 두 번"
         ],
         "correctIndex": 3,
-        "correctAnswer": "하루에 두 번 (twice a day)",
+        "correctAnswer": "하루에 두 번",
         "explanation": "교과서 어휘: 'twice'와 'tooth(teeth)'입니다."
       },
       {
@@ -15335,11 +15335,11 @@
         "options": [
           "한 달에 한 번",
           "주말에만 가끔",
-          "거의 매일 (almost every day)",
+          "거의 매일",
           "전혀 하지 않음"
         ],
         "correctIndex": 2,
-        "correctAnswer": "거의 매일 (almost every day)",
+        "correctAnswer": "거의 매일",
         "explanation": "교과서 어휘: 'exercise'와 'almost'입니다."
       },
       {
@@ -15389,11 +15389,11 @@
         "options": [
           "격주에 한 번",
           "매일 방과 후",
-          "일주일에 한 번 (once a week)",
+          "일주일에 한 번",
           "한 달에 한 번"
         ],
         "correctIndex": 2,
-        "correctAnswer": "일주일에 한 번 (once a week)",
+        "correctAnswer": "일주일에 한 번",
         "explanation": "교과서 어휘: 'member'와 'once'입니다."
       },
       {
@@ -15408,10 +15408,10 @@
           "한 달에 두 번",
           "일주일에 한 번",
           "거의 먹지 않음",
-          "하루에 세 번 (three times a day)"
+          "하루에 세 번"
         ],
         "correctIndex": 3,
-        "correctAnswer": "하루에 세 번 (three times a day)",
+        "correctAnswer": "하루에 세 번",
         "explanation": "교과서 단원 핵심 대화: 'How often do you eat vegetables?'입니다."
       },
       {
@@ -15424,12 +15424,12 @@
         "question": "대화를 듣고, B의 양치질 빈도는?",
         "options": [
           "일주일에 두 번",
-          "하루에 두 번 (twice a day)",
+          "하루에 두 번",
           "하루에 한 번",
           "식사할 때마다"
         ],
         "correctIndex": 1,
-        "correctAnswer": "하루에 두 번 (twice a day)",
+        "correctAnswer": "하루에 두 번",
         "explanation": "교과서 어휘: 'twice'와 'tooth(teeth)'입니다."
       },
       {
@@ -15444,10 +15444,10 @@
           "전혀 하지 않음",
           "한 달에 한 번",
           "주말에만 가끔",
-          "거의 매일 (almost every day)"
+          "거의 매일"
         ],
         "correctIndex": 3,
-        "correctAnswer": "거의 매일 (almost every day)",
+        "correctAnswer": "거의 매일",
         "explanation": "교과서 어휘: 'exercise'와 'almost'입니다."
       },
       {
@@ -15496,12 +15496,12 @@
         "question": "대화를 듣고, 동아리 부원들의 모임 빈도는?",
         "options": [
           "한 달에 한 번",
-          "일주일에 한 번 (once a week)",
+          "일주일에 한 번",
           "매일 방과 후",
           "격주에 한 번"
         ],
         "correctIndex": 1,
-        "correctAnswer": "일주일에 한 번 (once a week)",
+        "correctAnswer": "일주일에 한 번",
         "explanation": "교과서 어휘: 'member'와 'once'입니다."
       },
       {
@@ -15515,11 +15515,11 @@
         "options": [
           "한 달에 두 번",
           "일주일에 한 번",
-          "하루에 세 번 (three times a day)",
+          "하루에 세 번",
           "거의 먹지 않음"
         ],
         "correctIndex": 2,
-        "correctAnswer": "하루에 세 번 (three times a day)",
+        "correctAnswer": "하루에 세 번",
         "explanation": "교과서 단원 핵심 대화: 'How often do you eat vegetables?'입니다."
       },
       {
@@ -15531,13 +15531,13 @@
         "audioText": "Kelly: How often do you brush your teeth? Sarah: I brush my teeth twice a day, in the morning and evening.",
         "question": "대화를 듣고, B의 양치질 빈도는?",
         "options": [
-          "하루에 두 번 (twice a day)",
+          "하루에 두 번",
           "하루에 한 번",
           "일주일에 두 번",
           "식사할 때마다"
         ],
         "correctIndex": 0,
-        "correctAnswer": "하루에 두 번 (twice a day)",
+        "correctAnswer": "하루에 두 번",
         "explanation": "교과서 어휘: 'twice'와 'tooth(teeth)'입니다."
       },
       {
@@ -15552,10 +15552,10 @@
           "한 달에 한 번",
           "주말에만 가끔",
           "전혀 하지 않음",
-          "거의 매일 (almost every day)"
+          "거의 매일"
         ],
         "correctIndex": 3,
-        "correctAnswer": "거의 매일 (almost every day)",
+        "correctAnswer": "거의 매일",
         "explanation": "교과서 어휘: 'exercise'와 'almost'입니다."
       },
       {
@@ -15749,12 +15749,12 @@
         "options": [
           "습관",
           "건강한",
-          "치아, 이 (복수: teeth)",
+          "치아, 이",
           "자주, 종종"
         ],
         "correctIndex": 2,
-        "correctAnswer": "치아, 이 (복수: teeth)",
-        "explanation": "'tooth'은 '치아, 이 (복수: teeth)'를 뜻합니다."
+        "correctAnswer": "치아, 이",
+        "explanation": "'tooth'은 '치아, 이'를 뜻합니다."
       },
       {
         "id": 27,
@@ -15786,11 +15786,11 @@
           "습관",
           "건강한",
           "자주, 종종",
-          "많음 (a lot: 많이)"
+          "많음, 다량"
         ],
         "correctIndex": 3,
-        "correctAnswer": "많음 (a lot: 많이)",
-        "explanation": "'lot'은 '많음 (a lot: 많이)'를 뜻합니다."
+        "correctAnswer": "많음, 다량",
+        "explanation": "'lot'은 '많음, 다량'를 뜻합니다."
       },
       {
         "id": 29,
@@ -16235,11 +16235,11 @@
         "options": [
           "격주에 한 번",
           "한 달에 한 번",
-          "일주일에 한 번 (once a week)",
+          "일주일에 한 번",
           "매일 방과 후"
         ],
         "correctIndex": 2,
-        "correctAnswer": "일주일에 한 번 (once a week)",
+        "correctAnswer": "일주일에 한 번",
         "explanation": "교과서 어휘: 'member'와 'once'입니다."
       },
       {
@@ -16254,10 +16254,10 @@
           "한 달에 두 번",
           "거의 먹지 않음",
           "일주일에 한 번",
-          "하루에 세 번 (three times a day)"
+          "하루에 세 번"
         ],
         "correctIndex": 3,
-        "correctAnswer": "하루에 세 번 (three times a day)",
+        "correctAnswer": "하루에 세 번",
         "explanation": "교과서 단원 핵심 대화: 'How often do you eat vegetables?'입니다."
       },
       {
@@ -16272,10 +16272,10 @@
           "식사할 때마다",
           "일주일에 두 번",
           "하루에 한 번",
-          "하루에 두 번 (twice a day)"
+          "하루에 두 번"
         ],
         "correctIndex": 3,
-        "correctAnswer": "하루에 두 번 (twice a day)",
+        "correctAnswer": "하루에 두 번",
         "explanation": "교과서 어휘: 'twice'와 'tooth(teeth)'입니다."
       },
       {
@@ -16288,12 +16288,12 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: How often do you exercise? And the response was: \"I exercise almost every day to stay strong.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: B의 운동 빈도는?",
         "options": [
           "전혀 하지 않음",
-          "거의 매일 (almost every day)",
+          "거의 매일",
           "한 달에 한 번",
           "주말에만 가끔"
         ],
         "correctIndex": 1,
-        "correctAnswer": "거의 매일 (almost every day)",
+        "correctAnswer": "거의 매일",
         "explanation": "교과서 어휘: 'exercise'와 'almost'입니다."
       },
       {
@@ -16344,10 +16344,10 @@
           "격주에 한 번",
           "매일 방과 후",
           "한 달에 한 번",
-          "일주일에 한 번 (once a week)"
+          "일주일에 한 번"
         ],
         "correctIndex": 3,
-        "correctAnswer": "일주일에 한 번 (once a week)",
+        "correctAnswer": "일주일에 한 번",
         "explanation": "교과서 어휘: 'member'와 'once'입니다."
       },
       {
@@ -16362,10 +16362,10 @@
           "거의 먹지 않음",
           "한 달에 두 번",
           "일주일에 한 번",
-          "하루에 세 번 (three times a day)"
+          "하루에 세 번"
         ],
         "correctIndex": 3,
-        "correctAnswer": "하루에 세 번 (three times a day)",
+        "correctAnswer": "하루에 세 번",
         "explanation": "교과서 단원 핵심 대화: 'How often do you eat vegetables?'입니다."
       },
       {
@@ -16374,17 +16374,17 @@
         "domainIcon": "📖",
         "difficulty": "★★★",
         "type": "reading_choice",
-        "subtext": "Vocabulary Note: The word 'lot' is a new word in 10단원. In Korean, it means '많음 (a lot: 많이)'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'lot' is a new word in 10단원. In Korean, it means '많음 (a lot: 많이)'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'lot'의 뜻은?",
+        "subtext": "Vocabulary Note: The word 'lot' is a new word in 10단원. In Korean, it means '많음, 다량'.",
+        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'lot' is a new word in 10단원. In Korean, it means '많음, 다량'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'lot'의 뜻은?",
         "options": [
-          "많음 (a lot: 많이)",
+          "많음, 다량",
           "자주, 종종",
           "습관",
           "건강한"
         ],
         "correctIndex": 0,
-        "correctAnswer": "많음 (a lot: 많이)",
-        "explanation": "'lot'은 '많음 (a lot: 많이)'입니다."
+        "correctAnswer": "많음, 다량",
+        "explanation": "'lot'은 '많음, 다량'입니다."
       },
       {
         "id": 62,
@@ -16654,9 +16654,9 @@
         "domainIcon": "✍️",
         "difficulty": "★★★",
         "type": "writing_text",
-        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"치아, 이 (복수: teeth)\" (첫 글자: t, 총 5글자)",
+        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"치아, 이\" (첫 글자: t, 총 5글자)",
         "correctAnswer": "tooth",
-        "explanation": "'치아, 이 (복수: teeth)'의 영어 표기는 'tooth'입니다."
+        "explanation": "'치아, 이'의 영어 표기는 'tooth'입니다."
       },
       {
         "id": 82,
@@ -16674,9 +16674,9 @@
         "domainIcon": "✍️",
         "difficulty": "★★★",
         "type": "writing_text",
-        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"많음 (a lot: 많이)\" (첫 글자: l, 총 3글자)",
+        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"많음, 다량\" (첫 글자: l, 총 3글자)",
         "correctAnswer": "lot",
-        "explanation": "'많음 (a lot: 많이)'의 영어 표기는 'lot'입니다."
+        "explanation": "'많음, 다량'의 영어 표기는 'lot'입니다."
       },
       {
         "id": 84,
@@ -17078,10 +17078,10 @@
           "영화 관람",
           "컴퓨터 게임",
           "쇼핑",
-          "윷놀이 (전통 놀이)"
+          "윷놀이"
         ],
         "correctIndex": 3,
-        "correctAnswer": "윷놀이 (전통 놀이)",
+        "correctAnswer": "윷놀이",
         "explanation": "한국의 전통 놀이 문화 대화입니다."
       },
       {
@@ -17183,13 +17183,13 @@
         "audioText": "Amy: Let's play Yutnori together on Chuseok! Minsoo: Great! Traditional games are very exciting.",
         "question": "대화를 듣고, 두 사람이 추석에 함께 하기로 한 것은?",
         "options": [
-          "윷놀이 (전통 놀이)",
+          "윷놀이",
           "컴퓨터 게임",
           "영화 관람",
           "쇼핑"
         ],
         "correctIndex": 0,
-        "correctAnswer": "윷놀이 (전통 놀이)",
+        "correctAnswer": "윷놀이",
         "explanation": "한국의 전통 놀이 문화 대화입니다."
       },
       {
@@ -17453,14 +17453,14 @@
         "audioText": "Kelly: What is a traditional Indian sari? Sarah: It is beautiful traditional clothing.",
         "question": "대화에서 언급된 영어 단어 'sari'의 우리말 뜻으로 바른 것은?",
         "options": [
-          "사리 (인도 전통 의상)",
+          "사리",
           "전통의, 전통적인",
           "놀이, 게임",
-          "투호 (한국 전통 화살 던지기 놀이)"
+          "투호"
         ],
         "correctIndex": 0,
-        "correctAnswer": "사리 (인도 전통 의상)",
-        "explanation": "'sari'은 '사리 (인도 전통 의상)'를 뜻합니다."
+        "correctAnswer": "사리",
+        "explanation": "'sari'은 '사리'를 뜻합니다."
       },
       {
         "id": 27,
@@ -17473,7 +17473,7 @@
         "options": [
           "놀이, 게임",
           "전통의, 전통적인",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "문화"
         ],
         "correctIndex": 3,
@@ -17490,7 +17490,7 @@
         "question": "대화에서 언급된 영어 단어 'world'의 우리말 뜻으로 바른 것은?",
         "options": [
           "세계",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "전통의, 전통적인",
           "놀이, 게임"
         ],
@@ -17509,7 +17509,7 @@
         "options": [
           "전통의, 전통적인",
           "놀이, 게임",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "던지다"
         ],
         "correctIndex": 3,
@@ -17526,7 +17526,7 @@
         "question": "대화에서 언급된 영어 단어 'stick'의 우리말 뜻으로 바른 것은?",
         "options": [
           "막대기, 화살",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "전통의, 전통적인",
           "놀이, 게임"
         ],
@@ -17546,11 +17546,11 @@
           "놀이, 게임",
           "전통의, 전통적인",
           "알다",
-          "투호 (한국 전통 화살 던지기 놀이)"
+          "투호"
         ],
         "correctIndex": 3,
-        "correctAnswer": "투호 (한국 전통 화살 던지기 놀이)",
-        "explanation": "'tuho'은 '투호 (한국 전통 화살 던지기 놀이)'를 뜻합니다."
+        "correctAnswer": "투호",
+        "explanation": "'tuho'은 '투호'를 뜻합니다."
       },
       {
         "id": 32,
@@ -17562,7 +17562,7 @@
         "question": "대화에서 언급된 영어 단어 'traditional'의 우리말 뜻으로 바른 것은?",
         "options": [
           "전통의, 전통적인",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "놀이, 게임",
           "알다"
         ],
@@ -17579,7 +17579,7 @@
         "audioText": "Hana: Let's play a fun board game! Amy: Great! Let me bring the dice.",
         "question": "대화에서 언급된 영어 단어 'game'의 우리말 뜻으로 바른 것은?",
         "options": [
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "놀이, 게임",
           "전통의, 전통적인",
           "알다"
@@ -17598,7 +17598,7 @@
         "question": "대화에서 언급된 영어 단어 'know'의 우리말 뜻으로 바른 것은?",
         "options": [
           "알다",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "전통의, 전통적인",
           "놀이, 게임"
         ],
@@ -17616,7 +17616,7 @@
         "question": "대화에서 언급된 영어 단어 'about'의 우리말 뜻으로 바른 것은?",
         "options": [
           "~에 대하여",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "전통의, 전통적인",
           "놀이, 게임"
         ],
@@ -17922,12 +17922,12 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Let's play Yutnori together on Chuseok! And the response was: \"Great! Traditional games are very exciting.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 추석에 함께 하기로 한 것은?",
         "options": [
           "컴퓨터 게임",
-          "윷놀이 (전통 놀이)",
+          "윷놀이",
           "쇼핑",
           "영화 관람"
         ],
         "correctIndex": 1,
-        "correctAnswer": "윷놀이 (전통 놀이)",
+        "correctAnswer": "윷놀이",
         "explanation": "한국의 전통 놀이 문화 대화입니다."
       },
       {
@@ -18031,11 +18031,11 @@
         "options": [
           "쇼핑",
           "영화 관람",
-          "윷놀이 (전통 놀이)",
+          "윷놀이",
           "컴퓨터 게임"
         ],
         "correctIndex": 2,
-        "correctAnswer": "윷놀이 (전통 놀이)",
+        "correctAnswer": "윷놀이",
         "explanation": "한국의 전통 놀이 문화 대화입니다."
       },
       {
@@ -18084,7 +18084,7 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'world' is a new word in 11단원. In Korean, it means '세계'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'world'의 뜻은?",
         "options": [
           "세계",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "전통의, 전통적인",
           "놀이, 게임"
         ],
@@ -18104,7 +18104,7 @@
           "전통의, 전통적인",
           "던지다",
           "놀이, 게임",
-          "투호 (한국 전통 화살 던지기 놀이)"
+          "투호"
         ],
         "correctIndex": 1,
         "correctAnswer": "던지다",
@@ -18121,7 +18121,7 @@
         "options": [
           "놀이, 게임",
           "전통의, 전통적인",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "막대기, 화살"
         ],
         "correctIndex": 3,
@@ -18134,17 +18134,17 @@
         "domainIcon": "📖",
         "difficulty": "★★★",
         "type": "reading_choice",
-        "subtext": "Vocabulary Note: The word 'tuho' is a new word in 11단원. In Korean, it means '투호 (한국 전통 화살 던지기 놀이)'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'tuho' is a new word in 11단원. In Korean, it means '투호 (한국 전통 화살 던지기 놀이)'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'tuho'의 뜻은?",
+        "subtext": "Vocabulary Note: The word 'tuho' is a new word in 11단원. In Korean, it means '투호'.",
+        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'tuho' is a new word in 11단원. In Korean, it means '투호'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'tuho'의 뜻은?",
         "options": [
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "알다",
           "전통의, 전통적인",
           "놀이, 게임"
         ],
         "correctIndex": 0,
-        "correctAnswer": "투호 (한국 전통 화살 던지기 놀이)",
-        "explanation": "'tuho'은 '투호 (한국 전통 화살 던지기 놀이)'입니다."
+        "correctAnswer": "투호",
+        "explanation": "'tuho'은 '투호'입니다."
       },
       {
         "id": 65,
@@ -18156,7 +18156,7 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'traditional' is a new word in 11단원. In Korean, it means '전통의, 전통적인'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'traditional'의 뜻은?",
         "options": [
           "알다",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "전통의, 전통적인",
           "놀이, 게임"
         ],
@@ -18174,7 +18174,7 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'game' is a new word in 11단원. In Korean, it means '놀이, 게임'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'game'의 뜻은?",
         "options": [
           "전통의, 전통적인",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "놀이, 게임",
           "알다"
         ],
@@ -18191,7 +18191,7 @@
         "subtext": "Vocabulary Note: The word 'know' is a new word in 11단원. In Korean, it means '알다'.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'know' is a new word in 11단원. In Korean, it means '알다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'know'의 뜻은?",
         "options": [
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "전통의, 전통적인",
           "놀이, 게임",
           "알다"
@@ -18209,7 +18209,7 @@
         "subtext": "Vocabulary Note: The word 'about' is a new word in 11단원. In Korean, it means '~에 대하여'.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'about' is a new word in 11단원. In Korean, it means '~에 대하여'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'about'의 뜻은?",
         "options": [
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "놀이, 게임",
           "전통의, 전통적인",
           "~에 대하여"
@@ -18229,7 +18229,7 @@
         "options": [
           "놀이, 게임",
           "전통의, 전통적인",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "공기, 공중"
         ],
         "correctIndex": 3,
@@ -18246,7 +18246,7 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'boomerang' is a new word in 11단원. In Korean, it means '부메랑'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'boomerang'의 뜻은?",
         "options": [
           "놀이, 게임",
-          "투호 (한국 전통 화살 던지기 놀이)",
+          "투호",
           "전통의, 전통적인",
           "부메랑"
         ],
@@ -18260,9 +18260,9 @@
         "domainIcon": "✍️",
         "difficulty": "★☆☆",
         "type": "writing_text",
-        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"투호 (한국 전통 화살 던지기 놀이)\" (첫 글자: t, 총 4글자)",
+        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"투호\" (첫 글자: t, 총 4글자)",
         "correctAnswer": "tuho",
-        "explanation": "'투호 (한국 전통 화살 던지기 놀이)'의 영어 표기는 'tuho'입니다."
+        "explanation": "'투호'의 영어 표기는 'tuho'입니다."
       },
       {
         "id": 72,
@@ -18360,9 +18360,9 @@
         "domainIcon": "✍️",
         "difficulty": "★★★",
         "type": "writing_text",
-        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"사리 (인도 전통 의상)\" (첫 글자: s, 총 4글자)",
+        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"사리\" (첫 글자: s, 총 4글자)",
         "correctAnswer": "sari",
-        "explanation": "'사리 (인도 전통 의상)'의 영어 표기는 'sari'입니다."
+        "explanation": "'사리'의 영어 표기는 'sari'입니다."
       },
       {
         "id": 82,
@@ -18713,11 +18713,11 @@
         "options": [
           "학교 홍보 영상",
           "학급 신문",
-          "학급 앨범 (class album)",
+          "학급 앨범",
           "그림 동화책"
         ],
         "correctIndex": 2,
-        "correctAnswer": "학급 앨범 (class album)",
+        "correctAnswer": "학급 앨범",
         "explanation": "교과서 단원명 핵심 문장: 'We made a class album.'입니다."
       },
       {
@@ -18747,13 +18747,13 @@
         "audioText": "David: Look at this picture on the wall! Jisu: That boy in the photo is Tom when he was in the first grade.",
         "question": "대화를 듣고, 벽에 걸린 사진 속 인물은?",
         "options": [
-          "1학년 때의 Tom (소년)",
+          "1학년 때의 톰",
           "선생님의 어린 시절",
           "교장 선생님",
           "사라의 여동생"
         ],
         "correctIndex": 0,
-        "correctAnswer": "1학년 때의 Tom (소년)",
+        "correctAnswer": "1학년 때의 톰",
         "explanation": "교과서 어휘: 'wall'과 'boy'입니다."
       },
       {
@@ -18819,13 +18819,13 @@
         "audioText": "Emma: Look at our graduation album! We made a class album. Hana: Wow, it has so many wonderful pictures of our memories.",
         "question": "대화를 듣고, 두 사람이 함께 만든 것은?",
         "options": [
-          "학급 앨범 (class album)",
+          "학급 앨범",
           "학급 신문",
           "학교 홍보 영상",
           "그림 동화책"
         ],
         "correctIndex": 0,
-        "correctAnswer": "학급 앨범 (class album)",
+        "correctAnswer": "학급 앨범",
         "explanation": "교과서 단원명 핵심 문장: 'We made a class album.'입니다."
       },
       {
@@ -18857,11 +18857,11 @@
         "options": [
           "교장 선생님",
           "선생님의 어린 시절",
-          "1학년 때의 Tom (소년)",
+          "1학년 때의 톰",
           "사라의 여동생"
         ],
         "correctIndex": 2,
-        "correctAnswer": "1학년 때의 Tom (소년)",
+        "correctAnswer": "1학년 때의 톰",
         "explanation": "교과서 어휘: 'wall'과 'boy'입니다."
       },
       {
@@ -18929,11 +18929,11 @@
         "options": [
           "그림 동화책",
           "학교 홍보 영상",
-          "학급 앨범 (class album)",
+          "학급 앨범",
           "학급 신문"
         ],
         "correctIndex": 2,
-        "correctAnswer": "학급 앨범 (class album)",
+        "correctAnswer": "학급 앨범",
         "explanation": "교과서 단원명 핵심 문장: 'We made a class album.'입니다."
       },
       {
@@ -18963,13 +18963,13 @@
         "audioText": "David: Look at this picture on the wall! Jisu: That boy in the photo is Tom when he was in the first grade.",
         "question": "대화를 듣고, 벽에 걸린 사진 속 인물은?",
         "options": [
-          "1학년 때의 Tom (소년)",
+          "1학년 때의 톰",
           "사라의 여동생",
           "교장 선생님",
           "선생님의 어린 시절"
         ],
         "correctIndex": 0,
-        "correctAnswer": "1학년 때의 Tom (소년)",
+        "correctAnswer": "1학년 때의 톰",
         "explanation": "교과서 어휘: 'wall'과 'boy'입니다."
       },
       {
@@ -19162,7 +19162,7 @@
         "question": "대화에서 언급된 영어 단어 'remember'의 우리말 뜻으로 바른 것은?",
         "options": [
           "기억하다",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "앨범, 사진첩",
           "소년"
         ],
@@ -19180,7 +19180,7 @@
         "question": "대화에서 언급된 영어 단어 'photo'의 우리말 뜻으로 바른 것은?",
         "options": [
           "사진",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "앨범, 사진첩",
           "소년"
         ],
@@ -19200,7 +19200,7 @@
           "앨범, 사진첩",
           "친구",
           "소년",
-          "만들었다 (make의 과거형)"
+          "만들었다"
         ],
         "correctIndex": 1,
         "correctAnswer": "친구",
@@ -19218,7 +19218,7 @@
           "소년",
           "졸업하다",
           "앨범, 사진첩",
-          "만들었다 (make의 과거형)"
+          "만들었다"
         ],
         "correctIndex": 1,
         "correctAnswer": "졸업하다",
@@ -19235,7 +19235,7 @@
         "options": [
           "소년",
           "앨범, 사진첩",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "함께"
         ],
         "correctIndex": 3,
@@ -19254,11 +19254,11 @@
           "앨범, 사진첩",
           "잊다, 잊어버리다",
           "소년",
-          "만들었다 (make의 과거형)"
+          "만들었다"
         ],
         "correctIndex": 3,
-        "correctAnswer": "만들었다 (make의 과거형)",
-        "explanation": "'made'은 '만들었다 (make의 과거형)'를 뜻합니다."
+        "correctAnswer": "만들었다",
+        "explanation": "'made'은 '만들었다'를 뜻합니다."
       },
       {
         "id": 32,
@@ -19270,7 +19270,7 @@
         "question": "대화에서 언급된 영어 단어 'album'의 우리말 뜻으로 바른 것은?",
         "options": [
           "소년",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "잊다, 잊어버리다",
           "앨범, 사진첩"
         ],
@@ -19289,7 +19289,7 @@
         "options": [
           "앨범, 사진첩",
           "잊다, 잊어버리다",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "소년"
         ],
         "correctIndex": 3,
@@ -19305,7 +19305,7 @@
         "audioText": "Brian: Don't forget to call me this summer! Paul: I won't forget, I promise!",
         "question": "대화에서 언급된 영어 단어 'forget'의 우리말 뜻으로 바른 것은?",
         "options": [
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "소년",
           "앨범, 사진첩",
           "잊다, 잊어버리다"
@@ -19324,7 +19324,7 @@
         "question": "대화에서 언급된 영어 단어 'quiz'의 우리말 뜻으로 바른 것은?",
         "options": [
           "앨범, 사진첩",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "소년",
           "퀴즈, 간단한 시험"
         ],
@@ -19668,10 +19668,10 @@
           "그림 동화책",
           "학교 홍보 영상",
           "학급 신문",
-          "학급 앨범 (class album)"
+          "학급 앨범"
         ],
         "correctIndex": 3,
-        "correctAnswer": "학급 앨범 (class album)",
+        "correctAnswer": "학급 앨범",
         "explanation": "교과서 단원명 핵심 문장: 'We made a class album.'입니다."
       },
       {
@@ -19704,10 +19704,10 @@
           "선생님의 어린 시절",
           "교장 선생님",
           "사라의 여동생",
-          "1학년 때의 Tom (소년)"
+          "1학년 때의 톰"
         ],
         "correctIndex": 3,
-        "correctAnswer": "1학년 때의 Tom (소년)",
+        "correctAnswer": "1학년 때의 톰",
         "explanation": "교과서 어휘: 'wall'과 'boy'입니다."
       },
       {
@@ -19773,13 +19773,13 @@
         "subtext": "Dialogue Reading: Look at our graduation album! We made a class album. And the response was: \"Wow, it has so many wonderful pictures of our memories.\"",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Dialogue Reading: Look at our graduation album! We made a class album. And the response was: \"Wow, it has so many wonderful pictures of our memories.\"\"\n질문: 위 대화문을 읽고, 질문에 알맞은 답을 고르세요.\n질문: 두 사람이 함께 만든 것은?",
         "options": [
-          "학급 앨범 (class album)",
+          "학급 앨범",
           "학급 신문",
           "그림 동화책",
           "학교 홍보 영상"
         ],
         "correctIndex": 0,
-        "correctAnswer": "학급 앨범 (class album)",
+        "correctAnswer": "학급 앨범",
         "explanation": "교과서 단원명 핵심 문장: 'We made a class album.'입니다."
       },
       {
@@ -19793,7 +19793,7 @@
         "options": [
           "친구",
           "소년",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "앨범, 사진첩"
         ],
         "correctIndex": 0,
@@ -19811,7 +19811,7 @@
         "options": [
           "소년",
           "앨범, 사진첩",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "졸업하다"
         ],
         "correctIndex": 3,
@@ -19828,7 +19828,7 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'together' is a new word in 12단원. In Korean, it means '함께'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'together'의 뜻은?",
         "options": [
           "앨범, 사진첩",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "소년",
           "함께"
         ],
@@ -19842,17 +19842,17 @@
         "domainIcon": "📖",
         "difficulty": "★★★",
         "type": "reading_choice",
-        "subtext": "Vocabulary Note: The word 'made' is a new word in 12단원. In Korean, it means '만들었다 (make의 과거형)'.",
-        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'made' is a new word in 12단원. In Korean, it means '만들었다 (make의 과거형)'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'made'의 뜻은?",
+        "subtext": "Vocabulary Note: The word 'made' is a new word in 12단원. In Korean, it means '만들었다'.",
+        "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'made' is a new word in 12단원. In Korean, it means '만들었다'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'made'의 뜻은?",
         "options": [
           "소년",
           "앨범, 사진첩",
           "잊다, 잊어버리다",
-          "만들었다 (make의 과거형)"
+          "만들었다"
         ],
         "correctIndex": 3,
-        "correctAnswer": "만들었다 (make의 과거형)",
-        "explanation": "'made'은 '만들었다 (make의 과거형)'입니다."
+        "correctAnswer": "만들었다",
+        "explanation": "'made'은 '만들었다'입니다."
       },
       {
         "id": 65,
@@ -19863,7 +19863,7 @@
         "subtext": "Vocabulary Note: The word 'album' is a new word in 12단원. In Korean, it means '앨범, 사진첩'.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'album' is a new word in 12단원. In Korean, it means '앨범, 사진첩'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'album'의 뜻은?",
         "options": [
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "소년",
           "앨범, 사진첩",
           "잊다, 잊어버리다"
@@ -19883,7 +19883,7 @@
         "options": [
           "잊다, 잊어버리다",
           "소년",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "앨범, 사진첩"
         ],
         "correctIndex": 1,
@@ -19901,7 +19901,7 @@
         "options": [
           "잊다, 잊어버리다",
           "앨범, 사진첩",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "소년"
         ],
         "correctIndex": 0,
@@ -19918,7 +19918,7 @@
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'quiz' is a new word in 12단원. In Korean, it means '퀴즈, 간단한 시험'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'quiz'의 뜻은?",
         "options": [
           "소년",
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "퀴즈, 간단한 시험",
           "앨범, 사진첩"
         ],
@@ -19935,7 +19935,7 @@
         "subtext": "Vocabulary Note: The word 'street' is a new word in 12단원. In Korean, it means '거리, 길'.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'street' is a new word in 12단원. In Korean, it means '거리, 길'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'street'의 뜻은?",
         "options": [
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "거리, 길",
           "앨범, 사진첩",
           "소년"
@@ -19953,7 +19953,7 @@
         "subtext": "Vocabulary Note: The word 'wall' is a new word in 12단원. In Korean, it means '벽'.",
         "question": "다음 글을 읽고 물음에 답하세요.\n\"Vocabulary Note: The word 'wall' is a new word in 12단원. In Korean, it means '벽'.\"\n질문: 윗글에서 설명하고 있는 신출 어휘 'wall'의 뜻은?",
         "options": [
-          "만들었다 (make의 과거형)",
+          "만들었다",
           "앨범, 사진첩",
           "소년",
           "벽"
@@ -19968,9 +19968,9 @@
         "domainIcon": "✍️",
         "difficulty": "★☆☆",
         "type": "writing_text",
-        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"만들었다 (make의 과거형)\" (첫 글자: m, 총 4글자)",
+        "question": "다음 우리말 뜻에 해당하는 영어 단어를 소문자로 정확히 입력하세요.\n뜻: \"만들었다\" (첫 글자: m, 총 4글자)",
         "correctAnswer": "made",
-        "explanation": "'만들었다 (make의 과거형)'의 영어 표기는 'made'입니다."
+        "explanation": "'만들었다'의 영어 표기는 'made'입니다."
       },
       {
         "id": 72,
@@ -20587,13 +20587,13 @@
     "subtext": "Health Habit: How often do you eat vegetables? I eat vegetables three times a day to stay healthy.",
     "question": "윗글에서 말하는 사람의 채소 섭취 빈도는?",
     "options": [
-      "하루에 세 번 (three times a day)",
+      "하루에 세 번",
       "일주일에 한 번",
       "한 달에 두 번",
       "거의 먹지 않음"
     ],
     "correctIndex": 0,
-    "correctAnswer": "하루에 세 번 (three times a day)",
+    "correctAnswer": "하루에 세 번",
     "explanation": "'three times a day'는 하루에 세 번입니다."
   },
   {
@@ -20623,13 +20623,13 @@
     "subtext": "Look at the photos on the wall! We made a class album. I will never forget our happy memories in the sixth grade.",
     "question": "윗글에서 학생들이 함께 만든 것은 무엇인가요?",
     "options": [
-      "학급 앨범 (class album)",
+      "학급 앨범",
       "학급 신문",
       "학교 홍보 만화",
       "졸업 문집"
     ],
     "correctIndex": 0,
-    "correctAnswer": "학급 앨범 (class album)",
+    "correctAnswer": "학급 앨범",
     "explanation": "'We made a class album'입니다."
   },
   {
