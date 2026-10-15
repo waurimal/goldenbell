@@ -22,6 +22,7 @@
     <script src="../common/waurimal-nav.js"></script>
     <script src="../common/firebase-config.js"></script>
     <script src="../common/curriculum.js"></script>
+    <script src="goldenbell-data.js"></script>
 
     <style>
         :root {
@@ -291,17 +292,21 @@
                             <div>
                                 <label class="block text-2xs font-extrabold text-slate-600 mb-1">골든벨 단원 및 문제 세트 선택</label>
                                 <select id="select-unit-preset" class="w-full text-xs font-bold bg-white border border-amber-200 rounded-xl px-3 py-2.5 text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                    <option value="CURRICULUM_20" selected>🏆 [교사용 지도서] 3~6학년 핵심 20문제 통합 골든벨 (듣기7·읽기7·쓰기6)</option>
-                                    <option value="3G_L07">📚 3학년 Lesson 07 - 학용품 골든벨 (20문제 자동생성)</option>
-                                    <option value="6G_L01">📚 6학년 Lesson 01 - 서수와 학교생활 골든벨 (20문제)</option>
-                                    <option value="6G_L02">📚 6학년 Lesson 02 - 계절과 날씨 골든벨 (20문제)</option>
-                                    <option value="6G_L03">📚 6학년 Lesson 03 - 환경과 지구 보호 골든벨 (20문제)</option>
-                                    <option value="6G_L04">📚 6학년 Lesson 04 - 감정과 이유 골든벨 (20문제)</option>
-                                    <option value="6G_L05">📚 6학년 Lesson 05 - 길 찾기와 장소 골든벨 (20문제)</option>
-                                    <option value="6G_L06">📚 6학년 Lesson 06 - 가족과 묘사 골든벨 (20문제)</option>
-                                    <option value="6G_L07">📚 6학년 Lesson 07 - 경험과 과거 골든벨 (20문제)</option>
-                                    <option value="6G_L08">📚 6학년 Lesson 08 - 비교하기 골든벨 (20문제)</option>
-                                    <option value="6G_L09">📚 6학년 Lesson 09 - 방학 계획 골든벨 (20문제)</option>
+                                    <option value="ALL_MIXED" selected>🎲 [전체 단원 섞기] 1~12단원 총괄 무작위 골든벨 (문장·고난도 20문제) ⭐</option>
+                                    <option value="CURRICULUM_20">🏆 [교사용 지도서 표준] 1~12단원 대표 골든벨 20문제 (듣기7·읽기7·쓰기6)</option>
+                                    <option value="6G_L01">📚 1단원: 서수와 학년 · 동아리 (What grade are you in?)</option>
+                                    <option value="6G_L02">📚 2단원: 계절과 날씨 · 이유 (What's your favorite season?)</option>
+                                    <option value="6G_L03">📚 3단원: 환경과 지구 보호 · 규칙 (We should save energy)</option>
+                                    <option value="6G_L04">📚 4단원: 감정과 심리 · 이유 묻기 (Why are you so happy?)</option>
+                                    <option value="6G_L05">📚 5단원: 길 찾기와 위치 안내 (Where is the hospital?)</option>
+                                    <option value="6G_L06">📚 6단원: 외모와 인물 묘사 (What does she look like?)</option>
+                                    <option value="6G_L07">📚 7단원: 과거 경험과 여행 (Have you ever visited Jeju-do?)</option>
+                                    <option value="6G_L08">📚 8단원: 비교급과 특징 비교 (A giraffe is taller than an elephant)</option>
+                                    <option value="6G_L09">📚 9단원: 방학 계획과 미래 활동 (What will you do this summer?)</option>
+                                    <option value="6G_L10">📚 10단원: 가격 묻기와 쇼핑 (How much is this shirt?)</option>
+                                    <option value="6G_L11">📚 11단원: 건강 상태와 조언 (What's the matter?)</option>
+                                    <option value="6G_L12">📚 12단원: 제안하기와 여가 활동 (Why don't we go to the park?)</option>
+                                    <option value="3G_L07">📚 [기초 3학년] Lesson 07 - 학용품 기초 골든벨</option>
                                 </select>
                             </div>
 
@@ -357,7 +362,7 @@
                                 </span>
                                 <div>
                                     <h3 class="text-sm font-black text-slate-800">1인 골든벨 챌린지 (혼자 연습)</h3>
-                                    <p class="text-2xs text-slate-500 font-medium">혼자서 20문제를 풀며 스피드 점수를 기록합니다.</p>
+                                    <p class="text-2xs text-slate-500 font-medium">선택한 단원(또는 전체 섞기)으로 20문제를 풀며 스피드 점수를 기록합니다.</p>
                                 </div>
                             </div>
                             <button type="button" onclick="startSoloChallenge()" class="secondary-btn text-xs py-2 px-3">
@@ -1111,268 +1116,12 @@
         const SCORES_COLLECTION = 'artifacts/goldenbell/public/data/rankings';
 
         // ─────────────────────────────────────────────
-        // 1. 교사용 지도서 기반 3~6학년 핵심 20문제 마스터 데이터셋
-        // (듣기 7 + 읽기 7 + 쓰기 6 = 20문제 완벽 구성)
+        // 1. 교사용 지도서 기반 1~12단원 고난도 문장/대화 마스터 데이터셋
+        // (goldenbell-data.js 에서 로드된 데이터를 기본 사용)
         // ─────────────────────────────────────────────
-        const MASTER_20_QUESTIONS = [
-            // [듣기 영역 (Listening) Q1 ~ Q7]
-            {
-                id: 1,
-                domain: "듣기",
-                domainIcon: "🎧",
-                difficulty: "★☆☆",
-                type: "listening_choice",
-                audioText: "spring",
-                question: "원어민 음성을 잘 듣고, 들리는 단어의 올바른 의미를 고르세요.",
-                options: ["봄", "여름", "가을", "겨울"],
-                correctIndex: 0,
-                correctAnswer: "봄",
-                explanation: "'spring'은 '봄'을 의미합니다."
-            },
-            {
-                id: 2,
-                domain: "듣기",
-                domainIcon: "🎧",
-                difficulty: "★☆☆",
-                type: "listening_choice",
-                audioText: "What grade are you in?",
-                question: "대화를 듣고, 질문에 대한 가장 알맞은 대답을 고르세요.",
-                options: ["I'm in the sixth grade.", "My name is Minsoo.", "It is sunny today.", "Yes, I do."],
-                correctIndex: 0,
-                correctAnswer: "I'm in the sixth grade.",
-                explanation: "'What grade are you in?(몇 학년이니?)'에 대한 알맞은 응답은 'I'm in the sixth grade.(나는 6학년이야.)'입니다."
-            },
-            {
-                id: 3,
-                domain: "듣기",
-                domainIcon: "🎧",
-                difficulty: "★★☆",
-                type: "listening_choice",
-                audioText: "We should save energy. Please turn off the lights when you leave.",
-                question: "안내 방송을 듣고, 남자가 당부하는 행동으로 가장 알맞은 것은?",
-                options: ["나갈 때 전등 끄기", "물 아껴 쓰기", "종이 재활용하기", "쓰레기 분리수거하기"],
-                correctIndex: 0,
-                correctAnswer: "나갈 때 전등 끄기",
-                explanation: "'turn off the lights'는 '전등을 끄다'라는 뜻입니다."
-            },
-            {
-                id: 4,
-                domain: "듣기",
-                domainIcon: "🎧",
-                difficulty: "★★☆",
-                type: "listening_choice",
-                audioText: "Where is the library? Go straight two blocks and turn left. It's on your right.",
-                question: "길 안내 대화를 듣고, 도서관(library)의 위치로 올바른 것을 고르세요.",
-                options: ["두 블록 직진 후 좌회전하여 오른쪽", "한 블록 직진 후 우회전하여 왼쪽", "두 블록 직진 후 우회전하여 오른쪽", "길 건너편 병원 옆"],
-                correctIndex: 0,
-                correctAnswer: "두 블록 직진 후 좌회전하여 오른쪽",
-                explanation: "Go straight two blocks(두 블록 직진) ➔ turn left(좌회전) ➔ on your right(오른쪽에 위치)."
-            },
-            {
-                id: 5,
-                domain: "듣기",
-                domainIcon: "🎧",
-                difficulty: "★★☆",
-                type: "listening_choice",
-                audioText: "Why are you so happy? Because today is my birthday!",
-                question: "대화를 듣고, 말하는 사람이 행복해하는 이유로 알맞은 것은?",
-                options: ["오늘이 생일이기 때문에", "시험을 잘 봤기 때문에", "선물을 받았기 때문에", "방학이 시작되었기 때문에"],
-                correctIndex: 0,
-                correctAnswer: "오늘이 생일이기 때문에",
-                explanation: "'Because today is my birthday!'는 '오늘이 내 생일이기 때문이야!'라는 뜻입니다."
-            },
-            {
-                id: 6,
-                domain: "듣기",
-                domainIcon: "🎧",
-                difficulty: "★★☆",
-                type: "listening_choice",
-                audioText: "What will you do this summer? I will go camping in the forest with my family.",
-                question: "대화를 듣고, 여자가 이번 여름 방학에 할 일로 알맞은 것을 고르세요.",
-                options: ["가족과 숲으로 캠핑 가기", "할머니 댁 방문하기", "바다에서 수영하기", "동물원 봉사활동 하기"],
-                correctIndex: 0,
-                correctAnswer: "가족과 숲으로 캠핑 가기",
-                explanation: "'go camping in the forest'는 '숲으로 캠핑 가기'를 뜻합니다."
-            },
-            {
-                id: 7,
-                domain: "듣기",
-                domainIcon: "🎧",
-                difficulty: "★★★",
-                type: "listening_choice",
-                audioText: "She has long straight hair and wears glasses.",
-                question: "인물 묘사를 듣고, 인물의 알맞은 외모 특징을 고르세요.",
-                options: ["긴 생머리에 안경을 썼다", "짧은 곱슬머리에 모자를 썼다", "갈색 머리에 파란 셔츠를 입었다", "키가 크고 안경을 쓰지 않았다"],
-                correctIndex: 0,
-                correctAnswer: "긴 생머리에 안경을 썼다",
-                explanation: "'long straight hair(긴 생머리)', 'wears glasses(안경 착용)'입니다."
-            },
-
-            // [읽기 영역 (Reading) Q8 ~ Q14]
-            {
-                id: 8,
-                domain: "읽기",
-                domainIcon: "📖",
-                difficulty: "★☆☆",
-                type: "reading_choice",
-                question: "다음 설명이 나타내는 학용품으로 가장 알맞은 것은 무엇일까요?",
-                subtext: "You use this to cut paper in art class.",
-                options: ["scissors", "eraser", "pencil case", "ruler"],
-                correctIndex: 0,
-                correctAnswer: "scissors",
-                explanation: "종이를 자를 때 사용하는 도구는 'scissors(가위)'입니다."
-            },
-            {
-                id: 9,
-                domain: "읽기",
-                domainIcon: "📖",
-                difficulty: "★★☆",
-                type: "reading_choice",
-                question: "다음 두 문장의 빈칸에 공통으로 들어갈 가장 알맞은 낱말은?",
-                subtext: "• I want to ___ the dance club.\n• Would you like to ___ us for lunch?",
-                options: ["join", "break", "ride", "draw"],
-                correctIndex: 0,
-                correctAnswer: "join",
-                explanation: "'join'은 '동아리에 가입하다' 또는 '~와 함께하다'의 뜻을 가집니다."
-            },
-            {
-                id: 10,
-                domain: "읽기",
-                domainIcon: "📖",
-                difficulty: "★★☆",
-                type: "reading_choice",
-                question: "문장의 빈칸에 알맞은 영어 서수(순서)는?",
-                subtext: "Today is May 5th. It is the ______ day of May.",
-                options: ["fifth", "fiveth", "second", "fourth"],
-                correctIndex: 0,
-                correctAnswer: "fifth",
-                explanation: "5의 서수는 'fifth(다섯 번째의)'입니다."
-            },
-            {
-                id: 11,
-                domain: "읽기",
-                domainIcon: "📖",
-                difficulty: "★★☆",
-                type: "reading_choice",
-                question: "문장을 읽고, 사실과 일치하는 내용을 고르세요.",
-                subtext: "A giraffe is taller than an elephant.",
-                options: ["기린이 코끼리보다 키가 더 크다.", "기린이 코끼리보다 힘이 더 세다.", "코끼리가 기린보다 키가 더 크다.", "기린과 코끼리는 키가 같다."],
-                correctIndex: 0,
-                correctAnswer: "기린이 코끼리보다 키가 더 크다.",
-                explanation: "'taller than ~'은 '~보다 키가 더 큰'이라는 비교 표현입니다."
-            },
-            {
-                id: 12,
-                domain: "읽기",
-                domainIcon: "📖",
-                difficulty: "★★☆",
-                type: "reading_choice",
-                question: "자연스러운 대화가 되도록 빈칸에 들어갈 알맞은 말은?",
-                subtext: "A: Have you ever visited Jeju-do?\nB: Yes, I ______.",
-                options: ["have", "do", "did", "was"],
-                correctIndex: 0,
-                correctAnswer: "have",
-                explanation: "'Have you ever ~?'의 경험 질문에 대한 긍정 응답은 'Yes, I have.'입니다."
-            },
-            {
-                id: 13,
-                domain: "읽기",
-                domainIcon: "📖",
-                difficulty: "★★★",
-                type: "reading_choice",
-                question: "다음 환경 보호 표어의 빈칸에 알맞은 단어는?",
-                subtext: "Save our Earth! We should not ______ paper and water.",
-                options: ["waste", "visit", "catch", "win"],
-                correctIndex: 0,
-                correctAnswer: "waste",
-                explanation: "'waste'는 '낭비하다'라는 뜻입니다. (종이와 물을 낭비하지 맙시다.)"
-            },
-            {
-                id: 14,
-                domain: "읽기",
-                domainIcon: "📖",
-                difficulty: "★★★",
-                type: "reading_choice",
-                question: "문장을 읽고, 주인공이 가을을 좋아하는 이유로 알맞은 것을 고르세요.",
-                subtext: "My favorite season is fall because I can see colorful leaves.",
-                options: ["알록달록한 단풍잎을 볼 수 있어서", "시원한 바람이 불어서", "맛있는 과일을 먹을 수 있어서", "하늘이 높고 푸르러서"],
-                correctIndex: 0,
-                correctAnswer: "알록달록한 단풍잎을 볼 수 있어서",
-                explanation: "'colorful leaves'는 '다채로운 단풍잎'을 의미합니다."
-            },
-
-            // [쓰기 영역 (Writing) Q15 ~ Q20]
-            {
-                id: 15,
-                domain: "쓰기",
-                domainIcon: "✍️",
-                difficulty: "★★☆",
-                type: "writing_text",
-                question: "흐트러진 알파벳을 올바르게 조합하여 영어 단어를 입력하세요.",
-                subtext: "힌트: '계절' (s - e - a - s - o - n)",
-                correctAnswer: "season",
-                explanation: "올바른 철자는 'season(계절)'입니다."
-            },
-            {
-                id: 16,
-                domain: "쓰기",
-                domainIcon: "✍️",
-                difficulty: "★★☆",
-                type: "writing_text",
-                question: "뜻에 알맞은 영어 낱말의 철자를 바르게 입력하세요.",
-                subtext: "힌트: 환경을 '보호하다' (p r o t e c t)",
-                correctAnswer: "protect",
-                explanation: "'보호하다'는 영어로 'protect'입니다."
-            },
-            {
-                id: 17,
-                domain: "쓰기",
-                domainIcon: "✍️",
-                difficulty: "★★☆",
-                type: "writing_scramble",
-                question: "단어 칩을 올바른 순서로 배열하여 질문 문장을 완성하세요.",
-                subtext: "너는 연필을 가지고 있니?",
-                chips: ["Do", "you", "have", "a", "pencil", "?"],
-                correctAnswer: "Do you have a pencil?",
-                explanation: "일반동사 의문문 어순: Do + you + have + a pencil?"
-            },
-            {
-                id: 18,
-                domain: "쓰기",
-                domainIcon: "✍️",
-                difficulty: "★★★",
-                type: "writing_scramble",
-                question: "단어 칩을 바르게 배열하여 감정의 이유를 묻는 문장을 만드세요.",
-                subtext: "너는 왜 그렇게 행복하니?",
-                chips: ["Why", "are", "you", "so", "happy", "?"],
-                correctAnswer: "Why are you so happy?",
-                explanation: "Why + are + you + so happy?"
-            },
-            {
-                id: 19,
-                domain: "쓰기",
-                domainIcon: "✍️",
-                difficulty: "★★★",
-                type: "writing_scramble",
-                question: "단어 칩을 바르게 배열하여 환경 보호 실천 문장을 완성하세요.",
-                subtext: "우리는 에너지를 절약해야 해.",
-                chips: ["We", "should", "save", "energy", "."],
-                correctAnswer: "We should save energy.",
-                explanation: "We + should + save + energy."
-            },
-            {
-                id: 20,
-                domain: "골든벨",
-                domainIcon: "🔔",
-                difficulty: "★★★",
-                type: "writing_scramble",
-                question: "단어 칩을 모두 올바르게 배열하여 영광의 20번 골든벨을 울리세요!",
-                subtext: "지구를 위한 포스터를 만들자!",
-                chips: ["Let's", "make", "a", "poster", "for", "the", "Earth", "."],
-                correctAnswer: "Let's make a poster for the Earth.",
-                explanation: "Let's make a poster for the Earth. 축하합니다! 골든벨을 완주하셨습니다! 🔔"
-            }
-        ];
+        const MASTER_20_QUESTIONS = (window.MASTER_20_HIGH_LEVEL && window.MASTER_20_HIGH_LEVEL.length > 0)
+            ? window.MASTER_20_HIGH_LEVEL
+            : [];
 
         // ─────────────────────────────────────────────
         // 2. 글로벌 상태 및 런타임 변수
@@ -1538,110 +1287,13 @@
         });
 
         // ─────────────────────────────────────────────
-        // 6. 단원 프리셋 선택 시 문제 생성
+        // 6. 단원 프리셋 선택 시 문제 생성 (1~12단원 및 전체 섞기)
         // ─────────────────────────────────────────────
         function loadQuestionsForPreset(presetCode) {
-            if (presetCode === 'CURRICULUM_20' || !window.WaurimalCurriculum) {
-                return [...MASTER_20_QUESTIONS];
+            if (typeof window.loadGoldenBellQuestions === 'function') {
+                return window.loadGoldenBellQuestions(presetCode);
             }
-            const lesson = window.WaurimalCurriculum.getLesson(presetCode);
-            if (!lesson || !Array.isArray(lesson.words) || lesson.words.length === 0) {
-                return [...MASTER_20_QUESTIONS];
-            }
-
-            // 선택 단원의 단어와 문장으로 20문제 스마트 합성
-            const words = lesson.words;
-            const sentences = lesson.sentences || [];
-            const generated = [];
-
-            // 1~7번: 듣기
-            for (let i = 0; i < 7; i++) {
-                const w = words[i % words.length];
-                const otherWords = words.filter(x => x.en !== w.en);
-                const shuffledOthers = [...otherWords].sort(() => Math.random() - 0.5);
-                const opts = [w.kr, ...(shuffledOthers.slice(0, 3).map(x => x.kr || x.en))];
-                while (opts.length < 4) opts.push("보기 " + (opts.length + 1));
-                const correctOpt = w.kr;
-                const shuffledOpts = [...opts].sort(() => Math.random() - 0.5);
-                generated.push({
-                    id: i + 1,
-                    domain: "듣기",
-                    domainIcon: "🎧",
-                    difficulty: i < 3 ? "★☆☆" : "★★☆",
-                    type: "listening_choice",
-                    audioText: w.en,
-                    question: `[듣기] 음성을 잘 듣고, 알맞은 뜻을 고르세요.`,
-                    options: shuffledOpts,
-                    correctIndex: shuffledOpts.indexOf(correctOpt),
-                    correctAnswer: correctOpt,
-                    explanation: `'${w.en}'의 뜻은 '${w.kr}'입니다.`
-                });
-            }
-
-            // 8~14번: 읽기
-            for (let i = 0; i < 7; i++) {
-                const w = words[(i + 3) % words.length];
-                const otherWords = words.filter(x => x.en !== w.en);
-                const shuffledOthers = [...otherWords].sort(() => Math.random() - 0.5);
-                const opts = [w.en, ...(shuffledOthers.slice(0, 3).map(x => x.en))];
-                while (opts.length < 4) opts.push("Option " + (opts.length + 1));
-                const correctOpt = w.en;
-                const shuffledOpts = [...opts].sort(() => Math.random() - 0.5);
-                generated.push({
-                    id: i + 8,
-                    domain: "읽기",
-                    domainIcon: "📖",
-                    difficulty: "★★☆",
-                    type: "reading_choice",
-                    question: `[읽기] 다음 한국어 뜻에 해당하는 올바른 영단어는?`,
-                    subtext: `"${w.kr}"`,
-                    options: shuffledOpts,
-                    correctIndex: shuffledOpts.indexOf(correctOpt),
-                    correctAnswer: correctOpt,
-                    explanation: `'${w.kr}'은(는) 영어로 '${w.en}'입니다.`
-                });
-            }
-
-            // 15~16번: 쓰기 단어 철자
-            for (let i = 0; i < 2; i++) {
-                const w = words[(i + 5) % words.length];
-                generated.push({
-                    id: i + 15,
-                    domain: "쓰기",
-                    domainIcon: "✍️",
-                    difficulty: "★★☆",
-                    type: "writing_text",
-                    question: `[쓰기] 다음 뜻에 알맞은 영어 단어의 철자를 입력하세요.`,
-                    subtext: `힌트: "${w.kr}" (${w.en.length}글자)`,
-                    correctAnswer: w.en.toLowerCase(),
-                    explanation: `'${w.kr}'은(는) 영어로 '${w.en}'입니다.`
-                });
-            }
-
-            // 17~20번: 쓰기 문장 어순 배열
-            for (let i = 0; i < 4; i++) {
-                let sObj = sentences[i % sentences.length];
-                let senEn = sObj ? (sObj.en || sObj.sentence || "") : "We should save energy.";
-                let senKr = sObj ? (sObj.kr || sObj.meaning || "") : "우리는 에너지를 절약해야 해.";
-                let cleanSen = senEn.trim();
-                let chips = cleanSen.split(' ').map(c => c.trim()).filter(c => c.length > 0);
-                let shuffledChips = [...chips].sort(() => Math.random() - 0.5);
-
-                generated.push({
-                    id: i + 17,
-                    domain: i === 3 ? "골든벨" : "쓰기",
-                    domainIcon: i === 3 ? "🔔" : "✍️",
-                    difficulty: "★★★",
-                    type: "writing_scramble",
-                    question: i === 3 ? `[🔔 최종 20번 골든벨] 단어 칩을 올바르게 완성하세요!` : `[쓰기] 단어 칩을 바르게 배열하여 문장을 완성하세요.`,
-                    subtext: `${senKr}`,
-                    chips: shuffledChips,
-                    correctAnswer: cleanSen,
-                    explanation: `${cleanSen} [${senKr}]`
-                });
-            }
-
-            return generated;
+            return [...MASTER_20_QUESTIONS];
         }
 
         // ─────────────────────────────────────────────
@@ -1650,8 +1302,8 @@
         window.createGoldenBellRoom = async function() {
             initProfile();
             const presetSelect = document.getElementById('select-unit-preset');
-            const presetCode = presetSelect ? presetSelect.value : 'CURRICULUM_20';
-            const presetName = presetSelect ? presetSelect.options[presetSelect.selectedIndex].text : '통합 골든벨';
+            const presetCode = presetSelect ? presetSelect.value : 'ALL_MIXED';
+            const presetName = presetSelect ? presetSelect.options[presetSelect.selectedIndex].text : '전체 1~12단원 골든벨';
 
             const timeSelect = document.getElementById('select-q-time');
             const qDuration = parseInt(timeSelect ? timeSelect.value : '30', 10) || 30;
@@ -2448,7 +2100,9 @@
         window.startSoloChallenge = function() {
             initProfile();
             isSoloMode = true;
-            currentQuestions = [...MASTER_20_QUESTIONS];
+            const presetSelect = document.getElementById('select-unit-preset');
+            const presetCode = presetSelect ? presetSelect.value : 'ALL_MIXED';
+            currentQuestions = loadQuestionsForPreset(presetCode);
             currentQIndex = 0;
             soloScore = 0;
             soloFirstBonusCount = 0;
