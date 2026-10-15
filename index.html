@@ -577,7 +577,8 @@
                                     <span>원어민 대화 다시 듣기 (🔊)</span>
                                 </button>
                             </div>
-                            <div id="host-dialogue-speaker-status" class="hidden text-xs md:text-sm font-extrabold px-3 py-1 bg-amber-100 text-amber-900 rounded-full border border-amber-300 animate-pulse">
+                            <!-- 대화 발화 화자 안내 전광판 (크고 눈에 띄는 라이브 인디케이터) -->
+                            <div id="host-dialogue-speaker-status" class="hidden w-full max-w-xl mx-auto py-3 px-6 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white rounded-2xl shadow-xl border-2 border-amber-300 transition-all duration-300">
                             </div>
                         </div>
 
@@ -788,6 +789,9 @@
                     </h3>
                     <div id="student-subtext-box" class="hidden p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-xs font-bold text-slate-700 whitespace-pre-line text-left">
                     </div>
+                    <!-- 학생 화면 발화 화자 안내 -->
+                    <div id="student-dialogue-speaker-status" class="hidden w-full py-2.5 px-4 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white rounded-2xl shadow-md border-2 border-amber-300 transition-all">
+                    </div>
                 </div>
 
                 <!-- 답안 입력 영역 A: 4지선다형 (객관식) -->
@@ -983,7 +987,7 @@
                                 <span>원어민 대화 다시 듣기 (🔊)</span>
                             </button>
                         </div>
-                        <div id="solo-dialogue-speaker-status" class="hidden text-2xs font-extrabold px-2.5 py-0.5 bg-amber-100 text-amber-900 rounded-full border border-amber-300 animate-pulse">
+                        <div id="solo-dialogue-speaker-status" class="hidden w-full max-w-sm mx-auto py-2.5 px-4 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white rounded-2xl shadow-md border-2 border-amber-300 transition-all duration-200">
                         </div>
                     </div>
 
@@ -1309,6 +1313,30 @@
             return { femaleVoice: female || null, maleVoice: male || null };
         }
 
+        // 자연스럽고 또렷한 고품질 한국어 TTS 음성 탐색
+        function getBestKoreanVoice() {
+            const voices = (cachedVoices && cachedVoices.length > 0)
+                ? cachedVoices
+                : ((typeof window !== 'undefined' && 'speechSynthesis' in window) ? window.speechSynthesis.getVoices() : []);
+            
+            const koVoices = voices.filter(v => v.lang && v.lang.toLowerCase().replace('_', '-').startsWith('ko'));
+            if (koVoices.length === 0) return null;
+
+            // 자연스러운 고품질 한국어 Neural / Online / Google 음성 최우선 선택
+            const preferredKo = koVoices.find(v => {
+                const n = v.name.toLowerCase();
+                return (n.includes('online') || n.includes('natural') || n.includes('google') || n.includes('sunhi') || n.includes('injoon') || n.includes('yuna'));
+            }) || koVoices.find(v => v.name.includes('Heami')) || koVoices[0];
+
+            return preferredKo;
+        }
+
+        // 문제 지문 앞의 불필요한 [듣기 · 1단원], [읽기] 등 대괄호 제시어 제거 헬퍼
+        function cleanQuestionText(text) {
+            if (!text) return '';
+            return String(text).replace(/^\[[^\]]+\]\s*/, '').trim();
+        }
+
         let activeDialogueSessionId = 0;
 
         window.stopCurrentQuestionAudio = function() {
@@ -1319,24 +1347,80 @@
             updateDialogueSpeakerIndicator('');
         };
 
+        // 발화 중인 인물 실시간 대형 전광판 렌더러
         function updateDialogueSpeakerIndicator(speakerName) {
             const hostInd = document.getElementById('host-dialogue-speaker-status');
             const soloInd = document.getElementById('solo-dialogue-speaker-status');
+            const studentInd = document.getElementById('student-dialogue-speaker-status');
+
+            if (!speakerName) {
+                if (hostInd) hostInd.classList.add('hidden');
+                if (soloInd) soloInd.classList.add('hidden');
+                if (studentInd) studentInd.classList.add('hidden');
+                return;
+            }
+
+            const cleanName = speakerName.trim();
+            const isFemale = FEMALE_NAMES.has(cleanName.toLowerCase());
+            const avatar = isFemale ? '👩' : '👦';
+            const genderLabel = isFemale ? '여학생' : '남학생';
+
+            // 교사 호스트 화면용 대형 인디케이터 (교실 맨 뒤에서도 선명하게 식별)
+            const hostHtml = `
+                <div class="flex items-center justify-center gap-3 md:gap-5 py-1">
+                    <span class="text-3xl md:text-4xl animate-bounce flex-shrink-0 drop-shadow">${avatar}</span>
+                    <div class="text-left flex-1 min-w-0">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xs md:text-xs font-black text-amber-100 uppercase tracking-wider bg-black/20 px-2 py-0.5 rounded-md">
+                                🎙️ Speaking Now
+                            </span>
+                            <span class="text-2xs md:text-xs font-bold text-amber-200">
+                                (${genderLabel})
+                            </span>
+                        </div>
+                        <div class="text-xl md:text-3xl font-black text-white tracking-wide truncate mt-0.5">
+                            ${cleanName} <span class="text-sm md:text-lg font-bold text-amber-200">말하는 중...</span>
+                        </div>
+                    </div>
+                    <div class="flex items-end gap-1.5 h-8 flex-shrink-0 px-2">
+                        <span class="w-1.5 md:w-2 bg-white rounded-full animate-pulse h-4"></span>
+                        <span class="w-1.5 md:w-2 bg-amber-200 rounded-full animate-pulse h-8 delay-75"></span>
+                        <span class="w-1.5 md:w-2 bg-white rounded-full animate-pulse h-5 delay-150"></span>
+                    </div>
+                </div>
+            `;
+
+            // 학생 및 1인 챌린지 화면용 직관적 인디케이터
+            const compactHtml = `
+                <div class="flex items-center justify-center gap-3 py-0.5">
+                    <span class="text-2xl md:text-3xl animate-bounce flex-shrink-0">${avatar}</span>
+                    <div class="text-left flex-1 min-w-0">
+                        <div class="text-3xs font-extrabold text-amber-100 uppercase tracking-wide">
+                            🎙️ Speaking Now (${genderLabel})
+                        </div>
+                        <div class="text-base md:text-xl font-black text-white tracking-wide truncate">
+                            ${cleanName} <span class="text-xs md:text-sm font-semibold text-amber-200">발화 중...</span>
+                        </div>
+                    </div>
+                    <div class="flex items-end gap-1 h-6 flex-shrink-0">
+                        <span class="w-1 bg-white rounded-full animate-pulse h-3"></span>
+                        <span class="w-1 bg-amber-200 rounded-full animate-pulse h-6 delay-75"></span>
+                        <span class="w-1 bg-white rounded-full animate-pulse h-4 delay-150"></span>
+                    </div>
+                </div>
+            `;
+
             if (hostInd) {
-                if (speakerName) {
-                    hostInd.innerHTML = `<i class="fa-solid fa-comments text-amber-500 mr-1.5"></i><strong>${speakerName}</strong> 발화 중...`;
-                    hostInd.classList.remove('hidden');
-                } else {
-                    hostInd.classList.add('hidden');
-                }
+                hostInd.innerHTML = hostHtml;
+                hostInd.classList.remove('hidden');
             }
             if (soloInd) {
-                if (speakerName) {
-                    soloInd.innerHTML = `<i class="fa-solid fa-comments text-amber-500 mr-1.5"></i><strong>${speakerName}</strong> 발화 중...`;
-                    soloInd.classList.remove('hidden');
-                } else {
-                    soloInd.classList.add('hidden');
-                }
+                soloInd.innerHTML = compactHtml;
+                soloInd.classList.remove('hidden');
+            }
+            if (studentInd) {
+                studentInd.innerHTML = compactHtml;
+                studentInd.classList.remove('hidden');
             }
         }
 
@@ -1410,14 +1494,16 @@
 
                 if (hasKorean) {
                     u.lang = 'ko-KR';
-                    if (koVoice) u.voice = koVoice;
+                    const bestKo = getBestKoreanVoice();
+                    if (bestKo) u.voice = bestKo;
+                    u.rate = 0.95;
+                    u.pitch = 1.0;
                 } else {
                     u.lang = 'en-US';
                     if (profile.voice) u.voice = profile.voice;
+                    u.rate = profile.rate || 0.90;
+                    u.pitch = profile.pitch || 1.0;
                 }
-
-                u.rate = profile.rate || 0.90;
-                u.pitch = profile.pitch || 1.0;
 
                 u.onend = function() {
                     if (activeDialogueSessionId !== sessionId) return;
@@ -1962,7 +2048,7 @@
             document.getElementById('host-q-badge').innerText = `Q ${String(currentQIndex + 1).padStart(2, '0')} / 20`;
             document.getElementById('host-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain} 영역`;
             document.getElementById('host-difficulty-badge').innerText = q.difficulty || '★★☆';
-            document.getElementById('host-question-text').innerText = q.question;
+            document.getElementById('host-question-text').innerText = cleanQuestionText(q.question);
 
             // 오디오 컨트롤
             const audioCont = document.getElementById('host-audio-container');
@@ -2268,7 +2354,7 @@
 
             document.getElementById('student-q-badge').innerText = `Q ${String((data.currentQIndex || 0) + 1).padStart(2, '0')} / 20`;
             document.getElementById('student-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain}`;
-            document.getElementById('student-question-text').innerText = q.question;
+            document.getElementById('student-question-text').innerText = cleanQuestionText(q.question);
 
             // 서브 텍스트
             const subBox = document.getElementById('student-subtext-box');
@@ -2636,7 +2722,7 @@
 
             document.getElementById('solo-q-badge').innerText = `Q ${String(currentQIndex + 1).padStart(2, '0')} / 20`;
             document.getElementById('solo-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain}`;
-            document.getElementById('solo-question-text').innerText = q.question;
+            document.getElementById('solo-question-text').innerText = cleanQuestionText(q.question);
             document.getElementById('solo-timer-text').innerText = `${remainingSeconds}s`;
 
             const audioCont = document.getElementById('solo-audio-container');
