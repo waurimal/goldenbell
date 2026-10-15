@@ -1,0 +1,3025 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>도전! 골든벨 (Golden Bell) - 와우리말 에듀테크</title>
+
+    <!-- Pretendard 웹폰트 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- FontAwesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- 와우리말 공통 통합 테마 및 내비게이션 -->
+    <link rel="stylesheet" href="../common/waurimal-theme.css">
+    <script src="../common/waurimal-nav.js"></script>
+    <script src="../common/firebase-config.js"></script>
+    <script src="../common/curriculum.js"></script>
+
+    <style>
+        :root {
+            --app-font: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            --gold-primary: #D97706;
+            --gold-hover: #B45309;
+            --gold-light: #FEF3C7;
+            --card-bg: #FFFFFF;
+            --border-color: #FDE68A;
+            --shadow-gold: 0 10px 25px -5px rgba(217, 119, 6, 0.12), 0 8px 10px -6px rgba(217, 119, 6, 0.06);
+        }
+
+        body {
+            font-family: var(--app-font);
+            background-color: #FFFDF7;
+            color: #1E293B;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            overflow-x: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .home-split-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        @media (max-width: 960px) {
+            .home-split-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+
+        .golden-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-gold);
+            transition: all 0.2s ease;
+        }
+
+        .golden-btn {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            color: #FFFFFF;
+            border-radius: 16px;
+            padding: 1.1rem 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 10px 20px -3px rgba(217, 119, 6, 0.35);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .golden-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 24px -2px rgba(217, 119, 6, 0.45);
+        }
+
+        .secondary-btn {
+            background: #FFFFFF;
+            border: 2px solid #FDE68A;
+            color: #B45309;
+            border-radius: 14px;
+            padding: 0.85rem 1.25rem;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .secondary-btn:hover {
+            background: #FEF3C7;
+            border-color: #F59E0B;
+        }
+
+        /* 펄스 애니메이션 */
+        @keyframes bellPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            20% { transform: scale(1.15) rotate(-15deg); }
+            40% { transform: scale(1.15) rotate(15deg); }
+            60% { transform: scale(1.1) rotate(-8deg); }
+            80% { transform: scale(1.05) rotate(8deg); }
+        }
+
+        .animate-bell-ring {
+            animation: bellPulse 1.2s infinite ease-in-out;
+            display: inline-block;
+        }
+
+        /* 골든 글로우 */
+        .glow-gold {
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.55);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #FEF3C7; border-radius: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #FBBF24; border-radius: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #D97706; }
+
+        /* 단어 칩 스타일 (문장 어순 배열용) */
+        .word-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 1.1rem;
+            background: #FFFFFF;
+            border: 2px solid #FCD34D;
+            color: #92400E;
+            font-weight: 800;
+            font-size: 1.1rem;
+            border-radius: 14px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(217, 119, 6, 0.1);
+            transition: all 0.15s ease;
+            touch-action: manipulation;
+        }
+
+        .word-chip:hover {
+            background: #FEF3C7;
+            transform: translateY(-2px);
+            border-color: #F59E0B;
+        }
+
+        .word-chip:active {
+            transform: scale(0.96);
+        }
+
+        .word-chip.used {
+            opacity: 0.35;
+            background: #F1F5F9;
+            border-color: #CBD5E1;
+            color: #94A3B8;
+            pointer-events: none;
+            box-shadow: none;
+        }
+
+        /* 4지선다형 카드 */
+        .choice-btn {
+            background: #FFFFFF;
+            border: 2px solid #E2E8F0;
+            color: #334155;
+            border-radius: 16px;
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            text-align: left;
+            width: 100%;
+        }
+
+        .choice-btn:hover {
+            border-color: #FBBF24;
+            background: #FFFDF0;
+            transform: translateY(-2px);
+        }
+
+        .choice-btn.selected {
+            background: #FEF3C7;
+            border-color: #D97706;
+            color: #92400E;
+            font-weight: 900;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+        }
+
+        .choice-btn.correct {
+            background: #D1FAE5 !important;
+            border-color: #059669 !important;
+            color: #065F46 !important;
+        }
+
+        .choice-btn.wrong {
+            background: #FEE2E2 !important;
+            border-color: #DC2626 !important;
+            color: #991B1B !important;
+        }
+
+        /* 포디움 스타일 */
+        .podium-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            border-radius: 16px 16px 0 0;
+            padding: 1rem;
+            color: white;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 메인 컨테이너 -->
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-4 md:py-6 flex flex-col justify-start">
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 1. 홈 화면 (screen-home) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-home" class="w-full space-y-6">
+
+            <!-- 헤더 배너 -->
+            <div class="text-center space-y-2">
+                <div class="inline-flex items-center gap-2 bg-amber-100 border border-amber-300 text-amber-900 font-extrabold text-xs md:text-sm px-4 py-1.5 rounded-full shadow-2xs">
+                    <span class="animate-bell-ring">🔔</span>
+                    <span>초등 영어 지도서 기반 온 학급 라이브 퀴즈 쇼</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-black text-slate-800 tracking-tight flex items-center justify-center gap-3">
+                    <span class="text-amber-500">도전!</span> 골든벨 
+                    <span class="text-amber-500 text-2xl md:text-3xl font-extrabold bg-amber-50 px-3 py-0.5 rounded-xl border border-amber-200">20 Q</span>
+                </h1>
+                <p class="text-xs md:text-sm text-slate-500 font-medium">
+                    듣기 · 읽기 · 쓰기 20문제 완주! 가장 먼저 맞힌 학생에게는 <strong class="text-amber-600 font-black">🥇 선착순 보너스 +50점</strong>이 주어집니다!
+                </p>
+            </div>
+
+            <!-- 50:50 대칭 분할 레이아웃 -->
+            <div class="home-split-grid">
+
+                <!-- [좌측 50%]: 게임 모드 선택 (반 전체 & 1인 도전) -->
+                <div class="space-y-4 flex flex-col">
+
+                    <!-- 반 전체 게임 카드 -->
+                    <div class="golden-card space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-amber-100">
+                            <div class="flex items-center gap-2.5">
+                                <span class="w-10 h-10 rounded-2xl bg-amber-500 text-white flex items-center justify-center font-black text-lg shadow-md">
+                                    <i class="fa-solid fa-users"></i>
+                                </span>
+                                <div>
+                                    <h2 class="text-lg font-black text-slate-800">반 전체 골든벨 (Live)</h2>
+                                    <p class="text-xs text-amber-700 font-semibold">학급 전체 참여형 실시간 퀴즈 대결</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-black bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">추천 ⭐</span>
+                        </div>
+
+                        <!-- 교사 모드: 방 개설 설정 -->
+                        <div class="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-4 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-black text-amber-900 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-chalkboard-user text-amber-600"></i> 선생님 전광판 방 개설
+                                </span>
+                                <span class="text-2xs text-amber-700 font-bold bg-amber-200/70 px-2 py-0.5 rounded-md">전자칠판 / 프로젝터</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-2xs font-extrabold text-slate-600 mb-1">골든벨 단원 및 문제 세트 선택</label>
+                                <select id="select-unit-preset" class="w-full text-xs font-bold bg-white border border-amber-200 rounded-xl px-3 py-2.5 text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    <option value="CURRICULUM_20" selected>🏆 [교사용 지도서] 3~6학년 핵심 20문제 통합 골든벨 (듣기7·읽기7·쓰기6)</option>
+                                    <option value="3G_L07">📚 3학년 Lesson 07 - 학용품 골든벨 (20문제 자동생성)</option>
+                                    <option value="6G_L01">📚 6학년 Lesson 01 - 서수와 학교생활 골든벨 (20문제)</option>
+                                    <option value="6G_L02">📚 6학년 Lesson 02 - 계절과 날씨 골든벨 (20문제)</option>
+                                    <option value="6G_L03">📚 6학년 Lesson 03 - 환경과 지구 보호 골든벨 (20문제)</option>
+                                    <option value="6G_L04">📚 6학년 Lesson 04 - 감정과 이유 골든벨 (20문제)</option>
+                                    <option value="6G_L05">📚 6학년 Lesson 05 - 길 찾기와 장소 골든벨 (20문제)</option>
+                                    <option value="6G_L06">📚 6학년 Lesson 06 - 가족과 묘사 골든벨 (20문제)</option>
+                                    <option value="6G_L07">📚 6학년 Lesson 07 - 경험과 과거 골든벨 (20문제)</option>
+                                    <option value="6G_L08">📚 6학년 Lesson 08 - 비교하기 골든벨 (20문제)</option>
+                                    <option value="6G_L09">📚 6학년 Lesson 09 - 방학 계획 골든벨 (20문제)</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>
+                                    <label class="block text-2xs font-extrabold text-slate-600 mb-1">문제당 제한 시간</label>
+                                    <select id="select-q-time" class="w-full text-xs font-bold bg-white border border-amber-200 rounded-xl px-3 py-2 text-slate-700 focus:outline-none">
+                                        <option value="20">⚡ 20초 (스피드)</option>
+                                        <option value="30" selected>⏱️ 30초 (표준 추천)</option>
+                                        <option value="45">🕒 45초 (여유)</option>
+                                        <option value="60">🐢 60초 (충분)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-2xs font-extrabold text-slate-600 mb-1">선착순 1등 보너스</label>
+                                    <div class="w-full text-xs font-black bg-amber-100/70 border border-amber-300 rounded-xl px-3 py-2 text-amber-800 text-center">
+                                        🥇 +50점 지급
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="createGoldenBellRoom()" class="golden-btn">
+                                <span class="flex items-center gap-2">
+                                    <i class="fa-solid fa-bell animate-bell-ring"></i>
+                                    <span>반 전체 골든벨 방 개설하기</span>
+                                </span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- 학생 모드: 방 코드 입장 -->
+                        <div class="pt-2 border-t border-slate-100 space-y-2">
+                            <span class="text-xs font-black text-slate-700 flex items-center gap-1.5">
+                                <i class="fa-solid fa-mobile-screen-button text-amber-500"></i> 학생 참여 (코드 입장)
+                            </span>
+                            <div class="flex gap-2">
+                                <input type="text" id="input-room-code" maxlength="4" placeholder="4자리 코드 입력" 
+                                       class="flex-1 text-center font-black text-lg tracking-widest uppercase bg-slate-50 border-2 border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:bg-white focus:border-amber-500 focus:outline-none"
+                                       onkeydown="if(event.key==='Enter') joinGoldenBellRoom()">
+                                <button type="button" onclick="joinGoldenBellRoom()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-extrabold text-xs rounded-xl transition shadow-sm">
+                                    입장하기 🚀
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1인 골든벨 도전 카드 -->
+                    <div class="golden-card space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2.5">
+                                <span class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-black">
+                                    <i class="fa-solid fa-user-ninja"></i>
+                                </span>
+                                <div>
+                                    <h3 class="text-sm font-black text-slate-800">1인 골든벨 챌린지 (혼자 연습)</h3>
+                                    <p class="text-2xs text-slate-500 font-medium">혼자서 20문제를 풀며 스피드 점수를 기록합니다.</p>
+                                </div>
+                            </div>
+                            <button type="button" onclick="startSoloChallenge()" class="secondary-btn text-xs py-2 px-3">
+                                <i class="fa-solid fa-play"></i> 도전하기
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- [우측 50%]: 명예의 전당 & 규칙 배점 안내 -->
+                <div class="space-y-4 flex flex-col">
+
+                    <!-- 골든벨 명예의 전당 카드 -->
+                    <div class="golden-card flex-1 flex flex-col space-y-3">
+                        <div class="flex justify-between items-center pb-2 border-b border-amber-100">
+                            <div class="flex items-center gap-2">
+                                <span class="text-amber-500 text-lg">🏆</span>
+                                <h2 class="text-base font-black text-slate-800">골든벨 명예의 전당</h2>
+                            </div>
+                            <span class="text-2xs font-extrabold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded-full">
+                                표준 1224 순위제 · 1인 1기록
+                            </span>
+                        </div>
+
+                        <!-- 탭 및 필터 -->
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex bg-slate-100 p-0.5 rounded-lg text-2xs font-extrabold">
+                                <button type="button" id="tab-hof-all" onclick="setHofTab('all')" class="px-2.5 py-1 rounded-md bg-white text-amber-800 shadow-2xs">전체</button>
+                                <button type="button" id="tab-hof-month" onclick="setHofTab('month')" class="px-2.5 py-1 rounded-md text-slate-500 hover:text-slate-800">이번 달</button>
+                                <button type="button" id="tab-hof-week" onclick="setHofTab('week')" class="px-2.5 py-1 rounded-md text-slate-500 hover:text-slate-800">이번 주</button>
+                            </div>
+
+                            <div class="flex items-center gap-1.5 text-2xs font-bold text-slate-500">
+                                <select id="hof-filter-grade" onchange="renderHallOfFame()" class="bg-white border border-slate-200 rounded-lg px-2 py-1 text-slate-700">
+                                    <option value="all">전체 학년</option>
+                                    <option value="3">3학년</option>
+                                    <option value="4">4학년</option>
+                                    <option value="5">5학년</option>
+                                    <option value="6">6학년</option>
+                                </select>
+                                <select id="hof-filter-class" onchange="renderHallOfFame()" class="bg-white border border-slate-200 rounded-lg px-2 py-1 text-slate-700">
+                                    <option value="all">전체 반</option>
+                                    <option value="1">1반</option>
+                                    <option value="2">2반</option>
+                                    <option value="3">3반</option>
+                                    <option value="4">4반</option>
+                                    <option value="5">5반</option>
+                                    <option value="6">6반</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- 랭킹 리스트 컨테이너 -->
+                        <div id="hof-list" class="flex-1 min-h-[220px] max-h-[300px] overflow-y-auto custom-scrollbar space-y-1.5 pr-1">
+                            <div class="text-center py-10 text-xs text-slate-400 font-bold">
+                                <i class="fa-solid fa-spinner fa-spin mr-1"></i> 명예의 전당을 불러오는 중...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 골든벨 규칙 및 배점 안내 카드 -->
+                    <div class="golden-card bg-amber-50/40 border-amber-200 p-4 space-y-2">
+                        <h3 class="text-xs font-black text-amber-900 flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-info text-amber-600"></i> 골든벨 게임 규칙 및 점수 배점
+                        </h3>
+                        <ul class="text-2xs text-slate-600 font-medium space-y-1">
+                            <li>• <strong>20문제 구성</strong>: 듣기(7문제), 읽기(7문제), 쓰기(6문제)로 영역별 고르게 출제됩니다.</li>
+                            <li>• <strong>정답 기본 점수</strong>: 문제를 맞힌 모든 참가자에게 <strong>100점</strong>이 부여됩니다.</li>
+                            <li>• <strong>🥇 가장 먼저 맞힌 사람</strong>: 반에서 1등으로 가장 빠르게 맞힌 학생에게 <strong>보너스 +50점</strong>(총 150점!)이 수여됩니다!</li>
+                            <li>• <strong>개인정보 안심 마스킹</strong>: 명예의 전당에는 학생 이름이 안심 마스킹(예: 이O연)으로 표시됩니다.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 2. 교사용 대기실 화면 (screen-host-lobby) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-host-lobby" class="hidden max-w-4xl mx-auto w-full space-y-6">
+            <div class="golden-card space-y-6 text-center py-8">
+
+                <div class="space-y-1">
+                    <span class="text-xs font-black text-amber-800 bg-amber-100 px-3 py-1 rounded-full">
+                        선생님 호스트 대형 전광판 화면
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">학생들이 입장하고 있습니다!</h2>
+                    <p id="host-lobby-unit-name" class="text-xs text-slate-500 font-bold">3~6학년 지도서 핵심 20문제 통합 골든벨</p>
+                </div>
+
+                <!-- 대형 방 코드 안내 -->
+                <div class="max-w-xs mx-auto bg-amber-50 border-2 border-amber-300 rounded-3xl p-5 shadow-inner space-y-1">
+                    <span class="text-2xs text-amber-700 font-black tracking-widest block">학생 입장 코드</span>
+                    <span id="host-room-code-display" class="text-5xl font-black text-amber-600 tracking-wider">0000</span>
+                    <span class="text-2xs text-slate-400 font-medium block">학생 기기에서 위 4자리 코드를 입력하세요</span>
+                </div>
+
+                <!-- 현재 입장 인원 및 학생 태그 목록 -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span class="text-sm font-black text-slate-700">
+                            현재 입장 인원: <span id="host-player-count" class="text-amber-600 text-lg">0</span>명
+                        </span>
+                    </div>
+
+                    <div id="host-player-tags" class="flex flex-wrap justify-center gap-2 min-h-[90px] max-h-[220px] overflow-y-auto custom-scrollbar p-3 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <!-- 실시간 입장 학생 태그 렌더링 -->
+                        <span class="text-xs text-slate-400 font-semibold my-auto">학생들의 입장을 기다리고 있습니다...</span>
+                    </div>
+                </div>
+
+                <!-- 시작 버튼 -->
+                <div class="max-w-md mx-auto pt-2 space-y-2">
+                    <button type="button" id="btn-start-goldenbell" onclick="hostStartGame()" class="golden-btn text-base py-4 justify-center gap-3">
+                        <span class="animate-bell-ring text-xl">🔔</span>
+                        <span>모두 모였습니다! 골든벨 시작하기 (1번 문제 출발!)</span>
+                    </button>
+                    <button type="button" onclick="exitToHome()" class="text-xs text-slate-400 font-bold hover:text-slate-600 py-1">
+                        ← 대기실 나가기 (방 종료)
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 3. 교사용 인게임 전광판 화면 (screen-host-game) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-host-game" class="hidden max-w-5xl mx-auto w-full space-y-4">
+            <div class="golden-card space-y-5 p-6 md:p-8">
+
+                <!-- 상단 헤더: Q 번호, 영역 뱃지, 타이머, 제출률 -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-amber-100">
+                    <div class="flex items-center gap-3">
+                        <span id="host-q-badge" class="px-3.5 py-1.5 bg-amber-500 text-white font-black text-sm md:text-base rounded-xl shadow-xs">
+                            Q 01 / 20
+                        </span>
+                        <span id="host-domain-badge" class="px-3 py-1 bg-amber-100 text-amber-900 font-black text-xs md:text-sm rounded-xl">
+                            🎧 듣기 영역
+                        </span>
+                        <span id="host-difficulty-badge" class="text-amber-500 text-xs font-black">
+                            ★★★
+                        </span>
+                    </div>
+
+                    <!-- 실시간 타이머 및 점수 안내 -->
+                    <div class="flex items-center gap-3">
+                        <div class="text-right">
+                            <span class="text-2xs font-bold text-slate-400 block">기본 100점 + 🥇선착순 50점</span>
+                            <span id="host-timer-text" class="text-2xl md:text-3xl font-black text-rose-600">30s</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 타이머 프로그레스 바 -->
+                <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                    <div id="host-timer-bar" class="bg-amber-500 h-2.5 rounded-full transition-all duration-300" style="width: 100%;"></div>
+                </div>
+
+                <!-- 문제 카드 본문 -->
+                <div class="py-4 space-y-4 text-center">
+                    <h2 id="host-question-text" class="text-2xl md:text-3xl font-black text-slate-800 leading-snug">
+                        원어민 음성을 잘 듣고, 들리는 단어의 올바른 의미를 고르세요.
+                    </h2>
+
+                    <!-- 듣기 문제용 TTS 버튼 -->
+                    <div id="host-audio-container" class="hidden flex justify-center items-center gap-3 py-2">
+                        <button type="button" onclick="playCurrentQuestionAudio()" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-black text-sm md:text-base rounded-2xl shadow-md transition flex items-center gap-2">
+                            <i class="fa-solid fa-volume-high text-lg"></i>
+                            <span>원어민 음성 다시 듣기 (🔊)</span>
+                        </button>
+                    </div>
+
+                    <!-- 읽기 지문/보조 텍스트 (필요시) -->
+                    <div id="host-subtext-container" class="hidden max-w-xl mx-auto p-4 bg-amber-50/60 border border-amber-200 rounded-2xl text-slate-700 font-bold text-base md:text-lg whitespace-pre-line">
+                    </div>
+
+                    <!-- 4지선다형 보기 목록 (호스트 대형 화면 표시) -->
+                    <div id="host-choices-container" class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto text-left pt-2">
+                        <!-- 보기 1~4 -->
+                    </div>
+                </div>
+
+                <!-- 하단: 실시간 학생 제출 프로그레스 전광판 -->
+                <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs font-black text-slate-700">
+                            실시간 제출: <span id="host-submit-count" class="text-amber-600 font-black text-base">0</span> / <span id="host-total-players">0</span>명
+                        </span>
+                        <div class="w-32 md:w-48 bg-slate-100 rounded-full h-2 overflow-hidden">
+                            <div id="host-submit-bar" class="bg-emerald-500 h-2 rounded-full transition-all duration-300" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="hostForceReveal()" class="px-5 py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-black text-xs md:text-sm rounded-xl transition shadow-sm flex items-center gap-2">
+                            <span>정답 공개 및 채점</span>
+                            <i class="fa-solid fa-bell animate-bell-ring"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 4. 교사용 문제 결과 및 1등 선착순 발표 (screen-host-reveal) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-host-reveal" class="hidden max-w-5xl mx-auto w-full space-y-4">
+            <div class="golden-card space-y-6 p-6 md:p-8 text-center">
+
+                <!-- 헤더 -->
+                <div class="space-y-1">
+                    <span class="text-xs font-black text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
+                        Q <span id="reveal-q-num">1</span> 정답 및 채점 결과 발표
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">정답을 확인하세요! 🔔</h2>
+                </div>
+
+                <!-- 정답 박스 -->
+                <div class="max-w-xl mx-auto bg-emerald-50 border-2 border-emerald-300 rounded-2xl p-5 space-y-2">
+                    <span class="text-xs font-black text-emerald-800 block">정 답</span>
+                    <div id="reveal-correct-answer" class="text-2xl md:text-3xl font-black text-emerald-600">
+                        1) 봄 (spring)
+                    </div>
+                    <p id="reveal-explanation" class="text-xs md:text-sm text-slate-600 font-semibold pt-1 border-t border-emerald-200/70">
+                        'spring'은 봄을 의미합니다.
+                    </p>
+                </div>
+
+                <!-- 🥇 가장 먼저 맞힌 학생 (First Solver) 대형 발표 배너! -->
+                <div id="reveal-first-solver-box" class="max-w-xl mx-auto bg-gradient-to-r from-amber-400 to-amber-500 text-white rounded-2xl p-4 shadow-lg space-y-1">
+                    <div class="flex items-center justify-center gap-2 text-xl font-black">
+                        <span class="text-2xl">🥇</span>
+                        <span>가장 먼저 맞힌 학생 (선착순 보너스 +50점!)</span>
+                    </div>
+                    <div id="reveal-first-solver-name" class="text-2xl font-black tracking-wide">
+                        이O연 학생 (0.95초 만에 정답!)
+                    </div>
+                    <div class="text-2xs text-amber-100 font-bold">
+                        기본 100점 + 🥇 선착순 보너스 50점 = 총 150점 획득!
+                    </div>
+                </div>
+
+                <!-- 정답자 통계 & 실시간 학급 TOP 10 순위표 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
+                    <!-- 좌측: 제출 통계 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
+                        <h4 class="text-xs font-black text-slate-700 flex items-center gap-1.5">
+                            <i class="fa-solid fa-chart-pie text-amber-500"></i> 학급 정답 통계
+                        </h4>
+                        <div class="space-y-1.5 text-xs font-bold text-slate-600">
+                            <div class="flex justify-between">
+                                <span>⭕ 정답자</span>
+                                <span id="stat-correct-count" class="font-black text-emerald-600">0명</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>❌ 오답자</span>
+                                <span id="stat-wrong-count" class="font-black text-rose-500">0명</span>
+                            </div>
+                            <div class="flex justify-between border-t border-slate-200 pt-1">
+                                <span>정답률</span>
+                                <span id="stat-accuracy" class="font-black text-amber-600">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 우측: 실시간 학급 TOP 5 순위 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
+                        <h4 class="text-xs font-black text-slate-700 flex items-center gap-1.5">
+                            <i class="fa-solid fa-ranking-star text-amber-500"></i> 실시간 학급 순위 (TOP 5)
+                        </h4>
+                        <div id="reveal-top-rankings" class="space-y-1 text-xs font-bold text-slate-700 max-h-[140px] overflow-y-auto custom-scrollbar">
+                            <!-- 실시간 랭킹 행 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 다음 문제 진행 버튼 -->
+                <div class="pt-2">
+                    <button type="button" id="btn-next-question" onclick="hostNextQuestion()" class="golden-btn max-w-md mx-auto text-base py-3.5 justify-center gap-2">
+                        <span>다음 문제로 ➔</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 5. 학생 대기실 화면 (screen-student-lobby) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-student-lobby" class="hidden max-w-md mx-auto w-full space-y-5 text-center">
+            <div class="golden-card space-y-6 py-8">
+                <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-600 mx-auto flex items-center justify-center text-3xl animate-bounce">
+                    🔔
+                </div>
+
+                <div class="space-y-1">
+                    <h2 class="text-2xl font-black text-slate-800">골든벨 입장 완료!</h2>
+                    <p id="student-lobby-profile" class="text-xs text-amber-800 font-extrabold bg-amber-50 px-3 py-1 rounded-full inline-block border border-amber-200">
+                        6학년 1반 5번 이O연
+                    </p>
+                </div>
+
+                <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                    <span class="text-2xs font-extrabold text-slate-400 block tracking-widest">방 코드</span>
+                    <span id="student-lobby-code" class="text-3xl font-black text-amber-600 tracking-wider">0000</span>
+                    <p class="text-xs text-slate-500 font-medium">선생님이 골든벨을 시작할 때까지 잠시 기다려주세요...</p>
+                    <div class="flex justify-center gap-1.5 pt-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse delay-100"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-600 animate-pulse delay-200"></span>
+                    </div>
+                </div>
+
+                <button type="button" onclick="exitToHome()" class="text-xs text-slate-400 font-bold hover:text-slate-600">
+                    ← 나가기
+                </button>
+            </div>
+        </div>
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 6. 학생 인게임 화면 (screen-student-game) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-student-game" class="hidden max-w-md mx-auto w-full space-y-4">
+            <div class="golden-card space-y-4 p-5">
+
+                <!-- 상단 미니 HUD -->
+                <div class="flex justify-between items-center pb-2 border-b border-amber-100">
+                    <div class="flex items-center gap-2">
+                        <span id="student-q-badge" class="px-2.5 py-1 bg-amber-500 text-white font-black text-xs rounded-lg">
+                            Q 01 / 20
+                        </span>
+                        <span id="student-domain-badge" class="px-2 py-0.5 bg-amber-100 text-amber-800 font-black text-2xs rounded-md">
+                            🎧 듣기
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs font-black text-slate-500">내 점수: <strong id="student-my-score" class="text-amber-600">0</strong>점</span>
+                        <span id="student-timer-text" class="text-sm font-black text-rose-600">30s</span>
+                    </div>
+                </div>
+
+                <!-- 문제 요약 지문 -->
+                <div class="text-center space-y-2">
+                    <h3 id="student-question-text" class="text-lg font-black text-slate-800 leading-snug">
+                        원어민 음성을 잘 듣고, 알맞은 의미를 고르세요.
+                    </h3>
+                    <div id="student-subtext-box" class="hidden p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-xs font-bold text-slate-700 whitespace-pre-line text-left">
+                    </div>
+                </div>
+
+                <!-- 답안 입력 영역 A: 4지선다형 (객관식) -->
+                <div id="student-choices-container" class="space-y-2 pt-1">
+                    <!-- 보기 버튼들 -->
+                </div>
+
+                <!-- 답안 입력 영역 B: 쓰기 (문장 어순 배열 Word Scramble) -->
+                <div id="student-scramble-container" class="hidden space-y-3 pt-1">
+                    <div class="text-2xs font-extrabold text-amber-800 flex items-center justify-between">
+                        <span>단어 칩을 터치하여 올바른 문장을 만드세요:</span>
+                        <button type="button" onclick="resetScrambleChips()" class="text-2xs text-rose-500 underline font-bold">초기화</button>
+                    </div>
+
+                    <!-- 슬롯 박스 (내가 완성 중인 문장) -->
+                    <div id="scramble-slots" class="min-h-[56px] p-2.5 bg-amber-50/80 border-2 border-dashed border-amber-300 rounded-xl flex flex-wrap gap-1.5 items-center">
+                        <span class="text-2xs text-amber-700/60 font-semibold my-auto">아래 단어 칩을 터치하세요.</span>
+                    </div>
+
+                    <!-- 단어 칩 보관함 -->
+                    <div id="scramble-chips-pool" class="flex flex-wrap gap-2 justify-center p-2 bg-slate-50 rounded-xl border border-slate-200">
+                        <!-- 단어 칩들 -->
+                    </div>
+                </div>
+
+                <!-- 답안 입력 영역 C: 쓰기 (단답형 타이핑 / 주관식) -->
+                <div id="student-text-container" class="hidden space-y-2 pt-1">
+                    <label class="block text-2xs font-extrabold text-slate-600">영어 단어 또는 철자 입력:</label>
+                    <input type="text" id="student-text-input" placeholder="정답을 입력하세요" 
+                           class="w-full text-center font-black text-base bg-slate-50 border-2 border-slate-200 rounded-xl px-3 py-2.5 text-slate-800 focus:bg-white focus:border-amber-500 focus:outline-none"
+                           onkeydown="if(event.key==='Enter') submitStudentAnswer()">
+                </div>
+
+                <!-- 제출 버튼 -->
+                <div class="pt-2">
+                    <button type="button" id="btn-submit-answer" onclick="submitStudentAnswer()" class="golden-btn justify-center text-sm py-3">
+                        <span class="flex items-center gap-1.5">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>답안 제출하기 🚀</span>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- 제출 완료 대기 오버레이 -->
+                <div id="student-submitted-overlay" class="hidden p-4 bg-emerald-50 border border-emerald-200 rounded-2xl text-center space-y-1">
+                    <span class="text-emerald-600 text-lg">✅</span>
+                    <h4 class="text-xs font-black text-emerald-800">답안 제출이 완료되었습니다!</h4>
+                    <p id="student-submit-time-text" class="text-2xs text-slate-500 font-semibold">1.2초 만에 제출 완료</p>
+                    <p class="text-2xs text-emerald-700 font-bold animate-pulse">선생님이 정답을 공개할 때까지 기다려주세요...</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 7. 학생 채점 결과 피드백 화면 (screen-student-reveal) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-student-reveal" class="hidden max-w-md mx-auto w-full space-y-4 text-center">
+            <div class="golden-card space-y-5 p-6">
+
+                <div id="student-feedback-icon" class="text-5xl animate-bounce">
+                    🎉
+                </div>
+
+                <div class="space-y-1">
+                    <h2 id="student-feedback-title" class="text-2xl font-black text-emerald-700">
+                        정답입니다! (+100점)
+                    </h2>
+                    <p id="student-bonus-announcement" class="text-xs font-black text-amber-600 hidden bg-amber-50 px-3 py-1 rounded-full border border-amber-300">
+                        🥇 대단해요! 반에서 가장 먼저 맞혔습니다! (+50점 보너스!)
+                    </p>
+                </div>
+
+                <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-1 text-left text-xs">
+                    <div class="flex justify-between font-bold text-slate-500">
+                        <span>정답</span>
+                        <span id="student-correct-ans-text" class="font-black text-slate-800">1) 봄</span>
+                    </div>
+                    <div class="flex justify-between font-bold text-slate-500 border-t border-slate-200 pt-1">
+                        <span>현재 내 누적 점수</span>
+                        <span id="student-total-score-text" class="font-black text-amber-600 text-sm">150점</span>
+                    </div>
+                </div>
+
+                <p class="text-2xs text-slate-400 font-semibold animate-pulse">
+                    선생님이 다음 문제로 이동하기를 기다리는 중...
+                </p>
+
+            </div>
+        </div>
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 8. 최종 골든벨 시상식 및 종료 화면 (screen-final-podium) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-final-podium" class="hidden max-w-4xl mx-auto w-full space-y-6 text-center">
+            <div class="golden-card space-y-6 py-8 px-4 md:px-8">
+
+                <div class="space-y-1">
+                    <span class="text-xs font-black text-amber-800 bg-amber-100 px-3 py-1 rounded-full animate-bell-ring">
+                        🔔 영광의 도전 골든벨 20문제 완주!
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-800 mt-2">골든벨 명예의 시상식</h2>
+                    <p class="text-xs text-slate-500 font-bold">20번 문제까지 멋지게 완주한 모든 학생들에게 박수를 보냅니다!</p>
+                </div>
+
+                <!-- 1, 2, 3위 포디움 시상대 -->
+                <div class="flex items-end justify-center gap-3 max-w-lg mx-auto pt-6 pb-2 min-h-[220px]">
+                    <!-- 2위 은메달 -->
+                    <div class="w-1/3 flex flex-col items-center">
+                        <span class="text-2xl mb-1">🥈</span>
+                        <span id="podium-name-2" class="text-xs font-black text-slate-700 truncate max-w-full">2위 학생</span>
+                        <span id="podium-score-2" class="text-2xs font-extrabold text-amber-700 mb-2">0점</span>
+                        <div class="podium-step w-full bg-slate-400 h-28 shadow-md">
+                            <span class="text-sm">2nd</span>
+                        </div>
+                    </div>
+
+                    <!-- 1위 골든벨 챔피언 -->
+                    <div class="w-1/3 flex flex-col items-center">
+                        <span class="text-4xl mb-1 animate-bounce">🏆</span>
+                        <span id="podium-name-1" class="text-sm font-black text-amber-800 truncate max-w-full">1위 골든벨</span>
+                        <span id="podium-score-1" class="text-xs font-black text-amber-600 mb-2">0점</span>
+                        <div class="podium-step w-full bg-gradient-to-t from-amber-600 to-amber-400 h-40 shadow-xl glow-gold">
+                            <span class="text-xl">1st</span>
+                            <span class="text-2xs font-normal">골든벨</span>
+                        </div>
+                    </div>
+
+                    <!-- 3위 동메달 -->
+                    <div class="w-1/3 flex flex-col items-center">
+                        <span class="text-2xl mb-1">🥉</span>
+                        <span id="podium-name-3" class="text-xs font-black text-slate-700 truncate max-w-full">3위 학생</span>
+                        <span id="podium-score-3" class="text-2xs font-extrabold text-amber-700 mb-2">0점</span>
+                        <div class="podium-step w-full bg-amber-700/80 h-20 shadow-md">
+                            <span class="text-sm">3rd</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 전체 학생 최종 결과표 -->
+                <div class="max-w-2xl mx-auto bg-slate-50 border border-slate-200 rounded-2xl p-4 text-left space-y-2">
+                    <h3 class="text-xs font-black text-slate-700 flex items-center gap-1.5">
+                        <i class="fa-solid fa-list-ol text-amber-500"></i> 학급 최종 성적표
+                    </h3>
+                    <div id="final-scoreboard-list" class="max-h-[220px] overflow-y-auto custom-scrollbar space-y-1.5 pr-1">
+                        <!-- 순위표 렌더링 -->
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button type="button" onclick="exitToHome()" class="golden-btn max-w-xs mx-auto justify-center text-sm py-3">
+                        <span>메인 홈으로 돌아가기</span>
+                        <i class="fa-solid fa-house"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─────────────────────────────────────────── -->
+        <!-- 9. 1인 골든벨 솔로 화면 (screen-solo-game) -->
+        <!-- ─────────────────────────────────────────── -->
+        <div id="screen-solo-game" class="hidden max-w-2xl mx-auto w-full space-y-4">
+            <div class="golden-card space-y-5 p-6">
+
+                <!-- 솔로 상단 헤더 -->
+                <div class="flex justify-between items-center pb-3 border-b border-amber-100">
+                    <div class="flex items-center gap-2">
+                        <span id="solo-q-badge" class="px-3 py-1 bg-amber-500 text-white font-black text-xs rounded-xl shadow-xs">
+                            Q 01 / 20
+                        </span>
+                        <span id="solo-domain-badge" class="px-2.5 py-1 bg-amber-100 text-amber-900 font-black text-2xs rounded-lg">
+                            🎧 듣기
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs font-black text-slate-600">점수: <strong id="solo-my-score" class="text-amber-600">0</strong>점</span>
+                        <span id="solo-timer-text" class="text-base font-black text-rose-600">30s</span>
+                    </div>
+                </div>
+
+                <!-- 문제 지문 -->
+                <div class="text-center space-y-3 py-2">
+                    <h2 id="solo-question-text" class="text-xl md:text-2xl font-black text-slate-800 leading-snug">
+                        원어민 음성을 듣고 올바른 단어를 고르세요.
+                    </h2>
+
+                    <!-- 듣기 버튼 -->
+                    <div id="solo-audio-container" class="hidden flex justify-center py-1">
+                        <button type="button" onclick="playCurrentQuestionAudio()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center gap-2">
+                            <i class="fa-solid fa-volume-high"></i>
+                            <span>음성 다시 듣기 (🔊)</span>
+                        </button>
+                    </div>
+
+                    <!-- 서브 텍스트 -->
+                    <div id="solo-subtext-container" class="hidden p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-xs md:text-sm font-bold text-slate-700 whitespace-pre-line text-left">
+                    </div>
+                </div>
+
+                <!-- 답안 컨트롤 (객관식 or 스크램블 or 텍스트) -->
+                <div id="solo-choices-container" class="space-y-2"></div>
+                <div id="solo-scramble-container" class="hidden space-y-3">
+                    <div class="flex justify-between items-center text-2xs font-extrabold text-amber-800">
+                        <span>단어 칩을 터치하여 문장을 만드세요:</span>
+                        <button type="button" onclick="resetSoloScramble()" class="text-rose-500 underline font-bold">초기화</button>
+                    </div>
+                    <div id="solo-scramble-slots" class="min-h-[52px] p-2 bg-amber-50 border-2 border-dashed border-amber-300 rounded-xl flex flex-wrap gap-1.5 items-center"></div>
+                    <div id="solo-scramble-pool" class="flex flex-wrap gap-2 justify-center p-2 bg-slate-50 rounded-xl border border-slate-200"></div>
+                </div>
+                <div id="solo-text-container" class="hidden space-y-2">
+                    <input type="text" id="solo-text-input" placeholder="정답 입력" 
+                           class="w-full text-center font-black text-base bg-slate-50 border-2 border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:bg-white focus:border-amber-500 focus:outline-none"
+                           onkeydown="if(event.key==='Enter') submitSoloAnswer()">
+                </div>
+
+                <!-- 솔로 제출 및 다음 버튼 -->
+                <div class="pt-2">
+                    <button type="button" id="btn-solo-submit" onclick="submitSoloAnswer()" class="golden-btn justify-center text-sm py-3">
+                        <span>정답 제출하기 🚀</span>
+                    </button>
+                </div>
+
+                <!-- 정답 피드백 알림 박스 -->
+                <div id="solo-feedback-box" class="hidden p-4 rounded-xl text-center font-bold text-xs"></div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ─────────────────────────────────────────── -->
+    <!-- 10. 교사 관리자 모달 (modal-admin) -->
+    <!-- ─────────────────────────────────────────── -->
+    <div id="modal-admin" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-amber-200 overflow-hidden">
+            <!-- 모달 헤더 -->
+            <div class="flex justify-between items-center px-6 py-4 bg-amber-50 border-b border-amber-200">
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-600 text-xl">🔒</span>
+                    <h3 class="text-base font-black text-slate-800">도전 골든벨 교사 관리자 모드</h3>
+                </div>
+                <button type="button" onclick="closeAdminModal()" class="text-slate-400 hover:text-slate-600 text-lg font-black">
+                    ✕
+                </button>
+            </div>
+
+            <!-- 관리자 비밀번호 인증 영역 (미인증 시) -->
+            <div id="admin-auth-section" class="p-8 text-center space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 mx-auto flex items-center justify-center text-2xl">
+                    🔑
+                </div>
+                <div class="space-y-1">
+                    <h4 class="text-lg font-black text-slate-800">교사 비밀번호를 입력하세요</h4>
+                    <p class="text-xs text-slate-500 font-medium">기본 비밀번호: 1234 (설정된 교사 통합 비밀번호)</p>
+                </div>
+                <div class="max-w-xs mx-auto space-y-2">
+                    <input type="password" id="admin-pw-input" placeholder="비밀번호 입력" 
+                           class="w-full text-center font-black text-lg bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-2.5 focus:border-amber-500 focus:outline-none"
+                           onkeydown="if(event.key==='Enter') verifyAdminPassword()">
+                    <button type="button" onclick="verifyAdminPassword()" class="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-sm rounded-xl transition shadow-sm">
+                        인증 및 관리자 화면 진입
+                    </button>
+                </div>
+            </div>
+
+            <!-- 관리자 대시보드 영역 (인증 완료 시) -->
+            <div id="admin-dashboard-section" class="hidden flex-1 flex flex-col overflow-hidden">
+                <!-- 탭 메뉴 -->
+                <div class="flex border-b border-slate-200 bg-slate-50 px-6 pt-3 text-xs font-black">
+                    <button type="button" id="tab-adm-scores" onclick="switchAdminSubTab('scores')" class="px-4 py-2.5 border-b-2 border-amber-600 text-amber-800 bg-white rounded-t-lg">
+                        📊 학급 성적표 & CSV
+                    </button>
+                    <button type="button" id="tab-adm-questions" onclick="switchAdminSubTab('questions')" class="px-4 py-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+                        📚 골든벨 20문제 관리
+                    </button>
+                    <button type="button" id="tab-adm-password" onclick="switchAdminSubTab('password')" class="px-4 py-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+                        🔑 비밀번호 변경
+                    </button>
+                </div>
+
+                <!-- 탭 1: 학급 성적표 -->
+                <div id="adm-view-scores" class="flex-1 p-6 overflow-y-auto custom-scrollbar space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-2 text-xs font-bold">
+                            <select id="teacher-filter-grade" onchange="renderTeacherScoresTable()" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-700">
+                                <option value="all">전체 학년</option>
+                                <option value="3">3학년</option>
+                                <option value="4">4학년</option>
+                                <option value="5">5학년</option>
+                                <option value="6">6학년</option>
+                            </select>
+                            <select id="teacher-filter-class" onchange="renderTeacherScoresTable()" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-700">
+                                <option value="all">전체 반</option>
+                                <option value="1">1반</option>
+                                <option value="2">2반</option>
+                                <option value="3">3반</option>
+                                <option value="4">4반</option>
+                                <option value="5">5반</option>
+                                <option value="6">6반</option>
+                            </select>
+                            <select id="teacher-sort" onchange="renderTeacherScoresTable()" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-700">
+                                <option value="recent">최신순 ⏱️</option>
+                                <option value="score">점수순 🏆</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <button type="button" onclick="downloadScoresCSV()" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-2xs rounded-lg transition shadow-2xs flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-excel"></i>
+                                <span>엑셀(CSV) 다운로드</span>
+                            </button>
+                            <button type="button" onclick="deleteClassScores()" class="px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 font-extrabold text-2xs rounded-lg transition">
+                                학급 기록 일괄 삭제
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 성적표 테이블 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden bg-white">
+                        <table class="w-full text-left text-2xs border-collapse">
+                            <thead class="bg-slate-100 text-slate-600 font-black border-b border-slate-200">
+                                <tr>
+                                    <th class="py-2.5 px-3">순위</th>
+                                    <th class="py-2.5 px-3">학적</th>
+                                    <th class="py-2.5 px-3">실제 이름</th>
+                                    <th class="py-2.5 px-3">최종 점수</th>
+                                    <th class="py-2.5 px-3">정답수</th>
+                                    <th class="py-2.5 px-3">🥇1등횟수</th>
+                                    <th class="py-2.5 px-3">응시일시</th>
+                                    <th class="py-2.5 px-3 text-center">관리</th>
+                                </tr>
+                            </thead>
+                            <tbody id="teacher-scores-tbody" class="divide-y divide-slate-100 text-slate-700 font-medium">
+                                <!-- 성적표 행 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 탭 2: 골든벨 20문제 관리 -->
+                <div id="adm-view-questions" class="hidden flex-1 p-6 overflow-y-auto custom-scrollbar space-y-4">
+                    <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+                        <h4 class="text-xs font-black text-slate-800">현재 탑재된 20문제 목록 (듣기·읽기·쓰기)</h4>
+                        <span class="text-2xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">
+                            총 20문항 완비
+                        </span>
+                    </div>
+
+                    <div id="admin-questions-list" class="space-y-2 text-2xs">
+                        <!-- 20문제 프리뷰 -->
+                    </div>
+                </div>
+
+                <!-- 탭 3: 비밀번호 변경 -->
+                <div id="adm-view-password" class="hidden flex-1 p-8 space-y-4 max-w-sm mx-auto text-center">
+                    <h4 class="text-sm font-black text-slate-800">교사 모드 비밀번호 변경</h4>
+                    <p class="text-2xs text-slate-500 font-medium">비밀번호를 변경하면 20개 모든 와우리말 게임에 즉시 연동됩니다.</p>
+                    <div class="space-y-2 text-left">
+                        <label class="block text-2xs font-bold text-slate-600">새 비밀번호 (4자리 이상)</label>
+                        <input type="password" id="new-pw-input" class="w-full text-center text-sm font-black bg-slate-50 border border-slate-200 rounded-xl px-3 py-2">
+                        <label class="block text-2xs font-bold text-slate-600">새 비밀번호 확인</label>
+                        <input type="password" id="new-pw-confirm" class="w-full text-center text-sm font-black bg-slate-50 border border-slate-200 rounded-xl px-3 py-2">
+                        <button type="button" onclick="saveNewPassword()" class="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-black text-xs rounded-xl shadow-xs transition mt-2">
+                            비밀번호 저장 및 전체 연동
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────── -->
+    <!-- 스크립트: Firebase v11 모듈 & 골든벨 코어 엔진 -->
+    <!-- ─────────────────────────────────────────── -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { 
+            getFirestore, collection, doc, setDoc, getDoc, updateDoc, deleteDoc, 
+            onSnapshot, query, where, orderBy, limit, getDocs, addDoc, serverTimestamp, deleteField
+        } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Firebase 설정 초기화
+        const firebaseConfig = window.WaurimalFirebase ? window.WaurimalFirebase.getConfig() : {
+            apiKey: "AIzaSyDHCnRrVE2dVuJpf77P-1oftGpczR5WDd4",
+            authDomain: "eng-activity.firebaseapp.com",
+            projectId: "eng-activity"
+        };
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const APP_ID = 'goldenbell';
+        const ROOMS_COLLECTION = 'games/goldenbell/rooms';
+        const SCORES_COLLECTION = 'artifacts/goldenbell/public/data/rankings';
+
+        // ─────────────────────────────────────────────
+        // 1. 교사용 지도서 기반 3~6학년 핵심 20문제 마스터 데이터셋
+        // (듣기 7 + 읽기 7 + 쓰기 6 = 20문제 완벽 구성)
+        // ─────────────────────────────────────────────
+        const MASTER_20_QUESTIONS = [
+            // [듣기 영역 (Listening) Q1 ~ Q7]
+            {
+                id: 1,
+                domain: "듣기",
+                domainIcon: "🎧",
+                difficulty: "★☆☆",
+                type: "listening_choice",
+                audioText: "spring",
+                question: "원어민 음성을 잘 듣고, 들리는 단어의 올바른 의미를 고르세요.",
+                options: ["봄", "여름", "가을", "겨울"],
+                correctIndex: 0,
+                correctAnswer: "봄",
+                explanation: "'spring'은 '봄'을 의미합니다."
+            },
+            {
+                id: 2,
+                domain: "듣기",
+                domainIcon: "🎧",
+                difficulty: "★☆☆",
+                type: "listening_choice",
+                audioText: "What grade are you in?",
+                question: "대화를 듣고, 질문에 대한 가장 알맞은 대답을 고르세요.",
+                options: ["I'm in the sixth grade.", "My name is Minsoo.", "It is sunny today.", "Yes, I do."],
+                correctIndex: 0,
+                correctAnswer: "I'm in the sixth grade.",
+                explanation: "'What grade are you in?(몇 학년이니?)'에 대한 알맞은 응답은 'I'm in the sixth grade.(나는 6학년이야.)'입니다."
+            },
+            {
+                id: 3,
+                domain: "듣기",
+                domainIcon: "🎧",
+                difficulty: "★★☆",
+                type: "listening_choice",
+                audioText: "We should save energy. Please turn off the lights when you leave.",
+                question: "안내 방송을 듣고, 남자가 당부하는 행동으로 가장 알맞은 것은?",
+                options: ["나갈 때 전등 끄기", "물 아껴 쓰기", "종이 재활용하기", "쓰레기 분리수거하기"],
+                correctIndex: 0,
+                correctAnswer: "나갈 때 전등 끄기",
+                explanation: "'turn off the lights'는 '전등을 끄다'라는 뜻입니다."
+            },
+            {
+                id: 4,
+                domain: "듣기",
+                domainIcon: "🎧",
+                difficulty: "★★☆",
+                type: "listening_choice",
+                audioText: "Where is the library? Go straight two blocks and turn left. It's on your right.",
+                question: "길 안내 대화를 듣고, 도서관(library)의 위치로 올바른 것을 고르세요.",
+                options: ["두 블록 직진 후 좌회전하여 오른쪽", "한 블록 직진 후 우회전하여 왼쪽", "두 블록 직진 후 우회전하여 오른쪽", "길 건너편 병원 옆"],
+                correctIndex: 0,
+                correctAnswer: "두 블록 직진 후 좌회전하여 오른쪽",
+                explanation: "Go straight two blocks(두 블록 직진) ➔ turn left(좌회전) ➔ on your right(오른쪽에 위치)."
+            },
+            {
+                id: 5,
+                domain: "듣기",
+                domainIcon: "🎧",
+                difficulty: "★★☆",
+                type: "listening_choice",
+                audioText: "Why are you so happy? Because today is my birthday!",
+                question: "대화를 듣고, 말하는 사람이 행복해하는 이유로 알맞은 것은?",
+                options: ["오늘이 생일이기 때문에", "시험을 잘 봤기 때문에", "선물을 받았기 때문에", "방학이 시작되었기 때문에"],
+                correctIndex: 0,
+                correctAnswer: "오늘이 생일이기 때문에",
+                explanation: "'Because today is my birthday!'는 '오늘이 내 생일이기 때문이야!'라는 뜻입니다."
+            },
+            {
+                id: 6,
+                domain: "듣기",
+                domainIcon: "🎧",
+                difficulty: "★★☆",
+                type: "listening_choice",
+                audioText: "What will you do this summer? I will go camping in the forest with my family.",
+                question: "대화를 듣고, 여자가 이번 여름 방학에 할 일로 알맞은 것을 고르세요.",
+                options: ["가족과 숲으로 캠핑 가기", "할머니 댁 방문하기", "바다에서 수영하기", "동물원 봉사활동 하기"],
+                correctIndex: 0,
+                correctAnswer: "가족과 숲으로 캠핑 가기",
+                explanation: "'go camping in the forest'는 '숲으로 캠핑 가기'를 뜻합니다."
+            },
+            {
+                id: 7,
+                domain: "듣기",
+                domainIcon: "🎧",
+                difficulty: "★★★",
+                type: "listening_choice",
+                audioText: "She has long straight hair and wears glasses.",
+                question: "인물 묘사를 듣고, 인물의 알맞은 외모 특징을 고르세요.",
+                options: ["긴 생머리에 안경을 썼다", "짧은 곱슬머리에 모자를 썼다", "갈색 머리에 파란 셔츠를 입었다", "키가 크고 안경을 쓰지 않았다"],
+                correctIndex: 0,
+                correctAnswer: "긴 생머리에 안경을 썼다",
+                explanation: "'long straight hair(긴 생머리)', 'wears glasses(안경 착용)'입니다."
+            },
+
+            // [읽기 영역 (Reading) Q8 ~ Q14]
+            {
+                id: 8,
+                domain: "읽기",
+                domainIcon: "📖",
+                difficulty: "★☆☆",
+                type: "reading_choice",
+                question: "다음 설명이 나타내는 학용품으로 가장 알맞은 것은 무엇일까요?",
+                subtext: "You use this to cut paper in art class.",
+                options: ["scissors", "eraser", "pencil case", "ruler"],
+                correctIndex: 0,
+                correctAnswer: "scissors",
+                explanation: "종이를 자를 때 사용하는 도구는 'scissors(가위)'입니다."
+            },
+            {
+                id: 9,
+                domain: "읽기",
+                domainIcon: "📖",
+                difficulty: "★★☆",
+                type: "reading_choice",
+                question: "다음 두 문장의 빈칸에 공통으로 들어갈 가장 알맞은 낱말은?",
+                subtext: "• I want to ___ the dance club.\n• Would you like to ___ us for lunch?",
+                options: ["join", "break", "ride", "draw"],
+                correctIndex: 0,
+                correctAnswer: "join",
+                explanation: "'join'은 '동아리에 가입하다' 또는 '~와 함께하다'의 뜻을 가집니다."
+            },
+            {
+                id: 10,
+                domain: "읽기",
+                domainIcon: "📖",
+                difficulty: "★★☆",
+                type: "reading_choice",
+                question: "문장의 빈칸에 알맞은 영어 서수(순서)는?",
+                subtext: "Today is May 5th. It is the ______ day of May.",
+                options: ["fifth", "fiveth", "second", "fourth"],
+                correctIndex: 0,
+                correctAnswer: "fifth",
+                explanation: "5의 서수는 'fifth(다섯 번째의)'입니다."
+            },
+            {
+                id: 11,
+                domain: "읽기",
+                domainIcon: "📖",
+                difficulty: "★★☆",
+                type: "reading_choice",
+                question: "문장을 읽고, 사실과 일치하는 내용을 고르세요.",
+                subtext: "A giraffe is taller than an elephant.",
+                options: ["기린이 코끼리보다 키가 더 크다.", "기린이 코끼리보다 힘이 더 세다.", "코끼리가 기린보다 키가 더 크다.", "기린과 코끼리는 키가 같다."],
+                correctIndex: 0,
+                correctAnswer: "기린이 코끼리보다 키가 더 크다.",
+                explanation: "'taller than ~'은 '~보다 키가 더 큰'이라는 비교 표현입니다."
+            },
+            {
+                id: 12,
+                domain: "읽기",
+                domainIcon: "📖",
+                difficulty: "★★☆",
+                type: "reading_choice",
+                question: "자연스러운 대화가 되도록 빈칸에 들어갈 알맞은 말은?",
+                subtext: "A: Have you ever visited Jeju-do?\nB: Yes, I ______.",
+                options: ["have", "do", "did", "was"],
+                correctIndex: 0,
+                correctAnswer: "have",
+                explanation: "'Have you ever ~?'의 경험 질문에 대한 긍정 응답은 'Yes, I have.'입니다."
+            },
+            {
+                id: 13,
+                domain: "읽기",
+                domainIcon: "📖",
+                difficulty: "★★★",
+                type: "reading_choice",
+                question: "다음 환경 보호 표어의 빈칸에 알맞은 단어는?",
+                subtext: "Save our Earth! We should not ______ paper and water.",
+                options: ["waste", "visit", "catch", "win"],
+                correctIndex: 0,
+                correctAnswer: "waste",
+                explanation: "'waste'는 '낭비하다'라는 뜻입니다. (종이와 물을 낭비하지 맙시다.)"
+            },
+            {
+                id: 14,
+                domain: "읽기",
+                domainIcon: "📖",
+                difficulty: "★★★",
+                type: "reading_choice",
+                question: "문장을 읽고, 주인공이 가을을 좋아하는 이유로 알맞은 것을 고르세요.",
+                subtext: "My favorite season is fall because I can see colorful leaves.",
+                options: ["알록달록한 단풍잎을 볼 수 있어서", "시원한 바람이 불어서", "맛있는 과일을 먹을 수 있어서", "하늘이 높고 푸르러서"],
+                correctIndex: 0,
+                correctAnswer: "알록달록한 단풍잎을 볼 수 있어서",
+                explanation: "'colorful leaves'는 '다채로운 단풍잎'을 의미합니다."
+            },
+
+            // [쓰기 영역 (Writing) Q15 ~ Q20]
+            {
+                id: 15,
+                domain: "쓰기",
+                domainIcon: "✍️",
+                difficulty: "★★☆",
+                type: "writing_text",
+                question: "흐트러진 알파벳을 올바르게 조합하여 영어 단어를 입력하세요.",
+                subtext: "힌트: '계절' (s - e - a - s - o - n)",
+                correctAnswer: "season",
+                explanation: "올바른 철자는 'season(계절)'입니다."
+            },
+            {
+                id: 16,
+                domain: "쓰기",
+                domainIcon: "✍️",
+                difficulty: "★★☆",
+                type: "writing_text",
+                question: "뜻에 알맞은 영어 낱말의 철자를 바르게 입력하세요.",
+                subtext: "힌트: 환경을 '보호하다' (p r o t e c t)",
+                correctAnswer: "protect",
+                explanation: "'보호하다'는 영어로 'protect'입니다."
+            },
+            {
+                id: 17,
+                domain: "쓰기",
+                domainIcon: "✍️",
+                difficulty: "★★☆",
+                type: "writing_scramble",
+                question: "단어 칩을 올바른 순서로 배열하여 질문 문장을 완성하세요.",
+                subtext: "너는 연필을 가지고 있니?",
+                chips: ["Do", "you", "have", "a", "pencil", "?"],
+                correctAnswer: "Do you have a pencil?",
+                explanation: "일반동사 의문문 어순: Do + you + have + a pencil?"
+            },
+            {
+                id: 18,
+                domain: "쓰기",
+                domainIcon: "✍️",
+                difficulty: "★★★",
+                type: "writing_scramble",
+                question: "단어 칩을 바르게 배열하여 감정의 이유를 묻는 문장을 만드세요.",
+                subtext: "너는 왜 그렇게 행복하니?",
+                chips: ["Why", "are", "you", "so", "happy", "?"],
+                correctAnswer: "Why are you so happy?",
+                explanation: "Why + are + you + so happy?"
+            },
+            {
+                id: 19,
+                domain: "쓰기",
+                domainIcon: "✍️",
+                difficulty: "★★★",
+                type: "writing_scramble",
+                question: "단어 칩을 바르게 배열하여 환경 보호 실천 문장을 완성하세요.",
+                subtext: "우리는 에너지를 절약해야 해.",
+                chips: ["We", "should", "save", "energy", "."],
+                correctAnswer: "We should save energy.",
+                explanation: "We + should + save + energy."
+            },
+            {
+                id: 20,
+                domain: "골든벨",
+                domainIcon: "🔔",
+                difficulty: "★★★",
+                type: "writing_scramble",
+                question: "단어 칩을 모두 올바르게 배열하여 영광의 20번 골든벨을 울리세요!",
+                subtext: "지구를 위한 포스터를 만들자!",
+                chips: ["Let's", "make", "a", "poster", "for", "the", "Earth", "."],
+                correctAnswer: "Let's make a poster for the Earth.",
+                explanation: "Let's make a poster for the Earth. 축하합니다! 골든벨을 완주하셨습니다! 🔔"
+            }
+        ];
+
+        // ─────────────────────────────────────────────
+        // 2. 글로벌 상태 및 런타임 변수
+        // ─────────────────────────────────────────────
+        let currentRoomCode = null;
+        let isHost = false;
+        let roomUnsubscribe = null;
+        let myPlayerId = null;
+        let myProfile = { school: "이의초등학교", grade: "6", classNum: "1", studentNum: "1", name: "학생" };
+
+        let currentQuestions = [...MASTER_20_QUESTIONS];
+        let currentQIndex = 0;
+        let questionTimer = null;
+        let remainingSeconds = 30;
+
+        let selectedChoice = null;
+        let currentScrambleSlots = [];
+        let hasSubmittedAnswer = false;
+
+        // 솔로 모드 변수
+        let isSoloMode = false;
+        let soloScore = 0;
+        let soloFirstBonusCount = 0;
+
+        // 명예의 전당 캐시
+        let hofTab = 'all';
+        let hofAllScores = [];
+        let scoresMap = new Map();
+
+        // ─────────────────────────────────────────────
+        // 3. 웹 오디오 골든벨 타종 & 효과음 합성 엔진
+        // ─────────────────────────────────────────────
+        function playGoldenBellChime() {
+            try {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                const ctx = new AudioCtx();
+                const now = ctx.currentTime;
+                // 풍성한 황금종 배음 구조 (D5 587.33Hz 기본음 + 조화/비조화 벨 오버톤)
+                const harmonics = [587.33, 880, 1174.66, 1760, 2637];
+                const gains = [0.65, 0.4, 0.28, 0.16, 0.08];
+                const decays = [3.2, 2.5, 2.0, 1.4, 0.9];
+
+                harmonics.forEach((freq, idx) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = (idx % 2 === 0) ? 'sine' : 'triangle';
+                    osc.frequency.setValueAtTime(freq, now);
+                    gain.gain.setValueAtTime(gains[idx], now);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, now + decays[idx]);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(now);
+                    osc.stop(now + decays[idx]);
+                });
+            } catch (e) {
+                console.warn("Chime synth error:", e);
+            }
+        }
+
+        function playTickSound() {
+            try {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                const ctx = new AudioCtx();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(800, ctx.currentTime);
+                gain.gain.setValueAtTime(0.08, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.05);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + 0.05);
+            } catch(e) {}
+        }
+
+        // 미국 영어 원어민 프리미엄 음성 파이프라인
+        function getEnglishVoice() {
+            if (!('speechSynthesis' in window)) return null;
+            const voices = window.speechSynthesis.getVoices();
+            const us = voices.filter(v => v.lang === 'en-US' || v.lang === 'en_US');
+            const premium = us.find(v => 
+                v.name.includes('Google') || 
+                v.name.includes('Jenny') || 
+                v.name.includes('Aria') || 
+                v.name.includes('Samantha') || 
+                v.name.includes('Natural')
+            );
+            return premium || us[0] || voices.find(v => v.lang.startsWith('en')) || null;
+        }
+
+        window.playCurrentQuestionAudio = function() {
+            const q = currentQuestions[currentQIndex];
+            if (!q || !q.audioText) return;
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(q.audioText);
+                u.lang = 'en-US';
+                u.rate = 0.9;
+                const voice = getEnglishVoice();
+                if (voice) u.voice = voice;
+                window.speechSynthesis.speak(u);
+            }
+        };
+
+        // ─────────────────────────────────────────────
+        // 4. 화면 전환 유틸리티
+        // ─────────────────────────────────────────────
+        window.showScreen = function(screenId) {
+            const screens = [
+                'screen-home', 'screen-host-lobby', 'screen-host-game', 'screen-host-reveal',
+                'screen-student-lobby', 'screen-student-game', 'screen-student-reveal',
+                'screen-final-podium', 'screen-solo-game'
+            ];
+            screens.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (id === screenId) {
+                        el.classList.remove('hidden');
+                    } else {
+                        el.classList.add('hidden');
+                    }
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        window.exitToHome = function() {
+            if (roomUnsubscribe) {
+                roomUnsubscribe();
+                roomUnsubscribe = null;
+            }
+            if (questionTimer) {
+                clearInterval(questionTimer);
+                questionTimer = null;
+            }
+            currentRoomCode = null;
+            isHost = false;
+            isSoloMode = false;
+            window.showScreen('screen-home');
+            loadHallOfFame();
+        };
+
+        // ─────────────────────────────────────────────
+        // 5. 학생 프로필 및 SSO 초기화
+        // ─────────────────────────────────────────────
+        function initProfile() {
+            if (window.WaurimalStudent) {
+                const p = window.WaurimalStudent.get();
+                if (p) {
+                    myProfile = { ...p };
+                }
+            }
+            if (!myPlayerId) {
+                myPlayerId = 'p_' + Math.random().toString(36).substring(2, 9);
+            }
+        }
+
+        window.addEventListener('waurimal_student_updated', (e) => {
+            if (e.detail) {
+                myProfile = { ...e.detail };
+            }
+        });
+
+        // ─────────────────────────────────────────────
+        // 6. 단원 프리셋 선택 시 문제 생성
+        // ─────────────────────────────────────────────
+        function loadQuestionsForPreset(presetCode) {
+            if (presetCode === 'CURRICULUM_20' || !window.WaurimalCurriculum) {
+                return [...MASTER_20_QUESTIONS];
+            }
+            const lesson = window.WaurimalCurriculum.getLesson(presetCode);
+            if (!lesson || !Array.isArray(lesson.words) || lesson.words.length === 0) {
+                return [...MASTER_20_QUESTIONS];
+            }
+
+            // 선택 단원의 단어와 문장으로 20문제 스마트 합성
+            const words = lesson.words;
+            const sentences = lesson.sentences || [];
+            const generated = [];
+
+            // 1~7번: 듣기
+            for (let i = 0; i < 7; i++) {
+                const w = words[i % words.length];
+                const otherWords = words.filter(x => x.en !== w.en);
+                const shuffledOthers = [...otherWords].sort(() => Math.random() - 0.5);
+                const opts = [w.kr, ...(shuffledOthers.slice(0, 3).map(x => x.kr || x.en))];
+                while (opts.length < 4) opts.push("보기 " + (opts.length + 1));
+                const correctOpt = w.kr;
+                const shuffledOpts = [...opts].sort(() => Math.random() - 0.5);
+                generated.push({
+                    id: i + 1,
+                    domain: "듣기",
+                    domainIcon: "🎧",
+                    difficulty: i < 3 ? "★☆☆" : "★★☆",
+                    type: "listening_choice",
+                    audioText: w.en,
+                    question: `[듣기] 음성을 잘 듣고, 알맞은 뜻을 고르세요.`,
+                    options: shuffledOpts,
+                    correctIndex: shuffledOpts.indexOf(correctOpt),
+                    correctAnswer: correctOpt,
+                    explanation: `'${w.en}'의 뜻은 '${w.kr}'입니다.`
+                });
+            }
+
+            // 8~14번: 읽기
+            for (let i = 0; i < 7; i++) {
+                const w = words[(i + 3) % words.length];
+                const otherWords = words.filter(x => x.en !== w.en);
+                const shuffledOthers = [...otherWords].sort(() => Math.random() - 0.5);
+                const opts = [w.en, ...(shuffledOthers.slice(0, 3).map(x => x.en))];
+                while (opts.length < 4) opts.push("Option " + (opts.length + 1));
+                const correctOpt = w.en;
+                const shuffledOpts = [...opts].sort(() => Math.random() - 0.5);
+                generated.push({
+                    id: i + 8,
+                    domain: "읽기",
+                    domainIcon: "📖",
+                    difficulty: "★★☆",
+                    type: "reading_choice",
+                    question: `[읽기] 다음 한국어 뜻에 해당하는 올바른 영단어는?`,
+                    subtext: `"${w.kr}"`,
+                    options: shuffledOpts,
+                    correctIndex: shuffledOpts.indexOf(correctOpt),
+                    correctAnswer: correctOpt,
+                    explanation: `'${w.kr}'은(는) 영어로 '${w.en}'입니다.`
+                });
+            }
+
+            // 15~16번: 쓰기 단어 철자
+            for (let i = 0; i < 2; i++) {
+                const w = words[(i + 5) % words.length];
+                generated.push({
+                    id: i + 15,
+                    domain: "쓰기",
+                    domainIcon: "✍️",
+                    difficulty: "★★☆",
+                    type: "writing_text",
+                    question: `[쓰기] 다음 뜻에 알맞은 영어 단어의 철자를 입력하세요.`,
+                    subtext: `힌트: "${w.kr}" (${w.en.length}글자)`,
+                    correctAnswer: w.en.toLowerCase(),
+                    explanation: `'${w.kr}'은(는) 영어로 '${w.en}'입니다.`
+                });
+            }
+
+            // 17~20번: 쓰기 문장 어순 배열
+            for (let i = 0; i < 4; i++) {
+                let sObj = sentences[i % sentences.length];
+                let senEn = sObj ? (sObj.en || sObj.sentence || "") : "We should save energy.";
+                let senKr = sObj ? (sObj.kr || sObj.meaning || "") : "우리는 에너지를 절약해야 해.";
+                let cleanSen = senEn.trim();
+                let chips = cleanSen.split(' ').map(c => c.trim()).filter(c => c.length > 0);
+                let shuffledChips = [...chips].sort(() => Math.random() - 0.5);
+
+                generated.push({
+                    id: i + 17,
+                    domain: i === 3 ? "골든벨" : "쓰기",
+                    domainIcon: i === 3 ? "🔔" : "✍️",
+                    difficulty: "★★★",
+                    type: "writing_scramble",
+                    question: i === 3 ? `[🔔 최종 20번 골든벨] 단어 칩을 올바르게 완성하세요!` : `[쓰기] 단어 칩을 바르게 배열하여 문장을 완성하세요.`,
+                    subtext: `${senKr}`,
+                    chips: shuffledChips,
+                    correctAnswer: cleanSen,
+                    explanation: `${cleanSen} [${senKr}]`
+                });
+            }
+
+            return generated;
+        }
+
+        // ─────────────────────────────────────────────
+        // 7. 교사 호스트: 방 생성 & 실시간 동기화
+        // ─────────────────────────────────────────────
+        window.createGoldenBellRoom = async function() {
+            initProfile();
+            const presetSelect = document.getElementById('select-unit-preset');
+            const presetCode = presetSelect ? presetSelect.value : 'CURRICULUM_20';
+            const presetName = presetSelect ? presetSelect.options[presetSelect.selectedIndex].text : '통합 골든벨';
+
+            const timeSelect = document.getElementById('select-q-time');
+            const qDuration = parseInt(timeSelect ? timeSelect.value : '30', 10) || 30;
+
+            currentQuestions = loadQuestionsForPreset(presetCode);
+
+            // 4자리 방 코드 생성
+            const roomCode = Math.floor(1000 + Math.random() * 9000).toString();
+            currentRoomCode = roomCode;
+            isHost = true;
+
+            const roomData = {
+                code: roomCode,
+                createdAt: Date.now(),
+                hostId: myPlayerId,
+                hostName: myProfile.name || "선생님",
+                status: "waiting", // "waiting", "playing", "revealed", "finished"
+                unitCode: presetCode,
+                unitTitle: presetName,
+                qDuration: qDuration,
+                currentQIndex: 0,
+                totalQuestions: 20,
+                questionStartedAt: 0,
+                questions: currentQuestions,
+                players: {},
+                firstSolver: null,
+                revealedAnswer: null
+            };
+
+            try {
+                const roomRef = doc(db, ROOMS_COLLECTION, roomCode);
+                await setDoc(roomRef, roomData);
+
+                document.getElementById('host-room-code-display').innerText = roomCode;
+                document.getElementById('host-lobby-unit-name').innerText = presetName;
+
+                listenToRoom(roomCode);
+                window.showScreen('screen-host-lobby');
+                playGoldenBellChime();
+            } catch (e) {
+                console.error("Room creation error:", e);
+                alert("방 생성 실패: " + e.message);
+            }
+        };
+
+        // ─────────────────────────────────────────────
+        // 8. 학생: 방 코드 입장 & 참여
+        // ─────────────────────────────────────────────
+        window.joinGoldenBellRoom = async function() {
+            initProfile();
+            const inputEl = document.getElementById('input-room-code');
+            const code = inputEl ? inputEl.value.trim().toUpperCase() : '';
+            if (code.length !== 4) {
+                alert("4자리 방 코드를 정확히 입력하세요.");
+                return;
+            }
+
+            try {
+                const roomRef = doc(db, ROOMS_COLLECTION, code);
+                const snap = await getDoc(roomRef);
+                if (!snap.exists()) {
+                    alert("해당 방을 찾을 수 없습니다. 방 코드를 확인하세요.");
+                    return;
+                }
+
+                currentRoomCode = code;
+                isHost = false;
+
+                const playerData = {
+                    id: myPlayerId,
+                    name: myProfile.name || "학생",
+                    grade: myProfile.grade || "6",
+                    classNum: myProfile.classNum || "1",
+                    studentNum: myProfile.studentNum || "1",
+                    score: 0,
+                    correctCount: 0,
+                    firstCount: 0,
+                    answered: false,
+                    answer: null,
+                    submittedAt: 0,
+                    joinedAt: Date.now()
+                };
+
+                await updateDoc(roomRef, {
+                    [`players.${myPlayerId}`]: playerData
+                });
+
+                document.getElementById('student-lobby-code').innerText = code;
+                const pName = window.WaurimalMask ? window.WaurimalMask.maskStudentName(myProfile.name) : myProfile.name;
+                document.getElementById('student-lobby-profile').innerText = `${myProfile.grade}학년 ${myProfile.classNum}반 ${myProfile.studentNum}번 ${pName}`;
+
+                listenToRoom(code);
+                window.showScreen('screen-student-lobby');
+                if (window.WaurimalAudio) window.WaurimalAudio.play('click');
+            } catch (e) {
+                console.error("Join room error:", e);
+                alert("입장 실패: " + e.message);
+            }
+        };
+
+        // ─────────────────────────────────────────────
+        // 9. Firestore 실시간 룸 리스너 (Host & Student 공통)
+        // ─────────────────────────────────────────────
+        function listenToRoom(code) {
+            if (roomUnsubscribe) roomUnsubscribe();
+
+            const roomRef = doc(db, ROOMS_COLLECTION, code);
+            roomUnsubscribe = onSnapshot(roomRef, (snapshot) => {
+                if (!snapshot.exists()) {
+                    alert("방이 종료되었거나 삭제되었습니다.");
+                    exitToHome();
+                    return;
+                }
+
+                const data = snapshot.data();
+                handleRoomUpdate(data);
+            }, (err) => {
+                console.error("Room listener error:", err);
+            });
+        }
+
+        function handleRoomUpdate(data) {
+            if (!data) return;
+
+            const players = data.players || {};
+            const playerList = Object.values(players);
+            currentQIndex = data.currentQIndex || 0;
+            if (Array.isArray(data.questions) && data.questions.length > 0) {
+                currentQuestions = data.questions;
+            }
+
+            // ── A. 교사 호스트 화면 갱신 ──
+            if (isHost) {
+                if (data.status === 'waiting') {
+                    // 대기실 참가자 수 & 태그
+                    document.getElementById('host-player-count').innerText = playerList.length;
+                    const tagsCont = document.getElementById('host-player-tags');
+                    if (tagsCont) {
+                        if (playerList.length === 0) {
+                            tagsCont.innerHTML = `<span class="text-xs text-slate-400 font-semibold my-auto">학생들의 입장을 기다리고 있습니다...</span>`;
+                        } else {
+                            tagsCont.innerHTML = playerList.map(p => {
+                                const mName = window.WaurimalMask ? window.WaurimalMask.maskStudentName(p.name) : p.name;
+                                return `
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-amber-200 rounded-xl text-xs font-black text-amber-900 shadow-2xs">
+                                        <i class="fa-solid fa-graduation-cap text-amber-500"></i>
+                                        <span>${p.grade || 6}-${p.classNum || 1} ${mName}</span>
+                                    </span>
+                                `;
+                            }).join('');
+                        }
+                    }
+                    window.showScreen('screen-host-lobby');
+                } else if (data.status === 'playing') {
+                    renderHostGameScreen(data);
+                } else if (data.status === 'revealed') {
+                    renderHostRevealScreen(data);
+                } else if (data.status === 'finished') {
+                    renderFinalPodiumScreen(data);
+                }
+            } 
+            // ── B. 학생 화면 갱신 ──
+            else {
+                const me = players[myPlayerId] || {};
+                document.getElementById('student-my-score').innerText = me.score || 0;
+
+                if (data.status === 'waiting') {
+                    window.showScreen('screen-student-lobby');
+                } else if (data.status === 'playing') {
+                    renderStudentGameScreen(data, me);
+                } else if (data.status === 'revealed') {
+                    renderStudentRevealScreen(data, me);
+                } else if (data.status === 'finished') {
+                    renderFinalPodiumScreen(data);
+                }
+            }
+        }
+
+        // ─────────────────────────────────────────────
+        // 10. 교사 호스트: 인게임 제어 & 타이머
+        // ─────────────────────────────────────────────
+        window.hostStartGame = async function() {
+            if (!currentRoomCode || !isHost) return;
+            const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
+
+            // 학생 답변 상태 초기화
+            const snap = await getDoc(roomRef);
+            const data = snap.data();
+            const resetPlayers = {};
+            Object.keys(data.players || {}).forEach(pid => {
+                resetPlayers[`players.${pid}.answered`] = false;
+                resetPlayers[`players.${pid}.answer`] = null;
+                resetPlayers[`players.${pid}.submittedAt`] = 0;
+            });
+
+            await updateDoc(roomRef, {
+                status: 'playing',
+                currentQIndex: 0,
+                questionStartedAt: Date.now(),
+                firstSolver: null,
+                revealedAnswer: null,
+                ...resetPlayers
+            });
+
+            playGoldenBellChime();
+        };
+
+        function renderHostGameScreen(data) {
+            const q = currentQuestions[currentQIndex];
+            if (!q) return;
+
+            document.getElementById('host-q-badge').innerText = `Q ${String(currentQIndex + 1).padStart(2, '0')} / 20`;
+            document.getElementById('host-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain} 영역`;
+            document.getElementById('host-difficulty-badge').innerText = q.difficulty || '★★☆';
+            document.getElementById('host-question-text').innerText = q.question;
+
+            // 오디오 컨트롤
+            const audioCont = document.getElementById('host-audio-container');
+            if (q.domain === '듣기' && q.audioText) {
+                audioCont.classList.remove('hidden');
+                // 시작 시 1회 자동 재생
+                if (Date.now() - (data.questionStartedAt || 0) < 1500) {
+                    setTimeout(() => window.playCurrentQuestionAudio(), 300);
+                }
+            } else {
+                audioCont.classList.add('hidden');
+            }
+
+            // 서브 텍스트
+            const subCont = document.getElementById('host-subtext-container');
+            if (q.subtext) {
+                subCont.innerText = q.subtext;
+                subCont.classList.remove('hidden');
+            } else {
+                subCont.classList.add('hidden');
+            }
+
+            // 4지선다 보기 표시
+            const choicesCont = document.getElementById('host-choices-container');
+            if (Array.isArray(q.options) && q.options.length > 0) {
+                choicesCont.classList.remove('hidden');
+                choicesCont.innerHTML = q.options.map((opt, idx) => `
+                    <div class="choice-btn">
+                        <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center font-black text-xs">
+                            ${idx + 1}
+                        </span>
+                        <span class="font-bold">${opt}</span>
+                    </div>
+                `).join('');
+            } else {
+                choicesCont.classList.add('hidden');
+            }
+
+            // 실시간 제출 집계
+            const players = data.players || {};
+            const pList = Object.values(players);
+            const submittedCount = pList.filter(p => p.answered).length;
+            const totalCount = pList.length;
+
+            document.getElementById('host-submit-count').innerText = submittedCount;
+            document.getElementById('host-total-players').innerText = totalCount;
+            const pct = totalCount > 0 ? (submittedCount / totalCount) * 100 : 0;
+            document.getElementById('host-submit-bar').style.width = `${pct}%`;
+
+            // 타이머 관리
+            const duration = data.qDuration || 30;
+            const elapsed = Math.floor((Date.now() - (data.questionStartedAt || Date.now())) / 1000);
+            const remain = Math.max(0, duration - elapsed);
+
+            document.getElementById('host-timer-text').innerText = `${remain}s`;
+            const timePct = (remain / duration) * 100;
+            document.getElementById('host-timer-bar').style.width = `${timePct}%`;
+
+            if (!questionTimer && remain > 0) {
+                questionTimer = setInterval(() => {
+                    const elp = Math.floor((Date.now() - (data.questionStartedAt || Date.now())) / 1000);
+                    const rem = Math.max(0, duration - elp);
+                    document.getElementById('host-timer-text').innerText = `${rem}s`;
+                    document.getElementById('host-timer-bar').style.width = `${(rem / duration) * 100}%`;
+                    if (rem <= 5 && rem > 0) playTickSound();
+
+                    if (rem <= 0) {
+                        clearInterval(questionTimer);
+                        questionTimer = null;
+                        if (isHost) hostForceReveal();
+                    }
+                }, 1000);
+            }
+
+            window.showScreen('screen-host-game');
+        }
+
+        // 호스트: 정답 공개 및 채점 (선착순 보너스 계산)
+        window.hostForceReveal = async function() {
+            if (!currentRoomCode || !isHost) return;
+            if (questionTimer) {
+                clearInterval(questionTimer);
+                questionTimer = null;
+            }
+
+            const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
+            const snap = await getDoc(roomRef);
+            if (!snap.exists()) return;
+
+            const data = snap.data();
+            const q = currentQuestions[data.currentQIndex || 0];
+            const players = data.players || {};
+
+            // 채점 로직
+            const correctTarget = String(q.correctAnswer || '').trim().toLowerCase();
+            const playerUpdates = {};
+
+            const correctSolvers = [];
+
+            Object.entries(players).forEach(([pid, p]) => {
+                const ans = String(p.answer || '').trim().toLowerCase();
+                let isRight = false;
+
+                if (q.type === 'listening_choice' || q.type === 'reading_choice') {
+                    // 보기 텍스트 또는 인덱스 일치 여부
+                    isRight = (ans === correctTarget) || (String(p.answer) === String(q.correctAnswer));
+                } else if (q.type === 'writing_text') {
+                    isRight = (ans === correctTarget);
+                } else if (q.type === 'writing_scramble') {
+                    // 공백/특수문자 정규화 비교 (단어 칩과 문장부호 공백 자동 보정)
+                    const normAns = ans.replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
+                    const normTarget = correctTarget.replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
+                    isRight = (normAns === normTarget);
+                }
+
+                if (isRight) {
+                    correctSolvers.push({
+                        pid: pid,
+                        name: p.name,
+                        submittedAt: p.submittedAt || Date.now(),
+                        currentScore: p.score || 0,
+                        correctCount: (p.correctCount || 0) + 1,
+                        firstCount: p.firstCount || 0
+                    });
+                } else {
+                    playerUpdates[`players.${pid}.isCorrect`] = false;
+                    playerUpdates[`players.${pid}.bonus`] = 0;
+                }
+            });
+
+            // 🥇 선착순 1등 정답자 선발 (가장 먼저 맞힌 사람)
+            let firstSolver = null;
+            if (correctSolvers.length > 0) {
+                // 제출 시각 오름차순 정렬
+                correctSolvers.sort((a, b) => a.submittedAt - b.submittedAt);
+                const winner = correctSolvers[0];
+                const timeTaken = ((winner.submittedAt - (data.questionStartedAt || Date.now())) / 1000).toFixed(2);
+
+                firstSolver = {
+                    pid: winner.pid,
+                    name: winner.name,
+                    timeTaken: Math.max(0.1, Number(timeTaken)),
+                    bonusPoints: 50
+                };
+
+                // 1등에게는 100점 + 선착순 보너스 50점 = 150점!
+                playerUpdates[`players.${winner.pid}.score`] = winner.currentScore + 100 + 50;
+                playerUpdates[`players.${winner.pid}.isCorrect`] = true;
+                playerUpdates[`players.${winner.pid}.bonus`] = 50;
+                playerUpdates[`players.${winner.pid}.correctCount`] = winner.correctCount;
+                playerUpdates[`players.${winner.pid}.firstCount`] = winner.firstCount + 1;
+
+                // 나머지 정답자에게는 기본 100점
+                for (let i = 1; i < correctSolvers.length; i++) {
+                    const other = correctSolvers[i];
+                    playerUpdates[`players.${other.pid}.score`] = other.currentScore + 100;
+                    playerUpdates[`players.${other.pid}.isCorrect`] = true;
+                    playerUpdates[`players.${other.pid}.bonus`] = 0;
+                    playerUpdates[`players.${other.pid}.correctCount`] = other.correctCount;
+                }
+            }
+
+            await updateDoc(roomRef, {
+                status: 'revealed',
+                firstSolver: firstSolver,
+                revealedAnswer: {
+                    correctAnswer: q.correctAnswer,
+                    explanation: q.explanation || "",
+                    correctCount: correctSolvers.length,
+                    totalCount: Object.keys(players).length
+                },
+                ...playerUpdates
+            });
+
+            playGoldenBellChime();
+            confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } });
+        };
+
+        function renderHostRevealScreen(data) {
+            const q = currentQuestions[data.currentQIndex || 0];
+            const rev = data.revealedAnswer || {};
+
+            document.getElementById('reveal-q-num').innerText = (data.currentQIndex || 0) + 1;
+            document.getElementById('reveal-correct-answer').innerText = rev.correctAnswer || q.correctAnswer;
+            document.getElementById('reveal-explanation').innerText = rev.explanation || q.explanation || "";
+
+            // 🥇 1등 선착순 발표 배너
+            const firstBox = document.getElementById('reveal-first-solver-box');
+            if (data.firstSolver && data.firstSolver.name) {
+                const fsName = window.WaurimalMask ? window.WaurimalMask.maskStudentName(data.firstSolver.name) : data.firstSolver.name;
+                document.getElementById('reveal-first-solver-name').innerText = `🥇 ${fsName} 학생 (${data.firstSolver.timeTaken}초 만에 정답!)`;
+                firstBox.classList.remove('hidden');
+            } else {
+                firstBox.classList.add('hidden');
+            }
+
+            // 통계
+            const players = Object.values(data.players || {});
+            const corr = rev.correctCount || 0;
+            const total = rev.totalCount || players.length;
+            const wrong = Math.max(0, total - corr);
+            const acc = total > 0 ? Math.round((corr / total) * 100) : 0;
+
+            document.getElementById('stat-correct-count').innerText = `${corr}명`;
+            document.getElementById('stat-wrong-count').innerText = `${wrong}명`;
+            document.getElementById('stat-accuracy').innerText = `${acc}%`;
+
+            // TOP 5 실시간 순위
+            const sorted = [...players].sort((a, b) => (b.score || 0) - (a.score || 0));
+            const topCont = document.getElementById('reveal-top-rankings');
+            if (topCont) {
+                topCont.innerHTML = sorted.slice(0, 5).map((p, idx) => {
+                    const rank = idx + 1;
+                    const mName = window.WaurimalMask ? window.WaurimalMask.maskStudentName(p.name) : p.name;
+                    return `
+                        <div class="flex justify-between items-center py-1 border-b border-slate-100 last:border-0">
+                            <span class="flex items-center gap-1.5 font-black">
+                                <span class="w-4 text-center ${rank === 1 ? 'text-amber-500' : 'text-slate-400'}">${rank}</span>
+                                <span>${mName}</span>
+                            </span>
+                            <span class="font-black text-amber-700">${p.score || 0}점</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // 다음 문제 버튼 텍스트
+            const btnNext = document.getElementById('btn-next-question');
+            if (data.currentQIndex >= 19) {
+                btnNext.innerHTML = `<span>최종 골든벨 시상식 보기 🏆</span> <i class="fa-solid fa-trophy"></i>`;
+            } else {
+                btnNext.innerHTML = `<span>다음 문제로 ➔ (Q ${data.currentQIndex + 2} / 20)</span> <i class="fa-solid fa-arrow-right"></i>`;
+            }
+
+            window.showScreen('screen-host-reveal');
+        }
+
+        window.hostNextQuestion = async function() {
+            if (!currentRoomCode || !isHost) return;
+            const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
+            const snap = await getDoc(roomRef);
+            const data = snap.data();
+
+            const nextIndex = (data.currentQIndex || 0) + 1;
+
+            if (nextIndex >= 20) {
+                // 20문제 완주 ➔ 시상식 화면 전환 및 DB 성적 저장
+                await updateDoc(roomRef, {
+                    status: 'finished'
+                });
+                await saveRoomFinalScoresToFirestore(data);
+                return;
+            }
+
+            // 다음 문제 전환: 학생 답변 플래그 리셋
+            const resetPlayers = {};
+            Object.keys(data.players || {}).forEach(pid => {
+                resetPlayers[`players.${pid}.answered`] = false;
+                resetPlayers[`players.${pid}.answer`] = null;
+                resetPlayers[`players.${pid}.submittedAt`] = 0;
+            });
+
+            await updateDoc(roomRef, {
+                status: 'playing',
+                currentQIndex: nextIndex,
+                questionStartedAt: Date.now(),
+                firstSolver: null,
+                revealedAnswer: null,
+                ...resetPlayers
+            });
+
+            playGoldenBellChime();
+        };
+
+        // ─────────────────────────────────────────────
+        // 11. 학생: 인게임 답안 입력 & 실시간 제출
+        // ─────────────────────────────────────────────
+        function renderStudentGameScreen(data, me) {
+            const q = currentQuestions[data.currentQIndex || 0];
+            if (!q) return;
+
+            document.getElementById('student-q-badge').innerText = `Q ${String((data.currentQIndex || 0) + 1).padStart(2, '0')} / 20`;
+            document.getElementById('student-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain}`;
+            document.getElementById('student-question-text').innerText = q.question;
+
+            // 서브 텍스트
+            const subBox = document.getElementById('student-subtext-box');
+            if (q.subtext) {
+                subBox.innerText = q.subtext;
+                subBox.classList.remove('hidden');
+            } else {
+                subBox.classList.add('hidden');
+            }
+
+            // 타이머 표시
+            const duration = data.qDuration || 30;
+            const elapsed = Math.floor((Date.now() - (data.questionStartedAt || Date.now())) / 1000);
+            const rem = Math.max(0, duration - elapsed);
+            document.getElementById('student-timer-text').innerText = `${rem}s`;
+
+            // 내가 이미 제출했는지 확인
+            const overlay = document.getElementById('student-submitted-overlay');
+            const submitBtn = document.getElementById('btn-submit-answer');
+
+            if (me.answered) {
+                hasSubmittedAnswer = true;
+                overlay.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+            } else {
+                hasSubmittedAnswer = false;
+                overlay.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+            }
+
+            // 문제 유형별 입력 컨트롤 렌더링
+            const choiceCont = document.getElementById('student-choices-container');
+            const scrambleCont = document.getElementById('student-scramble-container');
+            const textCont = document.getElementById('student-text-container');
+
+            if (q.type === 'listening_choice' || q.type === 'reading_choice') {
+                choiceCont.classList.remove('hidden');
+                scrambleCont.classList.add('hidden');
+                textCont.classList.add('hidden');
+
+                choiceCont.innerHTML = (q.options || []).map((opt, idx) => {
+                    const isSel = (selectedChoice === opt);
+                    return `
+                        <button type="button" onclick="selectStudentChoice('${opt.replace(/'/g, "\\'")}')" 
+                                class="choice-btn ${isSel ? 'selected' : ''}">
+                            <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center font-black text-xs">
+                                ${idx + 1}
+                            </span>
+                            <span class="font-bold flex-1">${opt}</span>
+                        </button>
+                    `;
+                }).join('');
+            } else if (q.type === 'writing_scramble') {
+                choiceCont.classList.add('hidden');
+                scrambleCont.classList.remove('hidden');
+                textCont.classList.add('hidden');
+
+                // 슬롯 & 풀 렌더링
+                renderStudentScrambleUI(q);
+            } else if (q.type === 'writing_text') {
+                choiceCont.classList.add('hidden');
+                scrambleCont.classList.add('hidden');
+                textCont.classList.remove('hidden');
+            }
+
+            window.showScreen('screen-student-game');
+        }
+
+        window.selectStudentChoice = function(opt) {
+            if (hasSubmittedAnswer) return;
+            selectedChoice = opt;
+            if (window.WaurimalAudio) window.WaurimalAudio.play('click');
+
+            // 버튼 하이라이트 갱신
+            document.querySelectorAll('#student-choices-container .choice-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+        };
+
+        // 스크램블 칩 조작
+        function renderStudentScrambleUI(q) {
+            const slotsEl = document.getElementById('scramble-slots');
+            const poolEl = document.getElementById('scramble-chips-pool');
+
+            if (currentScrambleSlots.length === 0) {
+                slotsEl.innerHTML = `<span class="text-2xs text-amber-700/60 font-semibold my-auto">아래 단어 칩을 터치하세요.</span>`;
+            } else {
+                slotsEl.innerHTML = currentScrambleSlots.map((chip, idx) => `
+                    <button type="button" onclick="removeScrambleSlot(${idx})" class="word-chip text-sm py-1.5 px-3 bg-amber-100 border-amber-400">
+                        <span>${chip}</span>
+                        <i class="fa-solid fa-xmark text-2xs ml-1.5 opacity-60"></i>
+                    </button>
+                `).join('');
+            }
+
+            const chips = q.chips || [];
+            poolEl.innerHTML = chips.map((chip, idx) => {
+                const used = currentScrambleSlots.includes(chip);
+                return `
+                    <button type="button" onclick="addScrambleSlot('${chip.replace(/'/g, "\\'")}')" 
+                            class="word-chip ${used ? 'used' : ''}">
+                        ${chip}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        window.addScrambleSlot = function(chip) {
+            if (hasSubmittedAnswer) return;
+            currentScrambleSlots.push(chip);
+            if (window.WaurimalAudio) window.WaurimalAudio.play('click');
+            const q = currentQuestions[currentQIndex];
+            renderStudentScrambleUI(q);
+        };
+
+        window.removeScrambleSlot = function(idx) {
+            if (hasSubmittedAnswer) return;
+            currentScrambleSlots.splice(idx, 1);
+            if (window.WaurimalAudio) window.WaurimalAudio.play('click');
+            const q = currentQuestions[currentQIndex];
+            renderStudentScrambleUI(q);
+        };
+
+        window.resetScrambleChips = function() {
+            if (hasSubmittedAnswer) return;
+            currentScrambleSlots = [];
+            const q = currentQuestions[currentQIndex];
+            renderStudentScrambleUI(q);
+        };
+
+        // 학생 답안 제출
+        window.submitStudentAnswer = async function() {
+            if (hasSubmittedAnswer || !currentRoomCode) return;
+            const q = currentQuestions[currentQIndex];
+            let myAns = '';
+
+            if (q.type === 'listening_choice' || q.type === 'reading_choice') {
+                if (!selectedChoice) {
+                    alert("보기를 선택해주세요!");
+                    return;
+                }
+                myAns = selectedChoice;
+            } else if (q.type === 'writing_scramble') {
+                if (currentScrambleSlots.length === 0) {
+                    alert("단어 칩을 배열해주세요!");
+                    return;
+                }
+                myAns = currentScrambleSlots.join(' ');
+            } else if (q.type === 'writing_text') {
+                const input = document.getElementById('student-text-input');
+                myAns = input ? input.value.trim() : '';
+                if (!myAns) {
+                    alert("정답을 입력해주세요!");
+                    return;
+                }
+            }
+
+            hasSubmittedAnswer = true;
+            const submittedAt = Date.now();
+
+            try {
+                const roomRef = doc(db, ROOMS_COLLECTION, currentRoomCode);
+                await updateDoc(roomRef, {
+                    [`players.${myPlayerId}.answered`]: true,
+                    [`players.${myPlayerId}.answer`]: myAns,
+                    [`players.${myPlayerId}.submittedAt`]: submittedAt
+                });
+
+                document.getElementById('student-submitted-overlay').classList.remove('hidden');
+                document.getElementById('btn-submit-answer').classList.add('hidden');
+                if (window.WaurimalAudio) window.WaurimalAudio.play('correct');
+            } catch (e) {
+                console.error("Answer submission error:", e);
+                hasSubmittedAnswer = false;
+            }
+        };
+
+        function renderStudentRevealScreen(data, me) {
+            const q = currentQuestions[data.currentQIndex || 0];
+            const isRight = me.isCorrect;
+            const gotBonus = (me.bonus && me.bonus > 0);
+
+            const iconEl = document.getElementById('student-feedback-icon');
+            const titleEl = document.getElementById('student-feedback-title');
+            const bonusAnnounce = document.getElementById('student-bonus-announcement');
+
+            if (isRight) {
+                iconEl.innerText = "🎉";
+                titleEl.innerText = "정답입니다! (+100점)";
+                titleEl.className = "text-2xl font-black text-emerald-700";
+                if (gotBonus) {
+                    bonusAnnounce.classList.remove('hidden');
+                    bonusAnnounce.innerText = "🥇 대단해요! 반에서 가장 먼저 맞혔습니다! (선착순 보너스 +50점 추가!)";
+                } else {
+                    bonusAnnounce.classList.add('hidden');
+                }
+            } else {
+                iconEl.innerText = "😢";
+                titleEl.innerText = "아쉽네요! 오답입니다.";
+                titleEl.className = "text-2xl font-black text-rose-600";
+                bonusAnnounce.classList.add('hidden');
+            }
+
+            document.getElementById('student-correct-ans-text').innerText = q.correctAnswer;
+            document.getElementById('student-total-score-text').innerText = `${me.score || 0}점`;
+
+            // 다음 문제 진입을 위해 입력 상태 초기화
+            selectedChoice = null;
+            currentScrambleSlots = [];
+            const textInp = document.getElementById('student-text-input');
+            if (textInp) textInp.value = '';
+
+            window.showScreen('screen-student-reveal');
+        }
+
+        // ─────────────────────────────────────────────
+        // 12. 최종 골든벨 시상식 포디움 (20번 문제 완료)
+        // ─────────────────────────────────────────────
+        function renderFinalPodiumScreen(data) {
+            const players = Object.values(data.players || {});
+            const sorted = [...players].sort((a, b) => (b.score || 0) - (a.score || 0));
+
+            const p1 = sorted[0] || { name: "-", score: 0 };
+            const p2 = sorted[1] || { name: "-", score: 0 };
+            const p3 = sorted[2] || { name: "-", score: 0 };
+
+            const mask = window.WaurimalMask ? window.WaurimalMask.maskStudentName : (x => x);
+
+            document.getElementById('podium-name-1').innerText = mask(p1.name);
+            document.getElementById('podium-score-1').innerText = `${p1.score || 0}점 (🥇${p1.firstCount || 0}회)`;
+
+            document.getElementById('podium-name-2').innerText = mask(p2.name);
+            document.getElementById('podium-score-2').innerText = `${p2.score || 0}점`;
+
+            document.getElementById('podium-name-3').innerText = mask(p3.name);
+            document.getElementById('podium-score-3').innerText = `${p3.score || 0}점`;
+
+            // 전체 순위표
+            const scoreListEl = document.getElementById('final-scoreboard-list');
+            if (scoreListEl) {
+                scoreListEl.innerHTML = sorted.map((p, idx) => {
+                    const rank = idx + 1;
+                    return `
+                        <div class="flex justify-between items-center py-1.5 px-3 bg-white border border-slate-200 rounded-xl text-2xs font-bold">
+                            <span class="flex items-center gap-2">
+                                <span class="w-5 text-center font-black ${rank <= 3 ? 'text-amber-600' : 'text-slate-400'}">${rank}</span>
+                                <span class="font-black text-slate-800">${p.grade || 6}-${p.classNum || 1} ${mask(p.name)}</span>
+                            </span>
+                            <span class="flex items-center gap-2">
+                                <span class="text-emerald-700">⭕ ${p.correctCount || 0}/20</span>
+                                <span class="text-amber-600 font-extrabold">🥇 ${p.firstCount || 0}회</span>
+                                <span class="text-amber-800 font-black text-xs">${p.score || 0}점</span>
+                            </span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            playGoldenBellChime();
+            confetti({ particleCount: 150, spread: 90, origin: { y: 0.5 } });
+            window.showScreen('screen-final-podium');
+        }
+
+        async function saveRoomFinalScoresToFirestore(data) {
+            const players = Object.values(data.players || {});
+            const unitTitle = data.unitTitle || "통합 골든벨";
+
+            for (const p of players) {
+                if (!p.score || p.score === 0) continue;
+                try {
+                    const record = {
+                        name: p.name,
+                        maskedName: window.WaurimalMask ? window.WaurimalMask.maskStudentName(p.name) : p.name,
+                        grade: String(p.grade || '6'),
+                        classNum: String(p.classNum || '1'),
+                        studentNum: String(p.studentNum || '1'),
+                        score: p.score,
+                        correctCount: p.correctCount || 0,
+                        firstCount: p.firstCount || 0,
+                        unit: unitTitle,
+                        mode: "반 전체",
+                        timestamp: Date.now()
+                    };
+                    await addDoc(collection(db, SCORES_COLLECTION), record);
+                } catch(e) {
+                    console.warn("Score save error:", e);
+                }
+            }
+        }
+
+        // ─────────────────────────────────────────────
+        // 13. 1인 골든벨 솔로 챌린지 모드
+        // ─────────────────────────────────────────────
+        window.startSoloChallenge = function() {
+            initProfile();
+            isSoloMode = true;
+            currentQuestions = [...MASTER_20_QUESTIONS];
+            currentQIndex = 0;
+            soloScore = 0;
+            soloFirstBonusCount = 0;
+
+            document.getElementById('solo-my-score').innerText = '0';
+            loadSoloQuestion();
+            window.showScreen('screen-solo-game');
+            playGoldenBellChime();
+        };
+
+        function loadSoloQuestion() {
+            const q = currentQuestions[currentQIndex];
+            if (!q) {
+                finishSoloChallenge();
+                return;
+            }
+
+            selectedChoice = null;
+            currentScrambleSlots = [];
+            remainingSeconds = 30;
+
+            document.getElementById('solo-q-badge').innerText = `Q ${String(currentQIndex + 1).padStart(2, '0')} / 20`;
+            document.getElementById('solo-domain-badge').innerText = `${q.domainIcon || '🎧'} ${q.domain}`;
+            document.getElementById('solo-question-text').innerText = q.question;
+            document.getElementById('solo-timer-text').innerText = `${remainingSeconds}s`;
+
+            const audioCont = document.getElementById('solo-audio-container');
+            if (q.domain === '듣기' && q.audioText) {
+                audioCont.classList.remove('hidden');
+                setTimeout(() => window.playCurrentQuestionAudio(), 250);
+            } else {
+                audioCont.classList.add('hidden');
+            }
+
+            const subCont = document.getElementById('solo-subtext-container');
+            if (q.subtext) {
+                subCont.innerText = q.subtext;
+                subCont.classList.remove('hidden');
+            } else {
+                subCont.classList.add('hidden');
+            }
+
+            // 컨트롤
+            const choiceCont = document.getElementById('solo-choices-container');
+            const scrambleCont = document.getElementById('solo-scramble-container');
+            const textCont = document.getElementById('solo-text-container');
+
+            if (q.type === 'listening_choice' || q.type === 'reading_choice') {
+                choiceCont.classList.remove('hidden');
+                scrambleCont.classList.add('hidden');
+                textCont.classList.add('hidden');
+
+                choiceCont.innerHTML = (q.options || []).map((opt, idx) => `
+                    <button type="button" onclick="selectSoloChoice('${opt.replace(/'/g, "\\'")}')" class="choice-btn">
+                        <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center font-black text-xs">
+                            ${idx + 1}
+                        </span>
+                        <span class="font-bold flex-1">${opt}</span>
+                    </button>
+                `).join('');
+            } else if (q.type === 'writing_scramble') {
+                choiceCont.classList.add('hidden');
+                scrambleCont.classList.remove('hidden');
+                textCont.classList.add('hidden');
+                renderSoloScrambleUI(q);
+            } else if (q.type === 'writing_text') {
+                choiceCont.classList.add('hidden');
+                scrambleCont.classList.add('hidden');
+                textCont.classList.remove('hidden');
+                const inp = document.getElementById('solo-text-input');
+                if (inp) { inp.value = ''; inp.focus(); }
+            }
+
+            document.getElementById('solo-feedback-box').classList.add('hidden');
+            document.getElementById('btn-solo-submit').classList.remove('hidden');
+
+            if (questionTimer) clearInterval(questionTimer);
+            questionTimer = setInterval(() => {
+                remainingSeconds--;
+                document.getElementById('solo-timer-text').innerText = `${remainingSeconds}s`;
+                if (remainingSeconds <= 5 && remainingSeconds > 0) playTickSound();
+                if (remainingSeconds <= 0) {
+                    clearInterval(questionTimer);
+                    submitSoloAnswer(true);
+                }
+            }, 1000);
+        }
+
+        window.selectSoloChoice = function(opt) {
+            selectedChoice = opt;
+            if (window.WaurimalAudio) window.WaurimalAudio.play('click');
+            document.querySelectorAll('#solo-choices-container .choice-btn').forEach(btn => btn.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+        };
+
+        function renderSoloScrambleUI(q) {
+            const slotsEl = document.getElementById('solo-scramble-slots');
+            const poolEl = document.getElementById('solo-scramble-pool');
+
+            if (currentScrambleSlots.length === 0) {
+                slotsEl.innerHTML = `<span class="text-2xs text-amber-700/60 font-semibold my-auto">단어 칩을 터치하세요.</span>`;
+            } else {
+                slotsEl.innerHTML = currentScrambleSlots.map((chip, idx) => `
+                    <button type="button" onclick="removeSoloScrambleSlot(${idx})" class="word-chip text-sm py-1.5 px-3 bg-amber-100 border-amber-400">
+                        <span>${chip}</span>
+                        <i class="fa-solid fa-xmark text-2xs ml-1.5 opacity-60"></i>
+                    </button>
+                `).join('');
+            }
+
+            const chips = q.chips || [];
+            poolEl.innerHTML = chips.map((chip) => {
+                const used = currentScrambleSlots.includes(chip);
+                return `
+                    <button type="button" onclick="addSoloScrambleSlot('${chip.replace(/'/g, "\\'")}')" 
+                            class="word-chip ${used ? 'used' : ''}">
+                        ${chip}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        window.addSoloScrambleSlot = function(chip) {
+            currentScrambleSlots.push(chip);
+            if (window.WaurimalAudio) window.WaurimalAudio.play('click');
+            renderSoloScrambleUI(currentQuestions[currentQIndex]);
+        };
+
+        window.removeSoloScrambleSlot = function(idx) {
+            currentScrambleSlots.splice(idx, 1);
+            if (window.WaurimalAudio) window.WaurimalAudio.play('click');
+            renderSoloScrambleUI(currentQuestions[currentQIndex]);
+        };
+
+        window.resetSoloScramble = function() {
+            currentScrambleSlots = [];
+            renderSoloScrambleUI(currentQuestions[currentQIndex]);
+        };
+
+        window.submitSoloAnswer = function(isTimeout = false) {
+            if (questionTimer) {
+                clearInterval(questionTimer);
+                questionTimer = null;
+            }
+
+            const q = currentQuestions[currentQIndex];
+            let ans = '';
+            if (q.type === 'listening_choice' || q.type === 'reading_choice') {
+                ans = selectedChoice || '';
+            } else if (q.type === 'writing_scramble') {
+                ans = currentScrambleSlots.join(' ');
+            } else if (q.type === 'writing_text') {
+                ans = document.getElementById('solo-text-input').value.trim();
+            }
+
+            let isRight = false;
+            if (!isTimeout) {
+                if (q.type === 'writing_scramble') {
+                    const normAns = ans.replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
+                    const normTarget = String(q.correctAnswer).replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
+                    isRight = (normAns === normTarget);
+                } else {
+                    isRight = (ans.trim().toLowerCase() === String(q.correctAnswer).trim().toLowerCase());
+                }
+            }
+
+            const feedback = document.getElementById('solo-feedback-box');
+            feedback.classList.remove('hidden');
+
+            let pts = 0;
+            if (isRight) {
+                pts = 100;
+                // 솔로 스피드 보너스 (5초 내 +50, 10초 내 +30)
+                if (remainingSeconds >= 25) {
+                    pts += 50;
+                    soloFirstBonusCount++;
+                    feedback.className = "p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl text-center font-bold text-xs";
+                    feedback.innerHTML = `🎉 정답! (기본 100점 + 🥇 초고속 스피드 보너스 50점! 총 +150점!)<br><span class="text-2xs font-medium text-slate-600">${q.explanation || ''}</span>`;
+                } else if (remainingSeconds >= 20) {
+                    pts += 30;
+                    feedback.className = "p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl text-center font-bold text-xs";
+                    feedback.innerHTML = `🎉 정답! (기본 100점 + 스피드 보너스 30점! 총 +130점!)<br><span class="text-2xs font-medium text-slate-600">${q.explanation || ''}</span>`;
+                } else {
+                    feedback.className = "p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-center font-bold text-xs";
+                    feedback.innerHTML = `🎉 정답입니다! (+100점)<br><span class="text-2xs font-medium text-slate-600">${q.explanation || ''}</span>`;
+                }
+                soloScore += pts;
+                if (window.WaurimalAudio) window.WaurimalAudio.play('correct');
+            } else {
+                feedback.className = "p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-xl text-center font-bold text-xs";
+                feedback.innerHTML = `❌ 오답! 정답은 <strong>${q.correctAnswer}</strong> 입니다.<br><span class="text-2xs font-medium text-slate-600">${q.explanation || ''}</span>`;
+                if (window.WaurimalAudio) window.WaurimalAudio.play('wrong');
+            }
+
+            document.getElementById('solo-my-score').innerText = soloScore;
+            document.getElementById('btn-solo-submit').classList.add('hidden');
+
+            setTimeout(() => {
+                currentQIndex++;
+                if (currentQIndex < 20) {
+                    loadSoloQuestion();
+                } else {
+                    finishSoloChallenge();
+                }
+            }, 2300);
+        };
+
+        async function finishSoloChallenge() {
+            playGoldenBellChime();
+            confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 } });
+
+            // 명예의 전당 저장
+            try {
+                const record = {
+                    name: myProfile.name || "학생",
+                    maskedName: window.WaurimalMask ? window.WaurimalMask.maskStudentName(myProfile.name) : myProfile.name,
+                    grade: String(myProfile.grade || '6'),
+                    classNum: String(myProfile.classNum || '1'),
+                    studentNum: String(myProfile.studentNum || '1'),
+                    score: soloScore,
+                    correctCount: Math.min(20, Math.floor(soloScore / 100)),
+                    firstCount: soloFirstBonusCount,
+                    unit: "1인 골든벨 챌린지",
+                    mode: "1인 도전",
+                    timestamp: Date.now()
+                };
+                await addDoc(collection(db, SCORES_COLLECTION), record);
+            } catch(e) {
+                console.warn("Solo score save error:", e);
+            }
+
+            alert(`🎉 20문제 완주! 최종 점수: ${soloScore}점! 명예의 전당에 등록되었습니다.`);
+            exitToHome();
+        }
+
+        // ─────────────────────────────────────────────
+        // 14. 실시간 명예의 전당 (표준 1224 순위제 & 2중 리스너)
+        // ─────────────────────────────────────────────
+        function listenToHallOfFame() {
+            try {
+                // 1) 최근 기록 300건 리스너
+                const qRecent = query(collection(db, SCORES_COLLECTION), orderBy("timestamp", "desc"), limit(300));
+                onSnapshot(qRecent, (snap) => {
+                    snap.forEach(docSnap => {
+                        scoresMap.set(docSnap.id, { id: docSnap.id, ...docSnap.data() });
+                    });
+                    renderHallOfFame();
+                    renderTeacherScoresTable();
+                }, (err) => console.warn("Hof recent error:", err));
+
+                // 2) 역대 최고점 150건 리스너
+                const qTop = query(collection(db, SCORES_COLLECTION), orderBy("score", "desc"), limit(150));
+                onSnapshot(qTop, (snap) => {
+                    snap.forEach(docSnap => {
+                        scoresMap.set(docSnap.id, { id: docSnap.id, ...docSnap.data() });
+                    });
+                    renderHallOfFame();
+                    renderTeacherScoresTable();
+                }, (err) => console.warn("Hof top error:", err));
+            } catch (e) {
+                console.warn("HOF listener init error:", e);
+            }
+        }
+
+        window.setHofTab = function(tab) {
+            hofTab = tab;
+            ['all', 'month', 'week'].forEach(t => {
+                const btn = document.getElementById(`tab-hof-${t}`);
+                if (btn) {
+                    if (t === tab) {
+                        btn.className = "px-2.5 py-1 rounded-md bg-white text-amber-800 shadow-2xs font-black";
+                    } else {
+                        btn.className = "px-2.5 py-1 rounded-md text-slate-500 hover:text-slate-800 font-extrabold";
+                    }
+                }
+            });
+            renderHallOfFame();
+        };
+
+        function renderHallOfFame() {
+            const listCont = document.getElementById('hof-list');
+            if (!listCont) return;
+
+            let scores = Array.from(scoresMap.values());
+            const gradeFilter = document.getElementById('hof-filter-grade') ? document.getElementById('hof-filter-grade').value : 'all';
+            const classFilter = document.getElementById('hof-filter-class') ? document.getElementById('hof-filter-class').value : 'all';
+
+            const now = Date.now();
+            const oneWeek = 7 * 24 * 60 * 60 * 1000;
+            const oneMonth = 30 * 24 * 60 * 60 * 1000;
+
+            // 기간 필터
+            if (hofTab === 'week') {
+                scores = scores.filter(s => (now - (s.timestamp || 0)) <= oneWeek);
+            } else if (hofTab === 'month') {
+                scores = scores.filter(s => (now - (s.timestamp || 0)) <= oneMonth);
+            }
+
+            // 학년/반 필터
+            if (gradeFilter !== 'all') {
+                scores = scores.filter(s => String(s.grade) === gradeFilter);
+            }
+            if (classFilter !== 'all') {
+                scores = scores.filter(s => String(s.classNum) === classFilter);
+            }
+
+            // 1인 1최고기록 중복 제거
+            const uniqueMap = new Map();
+            scores.forEach(s => {
+                const key = `${s.grade}_${s.classNum}_${s.name}`;
+                if (!uniqueMap.has(key) || uniqueMap.get(key).score < s.score) {
+                    uniqueMap.set(key, s);
+                }
+            });
+            let deduplicated = Array.from(uniqueMap.values());
+
+            // 점수 내림차순 정렬 (동점 시 1등 횟수 많은 순)
+            deduplicated.sort((a, b) => {
+                if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
+                return (b.firstCount || 0) - (a.firstCount || 0);
+            });
+
+            if (deduplicated.length === 0) {
+                listCont.innerHTML = `<div class="text-center py-10 text-xs text-slate-400 font-bold">등록된 골든벨 점수 기록이 없습니다.</div>`;
+                return;
+            }
+
+            // 1224 표준 경쟁 순위 부여
+            listCont.innerHTML = deduplicated.slice(0, 30).map((item, idx, arr) => {
+                const rank = window.WaurimalRank ? 
+                    window.WaurimalRank.computeCompetitionRank(item, idx, arr, 'score') : (idx + 1);
+
+                const mName = item.maskedName || (window.WaurimalMask ? window.WaurimalMask.maskStudentName(item.name) : item.name);
+                const isTop3 = (rank <= 3);
+
+                return `
+                    <div class="flex items-center justify-between py-1.5 px-3 bg-white border border-amber-100 rounded-xl text-xs font-bold hover:bg-amber-50/50 transition">
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 text-center font-black ${isTop3 ? 'text-amber-500 font-extrabold text-sm' : 'text-slate-400'}">
+                                ${rank === 1 ? '🥇' : (rank === 2 ? '🥈' : (rank === 3 ? '🥉' : rank))}
+                            </span>
+                            <span class="text-slate-800 font-black">${item.grade || 6}-${item.classNum || 1} ${mName}</span>
+                            <span class="text-2xs text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-md border border-amber-200">
+                                ${item.unit ? item.unit.slice(0, 10) : '골든벨'}
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            ${item.firstCount ? `<span class="text-2xs text-amber-600 font-extrabold">🥇${item.firstCount}</span>` : ''}
+                            <span class="text-amber-700 font-black">${item.score || 0}점</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // ─────────────────────────────────────────────
+        // 15. 교사 관리자 모드 & 비밀번호 연동
+        // ─────────────────────────────────────────────
+        window.openCurriculumAdmin = function() {
+            const modal = document.getElementById('modal-admin');
+            if (modal) modal.classList.remove('hidden');
+
+            if (window.WaurimalAuth && window.WaurimalAuth.isAuthenticated()) {
+                document.getElementById('admin-auth-section').classList.add('hidden');
+                document.getElementById('admin-dashboard-section').classList.remove('hidden');
+                renderTeacherScoresTable();
+                renderAdminQuestionsList();
+            } else {
+                document.getElementById('admin-auth-section').classList.remove('hidden');
+                document.getElementById('admin-dashboard-section').classList.add('hidden');
+                setTimeout(() => {
+                    const pwInp = document.getElementById('admin-pw-input');
+                    if (pwInp) { pwInp.value = ''; pwInp.focus(); }
+                }, 100);
+            }
+        };
+        window.openTeacherAdmin = window.openCurriculumAdmin;
+
+        window.closeAdminModal = function() {
+            const modal = document.getElementById('modal-admin');
+            if (modal) modal.classList.add('hidden');
+        };
+
+        window.verifyAdminPassword = function() {
+            const pwInp = document.getElementById('admin-pw-input');
+            const pw = pwInp ? pwInp.value.trim() : '';
+
+            if (window.WaurimalAuth && window.WaurimalAuth.authenticate(pw)) {
+                document.getElementById('admin-auth-section').classList.add('hidden');
+                document.getElementById('admin-dashboard-section').classList.remove('hidden');
+                renderTeacherScoresTable();
+                renderAdminQuestionsList();
+            } else {
+                alert("비밀번호가 일치하지 않습니다.");
+                if (pwInp) { pwInp.value = ''; pwInp.focus(); }
+            }
+        };
+
+        window.switchAdminSubTab = function(tab) {
+            ['scores', 'questions', 'password'].forEach(t => {
+                const btn = document.getElementById(`tab-adm-${t}`);
+                const view = document.getElementById(`adm-view-${t}`);
+                if (btn && view) {
+                    if (t === tab) {
+                        btn.className = "px-4 py-2.5 border-b-2 border-amber-600 text-amber-800 bg-white rounded-t-lg font-black";
+                        view.classList.remove('hidden');
+                    } else {
+                        btn.className = "px-4 py-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-800 font-extrabold";
+                        view.classList.add('hidden');
+                    }
+                }
+            });
+        };
+
+        function renderTeacherScoresTable() {
+            const tbody = document.getElementById('teacher-scores-tbody');
+            if (!tbody) return;
+
+            let scores = Array.from(scoresMap.values());
+            const gradeFilter = document.getElementById('teacher-filter-grade') ? document.getElementById('teacher-filter-grade').value : 'all';
+            const classFilter = document.getElementById('teacher-filter-class') ? document.getElementById('teacher-filter-class').value : 'all';
+            const sortMode = document.getElementById('teacher-sort') ? document.getElementById('teacher-sort').value : 'recent';
+
+            if (gradeFilter !== 'all') scores = scores.filter(s => String(s.grade) === gradeFilter);
+            if (classFilter !== 'all') scores = scores.filter(s => String(s.classNum) === classFilter);
+
+            if (sortMode === 'score') {
+                scores.sort((a, b) => (b.score || 0) - (a.score || 0));
+            } else {
+                scores.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+            }
+
+            if (scores.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="8" class="text-center py-6 text-slate-400">등록된 성적이 없습니다.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = scores.map((item, idx) => {
+                const d = new Date(item.timestamp || Date.now());
+                const dateStr = `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+                return `
+                    <tr class="hover:bg-amber-50/40">
+                        <td class="py-2 px-3 font-black text-slate-500">${idx + 1}</td>
+                        <td class="py-2 px-3 font-bold">${item.grade || 6}학년 ${item.classNum || 1}반 ${item.studentNum || 1}번</td>
+                        <td class="py-2 px-3 font-black text-amber-900">${item.name || '-'}</td>
+                        <td class="py-2 px-3 font-black text-amber-700">${item.score || 0}점</td>
+                        <td class="py-2 px-3 text-emerald-700 font-bold">${item.correctCount || 0}/20</td>
+                        <td class="py-2 px-3 text-amber-600 font-extrabold">🥇 ${item.firstCount || 0}회</td>
+                        <td class="py-2 px-3 text-slate-400 text-3xs">${dateStr}</td>
+                        <td class="py-2 px-3 text-center">
+                            <button type="button" onclick="deleteSingleScore('${item.id}')" class="text-rose-500 hover:text-rose-700 font-bold">
+                                삭제
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        window.deleteSingleScore = async function(docId) {
+            if (!confirm("이 점수 기록을 삭제하시겠습니까?")) return;
+            try {
+                await deleteDoc(doc(db, SCORES_COLLECTION, docId));
+                scoresMap.delete(docId);
+                renderTeacherScoresTable();
+                renderHallOfFame();
+            } catch (e) {
+                alert("삭제 실패: " + e.message);
+            }
+        };
+
+        window.deleteClassScores = async function() {
+            const gradeFilter = document.getElementById('teacher-filter-grade').value;
+            const classFilter = document.getElementById('teacher-filter-class').value;
+
+            if (gradeFilter === 'all' || classFilter === 'all') {
+                alert("일괄 삭제를 위해 학년과 반을 특정하여 선택하세요.");
+                return;
+            }
+
+            if (!confirm(`${gradeFilter}학년 ${classFilter}반 학생들의 모든 골든벨 기록을 삭제하시겠습니까?`)) return;
+
+            try {
+                const targetDocs = Array.from(scoresMap.values()).filter(s => 
+                    String(s.grade) === gradeFilter && String(s.classNum) === classFilter
+                );
+                for (const item of targetDocs) {
+                    await deleteDoc(doc(db, SCORES_COLLECTION, item.id));
+                    scoresMap.delete(item.id);
+                }
+                alert(`${targetDocs.length}건의 기록이 삭제되었습니다.`);
+                renderTeacherScoresTable();
+                renderHallOfFame();
+            } catch (e) {
+                alert("일괄 삭제 실패: " + e.message);
+            }
+        };
+
+        window.downloadScoresCSV = function() {
+            const scores = Array.from(scoresMap.values());
+            if (scores.length === 0) {
+                alert("내보낼 성적 데이터가 없습니다.");
+                return;
+            }
+
+            let csv = "\uFEFF순위,학년,반,번호,실제이름,최종점수,정답수,선착순1등횟수,단원,응시일시\n";
+            scores.forEach((s, idx) => {
+                const d = new Date(s.timestamp || Date.now());
+                const dateStr = `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
+                csv += `${idx+1},${s.grade || 6},${s.classNum || 1},${s.studentNum || 1},"${s.name || ''}",${s.score || 0},${s.correctCount || 0},${s.firstCount || 0},"${s.unit || '통합골든벨'}",${dateStr}\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `도전골든벨_성적표_${new Date().toISOString().slice(0,10)}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        };
+
+        function renderAdminQuestionsList() {
+            const cont = document.getElementById('admin-questions-list');
+            if (!cont) return;
+
+            cont.innerHTML = MASTER_20_QUESTIONS.map(q => `
+                <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                    <div class="flex items-center justify-between">
+                        <span class="font-black text-amber-800">Q${q.id} [${q.domain}] ${q.difficulty}</span>
+                        <span class="text-emerald-700 font-bold">정답: ${q.correctAnswer}</span>
+                    </div>
+                    <div class="text-slate-800 font-bold">${q.question}</div>
+                    ${q.subtext ? `<div class="text-slate-500 font-medium">${q.subtext}</div>` : ''}
+                </div>
+            `).join('');
+        }
+
+        window.saveNewPassword = function() {
+            const p1 = document.getElementById('new-pw-input').value.trim();
+            const p2 = document.getElementById('new-pw-confirm').value.trim();
+
+            if (p1.length < 4) {
+                alert("비밀번호는 4자리 이상이어야 합니다.");
+                return;
+            }
+            if (p1 !== p2) {
+                alert("비밀번호가 일치하지 않습니다.");
+                return;
+            }
+
+            if (window.WaurimalAuth) {
+                const res = window.WaurimalAuth.setPw(p1);
+                if (res.success) {
+                    alert("교사 모드 비밀번호가 성공적으로 변경되었습니다.");
+                    document.getElementById('new-pw-input').value = '';
+                    document.getElementById('new-pw-confirm').value = '';
+                } else {
+                    alert(res.message);
+                }
+            }
+        };
+
+        // ─────────────────────────────────────────────
+        // 16. 초기 기동
+        // ─────────────────────────────────────────────
+        window.addEventListener('DOMContentLoaded', () => {
+            initProfile();
+            listenToHallOfFame();
+            window.showScreen('screen-home');
+        });
+
+    </script>
+</body>
+</html>
