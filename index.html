@@ -1049,57 +1049,101 @@
                     <div class="flex items-center gap-3">
                         <span class="text-xs font-black text-slate-600">점수: <strong id="solo-my-score" class="text-amber-600">0</strong>점</span>
                         <span id="solo-timer-text" class="text-base font-black text-rose-600">30s</span>
+                        <button type="button" onclick="if(confirm('진행 중인 도전을 종료하고 홈으로 돌아갈까요?')) exitToHome()" 
+                                class="text-xs text-slate-400 hover:text-slate-700 font-extrabold px-2 py-1 rounded-lg hover:bg-slate-100 transition flex items-center gap-1">
+                            <i class="fa-solid fa-xmark"></i> 나가기
+                        </button>
                     </div>
                 </div>
 
-                <!-- 문제 지문 -->
-                <div class="text-center space-y-3 py-2">
-                    <h2 id="solo-question-text" class="text-xl md:text-2xl font-black text-slate-800 leading-snug">
-                        원어민 음성을 듣고 올바른 단어를 고르세요.
-                    </h2>
+                <!-- 솔로 퀴즈 본문 영역 -->
+                <div id="solo-quiz-body" class="space-y-4">
+                    <!-- 문제 지문 -->
+                    <div class="text-center space-y-3 py-2">
+                        <h2 id="solo-question-text" class="text-xl md:text-2xl font-black text-slate-800 leading-snug">
+                            원어민 음성을 듣고 올바른 단어를 고르세요.
+                        </h2>
 
-                    <!-- 듣기 버튼 -->
-                    <div id="solo-audio-container" class="hidden flex flex-col justify-center items-center gap-1.5 py-1">
-                        <div class="flex items-center gap-2">
-                            <button type="button" onclick="playCurrentQuestionAudio()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center gap-2">
-                                <i class="fa-solid fa-volume-high"></i>
-                                <span>원어민 대화 다시 듣기 (🔊)</span>
-                            </button>
+                        <!-- 듣기 버튼 -->
+                        <div id="solo-audio-container" class="hidden flex flex-col justify-center items-center gap-1.5 py-1">
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="playCurrentQuestionAudio()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-black text-xs rounded-xl shadow-xs transition flex items-center gap-2">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                    <span>원어민 대화 다시 듣기 (🔊)</span>
+                                </button>
+                            </div>
+                            <div id="solo-dialogue-speaker-status" class="hidden w-full max-w-sm mx-auto py-2.5 px-4 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white rounded-2xl shadow-md border-2 border-amber-300 transition-all duration-200">
+                            </div>
                         </div>
-                        <div id="solo-dialogue-speaker-status" class="hidden w-full max-w-sm mx-auto py-2.5 px-4 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white rounded-2xl shadow-md border-2 border-amber-300 transition-all duration-200">
+
+                        <!-- 서브 텍스트 -->
+                        <div id="solo-subtext-container" class="hidden p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-xs md:text-sm font-bold text-slate-700 whitespace-pre-line text-left">
                         </div>
                     </div>
 
-                    <!-- 서브 텍스트 -->
-                    <div id="solo-subtext-container" class="hidden p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-xs md:text-sm font-bold text-slate-700 whitespace-pre-line text-left">
+                    <!-- 답안 컨트롤 (객관식 or 스크램블 or 텍스트) -->
+                    <div id="solo-choices-container" class="space-y-2"></div>
+                    <div id="solo-scramble-container" class="hidden space-y-3">
+                        <div class="flex justify-between items-center text-2xs font-extrabold text-amber-800">
+                            <span>단어 칩을 터치하여 문장을 만드세요:</span>
+                            <button type="button" onclick="resetSoloScramble()" class="text-rose-500 underline font-bold">초기화</button>
+                        </div>
+                        <div id="solo-scramble-slots" class="min-h-[52px] p-2 bg-amber-50 border-2 border-dashed border-amber-300 rounded-xl flex flex-wrap gap-1.5 items-center"></div>
+                        <div id="solo-scramble-pool" class="flex flex-wrap gap-2 justify-center p-2 bg-slate-50 rounded-xl border border-slate-200"></div>
+                    </div>
+                    <div id="solo-text-container" class="hidden space-y-2">
+                        <input type="text" id="solo-text-input" placeholder="정답 입력" 
+                               class="w-full text-center font-black text-base bg-slate-50 border-2 border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:bg-white focus:border-amber-500 focus:outline-none"
+                               onkeydown="if(event.key==='Enter') submitSoloAnswer()">
+                    </div>
+
+                    <!-- 솔로 제출 및 다음 버튼 -->
+                    <div class="pt-2">
+                        <button type="button" id="btn-solo-submit" onclick="submitSoloAnswer()" class="golden-btn justify-center text-sm py-3">
+                            <span>정답 제출하기 🚀</span>
+                        </button>
+                    </div>
+
+                    <!-- 정답 피드백 알림 박스 -->
+                    <div id="solo-feedback-box" class="hidden p-4 rounded-xl text-center font-bold text-xs"></div>
+                </div>
+
+                <!-- 솔로 챌린지 최종 완주 결과 카드 -->
+                <div id="solo-result-card" class="hidden space-y-5 p-6 bg-gradient-to-b from-amber-50/90 to-white border-2 border-amber-300 rounded-2xl shadow-xl text-center">
+                    <div class="space-y-2">
+                        <span id="solo-result-icon" class="text-5xl block animate-bounce">🏆</span>
+                        <h3 id="solo-result-title" class="text-2xl font-black text-slate-800">골든벨 20문제 완주!</h3>
+                        <p id="solo-result-desc" class="text-xs text-slate-600 font-bold">끝까지 멋지게 도전했습니다!</p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 py-3 bg-white border border-amber-200 rounded-xl max-w-md mx-auto">
+                        <div class="p-2">
+                            <span class="block text-2xs font-extrabold text-slate-400">최종 점수</span>
+                            <span id="solo-final-score" class="text-xl font-black text-amber-600">0점</span>
+                        </div>
+                        <div class="p-2 border-x border-amber-100">
+                            <span class="block text-2xs font-extrabold text-slate-400">정답 수</span>
+                            <span id="solo-final-correct" class="text-xl font-black text-emerald-600">0/20</span>
+                        </div>
+                        <div class="p-2">
+                            <span class="block text-2xs font-extrabold text-slate-400">스피드 보너스</span>
+                            <span id="solo-final-bonus" class="text-xl font-black text-amber-500">🥇 0회</span>
+                        </div>
+                    </div>
+
+                    <p class="text-2xs font-extrabold text-amber-800 bg-amber-100/70 py-1.5 px-3 rounded-full inline-block">
+                        ✨ 명예의 전당에 점수가 안전하게 기록되었습니다!
+                    </p>
+
+                    <div class="flex gap-2 justify-center pt-2">
+                        <button type="button" onclick="startSoloChallenge()" class="px-5 py-3 bg-amber-500 hover:bg-amber-600 text-white font-black text-xs rounded-xl shadow-md transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-rotate-right"></i> 다시 도전하기
+                        </button>
+                        <button type="button" onclick="exitToHome()" class="px-5 py-3 bg-slate-800 hover:bg-slate-900 text-white font-black text-xs rounded-xl shadow-md transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-house"></i> 메인 홈으로
+                        </button>
                     </div>
                 </div>
-
-                <!-- 답안 컨트롤 (객관식 or 스크램블 or 텍스트) -->
-                <div id="solo-choices-container" class="space-y-2"></div>
-                <div id="solo-scramble-container" class="hidden space-y-3">
-                    <div class="flex justify-between items-center text-2xs font-extrabold text-amber-800">
-                        <span>단어 칩을 터치하여 문장을 만드세요:</span>
-                        <button type="button" onclick="resetSoloScramble()" class="text-rose-500 underline font-bold">초기화</button>
-                    </div>
-                    <div id="solo-scramble-slots" class="min-h-[52px] p-2 bg-amber-50 border-2 border-dashed border-amber-300 rounded-xl flex flex-wrap gap-1.5 items-center"></div>
-                    <div id="solo-scramble-pool" class="flex flex-wrap gap-2 justify-center p-2 bg-slate-50 rounded-xl border border-slate-200"></div>
-                </div>
-                <div id="solo-text-container" class="hidden space-y-2">
-                    <input type="text" id="solo-text-input" placeholder="정답 입력" 
-                           class="w-full text-center font-black text-base bg-slate-50 border-2 border-slate-200 rounded-xl px-3 py-2 text-slate-800 focus:bg-white focus:border-amber-500 focus:outline-none"
-                           onkeydown="if(event.key==='Enter') submitSoloAnswer()">
-                </div>
-
-                <!-- 솔로 제출 및 다음 버튼 -->
-                <div class="pt-2">
-                    <button type="button" id="btn-solo-submit" onclick="submitSoloAnswer()" class="golden-btn justify-center text-sm py-3">
-                        <span>정답 제출하기 🚀</span>
-                    </button>
-                </div>
-
-                <!-- 정답 피드백 알림 박스 -->
-                <div id="solo-feedback-box" class="hidden p-4 rounded-xl text-center font-bold text-xs"></div>
 
             </div>
         </div>
@@ -1301,12 +1345,14 @@
         // 솔로 모드 변수
         let isSoloMode = false;
         let soloScore = 0;
+        let soloCorrectCount = 0;
         let soloFirstBonusCount = 0;
 
         // 명예의 전당 캐시
         let hofTab = 'all';
         let hofAllScores = [];
         let scoresMap = new Map();
+        window.scoresMap = scoresMap;
         let lastSeenRevivalTimestamp = 0;
 
         // ─────────────────────────────────────────────
@@ -2825,7 +2871,7 @@
                 choiceCont.innerHTML = (q.options || []).map((opt, idx) => {
                     const isSel = (selectedChoice === opt);
                     return `
-                        <button type="button" onclick="selectStudentChoice('${opt.replace(/'/g, "\\'")}')" 
+                        <button type="button" onclick="selectStudentChoice('${opt.replace(/'/g, "\\'")}', this)" 
                                 class="choice-btn ${isSel ? 'selected' : ''}">
                             <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center font-black text-xs">
                                 ${idx + 1}
@@ -2850,7 +2896,7 @@
             window.showScreen('screen-student-game');
         }
 
-        window.selectStudentChoice = function(opt) {
+        window.selectStudentChoice = function(opt, btnEl) {
             if (hasSubmittedAnswer) return;
             selectedChoice = opt;
             if (window.WaurimalAudio) window.WaurimalAudio.play('click');
@@ -2859,7 +2905,10 @@
             document.querySelectorAll('#student-choices-container .choice-btn').forEach(btn => {
                 btn.classList.remove('selected');
             });
-            event.currentTarget.classList.add('selected');
+            const target = btnEl || (window.event ? (window.event.currentTarget || window.event.target.closest('.choice-btn')) : null);
+            if (target && target.classList) {
+                target.classList.add('selected');
+            }
         };
 
         // 스크램블 칩 조작
@@ -3155,7 +3204,13 @@
             currentQuestions = loadQuestionsForPreset(presetCode);
             currentQIndex = 0;
             soloScore = 0;
+            soloCorrectCount = 0;
             soloFirstBonusCount = 0;
+
+            const quizBody = document.getElementById('solo-quiz-body');
+            const resultCard = document.getElementById('solo-result-card');
+            if (quizBody) quizBody.classList.remove('hidden');
+            if (resultCard) resultCard.classList.add('hidden');
 
             document.getElementById('solo-my-score').innerText = '0';
             window.showScreen('screen-solo-game');
@@ -3208,7 +3263,7 @@
                 textCont.classList.add('hidden');
 
                 choiceCont.innerHTML = (q.options || []).map((opt, idx) => `
-                    <button type="button" onclick="selectSoloChoice('${opt.replace(/'/g, "\\'")}')" class="choice-btn">
+                    <button type="button" onclick="selectSoloChoice('${opt.replace(/'/g, "\\'")}', this)" class="choice-btn">
                         <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center font-black text-xs">
                             ${idx + 1}
                         </span>
@@ -3243,11 +3298,14 @@
             }, 1000);
         }
 
-        window.selectSoloChoice = function(opt) {
+        window.selectSoloChoice = function(opt, btnEl) {
             selectedChoice = opt;
             if (window.WaurimalAudio) window.WaurimalAudio.play('click');
             document.querySelectorAll('#solo-choices-container .choice-btn').forEach(btn => btn.classList.remove('selected'));
-            event.currentTarget.classList.add('selected');
+            const target = btnEl || (window.event ? (window.event.currentTarget || window.event.target.closest('.choice-btn')) : null);
+            if (target && target.classList) {
+                target.classList.add('selected');
+            }
         };
 
         function renderSoloScrambleUI(q) {
@@ -3295,6 +3353,34 @@
         };
 
         window.submitSoloAnswer = function(isTimeout = false) {
+            const q = currentQuestions[currentQIndex];
+            if (!q) return;
+
+            let ans = '';
+            if (q.type === 'listening_choice' || q.type === 'reading_choice') {
+                ans = selectedChoice || '';
+            } else if (q.type === 'writing_scramble') {
+                ans = currentScrambleSlots.join(' ');
+            } else if (q.type === 'writing_text') {
+                ans = (document.getElementById('solo-text-input')?.value || '').trim();
+            }
+
+            // 미선택/미입력 방지 (시간초과 제출이 아닌 경우)
+            if (!isTimeout) {
+                if ((q.type === 'listening_choice' || q.type === 'reading_choice') && !selectedChoice) {
+                    alert('보기를 먼저 선택해 주세요!');
+                    return;
+                }
+                if (q.type === 'writing_scramble' && currentScrambleSlots.length === 0) {
+                    alert('단어 칩을 먼저 터치하여 문장을 만들어 주세요!');
+                    return;
+                }
+                if (q.type === 'writing_text' && !ans) {
+                    alert('정답을 입력해 주세요!');
+                    return;
+                }
+            }
+
             if (typeof window.stopCurrentQuestionAudio === 'function') {
                 window.stopCurrentQuestionAudio();
             }
@@ -3303,25 +3389,10 @@
                 questionTimer = null;
             }
 
-            const q = currentQuestions[currentQIndex];
-            let ans = '';
-            if (q.type === 'listening_choice' || q.type === 'reading_choice') {
-                ans = selectedChoice || '';
-            } else if (q.type === 'writing_scramble') {
-                ans = currentScrambleSlots.join(' ');
-            } else if (q.type === 'writing_text') {
-                ans = document.getElementById('solo-text-input').value.trim();
-            }
-
             let isRight = false;
             if (!isTimeout) {
-                if (q.type === 'writing_scramble') {
-                    const normAns = ans.replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
-                    const normTarget = String(q.correctAnswer).replace(/\s+/g, ' ').replace(/\s+([?.!,])/g, '$1').trim().toLowerCase();
-                    isRight = (normAns === normTarget);
-                } else {
-                    isRight = (ans.trim().toLowerCase() === String(q.correctAnswer).trim().toLowerCase());
-                }
+                const norm = (str) => String(str || '').replace(/[?.!,]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+                isRight = (norm(ans) === norm(q.correctAnswer));
             }
 
             const feedback = document.getElementById('solo-feedback-box');
@@ -3329,6 +3400,7 @@
 
             let pts = 0;
             if (isRight) {
+                soloCorrectCount++;
                 pts = 100;
                 // 솔로 스피드 보너스 (5초 내 +50, 10초 내 +30)
                 if (remainingSeconds >= 25) {
@@ -3348,7 +3420,7 @@
                 if (window.WaurimalAudio) window.WaurimalAudio.play('correct');
             } else {
                 feedback.className = "p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-xl text-center font-bold text-xs";
-                feedback.innerHTML = `❌ 아쉽네요! 오답으로 골든벨 도전이 종료되었습니다.<br>정답은 <strong>${q.correctAnswer}</strong> 입니다.<br><span class="text-2xs font-medium text-slate-600">${q.explanation || ''}</span>`;
+                feedback.innerHTML = `❌ 오답입니다. 정답은 <strong>${q.correctAnswer}</strong> 입니다.<br><span class="text-2xs font-medium text-slate-600">${q.explanation || ''}</span>`;
                 if (window.WaurimalAudio) window.WaurimalAudio.play('wrong');
             }
 
@@ -3356,42 +3428,36 @@
             document.getElementById('btn-solo-submit').classList.add('hidden');
 
             setTimeout(() => {
-                // 서바이벌 탈락 룰: 오답 시 즉시 도전 종료
-                if (!isRight) {
-                    finishSoloChallenge(true);
-                    return;
-                }
-
                 currentQIndex++;
-                if (currentQIndex < 20) {
+                if (currentQIndex < Math.min(20, currentQuestions.length)) {
                     const fb = document.getElementById('solo-feedback-box');
                     if (fb) fb.classList.add('hidden');
-                    runReadyCountdown(currentQIndex + 1, () => {
-                        loadSoloQuestion();
-                    });
+                    loadSoloQuestion();
                 } else {
-                    finishSoloChallenge(false);
+                    finishSoloChallenge();
                 }
-            }, 2300);
+            }, 1800);
         };
 
-        async function finishSoloChallenge(isEliminated = false) {
-            playGoldenBellChime();
-            if (!isEliminated) {
-                confetti({ particleCount: 150, spread: 90, origin: { y: 0.5 } });
+        window.finishSoloChallenge = async function finishSoloChallenge() {
+            if (questionTimer) {
+                clearInterval(questionTimer);
+                questionTimer = null;
             }
+            playGoldenBellChime();
+            confetti({ particleCount: 150, spread: 90, origin: { y: 0.5 } });
 
             // 명예의 전당 저장 (점수가 있는 경우)
             if (soloScore > 0) {
                 try {
                     const record = {
                         name: myProfile.name || "학생",
-                        maskedName: window.WaurimalMask ? window.WaurimalMask.maskStudentName(myProfile.name) : myProfile.name,
+                        maskedName: window.WaurimalMask ? window.WaurimalMask.maskStudentName(myProfile.name) : (myProfile.name || "학생"),
                         grade: String(myProfile.grade || '6'),
                         classNum: String(myProfile.classNum || '1'),
                         studentNum: String(myProfile.studentNum || '1'),
                         score: soloScore,
-                        correctCount: Math.min(20, Math.floor(soloScore / 100)),
+                        correctCount: soloCorrectCount,
                         firstCount: soloFirstBonusCount,
                         unit: "1인 골든벨 챌린지",
                         mode: "1인 도전",
@@ -3404,12 +3470,38 @@
                 saveScoresToLocalCache();
             }
 
-            if (isEliminated) {
-                alert(`🔔 아쉽게 탈락했습니다! (Q ${currentQIndex + 1}에서 탈락)\n최종 점수: ${soloScore}점! 다음번에 골든벨을 울려보세요!`);
-            } else {
-                alert(`🎉 20문제 완주 골든벨 달성! 최종 점수: ${soloScore}점! 명예의 전당에 등록되었습니다.`);
+            // 솔로 완주 결과 카드 노출
+            const quizBody = document.getElementById('solo-quiz-body');
+            const resultCard = document.getElementById('solo-result-card');
+            if (quizBody) quizBody.classList.add('hidden');
+            if (resultCard) {
+                resultCard.classList.remove('hidden');
+                const totalQ = Math.min(20, currentQuestions.length);
+                const scoreEl = document.getElementById('solo-final-score');
+                const correctEl = document.getElementById('solo-final-correct');
+                const bonusEl = document.getElementById('solo-final-bonus');
+                const titleEl = document.getElementById('solo-result-title');
+                const descEl = document.getElementById('solo-result-desc');
+                const iconEl = document.getElementById('solo-result-icon');
+
+                if (scoreEl) scoreEl.innerText = `${soloScore}점`;
+                if (correctEl) correctEl.innerText = `${soloCorrectCount}/${totalQ}`;
+                if (bonusEl) bonusEl.innerText = `🥇 ${soloFirstBonusCount}회`;
+
+                if (soloCorrectCount === totalQ) {
+                    if (iconEl) iconEl.innerText = '🔔';
+                    if (titleEl) titleEl.innerText = '황금골든벨을 울렸습니다! 🏆';
+                    if (descEl) descEl.innerText = '20문제 전원 만점! 최고의 영어 마스터입니다!';
+                } else if (soloCorrectCount >= 15) {
+                    if (iconEl) iconEl.innerText = '🌟';
+                    if (titleEl) titleEl.innerText = '골든벨 20문제 완주 성공!';
+                    if (descEl) descEl.innerText = '훌륭한 실력으로 높은 점수를 기록했습니다!';
+                } else {
+                    if (iconEl) iconEl.innerText = '👏';
+                    if (titleEl) titleEl.innerText = '골든벨 챌린지 완료!';
+                    if (descEl) descEl.innerText = '끝까지 포기하지 않고 20문제를 모두 완주했습니다!';
+                }
             }
-            exitToHome();
         }
 
         // ─────────────────────────────────────────────
@@ -3507,7 +3599,7 @@
             renderHallOfFame();
         };
 
-        function renderHallOfFame() {
+        window.renderHallOfFame = function renderHallOfFame() {
             const listCont = document.getElementById('hof-list');
             if (!listCont) return;
 
@@ -3557,8 +3649,18 @@
 
             // 1224 표준 경쟁 순위 부여
             listCont.innerHTML = deduplicated.slice(0, 30).map((item, idx, arr) => {
-                const rank = window.WaurimalRank ? 
-                    window.WaurimalRank.computeCompetitionRank(item, idx, arr, 'score') : (idx + 1);
+                let rank = idx + 1;
+                if (window.WaurimalRank) {
+                    if (typeof window.WaurimalRank.computeCompetitionRank === 'function') {
+                        rank = window.WaurimalRank.computeCompetitionRank(item, idx, arr, 'score');
+                    } else if (typeof window.WaurimalRank.getRank === 'function') {
+                        rank = window.WaurimalRank.getRank(item, idx, arr, 'score');
+                    }
+                }
+                if (rank === (idx + 1) && idx > 0 && item.score === arr[idx - 1].score) {
+                    rank = arr[idx - 1]._computedRank || idx;
+                }
+                item._computedRank = rank;
 
                 const mName = item.maskedName || (window.WaurimalMask ? window.WaurimalMask.maskStudentName(item.name) : item.name);
                 const isTop3 = (rank <= 3);
